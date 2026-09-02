@@ -42,6 +42,16 @@ body::before { display: none; }
 .cloud-card-copy h3 { margin: 0 0 13px; font-size: 37px; font-weight: 500; letter-spacing: .06em; line-height: 1.4; }
 .cloud-card-copy .gold-rule { width: 25px; }
 .cloud-card-copy > p { margin: 23px 0 0; font-size: 15px; line-height: 1.8; color: #555752; text-wrap: pretty; }
+.home-ai-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.home-ai-entry { display: flex; flex-direction: column; align-items: flex-start; padding: 20px 22px 15px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,.2); }
+.home-ai-entry:hover { border-color: #b39451; }
+.home-ai-label { color: #73766c; font-family: 'Source Sans 3', 'Microsoft YaHei', sans-serif; font-size: 12px; line-height: 1.5; }
+.home-ai-entry h3 { margin: 7px 0 10px; font-size: 22px; line-height: 1.55; font-weight: 500; text-wrap: balance; }
+.home-ai-entry p { margin: 0 0 16px; color: #555752; font-size: 14px; line-height: 1.85; text-wrap: pretty; }
+.home-ai-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 25px; min-height: 32px; margin-top: auto; font-size: 13px; }
+.home-ai-action > span { font-family: 'Source Sans 3', sans-serif; }
+.home-grid .home-books { display: flex; flex-direction: column; }
+.home-grid .paper-book-card { flex: 1; height: auto; max-height: none; min-height: 282px; }
 .paper-button { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: min(184px, 100%); min-height: 43px; margin-top: auto; padding: 9px 23px 9px 31px; border: 1px solid #454743; font-size: 15px; letter-spacing: .09em; line-height: 1.4; transition: background 180ms, border-color 180ms; }
 .paper-button svg { width: 21px; height: 21px; flex: 0 0 auto; stroke: currentColor; stroke-width: 1.2; }
 .paper-button:hover { background: #eee9df; border-color: #a88b50; }
@@ -152,6 +162,8 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .paper-footer > p { font-size: 12px; }
 }
 @media (max-width: 900px) {
+  .home-ai-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-ai-entry { padding: 18px 20px 14px; }
   .site-header { padding-inline: 5%; }
   .site-nav { top: 80px; padding: 12px 5% 18px; gap: 0; background: #f8f7f3; }
   .site-nav a { min-height: 48px; }
@@ -167,15 +179,17 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .paper-name h1 { font-size: 54px; }
   .paper-subtitle { font-size: 23px; }
   .paper-intro { font-size: 14px; }
-  .home-grid { gap: 28px; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); }
-  .cloud-card { height: auto; padding: 14px; gap: 16px; grid-template-columns: 1fr; }
-  .cloud-picture { height: auto; aspect-ratio: 1.52; }
+  .home-grid { gap: 28px; grid-template-columns: 1fr; }
+  .cloud-card { height: 282px; padding: 14px; gap: 24px; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .cloud-picture { height: 252px; }
   .cloud-card-copy { padding: 0; }
   .cloud-card-copy h3 { margin-bottom: 9px; font-size: 28px; }
   .cloud-card-copy > p { margin-top: 14px; }
   .paper-button { width: 100%; margin-top: 18px; }
   .paper-book-card { height: 100%; min-height: 282px; max-height: 480px; }
   .home-books { display: flex; flex-direction: column; }
+  .home-grid .paper-book-card { flex: none; height: 260px; min-height: 260px; }
+  .home-grid .paper-book-card img { left: auto; right: 0; width: min(100%, 440px); mask-image: linear-gradient(to bottom, transparent, #000 44%), linear-gradient(to left, #000 70%, transparent); mask-composite: intersect; }
   .book-card-caption h3 { font-size: 20px; }
   .home-book-links > a { font-size: 19px; gap: 10px; }
   .home-book-links > .book-shelf-link { font-size: 12px; }
@@ -190,6 +204,8 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .home-project-grid .paper-section-title { font-size: 25px; }
 }
 @media (max-width: 620px) {
+  .home-ai-list { grid-template-columns: 1fr; }
+  .home-grid .paper-book-card { flex: none; height: 238px; min-height: 238px; }
   .site-header { height: 76px; min-height: 76px; padding-inline: 6%; }
   .brand { gap: 11px; }
   .brand-glyph { width: 38px; height: 38px; font-size: 12px; }
@@ -210,8 +226,8 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .home-grid { width: 86%; grid-template-columns: 1fr; gap: 28px; padding-top: 0; padding-bottom: 39px; }
   .paper-section-title { margin-bottom: 20px; font-size: 25px; }
   .paper-section-title::after { bottom: -7px; width: 40px; }
-  .cloud-card { padding: 14px; gap: 16px; }
-  .cloud-picture { aspect-ratio: 1.65; }
+  .cloud-card { height: auto; grid-template-columns: 1fr; padding: 14px; gap: 16px; }
+  .cloud-picture { height: auto; aspect-ratio: 1.65; }
   .cloud-poem { top: 18px; left: 22px; font-size: 13px; gap: 7px; }
   .cloud-poem i { top: 125px; font-size: 7px; width: 12px; }
   .cloud-card-copy h3 { font-size: 29px; margin-bottom: 0; }

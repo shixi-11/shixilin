@@ -39,6 +39,10 @@
   ],
   "rewrites": [
     {
+      "source": "/games",
+      "destination": "/games/index.html"
+    },
+    {
       "source": "/games/ink-duel",
       "destination": "/games/ink-duel/index.html"
     },

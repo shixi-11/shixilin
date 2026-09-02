@@ -8,16 +8,16 @@
 
 ## AI产品
 
-- **[ALUX AI智能体情报日报](https://github.com/shixi-11/alux-ai-agent-daily)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
+- **[ALUX AI智能体情报日报](https://ai.alux.network/daily/)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
 - **[墨核](https://github.com/shixi-11/mohe-pet)**：运行在本机的黑猫AI伙伴，陪伴日常工作。
 - **[云笺](https://shixilin.com/ai/yunjian)**：从一张云的照片和一句当下所想出发，让AI写回一封信。
 
 [查看AI产品 →](https://shixilin.com/ai)
 
-## 独立游戏
+## [独立游戏](https://shixilin.com/games)
 
-- **[百世书](https://shixilin.com/games/baishishu)**：以轮回、记忆与选择为主题的中国历史幻想叙事游戏。正在制作中，可通过[游戏的X账号](https://x.com/baishishugame)关注开发动态。
-- **[墨斗·百兵](https://shixilin.com/games/ink-duel)**：以中国武术与兵器对战为主题的水墨格斗游戏。正在开发Windows桌面版本。
+- **[百世书](https://shixilin.com/games/baishishu)**：以轮回、记忆与选择为主题的中国历史幻想叙事游戏。Steam桌面游戏，正在制作中，可通过[游戏的X账号](https://x.com/baishishugame)关注开发动态。
+- **[墨斗·百兵](https://shixilin.com/games/ink-duel)**：以中国武术与兵器对战为主题的水墨格斗游戏。Steam桌面游戏，正在开发中。
 
 ## 书籍与写作
 

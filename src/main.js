@@ -5,14 +5,15 @@ import './about.css'
 import './games.css'
 import './support.css'
 import { supportView, bindSupport } from './support.js'
-import { inkDuelView, baishishuView } from './games.js'
+import { gamesView, inkDuelView, baishishuView } from './games.js'
 import { homeView, paperFooter } from './home.js'
 import { getLocale, t, toggleLocale } from './i18n.js'
-import { books } from './content.js'
+import { books, dailyUrl } from './content.js'
 
 const routes = {
   '/': { titleKey: 'meta.home', descriptionKey: 'meta.homeDescription', view: homeView },
   '/ai': { titleKey: 'meta.ai', descriptionKey: 'meta.aiDescription', view: aiView },
+  '/games': { titleKey: 'meta.games', descriptionKey: 'meta.gamesDescription', view: gamesView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
   '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
   '/support': { titleKey: 'meta.support', descriptionKey: 'meta.supportDescription', view: supportView },
@@ -21,9 +22,8 @@ const routes = {
 }
 
 const projects = [
-  { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: 'https://github.com/shixi-11/alux-ai-agent-daily', action: 'work.github' },
+  { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
   { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
-  { slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short', href: '/games/baishishu', action: 'games.details' },
   { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
 ]
 
@@ -78,7 +78,7 @@ function shell(content, pathname) {
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
             ${navLink('/ai', t('home.products'), activePath)}
-            ${navLink('/#games', t('games.nav'), activePath)}
+            ${navLink('/games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
@@ -96,17 +96,19 @@ function shell(content, pathname) {
 }
 
 function navLink(href, label, pathname) {
-  const gameSection = href === '/#games' && pathname.startsWith('/games/')
+  const gameSection = href === '/games' && pathname.startsWith('/games/')
   const active = pathname === href || gameSection
   return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ` aria-current="${gameSection ? 'location' : 'page'}"` : ''}>${label}</a>`
 }
 
 function aiView() {
   return `<section class="quiet-page"><h1>${t('aiPage.title')}</h1><p>${t('aiPage.intro')}</p>
-    <ol class="reading-list ai-list">${projects.map((project, index) => `<li class="reading-item">
+    <ol class="reading-list ai-list">${projects.map((project, index) => {
+      const href = project.href
+      return `<li class="reading-item">
       <small class="ai-item-meta"><span class="ai-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${t(project.category)}</small><h2>${t(project.title).replace(/AI智能体|情报日报/g, phrase => `<span class="title-phrase">${phrase}</span>`)}</h2><p>${t(project.text)}</p>
-      <a class="text-link" href="${project.href}"${project.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${project.href.startsWith('https:') ? '↗' : '→'}</span></a>
-    </li>`).join('')}</ol>
+      <a class="text-link" href="${href}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${href.startsWith('https:') ? '↗' : '→'}</span></a>
+    </li>`}).join('')}</ol>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`
 }
@@ -120,7 +122,7 @@ function booksView() {
 }
 
 function aboutView() {
-  const aboutText = key => t(key).replace(/《[^》]+》|AI智能体|叙事游戏|格斗游戏|现代诗|歌词|小说|数字文明随笔/g, phrase => `<span class="book-title">${phrase}</span>`)
+  const aboutText = key => t(key).replace(/《[^》]+》|AI智能体情报日报|AI智能体|AI炼丹师|数百篇|原创词作|连续创业者|数字游牧者|出口贸易|国际贸易|区块链|智能体网络|数字文明|所学所思|云笺|墨核|叙事游戏|格斗游戏|现代诗|歌词|小说/g, phrase => `<span class="book-title">${phrase}</span>`)
   return `<section class="about-page">
     <header class="about-masthead">
       <div class="about-identity">
@@ -130,17 +132,18 @@ function aboutView() {
         <p class="about-roles"><span>${t('about.roles1')}</span><span>${t('about.roles2')}</span></p>
       </div>
       <div class="about-introduction">
-        <p class="about-lead">${t('about.lead')}</p>
-        <p>${t('home.aboutWriting')}</p>
+        <p class="about-lead">${getLocale() === 'zh' ? t('about.lead').split('，').map((phrase, index) => `<span class="about-lead-phrase">${phrase}${index === 0 ? '，' : ''}</span>`).join('') : t('about.lead')}</p>
+        <p>${aboutText('home.aboutWriting')}</p>
       </div>
     </header>
     <section class="about-chapter" aria-labelledby="about-creation-title">
       <h2 id="about-creation-title">${t('about.creationsTitle')}</h2>
       <div class="about-chapter-body">
       <div class="about-creations">
-        <article><h3>${t('about.creation.term')}</h3>${aboutText('about.creation.text').split(getLocale() === 'zh' ? '。' : '. ').filter(Boolean).map(sentence => `<p>${sentence}${getLocale() === 'zh' ? '。' : sentence.endsWith('.') ? '' : '.'}</p>`).join('')}<a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
-        <article><h3>${t('about.buildTitle')}</h3><p>${aboutText('about.business.text')}</p><p>${aboutText('about.buildText')}</p><div class="about-actions"><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a><a class="about-link internal-link" href="/#games">${t('home.games')} <span aria-hidden="true">→</span></a></div></article>
+        <article><h3>${t('about.creation.term')}</h3><p>${aboutText('about.creation.intro')}</p><p>${aboutText('about.creation.books')}</p><a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
+        <article><h3>${t('about.buildTitle')}</h3><p>${aboutText('about.business.text')}</p><p>${aboutText('about.buildText')}</p><div class="about-actions"><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a><a class="about-link internal-link" href="/games">${t('home.games')} <span aria-hidden="true">→</span></a></div></article>
       </div>
+      <p class="about-practice-note">${aboutText('about.aiPractice')}</p>
       <a class="about-company" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
         <span><small>${t('about.companyLabel')}</small><strong>${t('about.companyName')}</strong></span>
         <span class="about-company-alias">${t('about.companyAlias')}</span><span class="about-company-arrow" aria-hidden="true">↗</span>
@@ -151,12 +154,12 @@ function aboutView() {
       <h2 id="about-experience-title">${t('about.experienceTitle')}</h2>
       <dl class="about-experience">
         <div><dt>${t('about.travel.term')}</dt><dd>${t('about.travel.text')}</dd></div>
-        <div><dt>${t('about.practice.term')}</dt><dd><ul class="about-credentials">${[1, 2, 3].map(index => `<li>${t(`about.credential${index}`)}</li>`).join('')}</ul></dd></div>
+        <div><dt>${t('about.practice.term')}</dt><dd><ul class="about-credentials">${[1, 2, 3, 4].map(index => `<li>${t(`about.credential${index}`)}</li>`).join('')}</ul></dd></div>
         <div><dt>${t('about.tradition.term')}</dt><dd>${t('about.tradition.text')}</dd></div>
       </dl>
     </section>
     <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
-      <h2 id="about-contact-title">${t('about.contactTitle')}</h2>
+      <div class="about-contact-heading"><h2 id="about-contact-title">${t('about.contactTitle')}</h2><p>${t('about.contactIntro')}</p></div>
       <div class="about-chapter-body">
       <a class="about-mail-card" href="mailto:info@elevencapital.ltd">
         <span><small>${t('about.mailLabel')}</small><span class="about-mail-address">info@elevencapital.ltd</span></span>

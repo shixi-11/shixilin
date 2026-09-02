@@ -1,6 +1,7 @@
 import { socialProfiles } from './social.js'
 import { t } from './i18n.js'
-import { books } from './content.js'
+import { books, dailyUrl } from './content.js'
+import { gameCards } from './games.js'
 
 export function cloudOrnament() {
   return `<svg class="cloud-ornament" viewBox="0 0 58 32" fill="none" aria-hidden="true"><path d="M15 25C5 26 3 19 8 15c2-2 5-2 8-1-1-6 3-10 8-10 5 0 8 3 9 7 5-5 13-2 12 4 8-2 13 2 11 5-2 3-9 2-14 3-9 4-17 5-27 2Z"/><path d="M17 19c-4-6 1-11 6-8 4 2 3 6 0 7m9-1c-1-4 5-6 8-3m-19 9c7 2 12-3 17-3"/></svg>`
@@ -33,6 +34,14 @@ export function homeView() {
             <span class="route-caption">/ai/yunjian</span>
           </div>
         </article>
+        <div class="home-ai-list">
+          <a class="home-ai-entry" href="${dailyUrl()}" target="_blank" rel="noopener">
+            <span class="home-ai-label">ALUX</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="home-ai-entry" href="https://github.com/shixi-11/mohe-pet" target="_blank" rel="noopener">
+            <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${t('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
       </section>
       <section class="home-books" aria-labelledby="books-title">
         <h2 class="paper-section-title" id="books-title"><a class="internal-link" href="/books">${t('home.books')}</a></h2>
@@ -44,24 +53,14 @@ export function homeView() {
     </div>
     <div class="home-project-grid">
     <section class="home-game" id="games" aria-labelledby="game-title">
-      <h2 class="paper-section-title" id="game-title">${t('home.games')}</h2>
-      <div class="home-game-list">
-      <a class="game-card internal-link" href="/games/baishishu">
-        <img src="/assets/baishishu-opening.jpg" alt="${t('game.imageAlt')}" width="1200" height="675" loading="lazy" />
-        <div><span class="game-status">${t('games.development')}</span><h3>${t('game.name')}</h3><p>${t('game.short')}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div>
-      </a>
-      <a class="game-card internal-link" href="/games/ink-duel">
-        <img src="/assets/ink-duel-concept.png" alt="${t('ink.imageAlt')}" width="1672" height="941" loading="lazy" />
-        <div><span class="game-status">${t('games.development')}</span><h3>${t('ink.name')}</h3><p>${t('ink.short')}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div>
-      </a>
-      </div>
+      <h2 class="paper-section-title" id="game-title"><a class="internal-link" href="/games">${t('home.games')}</a></h2>
+      ${gameCards()}
     </section>
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>
       <a class="alux-card" href="https://alux.network/" target="_blank" rel="noopener">
-        <span class="game-status">${t('home.aluxRole')}</span><h3>ALUX</h3>
-        <p>${t('home.aluxText')}</p>
-        <span class="game-action">${t('home.openAlux')} <span aria-hidden="true">↗</span></span>
+        <div class="alux-identity"><span class="game-status">${t('home.aluxRole')}</span><h3>ALUX</h3></div>
+        <div class="alux-description"><p>${t('home.aluxText')}</p><span class="game-action">${t('home.openAlux')} <span aria-hidden="true">↗</span></span></div>
       </a>
     </section>
     </div>

@@ -3,3 +3,7 @@ export const books = [
   { category: 'book.yinian.category', title: 'book.yinian.title', text: 'book.yinian.text', href: 'https://www.qidian.com/book/1025472585/' },
   { category: 'book.poetry.category', title: 'book.poetry.title', text: 'book.poetry.text' },
 ]
+
+export function dailyUrl() {
+  return 'https://ai.alux.network/daily/'
+}
