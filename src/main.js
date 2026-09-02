@@ -10,18 +10,30 @@ const routes = {
 
 const projects = [
   {
-    slug: 'alux',
+    slug: 'baishishu',
     index: '01',
+    category: 'work.baishishu.category',
+    title: 'work.baishishu.title',
+    text: 'work.baishishu.text',
+    href: 'https://x.com/baishishugame',
+    action: 'work.baishishu.action',
+    image: '/assets/baishishu-opening.jpg',
+    imageAlt: 'work.baishishu.alt',
+    flagship: true,
+  },
+  {
+    slug: 'alux',
+    index: '02',
     category: 'work.alux.category',
     title: 'work.alux.title',
     text: 'work.alux.text',
     href: 'https://www.alux.network/',
     action: 'work.open',
-    featured: true,
+    flagship: true,
   },
   {
     slug: 'mohe',
-    index: '02',
+    index: '03',
     category: 'work.mohe.category',
     title: 'work.mohe.title',
     text: 'work.mohe.text',
@@ -32,7 +44,7 @@ const projects = [
   },
   {
     slug: 'daily',
-    index: '03',
+    index: '04',
     category: 'work.daily.category',
     title: 'work.daily.title',
     text: 'work.daily.text',
@@ -41,7 +53,7 @@ const projects = [
   },
   {
     slug: 'yunjian',
-    index: '04',
+    index: '05',
     category: 'work.yunjian.category',
     title: 'work.yunjian.title',
     text: 'work.yunjian.text',
@@ -137,32 +149,30 @@ function navLink(href, label, pathname) {
 function homeView() {
   return `
     <section class="hero" id="top">
-      <div class="hero-main reveal">
-        <div class="hero-name-lockup">
+      <div class="hero-kicker reveal">
+        <span>${t('hero.index')}</span>
+        <span>${t('hero.now')}</span>
+      </div>
+      <div class="hero-composition">
+        <div class="hero-name-lockup reveal">
           <span>${t('hero.roman')}</span>
           <h1>${t('hero.name')}</h1>
         </div>
-        <p class="hero-title">${t('hero.title')}</p>
-        <p class="hero-lead">${t('hero.lead')}</p>
-        <div class="hero-actions">
-          <a class="action action-solid internal-link" href="/#work">${t('hero.primary')}<span aria-hidden="true">↓</span></a>
-          <a class="action action-line internal-link" href="/#about">${t('hero.secondary')}<span aria-hidden="true">→</span></a>
+        <div class="hero-copy reveal reveal-late">
+          <p class="hero-title">${t('hero.title')}</p>
+          <p class="hero-lead">${t('hero.lead')}</p>
+          <div class="hero-actions">
+            <a class="action action-solid internal-link" href="/#work">${t('hero.primary')}<span aria-hidden="true">↓</span></a>
+            <a class="action action-line internal-link" href="/#about">${t('hero.secondary')}<span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </div>
 
-      <aside class="identity-index reveal reveal-late" aria-label="${t('hero.index')}">
-        <div class="index-top">
-          <span>${t('hero.index')}</span>
-          <strong aria-hidden="true">11</strong>
-        </div>
-        <p>${t('hero.statement')}</p>
-        <ul>
-          <li><span>01</span>${t('hero.role1')}</li>
-          <li><span>02</span>${t('hero.role2')}</li>
-          <li><span>03</span>${t('hero.role3')}</li>
-          <li><span>04</span>${t('hero.role4')}</li>
-        </ul>
-      </aside>
+      <div class="hero-now reveal reveal-late" aria-label="${t('hero.nowLabel')}">
+        <span>${t('hero.nowLabel')}</span>
+        <a href="https://x.com/baishishugame" target="_blank" rel="noopener"><span class="now-thumb"><img src="/assets/baishishu-opening.jpg" alt="" width="96" height="64" /></span><b>${t('hero.nowBaishishu')}</b><i>↗</i></a>
+        <a href="https://www.alux.network/" target="_blank" rel="noopener"><span class="now-thumb now-monogram" aria-hidden="true">A</span><b>${t('hero.nowAlux')}</b><i>↗</i></a>
+      </div>
 
       <div class="hero-facts reveal reveal-late">
         ${fact('hero.fact1.value', 'hero.fact1.label')}
@@ -196,7 +206,8 @@ function pathSection() {
 }
 
 function workSection(preview = false) {
-  const list = preview ? projects : projects
+  const flagship = projects.filter((project) => project.flagship)
+  const supporting = projects.filter((project) => !project.flagship)
   return `
     <section class="work-section" id="work">
       <div class="section-intro reveal">
@@ -207,11 +218,33 @@ function workSection(preview = false) {
           ${preview ? `<a class="text-link internal-link" href="/works">${t('work.all')}<span aria-hidden="true">→</span></a>` : ''}
         </div>
       </div>
-      <div class="project-ledger">
-        ${list.map(projectItem).join('')}
+      <div class="flagship-projects">
+        ${flagship.map(flagshipProject).join('')}
+      </div>
+      <div class="support-heading reveal">
+        <p>${t('work.supporting')}</p>
+        <span>${t('work.supportingNote')}</span>
+      </div>
+      <div class="support-projects">
+        ${supporting.map(projectItem).join('')}
       </div>
     </section>
   `
+}
+
+function flagshipProject(project) {
+  const body = `
+    <div class="flagship-copy">
+      <div class="flagship-meta"><span>${project.index}</span><p>${t(project.category)}</p></div>
+      <h3>${t(project.title)}</h3>
+      <p class="project-description">${t(project.text)}</p>
+      <span class="project-action">${t(project.action)}<b aria-hidden="true">↗</b></span>
+    </div>
+    ${project.image ? `<div class="flagship-media"><img src="${project.image}" alt="${t(project.imageAlt)}" width="1200" height="675" loading="lazy" /></div>` : ''}
+    ${project.slug === 'alux' ? '<div class="alux-field" aria-hidden="true"><i></i><i></i><i></i><b>ALUX</b></div>' : ''}
+  `
+
+  return `<a class="flagship-project ${project.slug} reveal" href="${project.href}" target="_blank" rel="noopener">${body}</a>`
 }
 
 function projectItem(project) {
@@ -224,11 +257,10 @@ function projectItem(project) {
       <span class="project-action">${t(project.action)}<b aria-hidden="true">${project.href ? '↗' : '·'}</b></span>
     </div>
     ${project.image ? `<div class="project-visual"><img src="${project.image}" alt="${t(project.imageAlt)}" width="700" height="700" loading="lazy" /></div>` : ''}
-    ${project.featured ? '<div class="alux-field" aria-hidden="true"><i></i><i></i><i></i><b>A</b></div>' : ''}
   `
 
   if (!project.href) return `<article class="project-item ${project.slug} reveal">${content}</article>`
-  return `<a class="project-item ${project.slug}${project.featured ? ' featured' : ''} reveal" href="${project.href}" target="_blank" rel="noopener">${content}</a>`
+  return `<a class="project-item ${project.slug} reveal" href="${project.href}" target="_blank" rel="noopener">${content}</a>`
 }
 
 function writingSection(preview = false) {
