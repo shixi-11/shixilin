@@ -4,14 +4,17 @@ import { getLocale, t, toggleLocale } from './i18n.js'
 const routes = {
   '/': {
     titleKey: 'meta.home',
+    descriptionKey: 'meta.homeDescription',
     view: homeView,
   },
   '/ai': {
     titleKey: 'meta.ai',
+    descriptionKey: 'meta.aiDescription',
     view: aiView,
   },
   '/books': {
     titleKey: 'meta.books',
+    descriptionKey: 'meta.booksDescription',
     view: booksView,
   },
 }
@@ -27,10 +30,16 @@ function render() {
   const pathname = normalizePath(window.location.pathname)
   const route = routes[pathname] || routes['/']
   document.title = t(route.titleKey)
+  document.querySelector('meta[name="description"]').content = t(route.descriptionKey)
+  document.querySelector('meta[property="og:title"]').content = t(route.titleKey)
+  document.querySelector('meta[property="og:description"]').content = t(route.descriptionKey)
   document.documentElement.lang = getLocale() === 'en' ? 'en' : 'zh-CN'
   app.innerHTML = shell(route.view(), pathname)
   bindNavigation()
   window.scrollTo({ top: 0 })
+  if (window.location.hash === '#about') {
+    requestAnimationFrame(() => document.getElementById('about')?.scrollIntoView())
+  }
 }
 
 function shell(content, pathname) {
@@ -72,12 +81,12 @@ function homeView() {
   return `
     <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">shixilin.com /</p>
-        <h1>${t('hero.title')}</h1>
+        <p class="eyebrow">${t('hero.label')}</p>
+        <h1><span class="title-line">${t('hero.products')}</span><span class="title-line">${t('hero.writing')}</span></h1>
         <p class="hero-lead">${t('hero.lead')}</p>
         <a class="line-link internal-link" href="/ai">${t('hero.action')} <span aria-hidden="true">→</span></a>
       </div>
-      <div class="sky-study" aria-label="雾蓝天空与远山的抽象景象">
+      <div class="sky-study" aria-hidden="true">
         <div class="sun-wash"></div>
         <div class="cloud cloud-one"></div>
         <div class="cloud cloud-two"></div>
@@ -85,15 +94,12 @@ function homeView() {
         <div class="mountain mountain-far"></div>
         <div class="mountain mountain-near"></div>
         <div class="boat"><span></span></div>
-        <p>${t('hero.note')}</p>
       </div>
     </section>
 
     <section class="collection" aria-labelledby="work-title">
       <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p>
         <h2 id="work-title">${t('work.title')}</h2>
-        <p>${t('work.description')}</p>
       </div>
       <div class="portal-grid">
         ${yunjianCard('featured')}
@@ -111,10 +117,9 @@ function homeView() {
     </section>
 
     <section class="about" id="about">
-      <div><p class="eyebrow">ABOUT</p><h2>${t('about.title')}</h2></div>
+      <div><p class="eyebrow">${t('nav.about')}</p><h2>${t('about.title')}</h2></div>
       <div class="about-copy">
         <p>${t('about.p1')}</p>
-        <p>${t('about.p2')}</p>
       </div>
     </section>
   `
@@ -123,16 +128,11 @@ function homeView() {
 function aiView() {
   return `
     <section class="page-intro reveal">
-      <p class="eyebrow">shixilin.com / ai</p>
       <h1>${t('ai.title')}</h1>
       <p>${t('ai.intro')}</p>
     </section>
-    <section class="product-list" aria-label="AI产品列表">
+    <section class="product-list" aria-label="${t('ai.listLabel')}">
       ${yunjianCard('wide')}
-      <div class="future-note">
-        <span>${t('ai.next')}</span>
-        <p>${t('ai.nextDescription')}</p>
-      </div>
     </section>
   `
 }
@@ -140,16 +140,15 @@ function aiView() {
 function booksView() {
   return `
     <section class="page-intro books-intro reveal">
-      <p class="eyebrow">shixilin.com / books</p>
       <h1>${t('books.title')}</h1>
       <p>${t('books.intro')}</p>
     </section>
     <section class="books-empty" aria-labelledby="books-status">
       <div class="open-book" aria-hidden="true"><i></i><i></i></div>
       <div>
-        <p class="eyebrow">IN PROGRESS</p>
         <h2 id="books-status">${t('books.progress')}</h2>
         <p>${t('books.progressDescription')}</p>
+        <a class="line-link internal-link" href="/ai">${t('hero.action')} <span aria-hidden="true">→</span></a>
       </div>
     </section>
     <a class="back-link internal-link" href="/">← ${t('books.back')}</a>
@@ -168,8 +167,8 @@ function yunjianCard(variant) {
         <p class="card-category">${t('yunjian.category')}</p>
         <h3>${t('yunjian.name')} <small>${t('yunjian.otherName')}</small></h3>
         <p>${t('yunjian.description')}</p>
+        <p class="availability">${t('yunjian.availability')}</p>
         <span class="card-action">${t('yunjian.enter')} <b aria-hidden="true">→</b></span>
-        <code>shixilin.com / ai / yunjian</code>
       </div>
     </a>
   `
@@ -191,13 +190,13 @@ function bindNavigation() {
 
   document.querySelectorAll('a.internal-link').forEach((link) => {
     link.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
       const url = new URL(link.href)
       if (url.origin !== window.location.origin) return
       if (url.pathname === '/ai/yunjian') return
       event.preventDefault()
       window.history.pushState({}, '', `${url.pathname}${url.hash}`)
       render()
-      if (url.hash) requestAnimationFrame(() => document.querySelector(url.hash)?.scrollIntoView())
     })
   })
 }
