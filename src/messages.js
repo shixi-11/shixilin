@@ -1,6 +1,6 @@
 export const messages = {
   zh: {
-    'meta.home': '光之十一｜Shixi Lin 的个人品牌主页',
+    'meta.home': '光之十一｜Shixi Lin 的个人品牌',
     'meta.works': '正在创造｜光之十一',
     'meta.ai': '正在创造｜光之十一',
     'meta.books': '写作与书稿｜光之十一',
@@ -112,7 +112,7 @@ export const messages = {
   },
 
   en: {
-    'meta.home': 'Shixi Lin / 光之十一 — Writer, Founder, Builder',
+    'meta.home': '光之十一｜Shixi Lin 的个人品牌',
     'meta.works': 'Current Work — Shixi Lin / 光之十一',
     'meta.ai': 'Current Work — Shixi Lin / 光之十一',
     'meta.books': 'Writing & Books — Shixi Lin / 光之十一',
