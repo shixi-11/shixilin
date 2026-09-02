@@ -2,12 +2,12 @@
   <title>光之十一</title>
   <style>
     @media (prefers-color-scheme: dark) {
-      .tide { fill: #9FC5CA; }
-      .light { fill: #D0BD93; }
+      .tide { fill: #9CA6BA; }
+      .light { fill: #C7B184; }
     }
   </style>
-  <path class="light" d="M32 5c13-3 25 6 25 18 0 13-11 22-25 18 14 0 21-10 18-21C48 12 41 6 32 5Z" fill="#A58B62"/>
-  <path class="tide" d="M29 15C14 22 16 33 30 39c14 7 14 17 2 21-9 4-22-1-24-9 6 7 18 8 23 3 7-7-11-11-15-18C9 27 17 18 29 15Z" fill="#3F6E78"/>
-  <path class="tide" d="M20 28c2 8 12 9 22 5-6 6-18 8-22-5Z" fill="#3F6E78"/>
-  <circle class="light" cx="34" cy="28" r="3.5" fill="#A58B62"/>
+  <path class="light" d="M32 5c13-3 25 6 25 18 0 13-11 22-25 18 14 0 21-10 18-21C48 12 41 6 32 5Z" fill="#A78A58"/>
+  <path class="tide" d="M29 15C14 22 16 33 30 39c14 7 14 17 2 21-9 4-22-1-24-9 6 7 18 8 23 3 7-7-11-11-15-18C9 27 17 18 29 15Z" fill="#59657D"/>
+  <path class="tide" d="M20 28c2 8 12 9 22 5-6 6-18 8-22-5Z" fill="#59657D"/>
+  <circle class="light" cx="34" cy="28" r="3.5" fill="#A78A58"/>
 </svg>
