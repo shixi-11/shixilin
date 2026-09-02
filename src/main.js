@@ -1,5 +1,6 @@
 import './styles.css'
 import './home.css'
+import './about.css'
 import { homeView, paperFooter } from './home.js'
 import { getLocale, t, toggleLocale } from './i18n.js'
 import { books } from './content.js'
@@ -146,15 +147,50 @@ function booksView() {
 }
 
 function aboutView() {
-  return `<section class="quiet-page">
-    <h1>${t('nav.about')}</h1>
-    <p>${t('home.aboutIntro')}</p>
-    <p>${t('home.aboutWriting')}</p>
-    <dl class="about-details">${['travel', 'practice', 'tradition', 'creation', 'business'].map(key => `<div><dt>${t(`about.${key}.term`)}</dt><dd>${t(`about.${key}.text`)}</dd></div>`).join('')}</dl>
-    <a class="text-link internal-link" href="/works">${t('work.all')} <span aria-hidden="true">→</span></a>
-    <div class="quiet-contact" id="contact"><h2>${t('nav.contact')}</h2><p>${t('footer.follow')}</p><p><a href="https://x.com/11Shixi" target="_blank" rel="noopener">X / Twitter · @11Shixi ↗</a></p><p><a href="https://www.instagram.com/shixi_11/" target="_blank" rel="noopener">Instagram · @shixi_11 ↗</a></p><p><a href="https://www.tiktok.com/@shixilin" target="_blank" rel="noopener">TikTok · @shixilin ↗</a></p>
-      <a class="text-link" href="https://github.com/shixi-11" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-    </div>
+  const aboutText = key => t(key).replace(/《([^》]+)》/g, '<span class="book-title">《$1》</span>')
+  const profiles = [
+    { name: 'X', handle: '@11Shixi', href: 'https://x.com/11Shixi' },
+    { name: 'GitHub', handle: 'shixi-11', href: 'https://github.com/shixi-11' },
+    { name: 'Instagram', handle: '@shixi_11', href: 'https://www.instagram.com/shixi_11/' },
+    { name: 'TikTok', handle: '@shixilin', href: 'https://www.tiktok.com/@shixilin' },
+  ]
+  return `<section class="about-page">
+    <header class="about-masthead">
+      <div class="about-identity">
+        <p class="about-eyebrow">${t('nav.about')}</p>
+        <h1>${t('home.name')}</h1>
+        <p class="about-alias">${t('about.alias')}</p>
+        <p class="about-roles"><span>${t('about.roles1')}</span><span>${t('about.roles2')}</span></p>
+      </div>
+      <div class="about-introduction">
+        <span class="gold-rule" aria-hidden="true"></span>
+        <p class="about-lead">${t('about.lead')}</p>
+        <p>${t('home.aboutWriting')}</p>
+      </div>
+    </header>
+    <section class="about-chapter" aria-labelledby="about-creation-title">
+      <h2 id="about-creation-title">${t('about.creationsTitle')}</h2>
+      <div class="about-creations">
+        <article><h3>${t('about.creation.term')}</h3><p>${aboutText('about.creation.text')}</p><a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
+        <article><h3>${t('about.buildTitle')}</h3><p>${t('about.business.text')}</p><p>${aboutText('about.buildText')}</p><a class="about-link internal-link" href="/works">${t('work.all')} <span aria-hidden="true">→</span></a></article>
+      </div>
+      <a class="about-company" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
+        <span><small>${t('about.companyLabel')}</small><strong>${t('about.companyName')}</strong></span>
+        <span class="about-company-alias">${t('about.companyAlias')}</span><span class="about-company-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+    <section class="about-chapter" aria-labelledby="about-experience-title">
+      <h2 id="about-experience-title">${t('about.experienceTitle')}</h2>
+      <dl class="about-experience">
+        <div><dt>${t('about.travel.term')}</dt><dd>${t('about.travel.text')}</dd></div>
+        <div><dt>${t('about.practice.term')}</dt><dd><ul class="about-credentials">${[1, 2, 3].map(index => `<li>${t(`about.credential${index}`)}</li>`).join('')}</ul></dd></div>
+        <div><dt>${t('about.tradition.term')}</dt><dd>${t('about.tradition.text')}</dd></div>
+      </dl>
+    </section>
+    <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
+      <div><h2 id="about-contact-title">${t('about.contactTitle')}</h2><p class="about-mail-label">${t('about.mailLabel')}</p><a class="about-email" href="mailto:info@elevencapital.ltd">info@elevencapital.ltd</a><p class="about-channels">${t('about.channels')}<strong>${t('brand.name')}</strong></p></div>
+      <div class="about-profiles">${profiles.map(profile => `<a href="${profile.href}" target="_blank" rel="noopener"><span class="about-platform">${profile.name}</span><span class="about-handle">${profile.handle}</span><span class="about-external" aria-hidden="true">↗</span></a>`).join('')}</div>
+    </section>
   </section>`
 }
 

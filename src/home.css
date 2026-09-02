@@ -64,9 +64,9 @@ body::before { display: none; }
 .paper-footer > p { margin: 0; font-size: 14px; letter-spacing: .09em; color: #62635d; }
 .paper-footer > .social-notes { display: block; grid-column: 1 / -1; justify-self: end; max-width: none; margin: -10px 0 0; text-align: right; color: #62635d; font-family: 'Source Sans 3', 'Microsoft YaHei', sans-serif; font-size: 12px; letter-spacing: .04em; line-height: 1.8; }
 .paper-socials { display: flex; justify-content: flex-end; align-items: center; gap: 20px; }
-.paper-socials a { display: grid; place-items: center; width: 32px; height: 44px; }
+.paper-socials a { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 44px; line-height: 0; }
 .paper-socials a:hover { color: #947638; }
-.paper-socials svg { width: 23px; height: 23px; stroke: currentColor; stroke-width: 1.2; }
+.paper-socials svg { display: block; width: 23px; height: 23px; overflow: visible; stroke: currentColor; stroke-width: 1.2; }
 .paper-socials > span { width: 1px; height: 19px; background: rgba(62, 60, 51, .3); }
 html[lang='en'] .paper-name h1 { letter-spacing: .015em; }
 html[lang='en'] .paper-subtitle { font-size: 22px; letter-spacing: .015em; }
