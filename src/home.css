@@ -199,7 +199,7 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .language-toggle { min-width: 28px; }
   .site-nav { top: 76px; padding-inline: 6%; }
   .paper-hero { height: 305px; }
-  .landscape-art { top: 0; right: -18%; width: 118%; height: 285px; object-position: 72% center; opacity: .72; }
+  .landscape-art { top: 0; right: 0; width: 100%; height: 285px; object-position: right center; opacity: .72; }
   .paper-hero-copy { width: 86%; padding-top: 67px; }
   .paper-name { gap: 9px; }
   .paper-name h1 { font-size: clamp(36px, 10.7vw, 49px); line-height: 1.45; letter-spacing: .06em; }
@@ -257,7 +257,8 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .brand-glyph { width: 36px; height: 36px; }
   .header-tools { gap: 7px; }
   .paper-hero { height: 275px; }
+  .landscape-art { height: 255px; }
   .paper-hero-copy { padding-top: 54px; }
-  .cloud-poem { top: 16px; left: 16px; font-size: 12px; }
-  .cloud-poem i { top: 116px; }
+  .cloud-poem { top: 12px; left: 16px; font-size: 11px; }
+  .cloud-poem i { top: 103px; }
 }

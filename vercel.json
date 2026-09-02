@@ -5,6 +5,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/notes/:path*",
+      "destination": "/support",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -34,12 +39,20 @@
   ],
   "rewrites": [
     {
+      "source": "/games/ink-duel",
+      "destination": "/games/ink-duel/index.html"
+    },
+    {
+      "source": "/games/baishishu",
+      "destination": "/games/baishishu/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about/index.html"
     },
     {
-      "source": "/notes",
-      "destination": "/notes/index.html"
+      "source": "/support",
+      "destination": "/support/index.html"
     },
     {
       "source": "/ai",

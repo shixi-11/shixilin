@@ -2,6 +2,10 @@ import { socialProfiles } from './social.js'
 import './styles.css'
 import './home.css'
 import './about.css'
+import './games.css'
+import './support.css'
+import { supportView, bindSupport } from './support.js'
+import { inkDuelView, baishishuView } from './games.js'
 import { homeView, paperFooter } from './home.js'
 import { getLocale, t, toggleLocale } from './i18n.js'
 import { books } from './content.js'
@@ -11,13 +15,15 @@ const routes = {
   '/ai': { titleKey: 'meta.ai', descriptionKey: 'meta.aiDescription', view: aiView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
   '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
-  '/notes': { titleKey: 'meta.notes', descriptionKey: 'meta.notesDescription', view: notesView },
+  '/support': { titleKey: 'meta.support', descriptionKey: 'meta.supportDescription', view: supportView },
+  '/games/ink-duel': { titleKey: 'meta.inkDuel', descriptionKey: 'meta.inkDuelDescription', image: '/assets/ink-duel-concept.png', view: inkDuelView },
+  '/games/baishishu': { titleKey: 'meta.baishishu', descriptionKey: 'meta.baishishuDescription', image: '/assets/baishishu-opening.jpg', view: baishishuView },
 }
 
 const projects = [
   { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: 'https://github.com/shixi-11/alux-ai-agent-daily', action: 'work.github' },
   { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
-  { slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short', href: 'https://x.com/baishishugame', action: 'game.open' },
+  { slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short', href: '/games/baishishu', action: 'games.details' },
   { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
 ]
 
@@ -43,10 +49,14 @@ function render() {
   document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
   document.querySelector('link[rel="canonical"]').href = canonicalUrl
   document.querySelector('meta[property="og:url"]').content = canonicalUrl
+  document.querySelector('meta[property="og:image"]').content = new URL(route.image || '/assets/og-shixilin.jpg', 'https://shixilin.com').href
+  document.querySelector('meta[property="og:image:width"]').content = pathname === '/games/ink-duel' ? '1672' : '1200'
+  document.querySelector('meta[property="og:image:height"]').content = pathname === '/games/ink-duel' ? '941' : pathname === '/games/baishishu' ? '675' : '630'
   document.documentElement.lang = getLocale() === 'en' ? 'en' : 'zh-CN'
 
   app.innerHTML = shell(route.view(), pathname)
   bindNavigation()
+  bindSupport()
 
   if (window.location.hash) {
     const anchorId = decodeURIComponent(window.location.hash.slice(1))
@@ -68,9 +78,10 @@ function shell(content, pathname) {
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
             ${navLink('/ai', t('home.products'), activePath)}
+            ${navLink('/#games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/about', t('nav.about'), activePath)}
-            ${navLink('/notes', t('home.notes'), activePath)}
+            ${navLink('/support', t('support.nav'), activePath)}
           </nav>
           <button class="language-toggle" type="button" aria-label="${t('language.label')}">${t('language.short')}</button>
           <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
@@ -85,8 +96,9 @@ function shell(content, pathname) {
 }
 
 function navLink(href, label, pathname) {
-  const active = pathname === href
-  return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`
+  const gameSection = href === '/#games' && pathname.startsWith('/games/')
+  const active = pathname === href || gameSection
+  return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ` aria-current="${gameSection ? 'location' : 'page'}"` : ''}>${label}</a>`
 }
 
 function aiView() {
@@ -108,7 +120,7 @@ function booksView() {
 }
 
 function aboutView() {
-  const aboutText = key => t(key).replace(/《([^》]+)》/g, '<span class="book-title">《$1》</span>')
+  const aboutText = key => t(key).replace(/《[^》]+》|AI智能体|叙事游戏|格斗游戏|现代诗|歌词|小说|数字文明随笔/g, phrase => `<span class="book-title">${phrase}</span>`)
   return `<section class="about-page">
     <header class="about-masthead">
       <div class="about-identity">
@@ -118,21 +130,22 @@ function aboutView() {
         <p class="about-roles"><span>${t('about.roles1')}</span><span>${t('about.roles2')}</span></p>
       </div>
       <div class="about-introduction">
-        <span class="gold-rule" aria-hidden="true"></span>
         <p class="about-lead">${t('about.lead')}</p>
         <p>${t('home.aboutWriting')}</p>
       </div>
     </header>
     <section class="about-chapter" aria-labelledby="about-creation-title">
       <h2 id="about-creation-title">${t('about.creationsTitle')}</h2>
+      <div class="about-chapter-body">
       <div class="about-creations">
-        <article><h3>${t('about.creation.term')}</h3><p>${aboutText('about.creation.text')}</p><a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
-        <article><h3>${t('about.buildTitle')}</h3><p>${t('about.business.text')}</p><p>${aboutText('about.buildText')}</p><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a></article>
+        <article><h3>${t('about.creation.term')}</h3>${aboutText('about.creation.text').split(getLocale() === 'zh' ? '。' : '. ').filter(Boolean).map(sentence => `<p>${sentence}${getLocale() === 'zh' ? '。' : sentence.endsWith('.') ? '' : '.'}</p>`).join('')}<a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
+        <article><h3>${t('about.buildTitle')}</h3><p>${aboutText('about.business.text')}</p><p>${aboutText('about.buildText')}</p><div class="about-actions"><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a><a class="about-link internal-link" href="/#games">${t('home.games')} <span aria-hidden="true">→</span></a></div></article>
       </div>
       <a class="about-company" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
         <span><small>${t('about.companyLabel')}</small><strong>${t('about.companyName')}</strong></span>
         <span class="about-company-alias">${t('about.companyAlias')}</span><span class="about-company-arrow" aria-hidden="true">↗</span>
       </a>
+      </div>
     </section>
     <section class="about-chapter" aria-labelledby="about-experience-title">
       <h2 id="about-experience-title">${t('about.experienceTitle')}</h2>
@@ -144,18 +157,16 @@ function aboutView() {
     </section>
     <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
       <h2 id="about-contact-title">${t('about.contactTitle')}</h2>
+      <div class="about-chapter-body">
       <a class="about-mail-card" href="mailto:info@elevencapital.ltd">
         <span><small>${t('about.mailLabel')}</small><span class="about-mail-address">info@elevencapital.ltd</span></span>
         <span class="about-mail-action">${t('about.writeEmail')} <span aria-hidden="true">↗</span></span>
       </a>
       <div class="about-social-directory">${socialProfiles.map(profile => `<a href="${profile.href}" target="_blank" rel="noopener"><span class="about-social-icon">${profile.icon}</span><span class="about-social-copy"><span class="about-platform">${profile.name}</span><span class="about-handle">${profile.handle}</span></span><span class="about-external" aria-hidden="true">↗</span></a>`).join('')}</div>
       <div class="about-public-profile"><strong>@${t('brand.name')}</strong><p>${t('about.channels')}</p></div>
+      </div>
     </section>
   </section>`
-}
-
-function notesView() {
-  return `<section class="quiet-page"><h1>${t('home.notes')}</h1><span class="gold-rule" aria-hidden="true"></span><p class="notes-empty">${t('home.notesEmpty')}</p><a class="text-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></section>`
 }
 
 function bindNavigation() {

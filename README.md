@@ -7,6 +7,7 @@
 ## 主要入口
 
 - **[AI产品](https://shixilin.com/ai)**：ALUX AI智能体情报日报、墨核、百世书与云笺。
+- **独立游戏**：[百世书](https://shixilin.com/games/baishishu)与[墨斗·百兵](https://shixilin.com/games/ink-duel)。
 - **[书籍与写作](https://shixilin.com/books)**：《一念凡生》《代天行》《还没取名儿呢》及延伸创作。
 - **[ALUX](https://www.alux.network/)**：面向 AI 智能体与复杂协作的去中心化并发运行时。
 
@@ -18,6 +19,10 @@
 | --- | --- |
 | 首页 | `/` |
 | AI产品 | `/ai` |
+| 百世书 | `/games/baishishu` |
+| 墨斗·百兵 | `/games/ink-duel` |
+| 关于我 | `/about` |
+| 支持创作 | `/support` |
 | 云笺 | `/ai/yunjian` |
 | 书籍与写作 | `/books` |
 

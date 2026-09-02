@@ -9,7 +9,7 @@ export function cloudOrnament() {
 export function homeView() {
   return `
     <section class="paper-hero" aria-labelledby="home-title">
-      <img class="landscape-art" src="/assets/landscape.png" alt="" width="1536" height="512" fetchpriority="high" />
+      <img class="landscape-art" src="/assets/landscape.png" alt="" width="1773" height="887" fetchpriority="high" />
       <div class="paper-hero-copy">
         <div class="paper-name"><h1 id="home-title">${t('home.name')}</h1>${cloudOrnament()}</div>
         <p class="paper-subtitle">${t('home.subtitle')}</p>
@@ -19,7 +19,7 @@ export function homeView() {
     </section>
     <div class="home-grid">
       <section class="home-products" id="products" aria-labelledby="products-title">
-        <h2 class="paper-section-title" id="products-title">${t('home.products')}</h2>
+        <h2 class="paper-section-title" id="products-title"><a class="internal-link" href="/ai">${t('home.products')}</a></h2>
         <article class="cloud-card">
           <div class="cloud-picture">
             <img src="/assets/cloud.png" alt="${t('home.cloudAlt')}" width="1536" height="1024" />
@@ -43,12 +43,18 @@ export function homeView() {
       </section>
     </div>
     <div class="home-project-grid">
-    <section class="home-game" aria-labelledby="game-title">
+    <section class="home-game" id="games" aria-labelledby="game-title">
       <h2 class="paper-section-title" id="game-title">${t('home.games')}</h2>
-      <a class="game-card" href="https://x.com/baishishugame" target="_blank" rel="noopener">
+      <div class="home-game-list">
+      <a class="game-card internal-link" href="/games/baishishu">
         <img src="/assets/baishishu-opening.jpg" alt="${t('game.imageAlt')}" width="1200" height="675" loading="lazy" />
-        <div><span class="game-status">${t('game.status')}</span><h3>${t('game.name')}</h3><p>${t('game.short')}</p><span class="game-action">${t('game.open')} <span aria-hidden="true">↗</span></span></div>
+        <div><span class="game-status">${t('games.development')}</span><h3>${t('game.name')}</h3><p>${t('game.short')}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div>
       </a>
+      <a class="game-card internal-link" href="/games/ink-duel">
+        <img src="/assets/ink-duel-concept.png" alt="${t('ink.imageAlt')}" width="1672" height="941" loading="lazy" />
+        <div><span class="game-status">${t('games.development')}</span><h3>${t('ink.name')}</h3><p>${t('ink.short')}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div>
+      </a>
+      </div>
     </section>
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>
