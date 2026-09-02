@@ -39,6 +39,10 @@
   ],
   "rewrites": [
     {
+      "source": "/ai/yunjian/",
+      "destination": "https://yunjian-omega.vercel.app/ai/yunjian"
+    },
+    {
       "source": "/games",
       "destination": "/games/index.html"
     },
