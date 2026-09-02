@@ -1,43 +1,61 @@
-# 光之十一
+# 光之十一｜Shixi Lin
 
-光之十一的个人品牌入口：写作、产品、数字文明、意识实践与正在发生的创造。
+光之十一（Shixi Lin）的个人网站，汇集小说与诗词、AI产品，以及正在制作的独立游戏。
 
-[访问网站](https://shixilin.com)
+**[进入网站 → shixilin.com](https://shixilin.com/)**
 
-## 主要入口
+网站支持中文与英文，可在手机、平板和电脑上浏览。
 
-- **[AI产品](https://shixilin.com/ai)**：ALUX AI智能体情报日报、墨核、百世书与云笺。
-- **独立游戏**：[百世书](https://shixilin.com/games/baishishu)与[墨斗·百兵](https://shixilin.com/games/ink-duel)。
-- **[书籍与写作](https://shixilin.com/books)**：《一念凡生》《代天行》《还没取名儿呢》及延伸创作。
-- **[ALUX](https://www.alux.network/)**：面向 AI 智能体与复杂协作的去中心化并发运行时。
+## AI产品
 
-## 网站
+- **[ALUX AI智能体情报日报](https://github.com/shixi-11/alux-ai-agent-daily)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
+- **[墨核](https://github.com/shixi-11/mohe-pet)**：运行在本机的黑猫AI伙伴，陪伴日常工作。
+- **[云笺](https://shixilin.com/ai/yunjian)**：从一张云的照片和一句当下所想出发，让AI写回一封信。
 
-提供中文与英文界面，可在手机、平板和电脑上浏览。
+[查看AI产品 →](https://shixilin.com/ai)
 
-| 页面 | 路径 |
-| --- | --- |
-| 首页 | `/` |
-| AI产品 | `/ai` |
-| 百世书 | `/games/baishishu` |
-| 墨斗·百兵 | `/games/ink-duel` |
-| 关于我 | `/about` |
-| 支持创作 | `/support` |
-| 云笺 | `/ai/yunjian` |
-| 书籍与写作 | `/books` |
+## 独立游戏
 
-## 本地运行
+- **[百世书](https://shixilin.com/games/baishishu)**：以轮回、记忆与选择为主题的中国历史幻想叙事游戏。正在制作中，可通过[游戏的X账号](https://x.com/baishishugame)关注开发动态。
+- **[墨斗·百兵](https://shixilin.com/games/ink-duel)**：以中国武术与兵器对战为主题的水墨格斗游戏。正在开发Windows桌面版本。
+
+## 书籍与写作
+
+- **[《代天行》](https://www.qidian.com/book/1046989428/)**：小说，可在起点阅读。
+- **[《一念凡生》](https://www.qidian.com/book/1025472585/)**：词集，记录行路心迹与当下情思，可在起点阅读。
+- **《还没取名儿呢》**：现代诗集，正在整理中。
+
+[查看书籍与写作 →](https://shixilin.com/books)
+
+## 关于我与联系
+
+我是光之十一，作家、连续创业者、游戏创作者，也是[ALUX](https://alux.network/)联合创始人。更多个人经历与创作介绍，见[关于我](https://shixilin.com/about)。
+
+合作联系：[info@elevencapital.ltd](mailto:info@elevencapital.ltd) · [十一资本](https://elevencapital.ltd/)
+
+[X](https://x.com/11Shixi) · [Instagram](https://www.instagram.com/shixi_11/) · [TikTok](https://www.tiktok.com/@shixilin)
+
+微信公众号、小红书、微博、视频号：**@光之十一**
+
+如果你喜欢这里的文字、产品或游戏，欢迎[支持创作](https://shixilin.com/support)。
+
+<details>
+<summary>开发与本地运行</summary>
+
+本仓库保存网站源码，使用Vite、JavaScript与CSS。运行需要Node.js 22或更高版本。
+
+安装依赖并启动开发环境：
 
 ```bash
 npm install
 npm run dev
 ```
 
-构建与预览：
+构建与本地预览：
 
 ```bash
 npm run build
 npm run preview
 ```
 
-需要 Node.js 22 或更高版本。网站使用 Vite、JavaScript 与 CSS。
+</details>
