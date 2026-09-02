@@ -72,7 +72,7 @@ function homeView() {
   return `
     <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">SHIXILIN.COM</p>
+        <p class="eyebrow">shixilin.com /</p>
         <h1>${t('hero.title')}</h1>
         <p class="hero-lead">${t('hero.lead')}</p>
         <a class="line-link internal-link" href="/ai">${t('hero.action')} <span aria-hidden="true">→</span></a>
@@ -123,7 +123,7 @@ function homeView() {
 function aiView() {
   return `
     <section class="page-intro reveal">
-      <p class="eyebrow">AI PRODUCTS</p>
+      <p class="eyebrow">shixilin.com / ai</p>
       <h1>${t('ai.title')}</h1>
       <p>${t('ai.intro')}</p>
     </section>
@@ -140,7 +140,7 @@ function aiView() {
 function booksView() {
   return `
     <section class="page-intro books-intro reveal">
-      <p class="eyebrow">BOOKS</p>
+      <p class="eyebrow">shixilin.com / books</p>
       <h1>${t('books.title')}</h1>
       <p>${t('books.intro')}</p>
     </section>
@@ -169,7 +169,7 @@ function yunjianCard(variant) {
         <h3>云笺 <small>Yunjian</small></h3>
         <p>${t('yunjian.description')}</p>
         <span class="card-action">${t('yunjian.enter')} <b aria-hidden="true">→</b></span>
-        <code>/ai/yunjian</code>
+        <code>shixilin.com / ai / yunjian</code>
       </div>
     </a>
   `
