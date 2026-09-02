@@ -6,23 +6,40 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "shixilin.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "shixilin.vercel.app"
+        }
+      ],
       "destination": "https://shixilin.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.shixilin.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.shixilin.com"
+        }
+      ],
       "destination": "https://shixilin.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/works/:path*",
+      "destination": "/ai",
       "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/about", "destination": "/about/index.html" },
-    { "source": "/notes", "destination": "/notes/index.html" },
     {
-      "source": "/works",
-      "destination": "/works/index.html"
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/notes",
+      "destination": "/notes/index.html"
     },
     {
       "source": "/ai",

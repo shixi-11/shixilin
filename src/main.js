@@ -1,3 +1,4 @@
+import { socialProfiles } from './social.js'
 import './styles.css'
 import './home.css'
 import './about.css'
@@ -7,57 +8,17 @@ import { books } from './content.js'
 
 const routes = {
   '/': { titleKey: 'meta.home', descriptionKey: 'meta.homeDescription', view: homeView },
-  '/works': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', view: worksView },
-  '/ai': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', canonicalPath: '/works', view: worksView },
+  '/ai': { titleKey: 'meta.ai', descriptionKey: 'meta.aiDescription', view: aiView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
   '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
   '/notes': { titleKey: 'meta.notes', descriptionKey: 'meta.notesDescription', view: notesView },
 }
 
 const projects = [
-  {
-    slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short',
-    href: 'https://x.com/baishishugame', action: 'game.open',
-  },
-  {
-    slug: 'alux',
-    index: '01',
-    category: 'work.alux.category',
-    title: 'work.alux.title',
-    text: 'work.alux.text',
-    href: 'https://alux.network/',
-    action: 'work.open',
-    featured: true,
-  },
-  {
-    slug: 'mohe',
-    index: '02',
-    category: 'work.mohe.category',
-    title: 'work.mohe.title',
-    text: 'work.mohe.text',
-    href: 'https://github.com/shixi-11/mohe-pet',
-    action: 'work.github',
-    image: '/assets/mohe-idle-v2-cutout.png',
-    imageAlt: 'work.mohe.alt',
-  },
-  {
-    slug: 'daily',
-    index: '03',
-    category: 'work.daily.category',
-    title: 'work.daily.title',
-    text: 'work.daily.text',
-    href: 'https://github.com/shixi-11/alux-ai-agent-daily',
-    action: 'work.github',
-  },
-  {
-    slug: 'yunjian',
-    index: '04',
-    category: 'work.yunjian.category',
-    title: 'work.yunjian.title',
-    text: 'work.yunjian.text',
-    href: '/ai/yunjian',
-    action: 'work.open',
-  },
+  { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: 'https://github.com/shixi-11/alux-ai-agent-daily', action: 'work.github' },
+  { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
+  { slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short', href: 'https://x.com/baishishugame', action: 'game.open' },
+  { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
 ]
 
 const app = document.querySelector('#app')
@@ -96,7 +57,7 @@ function render() {
 }
 
 function shell(content, pathname) {
-  const activePath = pathname === '/ai' ? '/works' : pathname
+  const activePath = pathname
   return `
     <div class="site-shell${pathname === '/' ? ' home-shell' : ''}">
       <header class="site-header">
@@ -106,7 +67,7 @@ function shell(content, pathname) {
         </a>
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
-            ${navLink('/#products', t('home.products'), activePath)}
+            ${navLink('/ai', t('home.products'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/notes', t('home.notes'), activePath)}
@@ -124,16 +85,16 @@ function shell(content, pathname) {
 }
 
 function navLink(href, label, pathname) {
-  const active = pathname === href || (href === '/#products' && ['/', '/works'].includes(pathname))
+  const active = pathname === href
   return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`
 }
 
-function worksView() {
-  return `<section class="quiet-page"><h1>${t('worksPage.title')}</h1><p>${t('worksPage.intro')}</p>
-    <div class="reading-list">${projects.map(project => `<article class="reading-item">
-      <small>${t(project.category)}</small><h2>${t(project.title)}</h2><p>${t(project.text)}</p>
+function aiView() {
+  return `<section class="quiet-page"><h1>${t('aiPage.title')}</h1><p>${t('aiPage.intro')}</p>
+    <ol class="reading-list ai-list">${projects.map((project, index) => `<li class="reading-item">
+      <small class="ai-item-meta"><span class="ai-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${t(project.category)}</small><h2>${t(project.title).replace(/AI智能体|情报日报/g, phrase => `<span class="title-phrase">${phrase}</span>`)}</h2><p>${t(project.text)}</p>
       <a class="text-link" href="${project.href}"${project.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${project.href.startsWith('https:') ? '↗' : '→'}</span></a>
-    </article>`).join('')}</div>
+    </li>`).join('')}</ol>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`
 }
@@ -148,12 +109,6 @@ function booksView() {
 
 function aboutView() {
   const aboutText = key => t(key).replace(/《([^》]+)》/g, '<span class="book-title">《$1》</span>')
-  const profiles = [
-    { name: 'X', handle: '@11Shixi', href: 'https://x.com/11Shixi' },
-    { name: 'GitHub', handle: 'shixi-11', href: 'https://github.com/shixi-11' },
-    { name: 'Instagram', handle: '@shixi_11', href: 'https://www.instagram.com/shixi_11/' },
-    { name: 'TikTok', handle: '@shixilin', href: 'https://www.tiktok.com/@shixilin' },
-  ]
   return `<section class="about-page">
     <header class="about-masthead">
       <div class="about-identity">
@@ -172,7 +127,7 @@ function aboutView() {
       <h2 id="about-creation-title">${t('about.creationsTitle')}</h2>
       <div class="about-creations">
         <article><h3>${t('about.creation.term')}</h3><p>${aboutText('about.creation.text')}</p><a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
-        <article><h3>${t('about.buildTitle')}</h3><p>${t('about.business.text')}</p><p>${aboutText('about.buildText')}</p><a class="about-link internal-link" href="/works">${t('work.all')} <span aria-hidden="true">→</span></a></article>
+        <article><h3>${t('about.buildTitle')}</h3><p>${t('about.business.text')}</p><p>${aboutText('about.buildText')}</p><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a></article>
       </div>
       <a class="about-company" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
         <span><small>${t('about.companyLabel')}</small><strong>${t('about.companyName')}</strong></span>
@@ -188,8 +143,13 @@ function aboutView() {
       </dl>
     </section>
     <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
-      <div><h2 id="about-contact-title">${t('about.contactTitle')}</h2><p class="about-mail-label">${t('about.mailLabel')}</p><a class="about-email" href="mailto:info@elevencapital.ltd">info@elevencapital.ltd</a><p class="about-channels">${t('about.channels')}<strong>${t('brand.name')}</strong></p></div>
-      <div class="about-profiles">${profiles.map(profile => `<a href="${profile.href}" target="_blank" rel="noopener"><span class="about-platform">${profile.name}</span><span class="about-handle">${profile.handle}</span><span class="about-external" aria-hidden="true">↗</span></a>`).join('')}</div>
+      <h2 id="about-contact-title">${t('about.contactTitle')}</h2>
+      <a class="about-mail-card" href="mailto:info@elevencapital.ltd">
+        <span><small>${t('about.mailLabel')}</small><span class="about-mail-address">info@elevencapital.ltd</span></span>
+        <span class="about-mail-action">${t('about.writeEmail')} <span aria-hidden="true">↗</span></span>
+      </a>
+      <div class="about-social-directory">${socialProfiles.map(profile => `<a href="${profile.href}" target="_blank" rel="noopener"><span class="about-social-icon">${profile.icon}</span><span class="about-social-copy"><span class="about-platform">${profile.name}</span><span class="about-handle">${profile.handle}</span></span><span class="about-external" aria-hidden="true">↗</span></a>`).join('')}</div>
+      <div class="about-public-profile"><strong>@${t('brand.name')}</strong><p>${t('about.channels')}</p></div>
     </section>
   </section>`
 }

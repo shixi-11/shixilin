@@ -6,7 +6,7 @@
 
 ## 主要入口
 
-- **[作品与项目](https://shixilin.com/works)**：ALUX、AI 智能体情报日报、墨核与云笺。
+- **[AI产品](https://shixilin.com/ai)**：ALUX AI智能体情报日报、墨核、百世书与云笺。
 - **[书籍与写作](https://shixilin.com/books)**：《一念凡生》《代天行》《还没取名儿呢》及延伸创作。
 - **[ALUX](https://www.alux.network/)**：面向 AI 智能体与复杂协作的去中心化并发运行时。
 
@@ -17,8 +17,7 @@
 | 页面 | 路径 |
 | --- | --- |
 | 首页 | `/` |
-| 作品与项目 | `/works` |
-| 兼容入口 | `/ai` |
+| AI产品 | `/ai` |
 | 云笺 | `/ai/yunjian` |
 | 书籍与写作 | `/books` |
 
