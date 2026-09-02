@@ -20,4 +20,6 @@ npm run dev
 
 ## 接入状态（2026-09-03）
 
-主站已部署。GoDaddy DNS 仍待切换；旧 `cloud-oracle` 产品部署已删除，新 `yunjian` 部署与服务配置待恢复。当前 `vercel.json` 仍指向旧产品地址，恢复新部署后必须更新并验证，不将该路径视为已经可用。
+主站与独立的 `yunjian` 项目均已部署到原 ALUX Pro 团队。`/ai/yunjian` 转发至新项目的稳定生产地址 `https://yunjian-omega.vercel.app/ai/yunjian`，不再依赖已删除的旧部署。
+
+GoDaddy DNS 仍待切换。云笺页面与 API 已部署，但新项目尚未接回原 Supabase 配置；上传、账号与云笺生成仍待恢复，页面可访问不代表完整产品流程已验收。

@@ -6,11 +6,11 @@
   "rewrites": [
     {
       "source": "/ai/yunjian",
-      "destination": "https://cloud-oracle-alux.vercel.app/ai/yunjian"
+      "destination": "https://yunjian-omega.vercel.app/ai/yunjian"
     },
     {
       "source": "/ai/yunjian/:path*",
-      "destination": "https://cloud-oracle-alux.vercel.app/ai/yunjian/:path*"
+      "destination": "https://yunjian-omega.vercel.app/ai/yunjian/:path*"
     },
     {
       "source": "/:path*",
