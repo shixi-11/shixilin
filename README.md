@@ -1,13 +1,14 @@
 # 光之十一
 
-独立产品与文字作品。
+光之十一的个人品牌入口：写作、产品、数字文明、意识实践与正在发生的创造。
 
 [访问网站](https://shixilin.com)
 
-## 作品
+## 主要入口
 
-- **[云笺](https://shixilin.com/ai/yunjian)**：以云的照片和心中所想为灵感的AI文字创作工具。
-- **[书籍](https://shixilin.com/books)**：书稿、出版信息与延伸阅读。
+- **[作品与项目](https://shixilin.com/works)**：ALUX、AI 智能体情报日报、墨核与云笺。
+- **[书籍与写作](https://shixilin.com/books)**：《一念凡生》《代天行》《还没取名儿呢》及延伸创作。
+- **[ALUX](https://www.alux.network/)**：面向 AI 智能体与复杂协作的去中心化并发运行时。
 
 ## 网站
 
@@ -16,9 +17,10 @@
 | 页面 | 路径 |
 | --- | --- |
 | 首页 | `/` |
-| AI产品 | `/ai` |
+| 作品与项目 | `/works` |
+| 兼容入口 | `/ai` |
 | 云笺 | `/ai/yunjian` |
-| 书籍 | `/books` |
+| 书籍与写作 | `/books` |
 
 ## 本地运行
 
@@ -35,5 +37,3 @@ npm run preview
 ```
 
 需要 Node.js 22 或更高版本。网站使用 Vite、JavaScript 与 CSS。
-
-线上 `/ai/yunjian` 路径通过 `vercel.json` 转发至云笺服务；本地开发仅包含首页、AI产品页与书籍页。
