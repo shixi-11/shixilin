@@ -2,12 +2,12 @@
 
 独立产品与文字作品。
 
-[访问网站](https://shixilin.vercel.app)
+[访问网站](https://shixilin.com)
 
 ## 作品
 
-- **[云笺](https://shixilin.vercel.app/ai/yunjian)**：以云的照片和心中所想为灵感的AI文字创作工具。
-- **[书籍](https://shixilin.vercel.app/books)**：书稿、出版信息与延伸阅读。
+- **[云笺](https://shixilin.com/ai/yunjian)**：以云的照片和心中所想为灵感的AI文字创作工具。
+- **[书籍](https://shixilin.com/books)**：书稿、出版信息与延伸阅读。
 
 ## 网站
 
@@ -36,4 +36,4 @@ npm run preview
 
 需要 Node.js 22 或更高版本。网站使用 Vite、JavaScript 与 CSS。
 
-云笺的源码位于独立的 [yunjian 仓库](https://github.com/shixi-11/yunjian)。线上 `/ai/yunjian` 路径通过 `vercel.json` 转发至云笺；本地开发仅包含首页、AI产品页与书籍页。
+线上 `/ai/yunjian` 路径通过 `vercel.json` 转发至云笺服务；本地开发仅包含首页、AI产品页与书籍页。

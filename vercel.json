@@ -3,6 +3,20 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "shixilin.vercel.app" }],
+      "destination": "https://shixilin.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.shixilin.com" }],
+      "destination": "https://shixilin.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/ai/yunjian",

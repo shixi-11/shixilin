@@ -33,6 +33,9 @@ function render() {
   document.querySelector('meta[name="description"]').content = t(route.descriptionKey)
   document.querySelector('meta[property="og:title"]').content = t(route.titleKey)
   document.querySelector('meta[property="og:description"]').content = t(route.descriptionKey)
+  const canonicalUrl = new URL(routes[pathname] ? pathname : '/', 'https://shixilin.com').href
+  document.querySelector('link[rel="canonical"]').href = canonicalUrl
+  document.querySelector('meta[property="og:url"]').content = canonicalUrl
   document.documentElement.lang = getLocale() === 'en' ? 'en' : 'zh-CN'
   app.innerHTML = shell(route.view(), pathname)
   bindNavigation()
