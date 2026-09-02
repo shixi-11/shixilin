@@ -19,6 +19,14 @@
   ],
   "rewrites": [
     {
+      "source": "/ai",
+      "destination": "/ai/index.html"
+    },
+    {
+      "source": "/books",
+      "destination": "/books/index.html"
+    },
+    {
       "source": "/ai/yunjian",
       "destination": "https://yunjian-omega.vercel.app/ai/yunjian"
     },
