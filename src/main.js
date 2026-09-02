@@ -166,7 +166,7 @@ function yunjianCard(variant) {
       </div>
       <div class="card-copy">
         <p class="card-category">${t('yunjian.category')}</p>
-        <h3>云笺 <small>Yunjian</small></h3>
+        <h3>${t('yunjian.name')} <small>${t('yunjian.otherName')}</small></h3>
         <p>${t('yunjian.description')}</p>
         <span class="card-action">${t('yunjian.enter')} <b aria-hidden="true">→</b></span>
         <code>shixilin.com / ai / yunjian</code>
