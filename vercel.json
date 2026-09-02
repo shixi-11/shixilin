@@ -18,6 +18,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/notes", "destination": "/notes/index.html" },
     {
       "source": "/works",
       "destination": "/works/index.html"

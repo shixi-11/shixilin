@@ -4,7 +4,7 @@ import { messages } from '../src/messages.js'
 const template = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8')
 const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
 
-for (const page of ['works', 'ai', 'books']) {
+for (const page of ['works', 'ai', 'books', 'about', 'notes']) {
   const title = escape(messages.zh[`meta.${page}`])
   const description = escape(messages.zh[`meta.${page}Description`])
   const canonicalPage = page === 'ai' ? 'works' : page

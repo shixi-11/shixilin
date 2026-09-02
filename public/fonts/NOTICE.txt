@@ -1,0 +1,6 @@
+Noto Serif SC variable font
+Copyright 2017–2023 Adobe (http://www.adobe.com/).
+Licensed under the SIL Open Font License 1.1; see OFL.txt.
+
+This website includes a WOFF2 character subset of the installed
+NotoSerifSC-VF.ttf. The type design and variable weight axis are unchanged.

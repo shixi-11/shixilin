@@ -1,39 +1,36 @@
 import './styles.css'
+import './home.css'
+import { homeView, paperFooter } from './home.js'
 import { getLocale, t, toggleLocale } from './i18n.js'
+import { books } from './content.js'
 
 const routes = {
   '/': { titleKey: 'meta.home', descriptionKey: 'meta.homeDescription', view: homeView },
   '/works': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', view: worksView },
   '/ai': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', canonicalPath: '/works', view: worksView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
+  '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
+  '/notes': { titleKey: 'meta.notes', descriptionKey: 'meta.notesDescription', view: notesView },
 }
 
 const projects = [
   {
-    slug: 'baishishu',
-    index: '01',
-    category: 'work.baishishu.category',
-    title: 'work.baishishu.title',
-    text: 'work.baishishu.text',
-    href: 'https://x.com/baishishugame',
-    action: 'work.baishishu.action',
-    image: '/assets/baishishu-opening.jpg',
-    imageAlt: 'work.baishishu.alt',
-    flagship: true,
+    slug: 'baishishu', category: 'home.games', title: 'game.name', text: 'game.short',
+    href: 'https://x.com/baishishugame', action: 'game.open',
   },
   {
     slug: 'alux',
-    index: '02',
+    index: '01',
     category: 'work.alux.category',
     title: 'work.alux.title',
     text: 'work.alux.text',
-    href: 'https://www.alux.network/',
+    href: 'https://alux.network/',
     action: 'work.open',
-    flagship: true,
+    featured: true,
   },
   {
     slug: 'mohe',
-    index: '03',
+    index: '02',
     category: 'work.mohe.category',
     title: 'work.mohe.title',
     text: 'work.mohe.text',
@@ -44,7 +41,7 @@ const projects = [
   },
   {
     slug: 'daily',
-    index: '04',
+    index: '03',
     category: 'work.daily.category',
     title: 'work.daily.title',
     text: 'work.daily.text',
@@ -53,18 +50,13 @@ const projects = [
   },
   {
     slug: 'yunjian',
-    index: '05',
+    index: '04',
     category: 'work.yunjian.category',
     title: 'work.yunjian.title',
     text: 'work.yunjian.text',
-    action: 'work.private',
+    href: '/ai/yunjian',
+    action: 'work.open',
   },
-]
-
-const books = [
-  { index: '01', category: 'book.yinian.category', title: 'book.yinian.title', text: 'book.yinian.text' },
-  { index: '02', category: 'book.daitian.category', title: 'book.daitian.title', text: 'book.daitian.text' },
-  { index: '03', category: 'book.poetry.category', title: 'book.poetry.title', text: 'book.poetry.text' },
 ]
 
 const app = document.querySelector('#app')
@@ -93,7 +85,6 @@ function render() {
 
   app.innerHTML = shell(route.view(), pathname)
   bindNavigation()
-  bindReveals()
 
   if (window.location.hash) {
     const anchorId = decodeURIComponent(window.location.hash.slice(1))
@@ -106,7 +97,7 @@ function render() {
 function shell(content, pathname) {
   const activePath = pathname === '/ai' ? '/works' : pathname
   return `
-    <div class="site-shell">
+    <div class="site-shell${pathname === '/' ? ' home-shell' : ''}">
       <header class="site-header">
         <a class="brand internal-link" href="/" aria-label="${t('brand.homeLabel')}">
           <span class="brand-glyph" aria-hidden="true">十一</span>
@@ -114,10 +105,10 @@ function shell(content, pathname) {
         </a>
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
-            ${navLink('/works', t('nav.work'), activePath)}
-            ${navLink('/books', t('nav.writing'), activePath)}
-            <a class="internal-link" href="/#about">${t('nav.about')}</a>
-            <a class="internal-link" href="/#contact">${t('nav.contact')}</a>
+            ${navLink('/#products', t('home.products'), activePath)}
+            ${navLink('/books', t('home.books'), activePath)}
+            ${navLink('/about', t('nav.about'), activePath)}
+            ${navLink('/notes', t('home.notes'), activePath)}
           </nav>
           <button class="language-toggle" type="button" aria-label="${t('language.label')}">${t('language.short')}</button>
           <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
@@ -126,235 +117,49 @@ function shell(content, pathname) {
         </div>
       </header>
       <main>${content}</main>
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <span class="brand-glyph" aria-hidden="true">十一</span>
-          <b>${t('brand.name')}</b>
-        </div>
-        <div class="footer-copy">
-          <p>${t('footer.tagline')}</p>
-          <p>${t('footer.follow')}</p>
-        </div>
-        <p class="copyright">© ${new Date().getFullYear()} SHIXI LIN</p>
-      </footer>
+      ${paperFooter()}
     </div>
   `
 }
 
 function navLink(href, label, pathname) {
-  const active = pathname === href
+  const active = pathname === href || (href === '/#products' && ['/', '/works'].includes(pathname))
   return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`
 }
 
-function homeView() {
-  return `
-    <section class="hero" id="top">
-      <div class="hero-kicker reveal">
-        <span>${t('hero.index')}</span>
-        <span>${t('hero.now')}</span>
-      </div>
-      <div class="hero-composition">
-        <div class="hero-name-lockup reveal">
-          <span>${t('hero.roman')}</span>
-          <h1>${t('hero.name')}</h1>
-        </div>
-        <div class="hero-copy reveal reveal-late">
-          <p class="hero-title">${t('hero.title')}</p>
-          <p class="hero-lead">${t('hero.lead')}</p>
-          <div class="hero-actions">
-            <a class="action action-solid internal-link" href="/#work">${t('hero.primary')}<span aria-hidden="true">↓</span></a>
-            <a class="action action-line internal-link" href="/#about">${t('hero.secondary')}<span aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-now reveal reveal-late" aria-label="${t('hero.nowLabel')}">
-        <span>${t('hero.nowLabel')}</span>
-        <a href="https://x.com/baishishugame" target="_blank" rel="noopener"><span class="now-thumb"><img src="/assets/baishishu-opening.jpg" alt="" width="96" height="64" /></span><b>${t('hero.nowBaishishu')}</b><i>↗</i></a>
-        <a href="https://www.alux.network/" target="_blank" rel="noopener"><span class="now-thumb now-monogram" aria-hidden="true">A</span><b>${t('hero.nowAlux')}</b><i>↗</i></a>
-      </div>
-
-      <div class="hero-facts reveal reveal-late">
-        ${fact('hero.fact1.value', 'hero.fact1.label')}
-        ${fact('hero.fact2.value', 'hero.fact2.label')}
-        ${fact('hero.fact3.value', 'hero.fact3.label')}
-      </div>
-    </section>
-
-    ${pathSection()}
-    ${workSection(true)}
-    ${writingSection(true)}
-    ${aboutSection()}
-    ${contactSection()}
-  `
-}
-
-function pathSection() {
-  return `
-    <section class="path-section" id="about">
-      <div class="section-marker reveal"><span>01</span><p>${t('path.label')}</p></div>
-      <div class="path-heading reveal">
-        <h2>${t('path.title')}</h2>
-      </div>
-      <div class="path-copy reveal">
-        <p>${t('path.p1')}</p>
-        <p>${t('path.p2')}</p>
-      </div>
-      <blockquote class="path-quote reveal">${t('path.quote')}</blockquote>
-    </section>
-  `
-}
-
-function workSection(preview = false) {
-  const flagship = projects.filter((project) => project.flagship)
-  const supporting = projects.filter((project) => !project.flagship)
-  return `
-    <section class="work-section" id="work">
-      <div class="section-intro reveal">
-        <div class="section-marker"><span>02</span><p>${t('work.label')}</p></div>
-        <h2>${t('work.title')}</h2>
-        <div class="section-summary">
-          <p>${t('work.intro')}</p>
-          ${preview ? `<a class="text-link internal-link" href="/works">${t('work.all')}<span aria-hidden="true">→</span></a>` : ''}
-        </div>
-      </div>
-      <div class="flagship-projects">
-        ${flagship.map(flagshipProject).join('')}
-      </div>
-      <div class="support-heading reveal">
-        <p>${t('work.supporting')}</p>
-        <span>${t('work.supportingNote')}</span>
-      </div>
-      <div class="support-projects">
-        ${supporting.map(projectItem).join('')}
-      </div>
-    </section>
-  `
-}
-
-function flagshipProject(project) {
-  const body = `
-    <div class="flagship-copy">
-      <div class="flagship-meta"><span>${project.index}</span><p>${t(project.category)}</p></div>
-      <h3>${t(project.title)}</h3>
-      <p class="project-description">${t(project.text)}</p>
-      <span class="project-action">${t(project.action)}<b aria-hidden="true">↗</b></span>
-    </div>
-    ${project.image ? `<div class="flagship-media"><img src="${project.image}" alt="${t(project.imageAlt)}" width="1200" height="675" loading="lazy" /></div>` : ''}
-    ${project.slug === 'alux' ? '<div class="alux-field" aria-hidden="true"><i></i><i></i><i></i><b>ALUX</b></div>' : ''}
-  `
-
-  return `<a class="flagship-project ${project.slug} reveal" href="${project.href}" target="_blank" rel="noopener">${body}</a>`
-}
-
-function projectItem(project) {
-  const content = `
-    <span class="project-index">${project.index}</span>
-    <div class="project-copy">
-      <p class="project-category">${t(project.category)}</p>
-      <h3>${t(project.title)}</h3>
-      <p class="project-description">${t(project.text)}</p>
-      <span class="project-action">${t(project.action)}<b aria-hidden="true">${project.href ? '↗' : '·'}</b></span>
-    </div>
-    ${project.image ? `<div class="project-visual"><img src="${project.image}" alt="${t(project.imageAlt)}" width="700" height="700" loading="lazy" /></div>` : ''}
-  `
-
-  if (!project.href) return `<article class="project-item ${project.slug} reveal">${content}</article>`
-  return `<a class="project-item ${project.slug} reveal" href="${project.href}" target="_blank" rel="noopener">${content}</a>`
-}
-
-function writingSection(preview = false) {
-  return `
-    <section class="writing-section" id="writing">
-      <div class="writing-intro reveal">
-        <div class="section-marker"><span>03</span><p>${t('writing.label')}</p></div>
-        <h2>${t('writing.title')}</h2>
-        <p>${t('writing.intro')}</p>
-        ${preview ? `<a class="text-link internal-link" href="/books">${t('writing.all')}<span aria-hidden="true">→</span></a>` : `<span class="status-line">${t('books.status')}</span>`}
-      </div>
-      <div class="book-ledger">
-        ${books.map(bookItem).join('')}
-      </div>
-    </section>
-  `
-}
-
-function bookItem(book) {
-  return `
-    <article class="book-item reveal">
-      <span class="book-index">${book.index}</span>
-      <div class="book-title"><p>${t(book.category)}</p><h3>${t(book.title)}</h3></div>
-      <p class="book-description">${t(book.text)}</p>
-    </article>
-  `
-}
-
-function aboutSection() {
-  const items = [
-    ['about.travel.term', 'about.travel.text'],
-    ['about.practice.term', 'about.practice.text'],
-    ['about.tradition.term', 'about.tradition.text'],
-    ['about.creation.term', 'about.creation.text'],
-    ['about.business.term', 'about.business.text'],
-  ]
-  return `
-    <section class="about-section">
-      <div class="about-heading reveal">
-        <div class="section-marker"><span>04</span><p>${t('about.label')}</p></div>
-        <h2>${t('about.title')}</h2>
-        <p>${t('about.intro')}</p>
-      </div>
-      <dl class="evidence-list">
-        ${items.map(([term, text], index) => `<div class="reveal"><span>0${index + 1}</span><dt>${t(term)}</dt><dd>${t(text)}</dd></div>`).join('')}
-      </dl>
-    </section>
-  `
-}
-
-function contactSection() {
-  return `
-    <section class="contact-section" id="contact">
-      <div class="section-marker reveal"><span>05</span><p>${t('contact.label')}</p></div>
-      <h2 class="reveal">${t('contact.title')}</h2>
-      <div class="contact-bottom reveal">
-        <p>${t('contact.text')}</p>
-        <div class="contact-actions">
-          <a class="action action-light" href="https://github.com/shixi-11" target="_blank" rel="noopener">${t('contact.github')}<span aria-hidden="true">↗</span></a>
-          <a class="action action-ghost" href="https://www.alux.network/" target="_blank" rel="noopener">${t('contact.alux')}<span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-  `
-}
-
 function worksView() {
-  return `
-    ${pageHero('02', 'work.label', 'worksPage.title', 'worksPage.intro')}
-    ${workSection(false)}
-    ${contactSection()}
-  `
+  return `<section class="quiet-page"><h1>${t('worksPage.title')}</h1><p>${t('worksPage.intro')}</p>
+    <div class="reading-list">${projects.map(project => `<article class="reading-item">
+      <small>${t(project.category)}</small><h2>${t(project.title)}</h2><p>${t(project.text)}</p>
+      <a class="text-link" href="${project.href}"${project.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${project.href.startsWith('https:') ? '↗' : '→'}</span></a>
+    </article>`).join('')}</div>
+    <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
+  </section>`
 }
 
 function booksView() {
-  return `
-    ${pageHero('03', 'writing.label', 'booksPage.title', 'booksPage.intro')}
-    ${writingSection(false)}
-    <a class="back-home internal-link" href="/">← ${t('books.back')}</a>
-  `
+  return `<section class="quiet-page"><h1>${t('home.books')}</h1><p>${t('booksPage.intro')}</p>
+    <div class="reading-list">${books.map(book => `<article class="reading-item"><small>${t(book.category)}</small><h2>${t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')}</h2><p>${t(book.text)}</p>${book.href ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`).join('')}</div>
+    <p class="book-status">${t('books.status')}</p>
+    <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
+  </section>`
 }
 
-function pageHero(index, labelKey, titleKey, introKey) {
-  return `
-    <section class="page-hero">
-      <div class="section-marker reveal"><span>${index}</span><p>${t(labelKey)}</p></div>
-      <h1 class="reveal">${t(titleKey)}</h1>
-      <p class="reveal reveal-late">${t(introKey)}</p>
-    </section>
-  `
+function aboutView() {
+  return `<section class="quiet-page">
+    <h1>${t('nav.about')}</h1>
+    <p>${t('home.aboutIntro')}</p>
+    <p>${t('home.aboutWriting')}</p>
+    <dl class="about-details">${['travel', 'practice', 'tradition', 'creation', 'business'].map(key => `<div><dt>${t(`about.${key}.term`)}</dt><dd>${t(`about.${key}.text`)}</dd></div>`).join('')}</dl>
+    <a class="text-link internal-link" href="/works">${t('work.all')} <span aria-hidden="true">→</span></a>
+    <div class="quiet-contact" id="contact"><h2>${t('nav.contact')}</h2><p>${t('footer.follow')}</p><p><a href="https://x.com/11Shixi" target="_blank" rel="noopener">X / Twitter · @11Shixi ↗</a></p><p><a href="https://www.instagram.com/shixi_11/" target="_blank" rel="noopener">Instagram · @shixi_11 ↗</a></p><p><a href="https://www.tiktok.com/@shixilin" target="_blank" rel="noopener">TikTok · @shixilin ↗</a></p>
+      <a class="text-link" href="https://github.com/shixi-11" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>`
 }
 
-function fact(valueKey, labelKey) {
-  return `<div><strong>${t(valueKey)}</strong><span>${t(labelKey)}</span></div>`
+function notesView() {
+  return `<section class="quiet-page"><h1>${t('home.notes')}</h1><span class="gold-rule" aria-hidden="true"></span><p class="notes-empty">${t('home.notesEmpty')}</p><a class="text-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></section>`
 }
 
 function bindNavigation() {
@@ -382,24 +187,6 @@ function bindNavigation() {
       render()
     })
   })
-}
-
-function bindReveals() {
-  const elements = [...document.querySelectorAll('.reveal')]
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-    elements.forEach((element) => element.classList.add('is-visible'))
-    return
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return
-      entry.target.classList.add('is-visible')
-      observer.unobserve(entry.target)
-    })
-  }, { threshold: 0.12 })
-
-  elements.forEach((element) => observer.observe(element))
 }
 
 window.addEventListener('popstate', render)

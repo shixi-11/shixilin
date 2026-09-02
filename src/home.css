@@ -1,0 +1,253 @@
+/* The paper, spacing and composition follow the supplied desktop/mobile reference. */
+:root { --canvas: #f8f7f3; --ink: #242523; --muted: #707571; --line: rgba(62, 60, 51, .15); }
+body { min-width: 0; }
+body::before { display: none; }
+.site-shell { position: relative; width: 100%; border: 0; background: #f8f7f3; }
+.site-shell::after {
+  content: ''; position: absolute; inset: 0; z-index: 70; pointer-events: none;
+  background: url('/assets/paper-grain.svg') repeat; opacity: .37; mix-blend-mode: multiply;
+}
+.site-header { position: relative; height: 80px; min-height: 80px; padding-inline: 3.8%; background: transparent; backdrop-filter: none; border-bottom-color: rgba(62, 60, 51, .09); }
+.brand { color: #171c1a; }
+.brand-glyph { border-color: currentColor; }
+.brand-lockup small { color: #6b7873; }
+.header-tools { gap: 28px; }
+.site-nav { gap: 48px; }
+.site-nav a { font-family: 'Noto Serif SC', 'Songti SC', serif; color: var(--ink); font-size: 15px; letter-spacing: .04em; }
+.site-nav a::after { bottom: 0; background: #b49454; }
+.language-toggle { min-width: 32px; min-height: 44px; padding: 0 3px; border: 0; font-size: 12px; color: #606761; }
+.language-toggle:hover { background: transparent; color: #947638; }
+.paper-hero, .home-grid, .paper-footer { font-family: 'Noto Serif SC', 'Songti SC', serif; }
+.paper-hero { position: relative; height: 404px; isolation: isolate; }
+.landscape-art { position: absolute; z-index: -1; top: 0; right: 0; width: 77%; height: 404px; object-fit: cover; object-position: right center; mix-blend-mode: multiply; mask-image: linear-gradient(to right, transparent, #000 16%), linear-gradient(to bottom, #000 80%, transparent 100%); mask-composite: intersect; }
+.paper-hero-copy { position: relative; width: 84%; max-width: 1320px; margin: 0 auto; padding-top: 80px; }
+.paper-name { display: flex; align-items: baseline; gap: 15px; width: max-content; max-width: 100%; }
+.paper-name h1 { margin: 0; font-size: 66px; line-height: 1.5; font-weight: 500; letter-spacing: .09em; white-space: nowrap; }
+.cloud-ornament { flex: 0 0 auto; width: 51px; height: 30px; stroke: #b79551; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.paper-subtitle { margin: 3px 0 25px; font-size: 27px; line-height: 1.7; letter-spacing: .12em; }
+.gold-rule { display: block; width: 33px; height: 1px; background: #b39451; }
+.paper-intro { display: grid; gap: 5px; margin: 23px 0 0; color: #555752; font-size: 16px; line-height: 1.8; letter-spacing: .08em; }
+.paper-intro span { display: block; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1.915fr) minmax(0, 1fr); gap: 6.5%; width: 84%; max-width: 1320px; margin: 0 auto; padding: 2px 0 59px; }
+.home-grid section { min-width: 0; }
+.paper-section-title { position: relative; width: fit-content; margin: 0 0 22px; font-size: 29px; font-weight: 500; line-height: 1.4; letter-spacing: .07em; }
+.paper-section-title::after { position: absolute; bottom: -9px; left: 0; content: ''; width: 42px; height: 1px; background: linear-gradient(to right, #b39451, #b3945120); }
+.cloud-card { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 36px; height: 282px; padding: 16px; border: 1px solid rgba(95, 86, 67, .2); border-radius: 3px; background: rgba(255, 255, 255, .2); box-shadow: 0 2px 7px rgba(58, 49, 25, .025); }
+.cloud-picture { position: relative; min-width: 0; height: 248px; overflow: hidden; }
+.cloud-picture img { width: 100%; height: 100%; object-fit: cover; }
+.cloud-poem { position: absolute; top: 25px; left: 25px; display: flex; flex-direction: row-reverse; gap: 7px; color: #294b57; font-size: 16px; font-weight: 400; letter-spacing: .14em; }
+.cloud-poem > span { writing-mode: vertical-rl; text-orientation: upright; }
+.cloud-poem i { position: absolute; left: 0; top: 153px; width: 15px; padding: 2px 0; border: 1px solid #af8f51; border-radius: 2px; color: #af8f51; font-size: 9px; line-height: 1; font-style: normal; writing-mode: vertical-rl; }
+.cloud-card-copy { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 14px 0 0; }
+.cloud-card-copy h3 { margin: 0 0 13px; font-size: 37px; font-weight: 500; letter-spacing: .06em; line-height: 1.4; }
+.cloud-card-copy .gold-rule { width: 25px; }
+.cloud-card-copy > p { margin: 23px 0 0; font-size: 15px; line-height: 1.8; color: #555752; text-wrap: pretty; }
+.paper-button { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: min(184px, 100%); min-height: 43px; margin-top: auto; padding: 9px 23px 9px 31px; border: 1px solid #454743; font-size: 15px; letter-spacing: .09em; line-height: 1.4; transition: background 180ms, border-color 180ms; }
+.paper-button svg { width: 21px; height: 21px; flex: 0 0 auto; stroke: currentColor; stroke-width: 1.2; }
+.paper-button:hover { background: #eee9df; border-color: #a88b50; }
+.route-caption { display: block; margin-top: 10px; font-family: Georgia, 'Times New Roman', serif; font-size: 12px; letter-spacing: .06em; line-height: 1.5; color: #686c64; }
+.paper-book-card { position: relative; display: grid; place-items: center; height: 282px; border: 1px solid rgba(95, 86, 67, .12); border-radius: 3px; overflow: hidden; background: #f3f1eb; transition: border-color 180ms; }
+.paper-book-card:hover { border-color: #b39451; }
+.paper-book-card img { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; opacity: .58; mask-image: linear-gradient(to bottom, transparent, #000 44%); }
+.book-card-caption { position: relative; z-index: 1; display: grid; justify-items: center; gap: 19px; margin-top: -34px; }
+.book-card-caption h3 { margin: 0; font-size: 23px; font-weight: 400; letter-spacing: .15em; }
+.book-card-caption .gold-rule { width: 22px; }
+.home-book-links { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 13px; width: 100%; padding: 12px 16px 46px; }
+.book-reading-label { font-size: 12px; color: #6c6c63; letter-spacing: .06em; }
+.home-book-links > a { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 35px; font-size: 22px; }
+.home-book-links > a:hover { color: #8c713d; }
+.home-book-links > a > span { font-family: 'Source Sans 3', sans-serif; font-size: 15px; }
+.home-book-links > .book-shelf-link { margin-top: 2px; min-height: 30px; font-size: 12px; color: #60635d; }
+.paper-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; min-height: 134px; padding: 25px max(8%, calc((100% - 1320px) / 2)); border-top: 1px solid rgba(62, 60, 51, .08); }
+.paper-footer-name { display: inline-flex; align-items: baseline; gap: 6px; width: max-content; font-size: 27px; line-height: 1.6; letter-spacing: .05em; }
+.paper-footer-name .cloud-ornament { width: 34px; height: 21px; }
+.paper-footer > p { margin: 0; font-size: 14px; letter-spacing: .09em; color: #62635d; }
+.paper-footer > .social-notes { display: block; grid-column: 1 / -1; justify-self: end; max-width: none; margin: -10px 0 0; text-align: right; color: #62635d; font-family: 'Source Sans 3', 'Microsoft YaHei', sans-serif; font-size: 12px; letter-spacing: .04em; line-height: 1.8; }
+.paper-socials { display: flex; justify-content: flex-end; align-items: center; gap: 20px; }
+.paper-socials a { display: grid; place-items: center; width: 32px; height: 44px; }
+.paper-socials a:hover { color: #947638; }
+.paper-socials svg { width: 23px; height: 23px; stroke: currentColor; stroke-width: 1.2; }
+.paper-socials > span { width: 1px; height: 19px; background: rgba(62, 60, 51, .3); }
+html[lang='en'] .paper-name h1 { letter-spacing: .015em; }
+html[lang='en'] .paper-subtitle { font-size: 22px; letter-spacing: .015em; }
+html[lang='en'] .paper-intro { max-width: 450px; font-size: 15px; letter-spacing: 0; }
+html[lang='en'] .cloud-card-copy h3 { font-size: 33px; letter-spacing: 0; }
+html[lang='en'] .cloud-card-copy > p { font-size: 14px; line-height: 1.65; }
+html[lang='en'] .cloud-poem { flex-direction: column; gap: 3px; font-size: 14px; letter-spacing: 0; }
+html[lang='en'] .cloud-poem > span { writing-mode: horizontal-tb; }
+html[lang='en'] .paper-button { padding-inline: 13px; letter-spacing: 0; font-size: 14px; }
+html[lang='en'] .book-card-caption h3 { font-size: 21px; letter-spacing: .015em; }
+html[lang='en'] .paper-footer > p { letter-spacing: 0; }
+.quiet-page { width: 84%; max-width: 920px; min-height: 580px; margin: 0 auto; padding: 90px 0; font-family: 'Noto Serif SC', 'Songti SC', serif; }
+.quiet-page h1 { font-size: 44px; font-weight: 500; }
+.quiet-page p { max-width: 700px; font-size: 17px; line-height: 2; color: #555752; }
+.quiet-page .text-link { margin-top: 32px; }
+.home-project-grid { display: grid; grid-template-columns: minmax(0, 1.915fr) minmax(0, 1fr); gap: 6.5%; width: 84%; max-width: 1320px; margin: 0 auto; padding-bottom: 59px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
+.home-game, .home-alux { min-width: 0; }
+.game-card { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 26px; min-height: 246px; padding: 16px; border: 1px solid rgba(95, 86, 67, .18); border-radius: 3px; background: rgba(255,255,255,.2); transition: border-color 180ms; }
+.game-card > img { width: 100%; height: auto; }
+.game-card:hover { border-color: #b39451; }
+.game-status { display: block; color: #6c6c63; font-size: 12px; letter-spacing: .08em; }
+.game-card h3 { margin: 6px 0 0; font-size: 30px; font-weight: 500; letter-spacing: .1em; }
+.game-card p { margin: 13px 0 0; color: #555752; font-size: 15px; line-height: 1.9; text-wrap: balance; }
+.game-scene { width: 100%; height: auto; margin: 35px 0; }
+.game-action { display: inline-flex; align-items: center; gap: 25px; font-size: 14px; white-space: nowrap; }
+.game-card .game-action { margin-top: 20px; }
+.alux-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-height: 246px; padding: 25px 29px; border: 1px solid rgba(95,86,67,.18); border-radius: 3px; background: rgba(255,255,255,.2); transition: border-color 180ms; }
+.alux-card:hover { border-color: #b39451; }
+.alux-card h3 { margin: 0; font-size: 39px; font-weight: 500; line-height: 1.3; letter-spacing: .045em; }
+.alux-card p { margin: 0; color: #555752; font-size: 14px; line-height: 1.9; text-wrap: balance; }
+.alux-card .game-action { margin-top: auto; }
+.quiet-contact { margin-top: 65px; padding-top: 35px; border-top: 1px solid var(--line); }
+.quiet-contact h2 { font-size: 25px; font-weight: 500; }
+.notes-empty { margin-top: 35px; }
+.reading-list { margin: 55px 0 20px; padding: 0; list-style: none; }
+.reading-item { padding: 30px 0; border-top: 1px solid var(--line); }
+.reading-item small { font-size: 12px; color: #766747; letter-spacing: .1em; }
+.reading-item h2 { margin: 10px 0 14px; font-size: 28px; font-weight: 500; line-height: 1.5; }
+.reading-item p { margin-bottom: 10px; font-size: 16px; }
+.book-original { display: block; }
+.book-translation { display: block; margin-top: 9px; max-width: 590px; color: #555752; font-size: .8em; font-weight: 400; }
+.quiet-page .text-link { display: inline-flex; align-items: center; gap: 28px; min-height: 44px; margin-top: 8px; border-bottom: 1px solid #b39451; font-size: 14px; }
+.about-details { margin: 45px 0; }
+.about-details > div { display: grid; grid-template-columns: 125px minmax(0, 1fr); gap: 25px; padding: 22px 0; border-top: 1px solid var(--line); }
+.about-details dt { font-size: 16px; overflow-wrap: break-word; }
+.about-details dd { margin: 0; color: #555752; font-size: 15px; line-height: 1.9; }
+.project-category-label { margin-top: 35px; }
+html[lang='en'] .game-card h3 { letter-spacing: 0; }
+html[lang='en'] .game-card p { font-size: 14px; }
+html[lang='en'] .reading-item h2 { font-size: 25px; }
+
+@media (min-width: 1600px) {
+  .paper-hero { height: 470px; }
+  .landscape-art { height: 470px; }
+  .paper-hero-copy { padding-top: 100px; }
+  .home-grid { padding-bottom: 70px; }
+  .cloud-card, .paper-book-card { height: 318px; }
+  .cloud-picture { height: 284px; }
+}
+@media (max-width: 1100px) {
+  .site-nav { gap: 30px; }
+  .home-grid, .paper-hero-copy { width: 88%; }
+  .home-project-grid { width: 88%; gap: 4%; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); }
+  .game-card { gap: 20px; }
+  .game-card h3 { font-size: 28px; }
+  .game-card p { font-size: 14px; }
+  .alux-card { padding-inline: 22px; }
+  .home-grid { gap: 4%; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); }
+  .cloud-card { gap: 20px; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .cloud-card-copy h3 { font-size: 32px; }
+  .cloud-card-copy > p { font-size: 14px; }
+  .paper-name h1 { font-size: 60px; }
+  .paper-subtitle { font-size: 25px; }
+  .paper-footer { padding-inline: 6%; }
+  .paper-footer > p { font-size: 12px; }
+}
+@media (max-width: 900px) {
+  .site-header { padding-inline: 5%; }
+  .site-nav { top: 80px; padding: 12px 5% 18px; gap: 0; background: #f8f7f3; }
+  .site-nav a { min-height: 48px; }
+  .header-tools { gap: 20px; }
+  .menu-toggle { justify-content: center; width: 32px; min-height: 44px; }
+  .menu-toggle span { display: none; }
+  .menu-toggle i { position: relative; top: -3px; width: 18px; box-shadow: 0 6px currentColor; }
+  .menu-toggle[aria-expanded='true'] i { top: 0; transform: rotate(45deg); box-shadow: none; }
+  .menu-toggle[aria-expanded='true'] i::after { content: ''; position: absolute; inset: 0; background: currentColor; transform: rotate(90deg); }
+  .paper-hero { height: 385px; }
+  .landscape-art { height: 360px; width: 90%; opacity: .82; }
+  .paper-hero-copy { padding-top: 65px; }
+  .paper-name h1 { font-size: 54px; }
+  .paper-subtitle { font-size: 23px; }
+  .paper-intro { font-size: 14px; }
+  .home-grid { gap: 28px; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); }
+  .cloud-card { height: auto; padding: 14px; gap: 16px; grid-template-columns: 1fr; }
+  .cloud-picture { height: auto; aspect-ratio: 1.52; }
+  .cloud-card-copy { padding: 0; }
+  .cloud-card-copy h3 { margin-bottom: 9px; font-size: 28px; }
+  .cloud-card-copy > p { margin-top: 14px; }
+  .paper-button { width: 100%; margin-top: 18px; }
+  .paper-book-card { height: 100%; min-height: 282px; max-height: 480px; }
+  .home-books { display: flex; flex-direction: column; }
+  .book-card-caption h3 { font-size: 20px; }
+  .home-book-links > a { font-size: 19px; gap: 10px; }
+  .home-book-links > .book-shelf-link { font-size: 12px; }
+  .paper-footer { gap: 18px; }
+  .paper-footer-name { font-size: 22px; }
+  .paper-footer > p { max-width: 180px; text-align: center; line-height: 1.8; }
+  .paper-socials { gap: 12px; }
+  .game-card { gap: 22px; grid-template-columns: 1fr; }
+  .home-project-grid { gap: 28px; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); }
+  .home-alux { display: flex; flex-direction: column; }
+  .alux-card { flex: 1; }
+  .home-project-grid .paper-section-title { font-size: 25px; }
+}
+@media (max-width: 620px) {
+  .site-header { height: 76px; min-height: 76px; padding-inline: 6%; }
+  .brand { gap: 11px; }
+  .brand-glyph { width: 38px; height: 38px; font-size: 12px; }
+  .brand-lockup b { font-size: 17px; letter-spacing: .12em; }
+  .brand-lockup small { display: block; font-size: 9px; }
+  .header-tools { gap: 12px; }
+  .language-toggle { min-width: 28px; }
+  .site-nav { top: 76px; padding-inline: 6%; }
+  .paper-hero { height: 305px; }
+  .landscape-art { top: 0; right: -18%; width: 118%; height: 285px; object-position: 72% center; opacity: .72; }
+  .paper-hero-copy { width: 86%; padding-top: 67px; }
+  .paper-name { gap: 9px; }
+  .paper-name h1 { font-size: clamp(36px, 10.7vw, 49px); line-height: 1.45; letter-spacing: .06em; }
+  .paper-name .cloud-ornament { width: 37px; height: 25px; }
+  .paper-subtitle { margin: 6px 0 24px; font-size: clamp(16px, 4.6vw, 21px); letter-spacing: .06em; }
+  .paper-intro { display: none; }
+  .paper-hero-copy > .gold-rule { width: 34px; }
+  .home-grid { width: 86%; grid-template-columns: 1fr; gap: 28px; padding-top: 0; padding-bottom: 39px; }
+  .paper-section-title { margin-bottom: 20px; font-size: 25px; }
+  .paper-section-title::after { bottom: -7px; width: 40px; }
+  .cloud-card { padding: 14px; gap: 16px; }
+  .cloud-picture { aspect-ratio: 1.65; }
+  .cloud-poem { top: 18px; left: 22px; font-size: 13px; gap: 7px; }
+  .cloud-poem i { top: 125px; font-size: 7px; width: 12px; }
+  .cloud-card-copy h3 { font-size: 29px; margin-bottom: 0; }
+  .cloud-card-copy > .gold-rule { display: none; }
+  .cloud-card-copy > p { margin-top: 9px; font-size: 14px; line-height: 1.75; }
+  .paper-button { margin-top: 18px; min-height: 43px; padding-inline: 28px 18px; font-size: 14px; }
+  .route-caption { font-size: 11px; margin-top: 11px; }
+  .paper-book-card { height: 238px; min-height: 238px; }
+  .book-card-caption { gap: 16px; }
+  .book-card-caption h3 { font-size: 21px; }
+  .paper-footer { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-height: 108px; padding: 16px 7%; }
+  .paper-footer-name, .paper-footer > p { display: none; }
+  .paper-socials { gap: 22px; }
+  .paper-socials svg { width: 21px; height: 21px; }
+  .paper-socials > span { height: 17px; }
+  .paper-footer > .social-notes { margin: 0; font-size: 11px; text-align: center; }
+  html[lang='en'] .paper-name h1 { font-size: clamp(36px, 10.7vw, 49px); }
+  html[lang='en'] .paper-subtitle { max-width: 250px; font-size: 18px; line-height: 1.65; }
+  html[lang='en'] .cloud-card-copy h3 { font-size: 29px; }
+  html[lang='en'] .cloud-card-copy > p { font-size: 14px; }
+  .quiet-page { width: 86%; padding: 55px 0; min-height: 65vh; }
+  .quiet-page h1 { font-size: 34px; }
+  .quiet-page p { font-size: 15px; }
+  .home-project-grid { width: 86%; grid-template-columns: 1fr; gap: 28px; padding-bottom: 39px; }
+  .game-card { grid-template-columns: 1fr; gap: 16px; padding: 22px; }
+  .game-card h3 { font-size: 28px; }
+  .game-action { grid-column: 1; justify-content: space-between; margin-top: 8px; }
+  .game-card p { font-size: 14px; }
+  .alux-card { min-height: 235px; }
+  .paper-socials { gap: 16px; }
+  .reading-list { margin-top: 35px; }
+  .reading-item h2 { font-size: 24px; }
+  .about-details > div { grid-template-columns: 1fr; gap: 12px; }
+  .about-details dt { font-size: 18px; }
+  html[lang='en'] .reading-item h2 { font-size: 23px; }
+}
+@media (max-width: 360px) {
+  .site-header { padding-inline: 5%; }
+  .brand { gap: 9px; }
+  .brand-lockup b { font-size: 16px; }
+  .brand-glyph { width: 36px; height: 36px; }
+  .header-tools { gap: 7px; }
+  .paper-hero { height: 275px; }
+  .paper-hero-copy { padding-top: 54px; }
+  .cloud-poem { top: 16px; left: 16px; font-size: 12px; }
+  .cloud-poem i { top: 116px; }
+}
