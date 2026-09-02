@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/ai/yunjian",
+      "destination": "https://cloud-oracle.vercel.app/ai/yunjian"
+    },
+    {
+      "source": "/ai/yunjian/:path*",
+      "destination": "https://cloud-oracle.vercel.app/ai/yunjian/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
