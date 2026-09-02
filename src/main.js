@@ -39,6 +39,9 @@ function render() {
   document.querySelector('meta[name="description"]').content = t(route.descriptionKey)
   document.querySelector('meta[property="og:title"]').content = t(route.titleKey)
   document.querySelector('meta[property="og:description"]').content = t(route.descriptionKey)
+  document.querySelector('meta[property="og:site_name"]').content = t('brand.name')
+  document.querySelector('meta[name="application-name"]').content = t('brand.name')
+  document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
   const canonicalPath = route.canonicalPath || (routes[pathname] ? pathname : '/')
   const canonicalUrl = new URL(canonicalPath, 'https://shixilin.com').href
   document.querySelector('link[rel="canonical"]').href = canonicalUrl
@@ -58,8 +61,8 @@ function shell(content, pathname) {
     <div class="site-shell">
       <header class="site-header">
         <a class="signature internal-link" href="/" aria-label="${t('brand.homeLabel')}">
-          <span class="signature-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>光之十一</span>
+          <img class="signature-mark" src="/favicon.svg" width="32" height="32" alt="" />
+          <span>${t('brand.name')}</span>
         </a>
         <div class="header-actions">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
@@ -76,12 +79,12 @@ function shell(content, pathname) {
       </header>
       <main>${content}</main>
       <footer class="site-footer">
-        <a class="signature internal-link" href="/"><span>光之十一</span></a>
+        <a class="signature internal-link" href="/"><span>${t('brand.name')}</span></a>
         <div class="footer-center">
           <p>${t('footer.tagline')}</p>
           <p>${t('footer.follow')}</p>
         </div>
-        <p class="copyright">© ${new Date().getFullYear()} 光之十一</p>
+        <p class="copyright">© ${new Date().getFullYear()} ${t('brand.name')}</p>
       </footer>
     </div>
   `
