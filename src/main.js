@@ -2,28 +2,58 @@ import './styles.css'
 import { getLocale, t, toggleLocale } from './i18n.js'
 
 const routes = {
-  '/': {
-    titleKey: 'meta.home',
-    descriptionKey: 'meta.homeDescription',
-    view: homeView,
-  },
-  '/works': {
-    titleKey: 'meta.works',
-    descriptionKey: 'meta.worksDescription',
-    view: worksView,
-  },
-  '/ai': {
-    titleKey: 'meta.ai',
-    descriptionKey: 'meta.aiDescription',
-    canonicalPath: '/works',
-    view: worksView,
-  },
-  '/books': {
-    titleKey: 'meta.books',
-    descriptionKey: 'meta.booksDescription',
-    view: booksView,
-  },
+  '/': { titleKey: 'meta.home', descriptionKey: 'meta.homeDescription', view: homeView },
+  '/works': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', view: worksView },
+  '/ai': { titleKey: 'meta.works', descriptionKey: 'meta.worksDescription', canonicalPath: '/works', view: worksView },
+  '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
 }
+
+const projects = [
+  {
+    slug: 'alux',
+    index: '01',
+    category: 'work.alux.category',
+    title: 'work.alux.title',
+    text: 'work.alux.text',
+    href: 'https://www.alux.network/',
+    action: 'work.open',
+    featured: true,
+  },
+  {
+    slug: 'mohe',
+    index: '02',
+    category: 'work.mohe.category',
+    title: 'work.mohe.title',
+    text: 'work.mohe.text',
+    href: 'https://github.com/shixi-11/mohe-pet',
+    action: 'work.github',
+    image: '/assets/mohe-idle-v2-cutout.png',
+    imageAlt: 'work.mohe.alt',
+  },
+  {
+    slug: 'daily',
+    index: '03',
+    category: 'work.daily.category',
+    title: 'work.daily.title',
+    text: 'work.daily.text',
+    href: 'https://github.com/shixi-11/alux-ai-agent-daily',
+    action: 'work.github',
+  },
+  {
+    slug: 'yunjian',
+    index: '04',
+    category: 'work.yunjian.category',
+    title: 'work.yunjian.title',
+    text: 'work.yunjian.text',
+    action: 'work.private',
+  },
+]
+
+const books = [
+  { index: '01', category: 'book.yinian.category', title: 'book.yinian.title', text: 'book.yinian.text' },
+  { index: '02', category: 'book.daitian.category', title: 'book.daitian.title', text: 'book.daitian.text' },
+  { index: '03', category: 'book.poetry.category', title: 'book.poetry.title', text: 'book.poetry.text' },
+]
 
 const app = document.querySelector('#app')
 
@@ -35,6 +65,9 @@ function normalizePath(pathname) {
 function render() {
   const pathname = normalizePath(window.location.pathname)
   const route = routes[pathname] || routes['/']
+  const canonicalPath = route.canonicalPath || (routes[pathname] ? pathname : '/')
+  const canonicalUrl = new URL(canonicalPath, 'https://shixilin.com').href
+
   document.title = t(route.titleKey)
   document.querySelector('meta[name="description"]').content = t(route.descriptionKey)
   document.querySelector('meta[property="og:title"]').content = t(route.titleKey)
@@ -42,49 +75,55 @@ function render() {
   document.querySelector('meta[property="og:site_name"]').content = t('brand.name')
   document.querySelector('meta[name="application-name"]').content = t('brand.name')
   document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
-  const canonicalPath = route.canonicalPath || (routes[pathname] ? pathname : '/')
-  const canonicalUrl = new URL(canonicalPath, 'https://shixilin.com').href
   document.querySelector('link[rel="canonical"]').href = canonicalUrl
   document.querySelector('meta[property="og:url"]').content = canonicalUrl
   document.documentElement.lang = getLocale() === 'en' ? 'en' : 'zh-CN'
+
   app.innerHTML = shell(route.view(), pathname)
   bindNavigation()
-  window.scrollTo({ top: 0 })
+  bindReveals()
+
   if (window.location.hash) {
     const anchorId = decodeURIComponent(window.location.hash.slice(1))
     requestAnimationFrame(() => document.getElementById(anchorId)?.scrollIntoView())
+  } else {
+    window.scrollTo({ top: 0 })
   }
 }
 
 function shell(content, pathname) {
+  const activePath = pathname === '/ai' ? '/works' : pathname
   return `
     <div class="site-shell">
       <header class="site-header">
-        <a class="signature internal-link" href="/" aria-label="${t('brand.homeLabel')}">
-          <img class="signature-mark" src="/favicon.svg" width="32" height="32" alt="" />
-          <span>${t('brand.name')}</span>
+        <a class="brand internal-link" href="/" aria-label="${t('brand.homeLabel')}">
+          <span class="brand-glyph" aria-hidden="true">十一</span>
+          <span class="brand-lockup"><b>${t('brand.name')}</b><small>${t('brand.roman')}</small></span>
         </a>
-        <div class="header-actions">
+        <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
-            ${navLink('/works', t('nav.works'), pathname === '/ai' ? '/works' : pathname)}
-            ${navLink('/books', t('nav.books'), pathname)}
-            <a href="/#about" class="internal-link">${t('nav.about')}</a>
-            <a href="/#contact" class="internal-link">${t('nav.contact')}</a>
+            ${navLink('/works', t('nav.work'), activePath)}
+            ${navLink('/books', t('nav.writing'), activePath)}
+            <a class="internal-link" href="/#about">${t('nav.about')}</a>
+            <a class="internal-link" href="/#contact">${t('nav.contact')}</a>
           </nav>
           <button class="language-toggle" type="button" aria-label="${t('language.label')}">${t('language.short')}</button>
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-            <span>${t('nav.menu')}</span><i></i>
+          <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
+            <span>${t('nav.menu')}</span><i aria-hidden="true"></i>
           </button>
         </div>
       </header>
       <main>${content}</main>
       <footer class="site-footer">
-        <a class="signature internal-link" href="/"><span>${t('brand.name')}</span></a>
-        <div class="footer-center">
+        <div class="footer-brand">
+          <span class="brand-glyph" aria-hidden="true">十一</span>
+          <b>${t('brand.name')}</b>
+        </div>
+        <div class="footer-copy">
           <p>${t('footer.tagline')}</p>
           <p>${t('footer.follow')}</p>
         </div>
-        <p class="copyright">© ${new Date().getFullYear()} ${t('brand.name')}</p>
+        <p class="copyright">© ${new Date().getFullYear()} SHIXI LIN</p>
       </footer>
     </div>
   `
@@ -92,107 +131,165 @@ function shell(content, pathname) {
 
 function navLink(href, label, pathname) {
   const active = pathname === href
-  return `<a href="${href}" class="internal-link${active ? ' active' : ''}"${active ? ' aria-current="page"' : ''}>${label}</a>`
+  return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`
 }
 
 function homeView() {
   return `
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">${t('hero.label')}</p>
-        <h1>
-          <span class="hero-name">${t('hero.name')}</span>
-          <span class="hero-thesis">${t('hero.title')}</span>
-        </h1>
-      </div>
-      <figure class="identity-visual reveal-delay">
-        <a href="/assets/光之十一-作者简介.jpg" target="_blank" rel="noopener" aria-label="${t('hero.imageHint')}">
-          <img src="/assets/光之十一-作者简介.jpg" alt="${t('hero.imageAlt')}" width="1194" height="1600" fetchpriority="high" />
-        </a>
-        <figcaption><span>${t('hero.imageLabel')}</span><small>${t('hero.imageHint')}</small></figcaption>
-      </figure>
-      <div class="hero-details reveal">
+    <section class="hero" id="top">
+      <div class="hero-main reveal">
+        <div class="hero-name-lockup">
+          <span>${t('hero.roman')}</span>
+          <h1>${t('hero.name')}</h1>
+        </div>
+        <p class="hero-title">${t('hero.title')}</p>
         <p class="hero-lead">${t('hero.lead')}</p>
         <div class="hero-actions">
-          <a class="primary-link internal-link" href="/#work">${t('hero.primary')} <span aria-hidden="true">↘</span></a>
-          <a class="line-link internal-link" href="/#about">${t('hero.secondary')} <span aria-hidden="true">→</span></a>
+          <a class="action action-solid internal-link" href="/#work">${t('hero.primary')}<span aria-hidden="true">↓</span></a>
+          <a class="action action-line internal-link" href="/#about">${t('hero.secondary')}<span aria-hidden="true">→</span></a>
         </div>
-        <ul class="proof-strip" aria-label="${t('hero.highlightsLabel')}">
-          <li>${t('hero.proof1')}</li>
-          <li>${t('hero.proof2')}</li>
-          <li>${t('hero.proof3')}</li>
+      </div>
+
+      <aside class="identity-index reveal reveal-late" aria-label="${t('hero.index')}">
+        <div class="index-top">
+          <span>${t('hero.index')}</span>
+          <strong aria-hidden="true">11</strong>
+        </div>
+        <p>${t('hero.statement')}</p>
+        <ul>
+          <li><span>01</span>${t('hero.role1')}</li>
+          <li><span>02</span>${t('hero.role2')}</li>
+          <li><span>03</span>${t('hero.role3')}</li>
+          <li><span>04</span>${t('hero.role4')}</li>
         </ul>
+      </aside>
+
+      <div class="hero-facts reveal reveal-late">
+        ${fact('hero.fact1.value', 'hero.fact1.label')}
+        ${fact('hero.fact2.value', 'hero.fact2.label')}
+        ${fact('hero.fact3.value', 'hero.fact3.label')}
       </div>
     </section>
 
-    <section class="manifesto" id="about">
-      <div class="manifesto-heading">
-        <p class="eyebrow">${t('manifesto.label')}</p>
-        <h2>${t('manifesto.title')}</h2>
-      </div>
-      <div class="manifesto-copy">
-        <p>${t('manifesto.p1')}</p>
-        <p>${t('manifesto.p2')}</p>
-        <p>${t('manifesto.p3')}</p>
-        <blockquote>${t('manifesto.quote')}</blockquote>
-      </div>
-    </section>
+    ${pathSection()}
+    ${workSection(true)}
+    ${writingSection(true)}
+    ${aboutSection()}
+    ${contactSection()}
+  `
+}
 
-    <section class="axes" aria-labelledby="axes-title">
-      <div class="section-heading split-heading">
-        <p class="eyebrow">${t('axis.label')}</p>
-        <h2 id="axes-title">${t('axis.title')}</h2>
+function pathSection() {
+  return `
+    <section class="path-section" id="about">
+      <div class="section-marker reveal"><span>01</span><p>${t('path.label')}</p></div>
+      <div class="path-heading reveal">
+        <h2>${t('path.title')}</h2>
       </div>
-      <div class="axis-grid">
-        ${axisItem('01', 'axis.digital.title', 'axis.digital.text')}
-        ${axisItem('02', 'axis.writing.title', 'axis.writing.text')}
-        ${axisItem('03', 'axis.practice.title', 'axis.practice.text')}
-        ${axisItem('04', 'axis.world.title', 'axis.world.text')}
+      <div class="path-copy reveal">
+        <p>${t('path.p1')}</p>
+        <p>${t('path.p2')}</p>
       </div>
+      <blockquote class="path-quote reveal">${t('path.quote')}</blockquote>
     </section>
+  `
+}
 
-    <section class="work-section" id="work" aria-labelledby="work-title">
-      <div class="section-heading works-heading">
-        <div>
-          <p class="eyebrow">${t('works.label')}</p>
-          <h2 id="work-title">${t('works.title')}</h2>
+function workSection(preview = false) {
+  const list = preview ? projects : projects
+  return `
+    <section class="work-section" id="work">
+      <div class="section-intro reveal">
+        <div class="section-marker"><span>02</span><p>${t('work.label')}</p></div>
+        <h2>${t('work.title')}</h2>
+        <div class="section-summary">
+          <p>${t('work.intro')}</p>
+          ${preview ? `<a class="text-link internal-link" href="/works">${t('work.all')}<span aria-hidden="true">→</span></a>` : ''}
         </div>
-        <div>
-          <p>${t('works.intro')}</p>
-          <a class="line-link internal-link" href="/works">${t('works.all')} <span aria-hidden="true">→</span></a>
-        </div>
       </div>
-      <div class="work-grid">
-        ${workCard('alux featured', 'works.alux.category', 'works.alux.title', 'works.alux.text', 'https://www.alux.network/', 'works.visit', 'A')}
-        ${workCard('daily', 'works.daily.category', 'works.daily.title', 'works.daily.text', 'https://github.com/shixi-11/alux-ai-agent-daily', 'works.github', '11')}
-        ${workCard('mohe', 'works.mohe.category', 'works.mohe.title', 'works.mohe.text', 'https://github.com/shixi-11/mohe-pet', 'works.github', '墨', false, '/assets/mohe-idle-v2-cutout.png', 'works.mohe.imageAlt')}
-        ${workCard('yunjian', 'works.yunjian.category', 'works.yunjian.title', 'works.yunjian.text', '/ai/yunjian', 'works.visit', '云')}
-        ${workCard('writing', 'works.books.category', 'works.books.title', 'works.books.text', '/books', 'works.read', '文', true)}
+      <div class="project-ledger">
+        ${list.map(projectItem).join('')}
       </div>
     </section>
+  `
+}
 
-    <section class="profile" aria-labelledby="profile-title">
-      <div class="profile-intro">
-        <p class="eyebrow">${t('profile.label')}</p>
-        <h2 id="profile-title">${t('profile.title')}</h2>
-        <p>${t('profile.intro')}</p>
+function projectItem(project) {
+  const content = `
+    <span class="project-index">${project.index}</span>
+    <div class="project-copy">
+      <p class="project-category">${t(project.category)}</p>
+      <h3>${t(project.title)}</h3>
+      <p class="project-description">${t(project.text)}</p>
+      <span class="project-action">${t(project.action)}<b aria-hidden="true">${project.href ? '↗' : '·'}</b></span>
+    </div>
+    ${project.image ? `<div class="project-visual"><img src="${project.image}" alt="${t(project.imageAlt)}" width="700" height="700" loading="lazy" /></div>` : ''}
+    ${project.featured ? '<div class="alux-field" aria-hidden="true"><i></i><i></i><i></i><b>A</b></div>' : ''}
+  `
+
+  if (!project.href) return `<article class="project-item ${project.slug} reveal">${content}</article>`
+  return `<a class="project-item ${project.slug}${project.featured ? ' featured' : ''} reveal" href="${project.href}" target="_blank" rel="noopener">${content}</a>`
+}
+
+function writingSection(preview = false) {
+  return `
+    <section class="writing-section" id="writing">
+      <div class="writing-intro reveal">
+        <div class="section-marker"><span>03</span><p>${t('writing.label')}</p></div>
+        <h2>${t('writing.title')}</h2>
+        <p>${t('writing.intro')}</p>
+        ${preview ? `<a class="text-link internal-link" href="/books">${t('writing.all')}<span aria-hidden="true">→</span></a>` : `<span class="status-line">${t('books.status')}</span>`}
       </div>
-      <dl class="profile-list">
-        ${profileItem('profile.travel.term', 'profile.travel.text')}
-        ${profileItem('profile.practice.term', 'profile.practice.text')}
-        ${profileItem('profile.spirit.term', 'profile.spirit.text')}
-        ${profileItem('profile.creation.term', 'profile.creation.text')}
-        ${profileItem('profile.business.term', 'profile.business.text')}
+      <div class="book-ledger">
+        ${books.map(bookItem).join('')}
+      </div>
+    </section>
+  `
+}
+
+function bookItem(book) {
+  return `
+    <article class="book-item reveal">
+      <span class="book-index">${book.index}</span>
+      <div class="book-title"><p>${t(book.category)}</p><h3>${t(book.title)}</h3></div>
+      <p class="book-description">${t(book.text)}</p>
+    </article>
+  `
+}
+
+function aboutSection() {
+  const items = [
+    ['about.travel.term', 'about.travel.text'],
+    ['about.practice.term', 'about.practice.text'],
+    ['about.tradition.term', 'about.tradition.text'],
+    ['about.creation.term', 'about.creation.text'],
+    ['about.business.term', 'about.business.text'],
+  ]
+  return `
+    <section class="about-section">
+      <div class="about-heading reveal">
+        <div class="section-marker"><span>04</span><p>${t('about.label')}</p></div>
+        <h2>${t('about.title')}</h2>
+        <p>${t('about.intro')}</p>
+      </div>
+      <dl class="evidence-list">
+        ${items.map(([term, text], index) => `<div class="reveal"><span>0${index + 1}</span><dt>${t(term)}</dt><dd>${t(text)}</dd></div>`).join('')}
       </dl>
     </section>
+  `
+}
 
-    <section class="contact" id="contact">
-      <p class="eyebrow">${t('contact.label')}</p>
-      <h2>${t('contact.title')}</h2>
-      <p>${t('contact.text')}</p>
-      <div class="contact-actions">
-        <a class="primary-link inverse" href="https://github.com/shixi-11" target="_blank" rel="noopener">${t('contact.github')} <span aria-hidden="true">↗</span></a>
-        <a class="line-link inverse-line" href="https://www.alux.network/" target="_blank" rel="noopener">${t('contact.alux')} <span aria-hidden="true">↗</span></a>
+function contactSection() {
+  return `
+    <section class="contact-section" id="contact">
+      <div class="section-marker reveal"><span>05</span><p>${t('contact.label')}</p></div>
+      <h2 class="reveal">${t('contact.title')}</h2>
+      <div class="contact-bottom reveal">
+        <p>${t('contact.text')}</p>
+        <div class="contact-actions">
+          <a class="action action-light" href="https://github.com/shixi-11" target="_blank" rel="noopener">${t('contact.github')}<span aria-hidden="true">↗</span></a>
+          <a class="action action-ghost" href="https://www.alux.network/" target="_blank" rel="noopener">${t('contact.alux')}<span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   `
@@ -200,91 +297,38 @@ function homeView() {
 
 function worksView() {
   return `
-    <section class="page-intro reveal">
-      <p class="eyebrow">${t('works.label')}</p>
-      <h1>${t('worksPage.title')}</h1>
-      <p>${t('worksPage.intro')}</p>
-    </section>
-    <section class="work-section page-work" aria-label="${t('worksPage.title')}">
-      <div class="work-grid">
-        ${workCard('alux featured', 'works.alux.category', 'works.alux.title', 'works.alux.text', 'https://www.alux.network/', 'works.visit', 'A')}
-        ${workCard('daily', 'works.daily.category', 'works.daily.title', 'works.daily.text', 'https://github.com/shixi-11/alux-ai-agent-daily', 'works.github', '11')}
-        ${workCard('mohe', 'works.mohe.category', 'works.mohe.title', 'works.mohe.text', 'https://github.com/shixi-11/mohe-pet', 'works.github', '墨', false, '/assets/mohe-idle-v2-cutout.png', 'works.mohe.imageAlt')}
-        ${workCard('yunjian', 'works.yunjian.category', 'works.yunjian.title', 'works.yunjian.text', '/ai/yunjian', 'works.visit', '云')}
-        ${workCard('writing', 'works.books.category', 'works.books.title', 'works.books.text', '/books', 'works.read', '文', true)}
-      </div>
-    </section>
+    ${pageHero('02', 'work.label', 'worksPage.title', 'worksPage.intro')}
+    ${workSection(false)}
+    ${contactSection()}
   `
 }
 
 function booksView() {
   return `
-    <section class="page-intro books-intro reveal">
-      <p class="eyebrow">BOOKS & WRITING</p>
-      <h1>${t('books.title')}</h1>
-      <p>${t('books.intro')}</p>
-      <span class="page-status">${t('books.status')}</span>
+    ${pageHero('03', 'writing.label', 'booksPage.title', 'booksPage.intro')}
+    ${writingSection(false)}
+    <a class="back-home internal-link" href="/">← ${t('books.back')}</a>
+  `
+}
+
+function pageHero(index, labelKey, titleKey, introKey) {
+  return `
+    <section class="page-hero">
+      <div class="section-marker reveal"><span>${index}</span><p>${t(labelKey)}</p></div>
+      <h1 class="reveal">${t(titleKey)}</h1>
+      <p class="reveal reveal-late">${t(introKey)}</p>
     </section>
-    <section class="book-list" aria-label="${t('books.title')}">
-      ${bookItem('01', 'book.yinian.category', 'book.yinian.title', 'book.yinian.text')}
-      ${bookItem('02', 'book.daitian.category', 'book.daitian.title', 'book.daitian.text')}
-      ${bookItem('03', 'book.poetry.category', 'book.poetry.title', 'book.poetry.text')}
-    </section>
-    <a class="back-link internal-link" href="/">← ${t('books.back')}</a>
   `
 }
 
-function axisItem(index, titleKey, textKey) {
-  return `
-    <article class="axis-item">
-      <span>${index}</span>
-      <h3>${t(titleKey)}</h3>
-      <p>${t(textKey)}</p>
-    </article>
-  `
-}
-
-function profileItem(termKey, textKey) {
-  return `
-    <div>
-      <dt>${t(termKey)}</dt>
-      <dd>${t(textKey)}</dd>
-    </div>
-  `
-}
-
-function workCard(className, categoryKey, titleKey, textKey, href, actionKey, mark, internal = false, imageSrc = '', imageAltKey = '') {
-  const external = href.startsWith('http')
-  return `
-    <a class="work-card ${className}${internal ? ' internal-link' : ''}" href="${href}"${external ? ' target="_blank" rel="noopener"' : ''}>
-      <div class="work-mark" aria-hidden="true">${mark}</div>
-      ${imageSrc ? `<img class="work-art" src="${imageSrc}" alt="${t(imageAltKey)}" width="700" height="700" loading="lazy" />` : ''}
-      <div class="work-card-copy">
-        <p class="card-category">${t(categoryKey)}</p>
-        <h3>${t(titleKey)}</h3>
-        <p>${t(textKey)}</p>
-      </div>
-      <span class="card-action">${t(actionKey)} <b aria-hidden="true">${external ? '↗' : '→'}</b></span>
-    </a>
-  `
-}
-
-function bookItem(index, categoryKey, titleKey, textKey) {
-  return `
-    <article class="book-item">
-      <span class="book-index">${index}</span>
-      <div>
-        <p class="card-category">${t(categoryKey)}</p>
-        <h2>${t(titleKey)}</h2>
-      </div>
-      <p>${t(textKey)}</p>
-    </article>
-  `
+function fact(valueKey, labelKey) {
+  return `<div><strong>${t(valueKey)}</strong><span>${t(labelKey)}</span></div>`
 }
 
 function bindNavigation() {
   const menuButton = document.querySelector('.menu-toggle')
   const nav = document.querySelector('.site-nav')
+
   menuButton?.addEventListener('click', () => {
     const expanded = menuButton.getAttribute('aria-expanded') === 'true'
     menuButton.setAttribute('aria-expanded', String(!expanded))
@@ -301,12 +345,29 @@ function bindNavigation() {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
       const url = new URL(link.href)
       if (url.origin !== window.location.origin) return
-      if (url.pathname === '/ai/yunjian') return
       event.preventDefault()
       window.history.pushState({}, '', `${url.pathname}${url.hash}`)
       render()
     })
   })
+}
+
+function bindReveals() {
+  const elements = [...document.querySelectorAll('.reveal')]
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    elements.forEach((element) => element.classList.add('is-visible'))
+    return
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      entry.target.classList.add('is-visible')
+      observer.unobserve(entry.target)
+    })
+  }, { threshold: 0.12 })
+
+  elements.forEach((element) => observer.observe(element))
 }
 
 window.addEventListener('popstate', render)
