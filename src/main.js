@@ -89,7 +89,7 @@ function shell(content, pathname) {
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
           </nav>
-          <div class="language-picker"><select class="language-select" aria-label="${t('language.label')}" dir="ltr">${locales.map(locale => `<option value="${locale.id}" lang="${locale.lang}"${getLocale() === locale.id ? ' selected' : ''}>${locale.name}</option>`).join('')}</select></div>
+          <div class="language-picker"><select class="language-select" lang="${locales.find(locale => locale.id === getLocale()).lang}" aria-label="${t('language.label')}" dir="ltr">${locales.map(locale => `<option value="${locale.id}" lang="${locale.lang}"${getLocale() === locale.id ? ' selected' : ''}>${locale.name}</option>`).join('')}</select></div>
           <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
             <span>${t('nav.menu')}</span><i aria-hidden="true"></i>
           </button>

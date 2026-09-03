@@ -6,6 +6,7 @@ export const locales = [
   { id: 'en', lang: 'en', name: 'English', short: 'EN' },
   { id: 'ja', lang: 'ja', name: '日本語', short: '日本語' },
   { id: 'ko', lang: 'ko', name: '한국어', short: '한국어' },
+  { id: 'es', lang: 'es', name: 'Español', short: 'ES' },
   { id: 'fr', lang: 'fr', name: 'Français', short: 'FR' },
   { id: 'de', lang: 'de', name: 'Deutsch', short: 'DE' },
   { id: 'ar', lang: 'ar', name: 'العربية', short: 'العربية', dir: 'rtl' },

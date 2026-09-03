@@ -10,7 +10,7 @@ for (const [locale, copy] of Object.entries(messages)) {
     assert.ok(!value.includes('undefined'), `${locale}:${key}`)
   }
 }
-assert.equal(Object.keys(messages).length, 8)
+assert.equal(Object.keys(messages).length, 9)
 assert.equal(messages.zh['home.intro1'], '在技术与人文之间，寻找安静的连接。')
 assert.equal(messages.zh['home.intro2'], '写诗词与小说，也做AI产品和独立游戏。')
 for (const locale of ['zh', 'zh-Hant']) assert.equal(messages[locale]['about.companyName'], '十一資本')
@@ -22,7 +22,7 @@ const values = new Map()
 globalThis.localStorage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) }
 const { getLocale, syncLocale, setLocale, localizedHref, locales } = await import('../src/i18n.js')
 assert.equal(getLocale(), 'zh')
-assert.deepEqual(locales.map(item => item.id), ['zh', 'zh-Hant', 'en', 'ja', 'ko', 'fr', 'de', 'ar'])
+assert.deepEqual(locales.map(item => item.id), ['zh', 'zh-Hant', 'en', 'ja', 'ko', 'es', 'fr', 'de', 'ar'])
 setLocale('ja')
 assert.equal(localizedHref('/about#contact'), '/about?lang=ja#contact')
 assert.equal(syncLocale(), 'ja')
@@ -38,4 +38,8 @@ localStorage.setItem = () => { throw new Error('Storage unavailable') }
 assert.equal(syncLocale(), 'zh')
 assert.equal(setLocale('fr'), 'fr')
 assert.equal(localizedHref('/games?ref=card'), '/games?ref=card&lang=fr')
-console.log(`8 locales × ${expected.length} keys; Chinese baseline, proper names, URL/state behavior and Mohe pronouns verified.`)
+assert.equal(setLocale('es'), 'es')
+assert.equal(localizedHref('/about#contact'), '/about?lang=es#contact')
+location.search = '?lang=es'
+assert.equal(syncLocale(), 'es')
+console.log(`${locales.length} locales × ${expected.length} keys; Chinese baseline, proper names, URL/state behavior and Mohe pronouns verified.`)

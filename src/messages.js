@@ -1,12 +1,13 @@
 import traditional from './locales/zh-Hant.js'
 import ja from './locales/ja.js'
 import ko from './locales/ko.js'
+import es from './locales/es.js'
 import fr from './locales/fr.js'
 import de from './locales/de.js'
 import ar from './locales/ar.js'
 
 export const messages = {
-  'zh-Hant': traditional, ja, ko, fr, de, ar,
+  'zh-Hant': traditional, ja, ko, es, fr, de, ar,
   "zh": {
     "footer.collaborate": "合作联系",
     "home.handles": "微信公众号 / 小红书 / 微博 / 视频号：@光之十一",
