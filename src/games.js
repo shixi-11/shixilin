@@ -6,7 +6,7 @@ const gameLink = (href, label, external = false) => `<a class="game-page-link${e
 
 export function gameCards() {
   return `<div class="home-game-list">${[
-    { href: '/games/baishishu', image: '/assets/baishishu-cover.jpg', width: 3840, height: 2160, key: 'game' },
+    { href: '/games/baishishu', image: '/assets/baishishu-opening.jpg', width: 1200, height: 675, key: 'game' },
     { href: '/games/ink-duel', image: '/assets/ink-duel-concept.png', width: 1672, height: 941, key: 'ink' },
   ].map(game => `<a class="game-card internal-link" href="${game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>Steam · ${t('games.desktop')}</span><span>${t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
 }
@@ -39,8 +39,12 @@ export function inkDuelView() {
       <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">01</span><h2 id="gameplay-title">${t('ink.playTitle')}</h2></div>
       <div class="game-feature-list">${[1, 2, 3].map(i => `<div><h3>${t(`ink.feature${i}Title`)}</h3><p>${gameText(`ink.feature${i}`)}</p></div>`).join('')}</div>
     </section>
+    <section class="game-editorial-section" aria-labelledby="modes-title">
+      <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">02</span><h2 id="modes-title">${t('ink.modesTitle')}</h2></div>
+      <div class="game-feature-list">${[1, 2, 3].map(i => `<div><h3>${t(`ink.mode${i}Title`)}</h3><p>${gameText(`ink.mode${i}`)}</p></div>`).join('')}</div>
+    </section>
     <section class="game-editorial-section game-development" aria-labelledby="development-title">
-      <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">02</span><h2 id="development-title">${t('games.progress')}</h2></div>
+      <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">03</span><h2 id="development-title">${t('games.progress')}</h2></div>
       <div><p>${gameText('ink.progress')}</p>${gameFacts()}</div>
     </section>
     ${otherGame('/games/baishishu', t('game.name'), t('game.short'))}

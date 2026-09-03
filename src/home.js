@@ -50,10 +50,10 @@ export function homeView() {
       <section class="home-books" aria-labelledby="books-title">
         <h2 class="paper-section-title" id="books-title"><a class="internal-link" href="/books">${t('home.books')}</a></h2>
         <div class="paper-book-card">
-          <div class="home-book-links"><span class="book-reading-label">${t('books.read')}</span>${books.filter(book => book.href).map(book => {
+          <div class="home-book-links">${books.filter(book => book.href).map(book => {
             const [original, translation] = t(book.title).split(' · ')
             return `<a href="${book.href}" target="_blank" rel="noopener"><span class="home-book-name">${original}${translation ? `<small>${translation}</small>` : ''}</span><span aria-hidden="true">↗</span></a>`
-          }).join('')}<div class="home-book-upcoming"><span>${t('book.poetry.title').split(' · ').map((part,index) => index ? '<small>' + part + '</small>' : part).join('')}</span><small>${t('home.poetryStatus')}</small></div><a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
+          }).join('')}<div class="home-book-upcoming"><span>${t('book.poetry.title').split(' · ').map((part,index) => index ? '<small>' + part + '</small>' : part).join('')}</span></div><a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
           <img src="/assets/books.png" alt="" width="1536" height="1024" loading="lazy" />
         </div>
       </section>
