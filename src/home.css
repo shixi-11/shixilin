@@ -216,14 +216,14 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .header-tools { gap: 12px; }
   .language-toggle { min-width: 28px; }
   .site-nav { top: 76px; padding-inline: 6%; }
-  .paper-hero { height: 305px; }
+  .paper-hero { height: auto; min-height: 305px; padding-bottom: 48px; }
   .landscape-art { top: 0; right: 0; width: 100%; height: 285px; object-position: right center; opacity: .72; }
   .paper-hero-copy { width: 86%; padding-top: 67px; }
   .paper-name { gap: 9px; }
   .paper-name h1 { font-size: clamp(36px, 10.7vw, 49px); line-height: 1.45; letter-spacing: .06em; }
   .paper-name .cloud-ornament { width: 37px; height: 25px; }
   .paper-subtitle { margin: 6px 0 24px; font-size: clamp(16px, 4.6vw, 21px); letter-spacing: .06em; }
-  .paper-intro { display: none; }
+  .paper-intro { display: grid; gap: 10px; margin-top: 24px; font-size: 14px; line-height: 1.9; letter-spacing: .04em; }
   .paper-hero-copy > .gold-rule { width: 34px; }
   .home-grid { width: 86%; grid-template-columns: 1fr; gap: 28px; padding-top: 0; padding-bottom: 39px; }
   .paper-section-title { margin-bottom: 20px; font-size: 25px; }
@@ -274,7 +274,7 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .brand-lockup b { font-size: 16px; }
   .brand-glyph { width: 36px; height: 36px; }
   .header-tools { gap: 7px; }
-  .paper-hero { height: 275px; }
+  .paper-hero { min-height: 275px; }
   .landscape-art { height: 255px; }
   .paper-hero-copy { padding-top: 54px; }
   .cloud-poem { top: 12px; left: 16px; font-size: 11px; }
