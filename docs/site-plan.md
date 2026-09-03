@@ -30,7 +30,8 @@
 - 联系板块删除已发布：`96ba2bd`；部署 `dpl_G19iqvdGu1ri8hDfmLxHQKBxJSKF`，READY，生产JS/CSS与本地一致。
 - 新增服务页：九语种各20项；54组六种屏宽检查通过；手机导航、刷新语言、活动状态和联系锚点通过。已补充字体字符子集，保留原有字体与许可。新增页面后的全站复核共270组，通过；证据为 `.vercel/review/website-services-20260904.json`。
 - 服务页已发布：`91d8abf`；部署 `dpl_GyWFZ2mjubA4UhqMBAxHbkNcWgbV`，READY，正式入口 `https://shixilin.com/services`。生产JS `/assets/index-C8NubCp2.js` 与CSS `/assets/index-Cq4CxvXW.css` 和本地构建逐字节一致；九个语言URL的服务页HTML均与构建一致，证据为 `.vercel/review/services-production-20260904.json`。
-- 服务页高清预览：`A:/vibe coding/shixilin/design/20260904_服务与合作.jpg`，2844×2986px，来自与正式站一致的生产构建及完整浏览器渲染。
+- 改名前的服务页预览：`A:/vibe coding/shixilin/design/20260904_服务与合作.jpg`，2844×2986px，保留为首次交付记录；现行名称以“合作／咨询与合作”为准。
+- 名称调整已发布：`49673b0`；部署 `dpl_A44czLK5FdTF1SUsMh2A5qFNUMgD`，READY。九语种导航、页面标题与浏览器标题同步，45组屏宽与语言检查通过；生产JS `/assets/index-IIaJrOvb.js`、CSS `/assets/index-Cq4CxvXW.css`及九个语言URL的服务页HTML均与本地构建一致。
 - 本轮已确定事项已完成实施、验证与发布；用户视觉验收仍待反馈。
 
 ## 尚未决定的扩展
