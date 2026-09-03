@@ -1,8 +1,8 @@
 export default {
-    "services.nav": "服務",
-    "meta.services": "服務與合作｜光之十一",
+    "services.nav": "合作",
+    "meta.services": "諮詢與合作｜光之十一",
     "meta.servicesDescription": "心理諮詢、神祕學與占卜、創業指導、AI使用教學、AI產品製作與設計。了解光之十一提供的諮詢、教學與專案合作。",
-    "services.title": "服務與合作",
+    "services.title": "諮詢與合作",
     "services.intro": "圍繞個人成長、獨立創作與技術實踐，提供諮詢、教學和專案合作。",
     "services.psychology.title": "心理諮詢",
     "services.psychology.text": "圍繞情緒、關係與自我認識，透過對話梳理困擾，尋找適合自己的下一步。",

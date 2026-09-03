@@ -1,9 +1,9 @@
 import { complete } from './complete.js'
 export default complete({
-    "services.nav": "Services",
-    "meta.services": "Services et collaboration | Shixi Lin",
+    "services.nav": "Collaborer",
+    "meta.services": "Conseil et collaboration | Shixi Lin",
     "meta.servicesDescription": "Conseil psychologique, ésotérisme et divination, accompagnement entrepreneurial, apprentissage de l’IA, création de produits fondés sur l’IA et design. Découvrez les services de conseil, d’enseignement et de collaboration sur des projets proposés par Shixi Lin.",
-    "services.title": "Services et collaboration",
+    "services.title": "Conseil et collaboration",
     "services.intro": "Conseil, enseignement et collaboration sur des projets autour du développement personnel, de la création indépendante et de la pratique technologique.",
     "services.psychology.title": "Conseil psychologique",
     "services.psychology.text": "À travers un dialogue autour des émotions, des relations et de la connaissance de soi, nous clarifions ce qui vous préoccupe et cherchons une prochaine étape qui vous convienne.",

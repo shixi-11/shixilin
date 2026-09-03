@@ -1,9 +1,9 @@
 import { complete } from './complete.js'
 export default complete({
-    "services.nav": "Leistungen",
-    "meta.services": "Leistungen und Zusammenarbeit | Shixi Lin",
+    "services.nav": "Zusammenarbeit",
+    "meta.services": "Beratung und Zusammenarbeit | Shixi Lin",
     "meta.servicesDescription": "Psychologische Beratung, Esoterik und Wahrsagung, Gründungsberatung, Anleitung zur Nutzung von KI, Entwicklung von KI-Produkten und Design. Erfahren Sie mehr über die Beratung, Lehre und Projektzusammenarbeit von Shixi Lin.",
-    "services.title": "Leistungen und Zusammenarbeit",
+    "services.title": "Beratung und Zusammenarbeit",
     "services.intro": "Beratung, Schulungen und gemeinsame Projekte rund um persönliche Entwicklung, unabhängiges kreatives Arbeiten und die praktische Nutzung von Technologie.",
     "services.psychology.title": "Psychologische Beratung",
     "services.psychology.text": "In Gesprächen über Gefühle, Beziehungen und Selbsterkenntnis ordnen wir, was Sie beschäftigt, und suchen nach einem nächsten Schritt, der zu Ihnen passt.",

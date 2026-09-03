@@ -1,9 +1,9 @@
 import { complete } from './complete.js'
 export default complete({
-    "services.nav": "서비스",
-    "meta.services": "서비스와 협업 | Shixi Lin",
+    "services.nav": "협업",
+    "meta.services": "상담과 협업 | Shixi Lin",
     "meta.servicesDescription": "심리 상담, 신비학과 점술, 창업 안내, AI 활용 교육, AI 제품 제작, 디자인. Shixi Lin이 제공하는 상담, 교육, 프로젝트 협업을 알아보세요.",
-    "services.title": "서비스와 협업",
+    "services.title": "상담과 협업",
     "services.intro": "개인의 성장, 독립적인 창작, 기술 실천을 중심으로 상담과 교육, 프로젝트 협업을 제공합니다.",
     "services.psychology.title": "심리 상담",
     "services.psychology.text": "감정과 관계, 자기 이해를 중심으로 대화를 나누며 고민을 정리하고 자신에게 맞는 다음 단계를 찾아갑니다.",

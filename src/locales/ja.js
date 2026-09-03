@@ -1,9 +1,9 @@
 import { complete } from './complete.js'
 export default complete({
-    "services.nav": "サービス",
-    "meta.services": "サービスと協働｜Shixi Lin",
+    "services.nav": "ご依頼",
+    "meta.services": "ご相談・ご依頼｜Shixi Lin",
     "meta.servicesDescription": "心理相談、神秘学と占い、起業支援、AI活用レッスン、AIプロダクト制作、デザイン。Shixi Linが提供する相談、指導、プロジェクトでの協働についてご案内します。",
-    "services.title": "サービスと協働",
+    "services.title": "ご相談・ご依頼",
     "services.intro": "個人の成長、独立した創作、技術の活用を軸に、ご相談やレッスン、プロジェクトでの協働に対応しています。",
     "services.psychology.title": "心理相談",
     "services.psychology.text": "感情、人間関係、自己理解について対話を重ねながら、悩みを整理し、自分に合った次の一歩を探します。",

@@ -2,10 +2,10 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
-    "services.nav": "Servicios",
-    "meta.services": "Servicios y colaboración | Shixi Lin",
+    "services.nav": "Colaborar",
+    "meta.services": "Consultas y colaboración | Shixi Lin",
     "meta.servicesDescription": "Orientación psicológica, esoterismo y adivinación, orientación para emprender, enseñanza del uso de la IA, creación de productos con IA y diseño. Conoce la orientación, la enseñanza y la colaboración en proyectos que ofrece Shixi Lin.",
-    "services.title": "Servicios y colaboración",
+    "services.title": "Consultas y colaboración",
     "services.intro": "Orientación, enseñanza y colaboración en proyectos en torno al crecimiento personal, la creación independiente y la práctica tecnológica.",
     "services.psychology.title": "Orientación psicológica",
     "services.psychology.text": "A través del diálogo sobre las emociones, las relaciones y el autoconocimiento, ordenamos aquello que te preocupa y buscamos un siguiente paso adecuado para ti.",

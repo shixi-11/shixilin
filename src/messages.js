@@ -9,10 +9,10 @@ import ar from './locales/ar.js'
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
   "zh": {
-    "services.nav": "服务",
-    "meta.services": "服务与合作｜光之十一",
+    "services.nav": "合作",
+    "meta.services": "咨询与合作｜光之十一",
     "meta.servicesDescription": "心理咨询、神秘学与占卜、创业指导、AI使用教学、AI产品制作与设计。了解光之十一提供的咨询、教学与项目合作。",
-    "services.title": "服务与合作",
+    "services.title": "咨询与合作",
     "services.intro": "围绕个人成长、独立创作与技术实践，提供咨询、教学和项目合作。",
     "services.psychology.title": "心理咨询",
     "services.psychology.text": "围绕情绪、关系与自我认识，通过对话梳理困扰，寻找适合自己的下一步。",
@@ -243,10 +243,10 @@ export const messages = {
     "about.tradition.practice": "灵气导师，武当三丰派传人。"
   },
   "en": {
-    "services.nav": "Services",
-    "meta.services": "Services & Collaboration | Shixi Lin",
+    "services.nav": "Collaborate",
+    "meta.services": "Consultations & Collaboration | Shixi Lin",
     "meta.servicesDescription": "Psychological counseling, esoterica and divination, entrepreneurship guidance, AI instruction, AI product development, and design. Explore the counseling, teaching, and project collaboration offered by Shixi Lin.",
-    "services.title": "Services & Collaboration",
+    "services.title": "Consultations & Collaboration",
     "services.intro": "Consultations, teaching, and project collaborations spanning personal growth, independent creative work, and practical uses of technology.",
     "services.psychology.title": "Psychological Counseling",
     "services.psychology.text": "Through conversations about emotions, relationships, and self-understanding, we can sort through what is troubling you and look for a suitable next step.",
