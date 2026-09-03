@@ -1,6 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
-  'footer.collaborate': 'Collaborations', 'home.handles': 'Compte officiel WeChat · Xiaohongshu · Weibo · WeChat Channels : @光之十一',
+  'footer.collaborate': 'Collaborations', 'home.handles': 'Compte officiel WeChat · WeChat Channels · Xiaohongshu · Weibo : @光之十一',
   'books.read': 'Lire sur Qidian', 'home.collaborations': 'Entreprises et projets', 'home.aluxRole': 'Cofondatrice',
   'home.aluxText': 'Une blockchain publique à exécution concurrente pour les agents IA, qui développe une machine virtuelle logique globale (GLVM).',
   'home.openAlux': 'Découvrir ALUX',
@@ -57,7 +57,7 @@ export default complete({
   'about.credential1': 'Hypnothérapeute certifiée par l’AAH américaine et la NGH internationale',
   'about.credential2': 'Qualifications professionnelles nationales chinoises en conseil psychologique et en conseil conjugal et familial',
   'about.credential3': 'Praticienne en constellations familiales selon l’approche de Hellinger',
-  'about.contactTitle': 'Collaborations et contact', 'about.channels': 'Compte officiel WeChat · Xiaohongshu · Weibo · WeChat Channels',
+  'about.contactTitle': 'Collaborations et contact', 'about.channels': 'Compte officiel WeChat · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'Adresse pour les collaborations', 'about.writeEmail': 'Écrire un e-mail',
   'aiPage.intro': 'Une veille quotidienne sur l’IA, un compagnon de bureau et un outil d’écriture créative.',
   'games.nav': 'Jeux', 'games.details': 'Découvrir le jeu', 'games.breadcrumb': 'Fil d’Ariane', 'games.home': 'Accueil',

@@ -1,6 +1,6 @@
 export default {
   "footer.collaborate": "合作聯繫",
-  "home.handles": "微信公衆號 / 小紅書 / 微博 / 視頻號：@光之十一",
+  "home.handles": "微信公衆號 / 視頻號 / 小紅書 / 微博：@光之十一",
   "books.read": "在起點閱讀",
   "home.collaborations": "企業與項目",
   "home.aluxRole": "聯合創始人",
@@ -106,7 +106,7 @@ export default {
   "about.credential2": "國家職業心理諮詢師、婚姻家庭諮詢師",
   "about.credential3": "海靈格體系家族系統排列師",
   "about.contactTitle": "合作與聯繫",
-  "about.channels": "微信公衆號 · 小紅書 · 微博 · 視頻號",
+  "about.channels": "微信公衆號 · 視頻號 · 小紅書 · 微博",
   "about.mailLabel": "合作郵箱",
   "about.companyLabel": "創始人",
   "about.companyName": "十一資本",

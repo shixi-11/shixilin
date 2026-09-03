@@ -3,7 +3,7 @@ import { complete } from './complete.js'
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
   'footer.collaborate': 'Colaboraciones',
-  'home.handles': 'Cuenta oficial de WeChat · Xiaohongshu · Weibo · WeChat Channels: @光之十一',
+  'home.handles': 'Cuenta oficial de WeChat · WeChat Channels · Xiaohongshu · Weibo: @光之十一',
   'books.read': 'Leer en Qidian',
   'home.collaborations': 'Empresas y proyectos',
   'home.aluxRole': 'Cofundadora',
@@ -92,7 +92,7 @@ export default complete({
   'about.credential2': 'Cualificaciones profesionales nacionales chinas en orientación psicológica y asesoramiento matrimonial y familiar',
   'about.credential3': 'Practicante de constelaciones familiares según el enfoque de Hellinger',
   'about.contactTitle': 'Colaboraciones y contacto',
-  'about.channels': 'Cuenta oficial de WeChat · Xiaohongshu · Weibo · WeChat Channels',
+  'about.channels': 'Cuenta oficial de WeChat · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'Correo para colaboraciones',
   'about.writeEmail': 'Escribir un correo',
   'aiPage.intro': 'Un boletín sobre IA, un compañero de escritorio y una herramienta de escritura creativa.',

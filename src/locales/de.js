@@ -1,6 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
-  'footer.collaborate': 'Zusammenarbeit', 'home.handles': 'Offizieller WeChat-Account · Xiaohongshu · Weibo · WeChat Channels: @光之十一',
+  'footer.collaborate': 'Zusammenarbeit', 'home.handles': 'Offizieller WeChat-Account · WeChat Channels · Xiaohongshu · Weibo: @光之十一',
   'books.read': 'Auf Qidian lesen', 'home.collaborations': 'Unternehmen und Projekte', 'home.aluxRole': 'Mitgründerin',
   'home.aluxText': 'Eine öffentliche Blockchain mit nebenläufiger Ausführung für KI-Agenten. Eine globale logische virtuelle Maschine (GLVM) ist im Aufbau.',
   'home.openAlux': 'ALUX entdecken',
@@ -54,7 +54,7 @@ export default complete({
   'about.credential1': 'Von der amerikanischen AAH und der internationalen NGH zertifizierte Hypnotherapeutin',
   'about.credential2': 'Chinesische nationale Berufsqualifikationen für psychologische Beratung sowie Ehe- und Familienberatung',
   'about.credential3': 'Praktikerin für systemische Familienaufstellungen nach Hellinger',
-  'about.contactTitle': 'Zusammenarbeit und Kontakt', 'about.channels': 'Offizieller WeChat-Account · Xiaohongshu · Weibo · WeChat Channels',
+  'about.contactTitle': 'Zusammenarbeit und Kontakt', 'about.channels': 'Offizieller WeChat-Account · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'E-Mail für Anfragen', 'about.writeEmail': 'E-Mail schreiben',
   'aiPage.intro': 'Ein täglicher KI-Branchenüberblick, ein Desktop-Begleiter und ein Werkzeug für kreatives Schreiben.',
   'games.nav': 'Spiele', 'games.details': 'Spiel entdecken', 'games.breadcrumb': 'Seitennavigation', 'games.home': 'Startseite',

@@ -1,7 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
   'footer.collaborate': 'お仕事のご相談',
-  'home.handles': 'WeChat公式アカウント・小紅書・微博・WeChat Channels：@光之十一',
+  'home.handles': 'WeChat公式アカウント・WeChat Channels・小紅書・微博：@光之十一',
   'books.read': '起点で読む',
   'home.collaborations': '企業とプロジェクト',
   'home.aluxRole': '共同創業者',
@@ -73,7 +73,7 @@ export default complete({
   'about.credential1': '米国AAH・国際NGH協会認定ヒプノセラピスト',
   'about.credential2': '中国の国家職業資格を持つ心理カウンセラー、結婚・家族カウンセラー',
   'about.credential3': 'ヘリンガー方式のファミリー・コンステレーション実践者',
-  'about.contactTitle': 'ご相談・連絡先', 'about.channels': 'WeChat公式アカウント・小紅書・微博・WeChat Channels',
+  'about.contactTitle': 'ご相談・連絡先', 'about.channels': 'WeChat公式アカウント・WeChat Channels・小紅書・微博',
   'about.mailLabel': 'お仕事の連絡先', 'about.writeEmail': 'メールを書く',
   'aiPage.intro': 'AI業界の日報、デスクトップの仲間、創作のためのライティングツール。',
   'games.nav': 'ゲーム', 'games.details': 'ゲームについて', 'games.breadcrumb': '現在のページ', 'games.home': 'ホーム',

@@ -1,6 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
-  'footer.collaborate': '협업 문의', 'home.handles': '위챗 공식 계정 · 샤오홍슈 · 웨이보 · 위챗 채널: @光之十一',
+  'footer.collaborate': '협업 문의', 'home.handles': '위챗 공식 계정 · 위챗 채널 · 샤오홍슈 · 웨이보: @光之十一',
   'books.read': '치디엔에서 읽기', 'home.collaborations': '기업과 프로젝트', 'home.aluxRole': '공동 창업자',
   'home.aluxText': 'AI 에이전트를 위한 동시성 퍼블릭 블록체인으로, 글로벌 논리 가상 머신(GLVM)을 구축하고 있습니다.',
   'home.openAlux': 'ALUX 보기',
@@ -52,7 +52,7 @@ export default complete({
   'about.credential1': '미국 AAH·국제 NGH 협회 인증 최면치료사',
   'about.credential2': '중국 국가직업자격 심리상담사·결혼 및 가족상담사',
   'about.credential3': '헬링거 체계 가족세우기 실무자',
-  'about.contactTitle': '협업과 연락', 'about.channels': '위챗 공식 계정 · 샤오홍슈 · 웨이보 · 위챗 채널',
+  'about.contactTitle': '협업과 연락', 'about.channels': '위챗 공식 계정 · 위챗 채널 · 샤오홍슈 · 웨이보',
   'about.mailLabel': '협업 이메일', 'about.writeEmail': '이메일 보내기',
   'aiPage.intro': 'AI 산업 일보, 데스크톱 친구, 창작을 위한 글쓰기 도구.',
   'games.nav': '게임', 'games.details': '게임 알아보기', 'games.breadcrumb': '현재 위치', 'games.home': '홈',

@@ -1,6 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
-  'footer.collaborate': 'للتعاون', 'home.handles': 'حساب WeChat الرسمي · Xiaohongshu · Weibo · WeChat Channels: @光之十一',
+  'footer.collaborate': 'للتعاون', 'home.handles': 'حساب WeChat الرسمي · WeChat Channels · Xiaohongshu · Weibo: @光之十一',
   'books.read': 'القراءة على Qidian', 'home.collaborations': 'شركات ومشاريع', 'home.aluxRole': 'شريكة مؤسِّسة',
   'home.aluxText': 'بلوكتشين عامة تدعم التنفيذ المتزامن لوكلاء الذكاء الاصطناعي، تعمل على بناء آلة افتراضية منطقية عالمية (GLVM).',
   'home.openAlux': 'اكتشف ALUX',
@@ -55,7 +55,7 @@ export default complete({
   'about.credential1': 'مُعالجة بالتنويم الإيحائي معتمدة من AAH الأمريكية وNGH الدولية',
   'about.credential2': 'مؤهلات مهنية وطنية صينية في الإرشاد النفسي والإرشاد الزواجي والأسري',
   'about.credential3': 'مُمارسة للتمثيل المنظومي العائلي وفق منهج هيلينغر',
-  'about.contactTitle': 'للتعاون والتواصل', 'about.channels': 'حساب WeChat الرسمي · Xiaohongshu · Weibo · WeChat Channels',
+  'about.contactTitle': 'للتعاون والتواصل', 'about.channels': 'حساب WeChat الرسمي · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'بريد التعاون', 'about.writeEmail': 'اكتب رسالة',
   'aiPage.intro': 'نشرة يومية عن الذكاء الاصطناعي، ورفيق لسطح المكتب، وأداة للكتابة الإبداعية.',
   'games.nav': 'الألعاب', 'games.details': 'اكتشف اللعبة', 'games.breadcrumb': 'مسار الصفحة', 'games.home': 'الرئيسية',
