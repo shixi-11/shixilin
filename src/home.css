@@ -27,7 +27,7 @@ body::before { display: none; }
 .paper-subtitle { margin: 3px 0 25px; font-size: 27px; line-height: 1.7; letter-spacing: .12em; }
 .gold-rule { display: block; width: 33px; height: 1px; background: #b39451; }
 .paper-intro { display: grid; gap: 5px; margin: 23px 0 0; color: #555752; font-size: 16px; line-height: 1.8; letter-spacing: .08em; }
-.paper-intro span { display: block; }
+.paper-intro span { display: block; text-wrap: balance; }
 .home-grid { display: grid; grid-template-columns: minmax(0, 1.915fr) minmax(0, 1fr); gap: 6.5%; width: 84%; max-width: 1320px; margin: 0 auto; padding: 2px 0 59px; }
 .home-grid section { min-width: 0; }
 .paper-section-title { position: relative; width: fit-content; margin: 0 0 22px; font-size: 29px; font-weight: 500; line-height: 1.4; letter-spacing: .07em; }
