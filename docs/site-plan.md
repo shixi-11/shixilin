@@ -34,6 +34,7 @@
 - 改名前的服务页预览：`A:/vibe coding/shixilin/design/20260904_服务与合作.jpg`，2844×2986px，保留为首次交付记录；现行名称以“合作／咨询与合作”为准。
 - 名称调整已发布：`49673b0`；部署 `dpl_A44czLK5FdTF1SUsMh2A5qFNUMgD`，READY。九语种导航、页面标题与浏览器标题同步，45组屏宽与语言检查通过；生产JS `/assets/index-IIaJrOvb.js`、CSS `/assets/index-Cq4CxvXW.css`及九个语言URL的服务页HTML均与本地构建一致。
 - 本轮已确定事项已完成实施、验证与发布；用户视觉验收仍待反馈。
+- 设计范围扩展已发布：`f94ae1c`；部署 `dpl_HtRVat2gQBvjMJ1eBDAgaXGr1td7`，READY。设计项九语种各保留一段简述，36组语言与屏宽检查通过；生产JS `/assets/index-zdcuqUPh.js`、CSS `/assets/index-Cq4CxvXW.css`及服务页HTML与本地构建一致。
 
 ## 尚未决定的扩展
 
