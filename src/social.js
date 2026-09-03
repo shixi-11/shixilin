@@ -7,6 +7,13 @@ export const socialProfiles = [
     "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"m4 3 13 18h3L7 3H4Zm0 18L11 13M20 3l-7 8\"/></svg>"
   },
   {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "handle": "Shixi Lin",
+    "href": "https://www.linkedin.com/in/shixilin/",
+    "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" stroke=\"none\" d=\"M5.1 3a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.3 9h3.6v12H3.3V9Zm6.1 0h3.5v1.7c.5-1 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.6V21h-3.6v-6c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9.4V9Z\"/></svg>"
+  },
+  {
     "id": "instagram",
     "name": "Instagram",
     "handle": "@shixi_11",

@@ -29,11 +29,11 @@
 
 ## 关于我与联系
 
-我是光之十一，作家、连续创业者、游戏创作者，也是[ALUX](https://alux.network/)联合创始人。更多个人经历与创作介绍，见[关于我](https://shixilin.com/about)。
+我是光之十一，作家、连续创业者、游戏创作者，也是[ALUX、Foundation ALUX](https://alux.network/)与[ConcurSys](https://concursys.io/)的联合创始人。ALUX是一条面向AI智能体的并发公链，正在构建全局逻辑虚拟机（GLVM）；ConcurSys专注并发计算与区块链基础设施。更多个人经历与创作介绍，见[关于我](https://shixilin.com/about)。
 
 合作联系：[info@elevencapital.ltd](mailto:info@elevencapital.ltd) · [十一资本](https://elevencapital.ltd/)
 
-[X](https://x.com/11Shixi) · [Instagram](https://www.instagram.com/shixi_11/) · [TikTok](https://www.tiktok.com/@shixilin)
+[X](https://x.com/11Shixi) · [LinkedIn](https://www.linkedin.com/in/shixilin/) · [GitHub](https://github.com/shixi-11) · [Instagram](https://www.instagram.com/shixi_11/) · [TikTok](https://www.tiktok.com/@shixilin)
 
 微信公众号、小红书、微博、视频号：**@光之十一**
 

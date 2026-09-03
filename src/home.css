@@ -67,6 +67,8 @@ body::before { display: none; }
 .home-book-links > a { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 35px; font-size: 22px; }
 .home-book-links > a:hover { color: #8c713d; }
 .home-book-links > a > span { font-family: 'Source Sans 3', sans-serif; font-size: 15px; }
+.home-book-links > a > .home-book-name { font: inherit; }
+.home-book-name small { display: block; max-width: 230px; margin-top: 4px; color: #62675f; font-size: 13px; line-height: 1.5; text-wrap: balance; }
 .home-book-links > .book-shelf-link { margin-top: 2px; min-height: 30px; font-size: 12px; color: #60635d; }
 .paper-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; min-height: 134px; padding: 25px max(8%, calc((100% - 1320px) / 2)); border-top: 1px solid rgba(62, 60, 51, .08); }
 .paper-footer-name { display: inline-flex; align-items: baseline; gap: 6px; width: max-content; font-size: 27px; line-height: 1.6; letter-spacing: .05em; }
@@ -98,6 +100,7 @@ html[lang='en'] .paper-footer > p { letter-spacing: 0; }
 .quiet-page p { max-width: 700px; font-size: 17px; line-height: 2; color: #555752; }
 .quiet-page .text-link { margin-top: 32px; }
 .home-project-grid { display: grid; grid-template-columns: minmax(0, 1.915fr) minmax(0, 1fr); gap: 6.5%; width: 84%; max-width: 1320px; margin: 0 auto; padding-bottom: 59px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
+.subtitle-phrase { display: inline-block; }
 .home-game, .home-alux { min-width: 0; }
 .game-card { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 26px; min-height: 246px; padding: 16px; border: 1px solid rgba(95, 86, 67, .18); border-radius: 3px; background: rgba(255,255,255,.2); transition: border-color 180ms; }
 .game-card > img { width: 100%; height: auto; }

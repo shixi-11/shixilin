@@ -1,11 +1,11 @@
-import { t } from './i18n.js'
+import { getLocale, t } from './i18n.js'
 
 export const supportAddress = '0x8fEa6c988005A249355ea5b862de086b12CC77aD'
 const networks = ['Ethereum', 'Arbitrum', 'Base']
 
 export function supportView() {
   return `<section class="support-page" aria-labelledby="support-title">
-    <header class="support-heading"><p class="support-eyebrow">${t('support.nav')}</p><h1 id="support-title">${t('support.title')}</h1><p>${t('support.intro')}</p></header>
+    <header class="support-heading"><p class="support-eyebrow">${t('support.nav')}</p><h1 id="support-title">${t('support.title')}</h1><p>${getLocale() === 'zh' ? t('support.intro').split('，').map((phrase, index, phrases) => `<span class="support-phrase">${phrase}${index < phrases.length - 1 ? '，' : ''}</span>`).join('') : t('support.intro')}</p></header>
     <div class="support-wallet">
       <div class="support-wallet-copy">
         <p class="support-label" id="network-label">${t('support.chooseNetwork')}</p>
@@ -17,7 +17,6 @@ export function supportView() {
       <figure class="support-qr"><img src="/assets/support-address.svg" width="208" height="208" alt="${t('support.qrAlt')}" /><figcaption>${t('support.qrCaption')}</figcaption></figure>
       <p class="support-network-note">${t('support.networkNote')}</p>
     </div>
-    <p class="support-thanks">${t('support.thanks')}</p>
   </section>`
 }
 

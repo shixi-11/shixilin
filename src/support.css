@@ -1,8 +1,9 @@
 .support-page { width: 84%; max-width: 920px; min-height: 70vh; margin: 0 auto; padding: 68px 0 76px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
-.support-heading { max-width: 620px; }
+.support-heading { max-width: 100%; }
+.support-phrase { display: inline-block; }
 .support-heading .support-eyebrow { margin: 0 0 15px; color: #8b7446; font-size: 12px; letter-spacing: .12em; }
 .support-heading h1 { margin: 0 0 19px; font-size: 46px; font-weight: 500; line-height: 1.4; letter-spacing: .03em; }
-.support-heading > p:last-child { margin: 0; color: #555d54; font-size: 16px; line-height: 1.95; text-wrap: pretty; }
+.support-heading > p:last-child { margin: 0; color: #555d54; font-size: 16px; line-height: 1.95; text-wrap: balance; }
 .support-wallet { display: grid; grid-template-columns: minmax(0, 1fr) 208px; gap: 29px 42px; margin-top: 37px; padding: 30px; border: 1px solid var(--line); background: rgba(255,255,255,.22); }
 .support-label { margin: 0 0 12px; color: #65695f; font-size: 13px; }
 .support-networks { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -23,7 +24,6 @@
 .support-qr img { display: block; width: 208px; height: 208px; border: 1px solid rgba(62,60,51,.08); background: #fff; }
 .support-qr figcaption { margin-top: 10px; color: #72776f; font-size: 12px; text-align: center; }
 .support-network-note { grid-column: 1 / -1; margin: 0; padding-top: 20px; border-top: 1px solid var(--line); color: #727366; font-size: 13px; line-height: 1.9; text-wrap: pretty; }
-.support-thanks { margin: 26px 0 0; color: #777366; font-size: 15px; line-height: 1.8; }
 @media (max-width: 800px) {
   .support-page { width: 88%; padding-top: 49px; }
   .support-wallet { gap: 26px; padding: 25px; grid-template-columns: minmax(0, 1fr) 170px; }
@@ -40,5 +40,4 @@
   .wallet-address { font-size: 13px; }
   .support-qr { justify-self: center; }
   .support-qr img { width: 208px; height: 208px; }
-  .support-thanks { font-size: 14px; }
 }

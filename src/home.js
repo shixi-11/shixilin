@@ -1,5 +1,5 @@
 import { socialProfiles } from './social.js'
-import { t } from './i18n.js'
+import { getLocale, t } from './i18n.js'
 import { books, dailyUrl } from './content.js'
 import { gameCards } from './games.js'
 
@@ -8,12 +8,15 @@ export function cloudOrnament() {
 }
 
 export function homeView() {
+  const subtitle = getLocale() === 'en'
+    ? t('home.subtitle').split(', ').map((part, index) => `<span class="subtitle-phrase">${part}${index === 0 ? ',' : ''}</span>`).join(' ')
+    : t('home.subtitle')
   return `
     <section class="paper-hero" aria-labelledby="home-title">
       <img class="landscape-art" src="/assets/landscape.png" alt="" width="1773" height="887" fetchpriority="high" />
       <div class="paper-hero-copy">
         <div class="paper-name"><h1 id="home-title">${t('home.name')}</h1>${cloudOrnament()}</div>
-        <p class="paper-subtitle">${t('home.subtitle')}</p>
+        <p class="paper-subtitle">${subtitle}</p>
         <span class="gold-rule" aria-hidden="true"></span>
         <p class="paper-intro"><span>${t('home.intro1')}</span><span>${t('home.intro2')}</span></p>
       </div>
@@ -46,7 +49,10 @@ export function homeView() {
       <section class="home-books" aria-labelledby="books-title">
         <h2 class="paper-section-title" id="books-title"><a class="internal-link" href="/books">${t('home.books')}</a></h2>
         <div class="paper-book-card">
-          <div class="home-book-links"><span class="book-reading-label">${t('books.read')}</span>${books.filter(book => book.href).map(book => `<a href="${book.href}" target="_blank" rel="noopener">${t(book.title).split(' · ')[0]} <span aria-hidden="true">↗</span></a>`).join('')}<a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
+          <div class="home-book-links"><span class="book-reading-label">${t('books.read')}</span>${books.filter(book => book.href).map(book => {
+            const [original, translation] = t(book.title).split(' · ')
+            return `<a href="${book.href}" target="_blank" rel="noopener"><span class="home-book-name">${original}${translation ? `<small>${translation}</small>` : ''}</span><span aria-hidden="true">↗</span></a>`
+          }).join('')}<a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
           <img src="/assets/books.png" alt="" width="1536" height="1024" loading="lazy" />
         </div>
       </section>
@@ -58,10 +64,16 @@ export function homeView() {
     </section>
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>
+      <div class="home-collaborations">
       <a class="alux-card" href="https://alux.network/" target="_blank" rel="noopener">
         <div class="alux-identity"><span class="game-status">${t('home.aluxRole')}</span><h3>ALUX</h3></div>
         <div class="alux-description"><p>${t('home.aluxText')}</p><span class="game-action">${t('home.openAlux')} <span aria-hidden="true">↗</span></span></div>
       </a>
+      <a class="alux-card" href="https://concursys.io/" target="_blank" rel="noopener">
+        <div class="alux-identity"><span class="game-status">${t('home.aluxRole')}</span><h3>ConcurSys</h3></div>
+        <div class="alux-description"><p>${t('home.concursysText')}</p><span class="game-action">${t('home.openConcursys')} <span aria-hidden="true">↗</span></span></div>
+      </a>
+      </div>
     </section>
     </div>
   `
