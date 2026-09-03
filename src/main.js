@@ -89,7 +89,10 @@ function shell(content, pathname) {
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
           </nav>
-          <div class="language-picker"><select class="language-select" lang="${locales.find(locale => locale.id === getLocale()).lang}" aria-label="${t('language.label')}" dir="ltr">${locales.map(locale => `<option value="${locale.id}" lang="${locale.lang}"${getLocale() === locale.id ? ' selected' : ''}>${locale.name}</option>`).join('')}</select></div>
+          <div class="language-picker" dir="ltr">
+            <svg class="language-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h12M7 2v3M4 8c2 4 5 6 8 7M12 5c-1 5-4 8-8 10M13 22l5-11 5 11M15 18h6"/></svg>
+            <select class="language-select" lang="${locales.find(locale => locale.id === getLocale()).lang}" aria-label="${t('language.label')}" dir="ltr">${locales.map(locale => `<option value="${locale.id}" lang="${locale.lang}"${getLocale() === locale.id ? ' selected' : ''}>${locale.name}</option>`).join('')}</select>
+          </div>
           <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
             <span>${t('nav.menu')}</span><i aria-hidden="true"></i>
           </button>

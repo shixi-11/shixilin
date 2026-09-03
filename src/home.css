@@ -291,5 +291,8 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .home-book-upcoming > span { font-size: 19px; }
 }
 @media (max-width: 620px) {
-  .paper-socials { gap: 14px; }
+  .paper-socials { gap: 10px; }
+}
+@media (max-width: 360px) {
+  .paper-socials { gap: 4px; }
 }

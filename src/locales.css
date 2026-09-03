@@ -3,7 +3,8 @@
 @font-face { font-family: 'Noto Serif KR'; src: url('/fonts/noto-serif-kr.woff2') format('woff2'); font-weight: 200 900; font-display: swap; }
 @font-face { font-family: 'Noto Naskh Arabic'; src: url('/fonts/noto-naskh-arabic.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }
 
-.language-picker { flex: 0 0 auto; }
+.language-picker { position: relative; flex: 0 0 auto; color: #606761; }
+.language-icon { position: absolute; inset-inline-start: 0; top: 50%; width: 17px; height: 17px; transform: translateY(-50%); pointer-events: none; }
 .paper-section-title { min-inline-size: 42px; }
 .locale-phrase { display: inline-block; white-space: nowrap; }
 .game-facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); }
@@ -11,7 +12,7 @@
 .home-ai-entry p { text-wrap: balance; }
 html:not([lang^='zh']) .paper-button { width: min(230px, 100%); padding-inline: 15px; letter-spacing: 0; white-space: nowrap; }
 .language-select {
-  appearance: auto; width: 100px; min-height: 44px; padding: 7px 0 7px 7px;
+  appearance: auto; width: 114px; min-height: 44px; padding: 7px 0 7px 23px;
   border: 0; border-radius: 0; color: #606761; background: transparent;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400; font-synthesis: none;
@@ -77,7 +78,7 @@ html[dir='rtl'] .paper-section-title::after { left: auto; right: 0; }
 }
 @media (max-width: 600px) {
   .header-tools { gap: 14px; }
-  .language-select { width: 90px; font-size: 12px; }
+  .language-select { width: 104px; font-size: 12px; }
   html:not([lang^='zh']) .paper-hero { min-height: 305px; padding-bottom: 48px; }
   html:not([lang^='zh']) .paper-name h1 { font-size: clamp(42px, 11.5vw, 58px); }
   html:not([lang^='zh']) .paper-subtitle { max-width: 100%; font-size: 20px; }
@@ -90,5 +91,5 @@ html[dir='rtl'] .paper-section-title::after { left: auto; right: 0; }
 }
 @media (max-width: 360px) {
   .header-tools { gap: 7px; }
-  .language-select { width: 82px; }
+  .language-select { width: 96px; }
 }
