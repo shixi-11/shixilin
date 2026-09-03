@@ -1,4 +1,4 @@
-import { socialProfiles } from './social.js'
+import { aboutView } from './about.js'
 import './styles.css'
 import './home.css'
 import './about.css'
@@ -118,73 +118,6 @@ function booksView() {
     <div class="reading-list">${books.map(book => `<article class="reading-item"><small>${t(book.category)}</small><h2>${t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')}</h2><p>${t(book.text)}</p>${book.href ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`).join('')}</div>
     <p class="book-status">${t('books.status')}</p>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
-  </section>`
-}
-
-function aboutView() {
-  const aboutText = key => t(key).replace(/《[^》]+》|AI Agent Intelligence Daily|Ink Duel: Hundred Arms|Foundation ALUX|A Mortal Life,|Born of One Thought|In Heaven’s Stead|Still Untitled|Yunjian|Baishishu|Mohe|AI智能体情报日报|面向Steam的桌面游戏|AI智能体网络|AI智能体|AI炼丹师|数百篇|原创词作|连续创业者|数字游牧者|出口贸易|国际贸易|企业孵化|自2016年起|精神传统|区块链|智能体网络|数字文明|所学所思|云笺|墨核|叙事游戏|格斗游戏|现代诗|歌词|小说/g, phrase => `<span class="book-title">${phrase}</span>`)
-  return `<section class="about-page">
-    <header class="about-masthead">
-      <div class="about-identity">
-        <p class="about-eyebrow">${t('nav.about')}</p>
-        <h1>${t('home.name')}</h1>
-        <p class="about-alias">${t('about.alias')}</p>
-        <p class="about-roles"><span>${t('about.roles1')}</span><span>${t('about.roles2')}</span></p>
-      </div>
-      <div class="about-introduction">
-        <p class="about-lead">${getLocale() === 'zh' ? t('about.lead').split('，').map((phrase, index) => `<span class="about-lead-phrase">${phrase}${index === 0 ? '，' : ''}</span>`).join('') : t('about.lead')}</p>
-        <p>${aboutText('home.aboutWriting')}</p>
-      </div>
-    </header>
-    <section class="about-chapter" aria-labelledby="about-creation-title">
-      <h2 id="about-creation-title">${t('about.creationsTitle')}</h2>
-      <div class="about-chapter-body">
-      <div class="about-creations">
-        <article><h3>${t('about.creation.term')}</h3><p>${aboutText('about.creation.intro')}</p><p>${aboutText('about.creation.books')}</p><a class="about-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></article>
-        <article><h3>${t('about.buildTitle')}</h3><p>${aboutText('about.buildText')}</p><div class="about-actions"><a class="about-link internal-link" href="/ai">${t('work.all')} <span aria-hidden="true">→</span></a><a class="about-link internal-link" href="/games">${t('home.games')} <span aria-hidden="true">→</span></a></div></article>
-      </div>
-      <p class="about-practice-note">${aboutText('about.aiPractice')}</p>
-      </div>
-    </section>
-    <section class="about-chapter about-ventures" aria-labelledby="about-ventures-title">
-      <h2 id="about-ventures-title">${t('about.venturesTitle')}</h2>
-      <div class="about-chapter-body">
-      <p>${aboutText('about.business.text')}</p>
-      <div class="about-affiliations">
-      <a class="about-company" href="https://alux.network/" target="_blank" rel="noopener">
-        <span><small>${t('home.aluxRole')}</small><strong>ALUX · <span class="title-phrase">Foundation ALUX</span></strong></span>
-        <span class="about-company-alias">alux.network</span><span class="about-company-arrow" aria-hidden="true">↗</span>
-      </a>
-      <a class="about-company" href="https://concursys.io/" target="_blank" rel="noopener">
-        <span><small>${t('home.aluxRole')}</small><strong>ConcurSys</strong></span>
-        <span class="about-company-alias">concursys.io</span><span class="about-company-arrow" aria-hidden="true">↗</span>
-      </a>
-      <a class="about-company" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
-        <span><small>${t('about.companyLabel')}</small><strong>${t('about.companyName')}</strong></span>
-        <span class="about-company-alias">${t('about.companyAlias')}</span><span class="about-company-arrow" aria-hidden="true">↗</span>
-      </a>
-      </div>
-      </div>
-    </section>
-    <section class="about-chapter" aria-labelledby="about-experience-title">
-      <h2 id="about-experience-title">${t('about.experienceTitle')}</h2>
-      <dl class="about-experience">
-        <div><dt>${t('about.travel.term')}</dt><dd>${t('about.travel.text')}</dd></div>
-        <div><dt>${t('about.practice.term')}</dt><dd><ul class="about-credentials">${[1, 2, 3, 4].map(index => `<li>${t(`about.credential${index}`)}</li>`).join('')}</ul></dd></div>
-        <div><dt>${t('about.tradition.term')}</dt><dd>${t('about.tradition.text')}</dd></div>
-      </dl>
-    </section>
-    <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
-      <div class="about-contact-heading"><h2 id="about-contact-title">${t('about.contactTitle')}</h2><p>${t('about.contactIntro')}</p></div>
-      <div class="about-chapter-body">
-      <a class="about-mail-card" href="mailto:info@elevencapital.ltd">
-        <span><small>${t('about.mailLabel')}</small><span class="about-mail-address">info@elevencapital.ltd</span></span>
-        <span class="about-mail-action">${t('about.writeEmail')} <span aria-hidden="true">↗</span></span>
-      </a>
-      <div class="about-social-directory">${socialProfiles.map(profile => `<a href="${profile.href}" target="_blank" rel="noopener"><span class="about-social-icon">${profile.icon}</span><span class="about-social-copy"><span class="about-platform">${profile.name}</span><span class="about-handle">${profile.handle}</span></span><span class="about-external" aria-hidden="true">↗</span></a>`).join('')}</div>
-      <div class="about-public-profile"><strong>@${t('brand.name')}</strong><p>${t('about.channels')}</p></div>
-      </div>
-    </section>
   </section>`
 }
 

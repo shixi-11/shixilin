@@ -8,6 +8,7 @@ export function cloudOrnament() {
 }
 
 export function homeView() {
+  const projectText = key => t(key).replace(/AI智能体|并发公链|全局逻辑虚拟机|去中心化|分布式执行|国际贸易|企业孵化|商业实践/g, phrase => `<span class="home-phrase">${phrase}</span>`)
   const subtitle = getLocale() === 'en'
     ? t('home.subtitle').split(', ').map((part, index) => `<span class="subtitle-phrase">${part}${index === 0 ? ',' : ''}</span>`).join(' ')
     : t('home.subtitle')
@@ -52,7 +53,7 @@ export function homeView() {
           <div class="home-book-links"><span class="book-reading-label">${t('books.read')}</span>${books.filter(book => book.href).map(book => {
             const [original, translation] = t(book.title).split(' · ')
             return `<a href="${book.href}" target="_blank" rel="noopener"><span class="home-book-name">${original}${translation ? `<small>${translation}</small>` : ''}</span><span aria-hidden="true">↗</span></a>`
-          }).join('')}<a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
+          }).join('')}<div class="home-book-upcoming"><span>${t('book.poetry.title').split(' · ').map((part,index) => index ? '<small>' + part + '</small>' : part).join('')}</span><small>${t('home.poetryStatus')}</small></div><a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
           <img src="/assets/books.png" alt="" width="1536" height="1024" loading="lazy" />
         </div>
       </section>
@@ -65,13 +66,17 @@ export function homeView() {
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>
       <div class="home-collaborations">
+      <a class="alux-card" href="https://elevencapital.ltd/" target="_blank" rel="noopener">
+        <div class="alux-identity"><span class="game-status">${t('home.elevenRole')}</span><h3>${t('about.companyName')}</h3></div>
+        <div class="alux-description"><p>${projectText('home.elevenText')}</p><span class="game-action">${t('home.openEleven')} <span aria-hidden="true">↗</span></span></div>
+      </a>
       <a class="alux-card" href="https://alux.network/" target="_blank" rel="noopener">
         <div class="alux-identity"><span class="game-status">${t('home.aluxRole')}</span><h3>ALUX</h3></div>
-        <div class="alux-description"><p>${t('home.aluxText')}</p><span class="game-action">${t('home.openAlux')} <span aria-hidden="true">↗</span></span></div>
+        <div class="alux-description"><p>${projectText('home.aluxText')}</p><span class="game-action">${t('home.openAlux')} <span aria-hidden="true">↗</span></span></div>
       </a>
       <a class="alux-card" href="https://concursys.io/" target="_blank" rel="noopener">
         <div class="alux-identity"><span class="game-status">${t('home.aluxRole')}</span><h3>ConcurSys</h3></div>
-        <div class="alux-description"><p>${t('home.concursysText')}</p><span class="game-action">${t('home.openConcursys')} <span aria-hidden="true">↗</span></span></div>
+        <div class="alux-description"><p>${projectText('home.concursysText')}</p><span class="game-action">${t('home.openConcursys')} <span aria-hidden="true">↗</span></span></div>
       </a>
       </div>
     </section>
@@ -83,7 +88,7 @@ export function paperFooter() {
   return `<footer class="paper-footer">
     <a class="paper-footer-name internal-link" href="/">${t('brand.name')}${cloudOrnament()}</a>
     <p>${t('home.subtitle')}</p>
-    <div class="paper-socials">${socialProfiles.map(profile => `${profile.id === 'github' ? '<span aria-hidden="true"></span>' : ''}<a href="${profile.href}" target="_blank" rel="noopener" aria-label="${profile.name} · ${profile.handle}" title="${profile.name} · ${profile.handle}">${profile.icon}</a>`).join('')}</div>
+    <div class="paper-socials">${socialProfiles.map(profile => `${profile.id === 'instagram' ? '<span aria-hidden="true"></span>' : ''}<a href="${profile.href}" target="_blank" rel="noopener" aria-label="${profile.name} · ${profile.handle}" title="${profile.name} · ${profile.handle}">${profile.icon}</a>`).join('')}</div>
     <div class="footer-contact">
       <a class="footer-email" href="mailto:info@elevencapital.ltd"><span>${t('footer.collaborate')}</span><span>info@elevencapital.ltd</span></a>
       <p class="social-notes">${t('home.handles')}</p>

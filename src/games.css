@@ -9,12 +9,13 @@
 .home-game-list .game-action { align-self: flex-start; margin-top: auto; min-height: 36px; }
 .home-project-grid { display: flex; flex-direction: column; gap: 45px; }
 .home-alux { display: block; }
-.home-collaborations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.home-collaborations { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
 .home-alux .alux-card { display: flex; flex-direction: column; align-items: stretch; gap: 18px; min-height: 0; padding: 26px 28px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,.2); }
 .alux-description { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
 .home-alux .alux-card .game-status { font-family: 'Source Sans 3', 'Microsoft YaHei', sans-serif; line-height: 1.6; letter-spacing: .02em; }
 .home-alux .alux-card h3 { margin: 5px 0 0; font-size: 34px; }
-.home-alux .alux-card p { max-width: 620px; font-size: 16px; text-wrap: pretty; }
+.home-alux .alux-card p { max-width: 620px; font-size: 16px; text-wrap: balance; }
+.home-phrase { white-space: nowrap; }
 .home-alux .alux-card .game-action { min-height: 36px; margin-top: auto; padding-top: 16px; gap: 24px; }
 
 .game-directory { width: 84%; max-width: 1200px; margin: 0 auto; padding: 58px 0 70px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
@@ -62,7 +63,7 @@ html[lang='en'] .home-game-list .game-card h3 { font-size: 26px; letter-spacing:
 
 @media (max-width: 1000px) {
   .home-game-list { gap: 22px; }
-  .home-collaborations { gap: 22px; }
+  .home-collaborations { grid-template-columns: 1fr; gap: 22px; }
   .game-directory { width: 88%; }
   .game-page { width: 88%; }
   .game-masthead { gap: 35px; }

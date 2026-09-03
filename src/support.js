@@ -17,6 +17,7 @@ export function supportView() {
       <figure class="support-qr"><img src="/assets/support-address.svg" width="208" height="208" alt="${t('support.qrAlt')}" /><figcaption>${t('support.qrCaption')}</figcaption></figure>
       <p class="support-network-note">${t('support.networkNote')}</p>
     </div>
+    <p class="support-thanks">${t('support.thanks')}</p>
   </section>`
 }
 

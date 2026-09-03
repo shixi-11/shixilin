@@ -1,129 +1,98 @@
-.about-page {
-  width: 84%; max-width: 1080px; margin: 0 auto; padding: 64px 0 70px;
-  font-family: 'Noto Serif SC', 'Songti SC', serif;
-}
-.about-page p { margin: 0; color: #555752; font-size: 16px; line-height: 2; text-wrap: pretty; }
-.about-masthead { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.4fr); gap: 64px; align-items: center; padding-bottom: 50px; }
-.about-page .about-eyebrow { margin-bottom: 17px; color: #8b7446; font-size: 13px; letter-spacing: .15em; }
-.about-identity h1 { margin: 0; font-size: 44px; font-weight: 500; line-height: 1.4; letter-spacing: .05em; white-space: nowrap; }
-.about-page .about-alias { margin-top: 8px; color: #6b7873; font-family: 'Source Sans 3', sans-serif; font-size: 13px; letter-spacing: .23em; }
-.about-page .about-roles { display: grid; gap: 3px; margin-top: 24px; font-size: 13px; line-height: 1.9; color: #62635d; }
-.about-roles span { text-wrap: pretty; }
-.about-introduction { align-self: center; max-width: 560px; }
-.about-page .about-lead { margin: 0 0 20px; color: #283c34; font-size: 29px; font-weight: 500; line-height: 1.65; text-wrap: balance; }
-.about-introduction > p:last-child { text-wrap: pretty; }
-.about-lead-phrase { display: inline-block; }
-.about-chapter { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; padding: 38px 0 42px; border-top: 1px solid var(--line); }
-.about-chapter h2 { margin: 0; color: var(--ink); font-size: 25px; font-weight: 500; line-height: 1.6; letter-spacing: .02em; }
+.about-page { width: 84%; max-width: 1080px; margin: 0 auto; padding: 78px 0 82px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
+.about-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: pretty; }
+.about-page h2, .about-page h3 { margin: 0; font-weight: 500; }
+.about-phrase { white-space: nowrap; }
+.about-masthead { display: grid; grid-template-columns: 330px minmax(0,1fr); gap: 66px; padding-bottom: 65px; align-items: start; }
+.about-page .about-eyebrow { margin: 0 0 21px; font-size: 12px; color: #857344; letter-spacing: .16em; }
+.about-identity h1 { margin: 0; font-size: 54px; font-weight: 400; line-height: 1.35; letter-spacing: .045em; white-space: nowrap; }
+.about-page .about-alias { margin: 13px 0 0; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: #778078; letter-spacing: .22em; }
+.about-page .about-roles { margin-top: 26px; font-size: 14px; color: #62695f; }
+.about-introduction { padding-top: 41px; }
+.about-page .about-lead { max-width: 600px; margin-bottom: 23px; color: #2e453a; font-size: 28px; line-height: 1.7; text-wrap: balance; }
+.about-introduction > p:last-child { max-width: 580px; }
+
+.about-chapter { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 66px; padding: 43px 0 49px; border-top: 1px solid var(--line); }
+.about-chapter > h2 { font-size: 24px; line-height: 1.7; color: #303c32; }
 .about-chapter-body { min-width: 0; }
-.about-ventures .about-chapter-body > p { max-width: 790px; text-wrap: balance; }
-.about-creations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 60px; }
-.about-actions { display: flex; flex-wrap: wrap; gap: 6px 28px; margin-top: auto; }
-.about-creations article { display: flex; flex-direction: column; align-items: flex-start; }
-.about-creations h3 { margin: 0 0 16px; color: #746347; font-size: 18px; font-weight: 500; line-height: 1.6; }
-.about-creations p { max-width: 670px; margin-bottom: 16px; text-wrap: pretty; }
-.about-page .book-title { white-space: nowrap; }
-.about-page .about-practice-note { margin-top: 30px; padding-left: 18px; border-left: 1px solid #b39451; color: #666c61; font-size: 14px; }
-.about-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 44px; margin-top: auto; border-bottom: 1px solid #b39451; font-size: 14px; }
-.about-link:hover, .about-social-directory a:hover { color: #8c713d; }
-.about-affiliations { margin-top: 35px; }
-.about-company { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 24px; padding: 20px 0; border-top: 1px solid rgba(62,60,51,.09); }
+.about-work + .about-work { margin-top: 29px; padding-top: 29px; border-top: 1px solid rgba(62,60,51,.08); }
+.about-work-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px 24px; margin-bottom: 13px; }
+.about-work h3, .about-study h3 { color: #564f3e; font-size: 19px; line-height: 1.65; }
+.about-work p + p { margin-top: 12px; }
+.about-link { display: inline-flex; align-items: center; gap: 17px; min-height: 32px; font-size: 13px; color: #6e705f; white-space: nowrap; }
+.about-link > span { color: #99804b; font-family: 'Source Sans 3', sans-serif; }
+.about-link:hover, .about-company:hover, .about-social-directory a:hover { color: #8b703e; }
+.about-page .about-practice-note { font-size: 14px; color: #74786e; }
+.about-section-intro { max-width: 760px; }
+.about-affiliations { margin-top: 24px; }
+.about-company { display: grid; grid-template-columns: minmax(0,1fr) auto 14px; align-items: center; gap: 25px; padding: 21px 0; border-top: 1px solid rgba(62,60,51,.1); }
 .about-company:last-child { padding-bottom: 0; }
-.about-company small { display: block; margin-bottom: 6px; color: #8b7446; font-size: 12px; letter-spacing: .08em; }
-.about-company strong { font-size: 20px; font-weight: 400; line-height: 1.5; }
-.about-company-alias { color: #707571; font-family: 'Source Sans 3', sans-serif; font-size: 14px; }
-.about-company-arrow { font-family: 'Source Sans 3', sans-serif; font-size: 19px; }
-.about-company:hover, .about-mail-card:hover { color: #8c713d; }
-.about-experience { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 38px; margin: 0; }
-.about-experience > div { display: block; min-width: 0; padding: 0; border: 0; }
-.about-experience > div:first-child { border-top: 0; padding-top: 0; }
-.about-experience > div:last-child { padding-bottom: 0; }
-.about-experience dt { margin-bottom: 15px; color: #746347; font-size: 17px; line-height: 1.7; }
-.about-experience dd { max-width: 700px; margin: 0; color: #555752; font-size: 15px; line-height: 2; text-wrap: pretty; }
-.about-credentials { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.about-credentials li { position: relative; padding-left: 16px; }
-.about-credentials li::before { content: ''; position: absolute; left: 0; top: .98em; width: 4px; height: 4px; border-radius: 50%; background: #b39451; }
+.about-company strong { display: block; font-weight: 400; color: #2f3a30; font-size: 23px; line-height: 1.5; }
+.about-company small { display: block; margin-top: 4px; color: #727a70; font-family: 'Source Sans 3', 'Noto Serif SC', sans-serif; font-size: 13px; line-height: 1.6; }
+.about-company-role { font-family: 'Source Sans 3', 'Noto Serif SC', sans-serif; color: #79705b; font-size: 13px; line-height: 1.6; }
+.about-company > span:last-child { color: #817859; }
+.about-study { margin-top: 28px; }
+.about-study h3 { margin-bottom: 10px; }
+.about-qualifications { margin-top: 13px; }
+.about-qualifications summary { width: fit-content; padding: 8px 0; color: #827048; font-size: 13px; line-height: 1.6; cursor: pointer; }
+.about-qualifications summary::marker { font-size: .8em; }
+.about-qualifications[open] summary { margin-bottom: 8px; }
+.about-qualifications ul { margin: 0; padding: 14px 20px 14px 33px; border-left: 1px solid #c8b98f; background: rgba(226,219,203,.13); color: #60685d; font-size: 14px; line-height: 1.95; }
+.about-qualifications li + li { margin-top: 7px; }
+
 .about-contact { padding-bottom: 0; }
-.about-contact h2 { margin-bottom: 0; }
-.about-contact-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px 36px; }
-.about-contact-heading p { font-size: 14px; }
-.about-mail-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 28px; border: 1px solid rgba(149,126,81,.2); background: rgba(222,213,192,.12); }
-.about-mail-card small { display: block; margin-bottom: 6px; color: #787263; font-size: 12px; letter-spacing: .04em; }
-.about-mail-address { display: block; font-family: 'Source Sans 3', sans-serif; font-size: 25px; line-height: 1.5; }
-.about-mail-action { display: flex; align-items: center; gap: 25px; font-size: 14px; white-space: nowrap; }
-.about-mail-action > span { font-family: 'Source Sans 3', sans-serif; font-size: 19px; }
-.about-social-directory { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 22px; margin: 20px 0; }
-.about-social-directory a { display: flex; align-items: center; gap: 13px; min-width: 0; min-height: 66px; padding: 8px 0; }
-.about-social-icon { display: grid; place-items: center; flex: 0 0 23px; }
-.about-social-icon svg { display: block; width: 23px; height: 23px; overflow: visible; stroke: currentColor; stroke-width: 1.2; }
-.about-social-copy { display: flex; flex-direction: column; min-width: 0; }
-.about-platform { font-family: 'Source Sans 3', sans-serif; font-size: 16px; line-height: 1.5; }
-.about-handle { margin-top: 3px; color: #707571; font-family: 'Source Sans 3', sans-serif; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
-.about-external { margin-left: auto; color: #707571; font-family: 'Source Sans 3', sans-serif; font-size: 14px; }
-.about-public-profile { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; padding-top: 21px; border-top: 1px solid var(--line); }
-.about-public-profile strong { color: var(--ink); font-size: 20px; font-weight: 400; white-space: nowrap; }
-.about-page .about-public-profile p { color: #707571; font-family: 'Source Sans 3', 'Microsoft YaHei', sans-serif; font-size: 13px; }
-html[lang='en'] .about-identity h1 { letter-spacing: .01em; }
-html[lang='en'] .about-alias { font-family: 'Noto Serif SC', serif; letter-spacing: .15em; }
-html[lang='en'] .about-roles { font-family: 'Source Sans 3', sans-serif; font-size: 14px; }
-html[lang='en'] .about-chapter h2 { letter-spacing: 0; }
-html[lang='en'] .about-experience dt { line-height: 1.7; }
-html[lang='en'] .about-experience > div { grid-template-columns: 1fr; gap: 9px; }
-@media (max-width: 1000px) {
-  .about-page { width: 88%; padding-top: 56px; }
-  .about-masthead { grid-template-columns: 250px minmax(0, 1fr); gap: 34px; }
-  .about-identity h1 { font-size: 38px; }
-  .about-chapter { grid-template-columns: 1fr; gap: 28px; }
-  .about-creations { gap: 38px; }
-  .about-chapter h2 { font-size: 23px; }
-  .about-page .about-lead { font-size: 22px; }
-  .about-experience { grid-template-columns: 1fr; gap: 24px; }
-  .about-experience > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 28px; }
-  .about-experience dt { margin-bottom: 0; }
-  .about-contact-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .about-mail-card { padding: 18px; }
-  .about-mail-address { font-size: 22px; }
-  .about-mail-action { gap: 12px; }
-  .about-social-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 35px; }
+.about-mail { display: inline-flex; align-items: center; gap: 32px; margin-top: 14px; padding: 8px 0 13px; border-bottom: 1px solid #ad935c; font-family: 'Source Sans 3', sans-serif; font-size: 29px; line-height: 1.5; color: #2f4035; }
+.about-mail > span:last-child { color: #927b4b; font-size: 21px; }
+.about-social-directory { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin: 26px 0; }
+.about-social-directory a { display: flex; align-items: center; gap: 9px; min-width: 0; min-height: 58px; }
+.about-social-icon { flex: 0 0 20px; width: 20px; }
+.about-social-icon svg { display: block; width: 20px; height: 20px; overflow: visible; stroke: currentColor; stroke-width: 1.2; }
+.about-social-copy { display: flex; flex-direction: column; min-width: 0; font-family: 'Source Sans 3', sans-serif; }
+.about-platform { font-size: 14px; line-height: 1.5; }
+.about-handle { margin-top: 4px; font-size: 12px; line-height: 1.5; color: #767c71; overflow-wrap: anywhere; }
+.about-public-profile { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 22px; border-top: 1px solid var(--line); padding-top: 20px; }
+.about-public-profile strong { font-weight: 400; font-size: 18px; white-space: nowrap; }
+.about-page .about-public-profile p { font-family: 'Source Sans 3','Noto Serif SC',sans-serif; color: #727b70; font-size: 12px; line-height: 1.8; }
+html[lang='en'] .about-identity h1 { font-size: 50px; letter-spacing: 0; }
+html[lang='en'] .about-page .about-alias { font-family: 'Noto Serif SC',serif; }
+html[lang='en'] .about-page .about-roles { font-family: 'Source Sans 3',sans-serif; }
+html[lang='en'] .about-page .about-lead { font-size: 27px; }
+@media (max-width: 1100px) {
+  .about-page { width: 88%; }
+  .about-masthead { grid-template-columns: 280px minmax(0,1fr); gap: 36px; }
+  .about-chapter { grid-template-columns: 160px minmax(0,1fr); gap: 36px; }
+  .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px 20px; }
 }
-@media (max-width: 700px) {
-  .about-page { width: 86%; padding: 43px 0 54px; }
-  .about-masthead { grid-template-columns: minmax(0, 1fr); gap: 31px; padding-bottom: 37px; }
-  .about-page .about-eyebrow { margin-bottom: 10px; }
-  .about-identity h1 { font-size: 39px; }
-  .about-page .about-alias { margin-top: 4px; font-size: 12px; }
-  .about-page .about-roles { margin-top: 18px; font-size: 13px; }
-  .about-roles span { text-wrap: pretty; }
+@media (max-width: 900px) {
+  .about-page { padding-top: 57px; padding-bottom: 62px; }
+  .about-masthead { grid-template-columns: 1fr; gap: 32px; padding-bottom: 42px; }
   .about-introduction { padding-top: 0; }
-  .about-page .about-lead { margin: 0 0 15px; font-size: 24px; line-height: 1.7; }
-  .about-page p { font-size: 15px; line-height: 1.95; }
-  .about-chapter { grid-template-columns: 1fr; gap: 23px; padding: 29px 0; }
-  .about-chapter h2 { margin-bottom: 0; font-size: 23px; }
-  .about-creations { grid-template-columns: minmax(0, 1fr); gap: 29px; }
-  .about-creations article + article { border-top: 1px solid rgba(62,60,51,.08); padding-top: 25px; }
-  .about-creations h3 { margin-bottom: 12px; font-size: 17px; }
-  .about-creations p { margin-bottom: 12px; }
-  .about-affiliations { margin-top: 29px; }
-  .about-company { grid-template-columns: minmax(0, 1fr) auto; gap: 7px 15px; }
-  .about-company-alias { grid-column: 1; font-size: 13px; }
-  .about-company-arrow { grid-column: 2; grid-row: 1 / 3; }
-  .about-company strong { font-size: 19px; }
-  .about-link { padding-top: 0; }
-  .about-experience > div { grid-template-columns: minmax(0, 1fr); gap: 9px; padding: 0; }
-  .about-experience dt { font-size: 16px; }
-  .about-experience dd { font-size: 14px; line-height: 1.95; }
-  .about-credentials { gap: 10px; }
-  .about-contact { padding-bottom: 0; }
-  .about-contact h2 { margin-bottom: 0; }
-  .about-mail-card { align-items: flex-start; flex-direction: column; gap: 12px; padding: 17px 16px; }
-  .about-mail-address { font-size: 21px; }
-  .about-mail-action { gap: 19px; font-size: 13px; }
-  .about-social-directory { gap: 5px 20px; margin: 20px 0; }
-  .about-social-directory a { gap: 10px; }
-  .about-social-icon, .about-social-icon svg { width: 20px; height: 20px; flex-basis: 20px; }
-  .about-external { display: none; }
-  .about-public-profile { align-items: flex-start; flex-direction: column; gap: 6px; padding-top: 18px; }
-  .about-public-profile strong { font-size: 19px; }
-  .about-page .about-public-profile p { font-size: 12px; line-height: 1.9; }
-  html[lang='en'] .about-page .about-roles { font-size: 14px; }
+  .about-introduction > p:last-child { max-width: 650px; }
+  .about-chapter { grid-template-columns: 1fr; gap: 27px; padding: 34px 0 40px; }
+  .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); }
 }
+@media (max-width: 620px) {
+  .about-page { width: 86%; padding: 38px 0 48px; }
+  .about-page .about-eyebrow { margin-bottom: 15px; }
+  .about-identity h1 { font-size: 42px; }
+  html[lang='en'] .about-identity h1 { font-size: 42px; }
+  .about-page .about-alias { margin-top: 10px; }
+  .about-page .about-roles { margin-top: 18px; }
+  .about-page p { font-size: 15px; line-height: 1.95; }
+  .about-page .about-lead, html[lang='en'] .about-page .about-lead { font-size: 24px; line-height: 1.7; margin-bottom: 18px; }
+  .about-chapter > h2 { font-size: 23px; }
+  .about-work-heading { flex-wrap: wrap; gap: 6px 20px; margin-bottom: 10px; }
+  .about-work h3, .about-study h3 { font-size: 18px; }
+  .about-work + .about-work { margin-top: 25px; padding-top: 25px; }
+  .about-page .about-practice-note { font-size: 13px; }
+  .about-company { grid-template-columns: minmax(0,1fr) 14px; gap: 7px 20px; padding: 19px 0; }
+  .about-company-role { grid-column: 1; }
+  .about-company > span:last-child { grid-column: 2; grid-row: 1 / 3; }
+  .about-company strong { font-size: 22px; }
+  .about-mail { max-width: 100%; gap: 15px; font-size: 23px; }
+  .about-mail > span:first-child { overflow-wrap: anywhere; }
+  .about-social-directory { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 20px; margin: 22px 0; }
+  .about-public-profile { flex-direction: column; gap: 7px; }
+}
+
+
+.about-study p + p { margin-top: 12px; }

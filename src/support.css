@@ -24,6 +24,7 @@
 .support-qr img { display: block; width: 208px; height: 208px; border: 1px solid rgba(62,60,51,.08); background: #fff; }
 .support-qr figcaption { margin-top: 10px; color: #72776f; font-size: 12px; text-align: center; }
 .support-network-note { grid-column: 1 / -1; margin: 0; padding-top: 20px; border-top: 1px solid var(--line); color: #727366; font-size: 13px; line-height: 1.9; text-wrap: pretty; }
+.support-thanks { margin: 26px 0 0; color: #756c59; font-size: 15px; line-height: 1.9; text-wrap: balance; }
 @media (max-width: 800px) {
   .support-page { width: 88%; padding-top: 49px; }
   .support-wallet { gap: 26px; padding: 25px; grid-template-columns: minmax(0, 1fr) 170px; }
