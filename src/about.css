@@ -2,22 +2,23 @@
 .about-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: pretty; }
 .about-page h2, .about-page h3 { margin: 0; font-weight: 500; }
 .about-phrase { white-space: nowrap; }
-.about-masthead { display: grid; grid-template-columns: 300px minmax(0,1fr); gap: 56px; padding-bottom: 65px; align-items: start; }
+.about-masthead { display: grid; grid-template-columns: minmax(0,1fr); gap: 36px; padding-bottom: 65px; align-items: start; }
+.about-identity { max-width: 760px; }
 .about-page .about-eyebrow { margin: 0 0 21px; font-size: 12px; color: #857344; letter-spacing: .16em; }
 .about-identity h1 { margin: 0; font-size: 54px; font-weight: 400; line-height: 1.35; letter-spacing: .045em; white-space: nowrap; }
 .about-page .about-alias { margin: 13px 0 0; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: #778078; letter-spacing: .22em; }
-.about-page .about-roles { display: flex; flex-wrap: wrap; gap: 0 1.1em; overflow: hidden; margin-top: 26px; font-size: 14px; color: #62695f; }
+.about-page .about-roles { display: flex; flex-wrap: wrap; gap: 0 1.1em; overflow: hidden; margin-top: 18px; font-size: 14px; color: #62695f; }
 .about-roles > .about-phrase { position: relative; }
 /* A separator at the start of a wrapped line falls outside the container. */
 .about-roles > .about-phrase + .about-phrase::before { content: '·'; position: absolute; inset-inline-start: -.7em; }
 html[lang='ja'] .about-roles > .about-phrase + .about-phrase::before { content: '・'; }
-.about-introduction { padding-top: 41px; }
-.about-page .about-lead { max-width: 600px; margin-bottom: 23px; color: #2e453a; font-size: 28px; line-height: 1.7; text-wrap: balance; }
-.about-introduction > p:last-child { max-width: 520px; text-wrap: balance; }
+.about-introduction { min-width: 0; max-width: 760px; }
+.about-page .about-lead { max-width: 760px; margin-bottom: 20px; color: #2e453a; font-size: 28px; line-height: 1.7; text-wrap: balance; }
+.about-introduction > p:last-child { max-width: 650px; text-wrap: balance; }
 
 .about-chapter { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 66px; padding: 43px 0 49px; border-top: 1px solid var(--line); }
 .about-chapter > h2 { font-size: 24px; line-height: 1.7; color: #303c32; }
-html[lang='de'] .about-chapter > h2 { hyphens: auto; }
+html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-chapter-body { min-width: 0; }
 .about-work + .about-work { margin-top: 29px; padding-top: 29px; border-top: 1px solid rgba(62,60,51,.08); }
 .about-work-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px 24px; margin-bottom: 13px; }
@@ -64,15 +65,12 @@ html[lang='en'] .about-page .about-roles { font-family: 'Source Sans 3',sans-ser
 html[lang='en'] .about-page .about-lead { font-size: 27px; }
 @media (max-width: 1100px) {
   .about-page { width: 88%; }
-  .about-masthead { grid-template-columns: 280px minmax(0,1fr); gap: 36px; }
   .about-chapter { grid-template-columns: 160px minmax(0,1fr); gap: 36px; }
   .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px 20px; }
 }
 @media (max-width: 900px) {
   .about-page { padding-top: 57px; padding-bottom: 62px; }
-  .about-masthead { grid-template-columns: 1fr; gap: 32px; padding-bottom: 42px; }
-  .about-introduction { padding-top: 0; }
-  .about-introduction > p:last-child { max-width: 650px; }
+  .about-masthead { gap: 32px; padding-bottom: 42px; }
   .about-chapter { grid-template-columns: 1fr; gap: 27px; padding: 34px 0 40px; }
   .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); }
 }
