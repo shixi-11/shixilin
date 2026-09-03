@@ -4,12 +4,12 @@
 
 **[进入网站 → shixilin.com](https://shixilin.com/)**
 
-网站支持中文与英文，可在手机、平板和电脑上浏览。
+网站支持简体中文、繁體中文、English、日本語、한국어、Français、Deutsch与العربية，可在手机、平板和电脑上浏览。其他语言均以中文内容为原文。
 
 ## AI产品
 
 - **[ALUX AI智能体情报日报](https://ai.alux.network/daily/)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
-- **[墨核](https://github.com/shixi-11/mohe-pet)**：运行在本机的黑猫AI伙伴，陪伴日常工作。
+- **[墨核](https://github.com/shixi-11/mohe-pet)**：AI Pet · Codex Pet。住在你电脑里的小小守护者，安静陪伴，偶尔调皮。
 - **[云笺](https://shixilin.com/ai/yunjian)**：从一张云的照片和一句当下所想出发，让AI写回一封信。
 
 [查看AI产品 →](https://shixilin.com/ai)

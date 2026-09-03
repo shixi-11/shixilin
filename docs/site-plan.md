@@ -124,6 +124,8 @@
 
 ## 发布核对
 
+> 以下为先前发布记录。2026-09-03追加的八语言、墨核文案、三端排版与3:4入口卡说明见 [网站语言与排版](localization.md)。本轮发布信息在本文末尾记录。
+
 - 功能提交：5eb60656e6474afa981e66ff1b191ab81fcb480b，已推送GitHub main；本机主目录同步完成。
 - Vercel生产部署：dpl_9jpVGrC1XjtC3ud8FqtFcn96fk51，状态READY。
 - 正式域名：https://shixilin.com/；本次部署：https://shixilin-qj6281e67-shixilin.vercel.app。

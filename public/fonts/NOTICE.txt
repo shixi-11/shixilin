@@ -1,6 +1,15 @@
-Noto Serif SC variable font
+Noto Serif SC / TC / JP / KR variable fonts
 Copyright 2017–2023 Adobe (http://www.adobe.com/).
 Licensed under the SIL Open Font License 1.1; see OFL.txt.
 
-This website includes a WOFF2 character subset of the installed
-NotoSerifSC-VF.ttf. The type design and variable weight axis are unchanged.
+This website includes WOFF2 character subsets of the installed
+NotoSerifSC-VF.ttf, NotoSerifTC-VF.ttf, NotoSerifJP-VF.ttf and NotoSerifKR-VF.ttf.
+The type designs and variable weight axes are unchanged.
+
+Noto Naskh Arabic variable font
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/arabic).
+Licensed under the SIL Open Font License 1.1; see OFL-NotoNaskhArabic.txt.
+This website includes a WOFF2 character subset. Arabic shaping features are preserved.
+
+Source Sans 3: see OFL-SourceSans3.txt.
+Source Serif 4: see SOURCE-SERIF-LICENSE.md.

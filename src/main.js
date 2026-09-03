@@ -4,10 +4,12 @@ import './home.css'
 import './about.css'
 import './games.css'
 import './support.css'
+import './locales.css'
 import { supportView, bindSupport } from './support.js'
 import { gamesView, inkDuelView, baishishuView } from './games.js'
 import { homeView, paperFooter } from './home.js'
-import { getLocale, t, toggleLocale } from './i18n.js'
+import { getLocale, t, setLocale, syncLocale, locales, localizedHref } from './i18n.js'
+import { composeLocaleHeadings } from './locales/typography.js'
 import { books, dailyUrl } from './content.js'
 
 const routes = {
@@ -52,9 +54,13 @@ function render() {
   document.querySelector('meta[property="og:image"]').content = new URL(route.image || '/assets/og-shixilin.jpg', 'https://shixilin.com').href
   document.querySelector('meta[property="og:image:width"]').content = pathname === '/games/ink-duel' ? '1672' : '1200'
   document.querySelector('meta[property="og:image:height"]').content = pathname === '/games/ink-duel' ? '941' : pathname === '/games/baishishu' ? '675' : '630'
-  document.documentElement.lang = getLocale() === 'en' ? 'en' : 'zh-CN'
+  const locale = locales.find(item => item.id === getLocale())
+  document.documentElement.lang = locale.lang
+  document.documentElement.dir = locale.dir || 'ltr'
 
   app.innerHTML = shell(route.view(), pathname)
+  composeLocaleHeadings(app, locale.id)
+  if (locale.dir === 'rtl') isolateMixedText()
   bindNavigation()
   bindSupport()
 
@@ -83,7 +89,7 @@ function shell(content, pathname) {
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
           </nav>
-          <button class="language-toggle" type="button" aria-label="${t('language.label')}">${t('language.short')}</button>
+          <div class="language-picker"><select class="language-select" aria-label="${t('language.label')}" dir="ltr">${locales.map(locale => `<option value="${locale.id}" lang="${locale.lang}"${getLocale() === locale.id ? ' selected' : ''}>${locale.name}</option>`).join('')}</select></div>
           <button class="menu-toggle" type="button" aria-label="${t('nav.menu')}" aria-expanded="false" aria-controls="site-nav">
             <span>${t('nav.menu')}</span><i aria-hidden="true"></i>
           </button>
@@ -131,22 +137,52 @@ function bindNavigation() {
     nav?.classList.toggle('open', !expanded)
   })
 
-  document.querySelector('.language-toggle')?.addEventListener('click', () => {
-    toggleLocale()
+  document.querySelector('.language-select')?.addEventListener('change', event => {
+    const top = window.scrollY
+    setLocale(event.target.value)
+    window.history.pushState({}, '', localizedHref(location.href))
     render()
+    document.querySelector('.language-select')?.focus({ preventScroll: true })
+    window.scrollTo({ top })
   })
 
   document.querySelectorAll('a.internal-link').forEach((link) => {
+    link.href = localizedHref(link.href)
     link.addEventListener('click', (event) => {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
       const url = new URL(link.href)
       if (url.origin !== window.location.origin) return
       event.preventDefault()
-      window.history.pushState({}, '', `${url.pathname}${url.hash}`)
+      window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`)
       render()
     })
   })
 }
 
-window.addEventListener('popstate', render)
+// Isolate Latin names, Chinese titles and handles without reversing their characters in RTL text.
+function isolateMixedText() {
+  const walker = document.createTreeWalker(app, NodeFilter.SHOW_TEXT)
+  const nodes = []
+  while (walker.nextNode()) nodes.push(walker.currentNode)
+  for (const node of nodes) {
+    if (node.parentElement.closest('select, svg, code, bdi, [dir="ltr"]')) continue
+    const pattern = /(?:@?[A-Za-z0-9][A-Za-z0-9@._:/–-]*(?: [A-Za-z0-9][A-Za-z0-9._-]*)*|《[^》]+》|@?[\u3400-\u9fff]+)/g
+    if (!pattern.test(node.data)) continue
+    pattern.lastIndex = 0
+    const fragment = document.createDocumentFragment()
+    let end = 0
+    for (const match of node.data.matchAll(pattern)) {
+      fragment.append(node.data.slice(end, match.index))
+      const isolated = document.createElement('bdi')
+      isolated.dir = 'ltr'
+      isolated.textContent = match[0]
+      fragment.append(isolated)
+      end = match.index + match[0].length
+    }
+    fragment.append(node.data.slice(end))
+    node.replaceWith(fragment)
+  }
+}
+
+window.addEventListener('popstate', () => { syncLocale(); render() })
 render()

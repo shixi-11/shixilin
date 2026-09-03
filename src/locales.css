@@ -1,0 +1,92 @@
+@font-face { font-family: 'Noto Serif TC'; src: url('/fonts/noto-serif-tc.woff2') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Serif JP'; src: url('/fonts/noto-serif-jp.woff2') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Serif KR'; src: url('/fonts/noto-serif-kr.woff2') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Naskh Arabic'; src: url('/fonts/noto-naskh-arabic.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }
+
+.language-picker { flex: 0 0 auto; }
+.paper-section-title { min-inline-size: 42px; }
+.locale-phrase { display: inline-block; white-space: nowrap; }
+.game-facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); }
+.cloud-card-copy p { text-wrap: balance; }
+.home-ai-entry p { text-wrap: balance; }
+html:not([lang^='zh']) .paper-button { width: min(230px, 100%); padding-inline: 15px; letter-spacing: 0; white-space: nowrap; }
+.language-select {
+  appearance: auto; width: 100px; min-height: 44px; padding: 7px 0 7px 7px;
+  border: 0; border-radius: 0; color: #606761; background: transparent;
+  font-family: 'Source Sans 3', 'Noto Serif SC', 'Noto Serif KR', 'Noto Naskh Arabic', sans-serif;
+  font-size: 13px; cursor: pointer;
+}
+.language-select:focus-visible { outline: 1px solid #9b814c; outline-offset: 3px; }
+.language-select option { color: #242523; background: #f8f7f3; }
+.language-select option[lang='ja'] { font-family: 'Noto Serif JP', serif; }
+.language-select option[lang='ko'] { font-family: 'Noto Serif KR', serif; }
+.language-select option[lang='zh-Hant'] { font-family: 'Noto Serif TC', serif; }
+
+html { --locale-serif: 'Noto Serif SC', 'Songti SC', serif; }
+html[lang='zh-Hant'] { --locale-serif: 'Noto Serif TC', 'Noto Serif SC', serif; }
+html[lang='ja'] { --locale-serif: 'Noto Serif JP', 'Noto Serif SC', serif; }
+html[lang='ko'] { --locale-serif: 'Noto Serif KR', 'Noto Serif SC', serif; }
+html:is([lang='en'], [lang='fr'], [lang='de']) { --locale-serif: 'Source Serif 4', 'Noto Serif SC', serif; }
+html[lang='ar'] { --locale-serif: 'Noto Naskh Arabic', 'Source Serif 4', 'Noto Serif SC', serif; }
+html body :is(.site-nav a, .paper-hero, .home-grid, .home-project-grid, .paper-footer, .quiet-page, .about-page, .game-page, .game-directory, .support-page) { font-family: var(--locale-serif); }
+html:not([lang^='zh']) body :is(.paper-name h1, .about-identity h1, .paper-footer-name, .brand-lockup b) { font-family: 'Source Serif 4', 'Noto Serif SC', serif; letter-spacing: 0; }
+html:not([lang^='zh']) body .brand-lockup small { font-family: 'Source Sans 3', sans-serif; }
+html[lang='ko'] body :is(p, h1, h2, h3, a, li, small, figcaption) { word-break: keep-all; overflow-wrap: break-word; }
+html[lang='ja'] body :is(p, h1, h2, h3) { line-break: strict; }
+html:not([lang^='zh']) .paper-hero { height: auto; min-height: 404px; padding-bottom: 54px; }
+html:not([lang^='zh']) .paper-intro { max-width: 540px; line-height: 1.8; letter-spacing: 0; }
+html:not([lang^='zh']) .paper-subtitle { max-width: 600px; font-size: 23px; line-height: 1.5; letter-spacing: 0; text-wrap: balance; }
+html:not([lang^='zh']) .cloud-poem { flex-direction: column; gap: 0; max-width: 75%; font-size: 15px; letter-spacing: 0; }
+html:not([lang^='zh']) .cloud-poem > span { writing-mode: horizontal-tb; text-orientation: mixed; }
+html:not([lang^='zh']) .cloud-poem i { display: none; }
+html:not([lang^='zh']) :is(.home-ai-label, .game-status, .game-platform, .reading-item small, .site-nav a) { letter-spacing: 0; }
+html:not([lang^='zh']) .paper-section-title { font-size: 26px; line-height: 1.4; }
+html:not([lang^='zh']) .home-ai-entry h3 { font-size: 23px; line-height: 1.5; letter-spacing: 0; }
+html:not([lang^='zh']) .alux-card h3 { font-size: 29px; letter-spacing: 0; }
+html:not([lang^='zh']) .alux-card p { text-wrap: pretty; }
+html:not([lang^='zh']) .home-book-name, html:not([lang^='zh']) .home-book-upcoming { font-family: 'Noto Serif SC', serif; }
+.home-ai-entry, .alux-card, .game-card-copy, .about-company > span { min-width: 0; }
+html:not([lang^='zh']) body .cloud-card { height: auto; min-height: 280px; }
+.route-caption, .wallet-address, .support-networks, #selected-network, .about-mail span, .footer-email > span:last-child, .about-handle { direction: ltr; unicode-bidi: isolate; }
+html[dir='rtl'] body :is(p, h1, h2, h3, a, small, li, dt, dd, button, figcaption, summary) { letter-spacing: 0; }
+html[dir='rtl'] body :is(.support-page, .about-page, .quiet-page, .game-page, .game-directory) { font-family: var(--locale-serif); }
+html[dir='rtl'] .paper-hero-copy { text-align: right; }
+html[dir='rtl'] .paper-intro { margin-inline-start: 0; padding: 5px 0; }
+html[dir='rtl'] .landscape-art { opacity: .7; }
+html[dir='rtl'] .cloud-poem { left: auto; right: 25px; }
+html[dir='rtl'] body .cloud-card-copy { text-align: right; }
+html[dir='rtl'] .paper-button svg { transform: rotate(180deg); }
+html[dir='rtl'] .wallet-address { display: inline-flex; flex-wrap: wrap; }
+html[dir='rtl'] body .paper-intro { font-size: 19px; line-height: 1.85; }
+html[dir='rtl'] body :is(.home-ai-entry p, .alux-card p, .game-card p) { font-size: 17px; line-height: 1.8; }
+html[dir='rtl'] body :is(.reading-item p, .about-chapter-body p) { font-size: 19px; line-height: 1.9; }
+html[dir='rtl'] bdi { unicode-bidi: isolate; }
+html[dir='rtl'] :is(.about-company-role, .about-page .about-public-profile p, .game-card-meta, .game-facts, .game-kicker, .support-label) { font-family: var(--locale-serif); }
+html[dir='rtl'] .about-qualifications ul { border-left: 0; border-right: 1px solid #c8b98f; padding-inline: 33px 20px; }
+html[dir='rtl'] .paper-section-title::after { left: auto; right: 0; }
+@media (min-width: 901px) and (max-width: 1200px) {
+  html:not([lang^='zh']) .site-nav { gap: 18px; }
+  html:not([lang^='zh']) .site-nav a { font-size: 13px; }
+  .header-tools { gap: 18px; }
+}
+@media (max-width: 900px) {
+  html:not([lang^='zh']) .paper-hero { min-height: 385px; }
+  html:not([lang^='zh']) .cloud-card-copy { padding-inline: 20px; }
+}
+@media (max-width: 600px) {
+  .header-tools { gap: 14px; }
+  .language-select { width: 90px; font-size: 12px; }
+  html:not([lang^='zh']) .paper-hero { min-height: 305px; padding-bottom: 48px; }
+  html:not([lang^='zh']) .paper-name h1 { font-size: clamp(42px, 11.5vw, 58px); }
+  html:not([lang^='zh']) .paper-subtitle { max-width: 100%; font-size: 20px; }
+  html:not([lang^='zh']) .paper-intro { font-size: 14px; max-width: 100%; }
+  html:not([lang^='zh']) .paper-section-title { font-size: 25px; }
+  html:not([lang^='zh']) .paper-button { width: 100%; }
+  html:not([lang^='zh']) .alux-card h3 { font-size: 26px; }
+  html[lang='ar'] .paper-intro { font-size: 18px; }
+  html[lang='ar'] .site-nav { text-align: right; }
+}
+@media (max-width: 360px) {
+  .header-tools { gap: 7px; }
+  .language-select { width: 82px; }
+}

@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build && node scripts/build-pages.mjs",
+    "build": "node scripts/check-locales.mjs && vite build && node scripts/build-pages.mjs",
+    "check:locales": "node scripts/check-locales.mjs",
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": {

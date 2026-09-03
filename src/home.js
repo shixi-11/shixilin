@@ -8,7 +8,7 @@ export function cloudOrnament() {
 }
 
 export function homeView() {
-  const projectText = key => t(key).replace(/AI智能体|并发公链|全局逻辑虚拟机|去中心化|分布式执行|国际贸易|企业孵化|商业实践/g, phrase => `<span class="home-phrase">${phrase}</span>`)
+  const projectText = key => t(key).replace(/小小守护者|小小守護者|安静陪伴|安靜陪伴|偶尔调皮|偶爾調皮|AI智能体|并发公链|全局逻辑虚拟机|去中心化|分布式执行|国际贸易|企业孵化|商业实践/g, phrase => `<span class="home-phrase">${phrase}</span>`)
   const subtitle = getLocale() === 'en'
     ? t('home.subtitle').split(', ').map((part, index) => `<span class="subtitle-phrase">${part}${index === 0 ? ',' : ''}</span>`).join(' ')
     : t('home.subtitle')
@@ -43,7 +43,7 @@ export function homeView() {
             <span class="home-ai-label">ALUX</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
           </a>
           <a class="home-ai-entry" href="https://github.com/shixi-11/mohe-pet" target="_blank" rel="noopener">
-            <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${t('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
+            <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${projectText('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
           </a>
         </div>
       </section>

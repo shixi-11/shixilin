@@ -1,4 +1,12 @@
+import traditional from './locales/zh-Hant.js'
+import ja from './locales/ja.js'
+import ko from './locales/ko.js'
+import fr from './locales/fr.js'
+import de from './locales/de.js'
+import ar from './locales/ar.js'
+
 export const messages = {
+  'zh-Hant': traditional, ja, ko, fr, de, ar,
   "zh": {
     "footer.collaborate": "合作联系",
     "home.handles": "微信公众号 / 小红书 / 微博 / 视频号：@光之十一",
@@ -39,8 +47,8 @@ export const messages = {
     "nav.about": "关于我",
     "nav.contact": "联系",
     "nav.menu": "目录",
-    "language.label": "Switch to English",
-    "language.short": "EN",
+    "language.label": "选择语言",
+    "language.short": "简体",
     "work.all": "查看AI产品",
     "work.open": "进入项目",
     "work.github": "查看GitHub",
@@ -50,9 +58,9 @@ export const messages = {
     "work.daily.category": "AI智能体行业情报",
     "work.daily.title": "ALUX AI智能体情报日报",
     "work.daily.text": "持续追踪AI智能体产品、基础设施、安全与生产运行，整理值得关注的行业进展。",
-    "work.mohe.category": "本地AI伙伴",
+    "work.mohe.category": "AI Pet · Codex Pet",
     "work.mohe.title": "墨核",
-    "work.mohe.text": "住在本机的黑猫伙伴，陪你度过长时间的工作。无需账号，不收集遥测数据，记忆保留在本地。",
+    "work.mohe.text": "可作为Codex Pet，也有独立的Windows桌面版。无需账号，不收集遥测数据，记忆保留在本地。",
     "work.mohe.alt": "墨核，一只带有琥珀色核心的黑色守护猫",
     "work.yunjian.category": "摄影与AI写作",
     "work.yunjian.title": "云笺",
@@ -174,7 +182,7 @@ export const messages = {
     "home.dailyTitle": "AI智能体情报日报",
     "home.dailyText": "AI新功能、开源项目与值得关注的行业进展。",
     "home.readDaily": "阅读日报",
-    "home.moheText": "运行在本机的黑猫AI伙伴，陪伴日常工作。",
+    "home.moheText": "住在你电脑里的小小守护者，安静陪伴，偶尔调皮。",
     "home.openMohe": "了解墨核",
     "meta.games": "游戏｜光之十一",
     "meta.gamesDescription": "光之十一正在制作的Steam游戏：《百世书》与《墨斗·百兵》。",
@@ -251,7 +259,7 @@ export const messages = {
     "nav.about": "About Me",
     "nav.contact": "Contact",
     "nav.menu": "Menu",
-    "language.label": "切换到中文",
+    "language.label": "Choose a language",
     "language.short": "中文",
     "work.all": "Explore AI products",
     "work.open": "Explore the project",
@@ -262,9 +270,9 @@ export const messages = {
     "work.daily.category": "AI AGENT INTELLIGENCE",
     "work.daily.title": "ALUX AI Agent Intelligence Daily",
     "work.daily.text": "An ongoing briefing on AI agent products, infrastructure, security, and production operations, highlighting developments worth following.",
-    "work.mohe.category": "LOCAL AI COMPANION",
+    "work.mohe.category": "AI Pet · Codex Pet",
     "work.mohe.title": "Mohe",
-    "work.mohe.text": "A black cat companion that lives on your device and keeps you company through long work sessions. It requires no account, collects no telemetry, and keeps its memories locally.",
+    "work.mohe.text": "Available as a Codex Pet and a standalone Windows desktop companion. It requires no account, collects no telemetry, and keeps its memories locally.",
     "work.mohe.alt": "Mohe, a black guardian cat with an amber core",
     "work.yunjian.category": "PHOTOGRAPHY & AI WRITING",
     "work.yunjian.title": "Yunjian",
@@ -386,7 +394,7 @@ export const messages = {
     "home.dailyTitle": "AI Agent Intelligence Daily",
     "home.dailyText": "New AI features, open-source projects, and industry developments worth following.",
     "home.readDaily": "Read the daily briefing",
-    "home.moheText": "A black cat AI companion that lives on your device and keeps you company as you work.",
+    "home.moheText": "A little guardian in your computer. Quiet company, with a playful side.",
     "home.openMohe": "Meet Mohe",
     "meta.games": "Games — Shixi Lin",
     "meta.gamesDescription": "Steam games in development by Shixi Lin: Baishishu and Ink Duel: Hundred Arms.",
