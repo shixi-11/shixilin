@@ -1,0 +1,42 @@
+.services-page {
+  width: 84%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 78px 0 82px;
+  font-family: var(--locale-serif, 'Noto Serif SC', serif);
+  font-optical-sizing: auto;
+}
+.services-header { max-width: 720px; margin-bottom: 54px; }
+.services-header h1 { margin-bottom: 22px; font-size: 42px; font-weight: 400; line-height: 1.4; }
+.services-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: balance; }
+.service-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 72px; margin: 0; padding: 0; list-style: none; }
+.service-item { min-width: 0; }
+.service-number { display: block; margin-bottom: 10px; color: #857344; font-family: 'Source Sans 3', sans-serif; font-size: 12px; line-height: 1.5; }
+.service-item h2, .services-inquiry h2 { margin-bottom: 14px; color: #303c32; font-size: 24px; font-weight: 400; line-height: 1.6; }
+.service-item p { max-width: 440px; }
+.service-phrase { white-space: nowrap; }
+.services-inquiry { max-width: 650px; margin-top: 62px; }
+.services-inquiry h2 { font-size: 22px; }
+.services-contact { display: inline-flex; align-items: center; gap: 30px; min-height: 44px; margin-top: 18px; border-bottom: 1px solid var(--amber); font-size: 15px; }
+.services-contact > span { color: var(--amber); }
+.services-contact:hover { color: #8b703e; }
+html:is([lang='de'], [lang='es']) .services-page h2 { hyphens: auto; }
+@media (max-width: 1100px) {
+  .services-page { width: 88%; }
+  .service-directory { column-gap: 42px; }
+}
+@media (max-width: 900px) {
+  .services-page { padding-top: 57px; padding-bottom: 62px; }
+  .services-header h1 { font-size: 38px; }
+}
+@media (max-width: 620px) {
+  .services-page { width: 86%; padding: 38px 0 48px; }
+  .services-header { margin-bottom: 36px; }
+  .services-header h1 { margin-bottom: 18px; font-size: 32px; }
+  .services-page p { font-size: 15px; }
+  .service-directory { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .service-number { margin-bottom: 7px; }
+  .service-item h2 { margin-bottom: 10px; font-size: 23px; }
+  .services-inquiry { margin-top: 42px; }
+  .services-inquiry h2 { font-size: 21px; }
+}

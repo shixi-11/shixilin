@@ -59,6 +59,10 @@
       "destination": "/about/index.html"
     },
     {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
       "source": "/support",
       "destination": "/support/index.html"
     },

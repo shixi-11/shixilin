@@ -1,7 +1,9 @@
 import { aboutView } from './about.js'
+import { servicesView } from './services.js'
 import './styles.css'
 import './home.css'
 import './about.css'
+import './services.css'
 import './games.css'
 import './support.css'
 import './locales.css'
@@ -18,6 +20,7 @@ const routes = {
   '/games': { titleKey: 'meta.games', descriptionKey: 'meta.gamesDescription', view: gamesView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
   '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
+  '/services': { titleKey: 'meta.services', descriptionKey: 'meta.servicesDescription', view: servicesView },
   '/support': { titleKey: 'meta.support', descriptionKey: 'meta.supportDescription', view: supportView },
   '/games/ink-duel': { titleKey: 'meta.inkDuel', descriptionKey: 'meta.inkDuelDescription', image: '/assets/ink-duel-concept.png', view: inkDuelView },
   '/games/baishishu': { titleKey: 'meta.baishishu', descriptionKey: 'meta.baishishuDescription', image: '/assets/baishishu-opening.jpg', view: baishishuView },
@@ -87,6 +90,7 @@ function shell(content, pathname) {
             ${navLink('/games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/about', t('nav.about'), activePath)}
+            ${navLink('/services', t('services.nav'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
           </nav>
           <div class="language-picker" dir="ltr">
