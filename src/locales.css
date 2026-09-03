@@ -38,7 +38,6 @@ html:not([lang^='zh']) .paper-intro { max-width: 540px; line-height: 1.8; letter
 html:not([lang^='zh']) .paper-subtitle { max-width: 600px; font-size: 23px; line-height: 1.5; letter-spacing: 0; text-wrap: balance; }
 html:not([lang^='zh']) .cloud-poem { flex-direction: column; gap: 0; max-width: 75%; font-size: 15px; letter-spacing: 0; }
 html:not([lang^='zh']) .cloud-poem > span { writing-mode: horizontal-tb; text-orientation: mixed; }
-html:not([lang^='zh']) .cloud-poem i { display: none; }
 html:not([lang^='zh']) :is(.home-ai-label, .game-status, .game-platform, .reading-item small, .site-nav a) { letter-spacing: 0; }
 html:not([lang^='zh']) .paper-section-title { font-size: 26px; line-height: 1.4; }
 html:not([lang^='zh']) .home-ai-entry h3 { font-size: 23px; line-height: 1.5; letter-spacing: 0; }

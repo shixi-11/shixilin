@@ -37,7 +37,8 @@ body::before { display: none; }
 .cloud-picture img { width: 100%; height: 100%; object-fit: cover; }
 .cloud-poem { position: absolute; top: 25px; left: 25px; display: flex; flex-direction: row-reverse; gap: 7px; color: #294b57; font-size: 16px; font-weight: 400; letter-spacing: .14em; }
 .cloud-poem > span { writing-mode: vertical-rl; text-orientation: upright; }
-.cloud-poem i { position: absolute; left: 0; top: 153px; width: 15px; padding: 2px 0; border: 1px solid #af8f51; border-radius: 2px; color: #af8f51; font-size: 9px; line-height: 1; font-style: normal; writing-mode: vertical-rl; }
+.cloud-poem .cloud-seal { position: absolute; inset-inline-start: 0; top: calc(100% + 10px); display: flex; flex-direction: column; align-items: center; justify-content: center; width: 20px; height: 32px; padding: 3px; box-sizing: border-box; border: 1px solid #af8f51; border-radius: 2px; color: #af8f51; font-family: 'Noto Serif SC', serif; font-size: 10px; font-weight: 400; line-height: 12px; letter-spacing: 0; font-style: normal; text-align: center; writing-mode: horizontal-tb; white-space: nowrap; }
+.cloud-seal > span { display: block; flex: 0 0 auto; }
 .cloud-card-copy { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 14px 0 0; }
 .cloud-card-copy h3 { margin: 0 0 13px; font-size: 37px; font-weight: 500; letter-spacing: .06em; line-height: 1.4; }
 .cloud-card-copy .gold-rule { width: 25px; }
@@ -231,7 +232,7 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .cloud-card { height: auto; grid-template-columns: 1fr; padding: 14px; gap: 16px; }
   .cloud-picture { height: auto; aspect-ratio: 1.65; }
   .cloud-poem { top: 18px; left: 22px; font-size: 13px; gap: 7px; }
-  .cloud-poem i { top: 125px; font-size: 7px; width: 12px; }
+  .cloud-poem .cloud-seal { top: calc(100% + 8px); width: 18px; height: 28px; padding: 2px; font-size: 9px; line-height: 11px; }
   .cloud-card-copy h3 { font-size: 29px; margin-bottom: 0; }
   .cloud-card-copy > .gold-rule { display: none; }
   .cloud-card-copy > p { margin-top: 9px; font-size: 14px; line-height: 1.75; }
@@ -278,7 +279,6 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .landscape-art { height: 255px; }
   .paper-hero-copy { padding-top: 54px; }
   .cloud-poem { top: 12px; left: 16px; font-size: 11px; }
-  .cloud-poem i { top: 103px; }
 }
 
 .home-book-upcoming { display: grid; justify-items: center; color: #50594f; text-align: center; }

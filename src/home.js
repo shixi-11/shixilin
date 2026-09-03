@@ -28,7 +28,7 @@ export function homeView() {
         <article class="cloud-card">
           <div class="cloud-picture">
             <img src="/assets/cloud.png" alt="${t('home.cloudAlt')}" width="1536" height="1024" />
-            <div class="cloud-poem" aria-hidden="true"><span>${t('home.cloudPoem1')}</span><span>${t('home.cloudPoem2')}</span><i>云笺</i></div>
+            <div class="cloud-poem" aria-hidden="true"><span>${t('home.cloudPoem1')}</span><span>${t('home.cloudPoem2')}</span><i class="cloud-seal"><span>云</span><span>笺</span></i></div>
           </div>
           <div class="cloud-card-copy">
             <h3>${t('home.yunjian')}</h3>
