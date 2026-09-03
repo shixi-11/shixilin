@@ -1,12 +1,12 @@
 import { t } from './i18n.js'
 
-const gameText = key => t(key).replace(/《[^》]+》|中国武术|中国历史|历史幻想|幻想|水墨格斗游戏|叙事游戏|格斗游戏|兵器对战|招式衔接|打击反馈|让每一次选择|每一次选择|留下痕迹|相遇与离别|轮回|记忆|选择|门派|兵器|交锋|攻防/g, phrase => `<span class="game-phrase">${phrase}</span>`)
+const gameText = key => t(key).replace(/《[^》]+》|中国武术|中国历史|历史幻想|幻想|水墨格斗游戏|叙事游戏|格斗游戏|兵器对战|招式衔接|打击反馈|让每一次选择|每一次选择|留下痕迹|相遇与离别|不同时代|与他们|最终成为的模样|百世间|归简台|找回|失散|此身|旧忆|修复|魂体|融合|轮回|记忆|选择|门派|兵器|交锋|攻防/g, phrase => `<span class="game-phrase">${phrase}</span>`)
 
 const gameLink = (href, label, external = false) => `<a class="game-page-link${external ? '' : ' internal-link'}" href="${href}"${external ? ' target="_blank" rel="noopener"' : ''}>${label}<span aria-hidden="true">${external ? '↗' : '→'}</span></a>`
 
 export function gameCards() {
   return `<div class="home-game-list">${[
-    { href: '/games/baishishu', image: '/assets/baishishu-opening.jpg', width: 1200, height: 675, key: 'game' },
+    { href: '/games/baishishu', image: '/assets/baishishu-meadow.jpg', width: 3840, height: 2160, key: 'game' },
     { href: '/games/ink-duel', image: '/assets/ink-duel-concept.png', width: 1672, height: 941, key: 'ink' },
   ].map(game => `<a class="game-card internal-link" href="${game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>Steam · ${t('games.desktop')}</span><span>${t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
 }
@@ -57,7 +57,7 @@ export function baishishuView() {
     <figure class="game-lead-image game-video" id="baishishu-preview"><video controls playsinline preload="none" poster="/assets/baishishu-opening.jpg" width="1920" height="1080" aria-label="${t('baishishu.videoLabel')}"><source src="/assets/baishishu-dream.mp4" type="video/mp4" /><a href="/assets/baishishu-dream.mp4">${t('baishishu.videoFallback')}</a></video><figcaption>${t('baishishu.videoCaption')}</figcaption></figure>
     <section class="game-editorial-section" aria-labelledby="baishishu-story-title">
       <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">01</span><h2 id="baishishu-story-title">${t('baishishu.storyTitle')}</h2></div>
-      <div class="game-story"><p class="game-story-lead">${gameText('game.story')}</p><p>${gameText('baishishu.story')}</p><p>${gameText('baishishu.storyMore')}</p></div>
+      <div class="game-story"><p class="game-story-lead">${gameText('game.story')}</p><p>${gameText('baishishu.story')}</p><p>${gameText('baishishu.storyMore')}</p><figure class="game-scene"><img src="/assets/baishishu-lantern.jpg" alt="${t('baishishu.sceneAlt')}" width="3840" height="2160" loading="lazy" /><figcaption>${t('baishishu.sceneCaption')}</figcaption></figure></div>
     </section>
     <section class="game-editorial-section" aria-labelledby="baishishu-play-title">
       <div class="game-section-heading"><span class="game-section-number" aria-hidden="true">02</span><h2 id="baishishu-play-title">${t('baishishu.playTitle')}</h2></div>

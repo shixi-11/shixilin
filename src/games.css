@@ -51,6 +51,8 @@
 .game-facts dt { margin-bottom: 7px; color: #74766d; font-size: 12px; }
 .game-facts dd { margin: 0; }
 .game-story p + p { margin-top: 16px; }
+.game-story p { text-wrap: balance; }
+.game-story .game-scene { margin: 28px 0 0; }
 .game-story .game-story-lead { font-size: 21px; line-height: 1.9; color: #39483e; text-wrap: balance; }
 .game-related { display: flex; align-items: center; justify-content: space-between; gap: 36px; margin-top: 65px; padding-top: 30px; border-top: 1px solid var(--line); }
 .game-related > div > span { color: #79786c; font-size: 12px; }
@@ -72,6 +74,9 @@ html[lang='en'] .home-game-list .game-card h3 { font-size: 26px; letter-spacing:
   .game-editorial-section { grid-template-columns: 1fr 2fr; gap: 30px; }
   .game-section-heading { gap: 12px; }
   .game-section-heading h2 { font-size: 23px; }
+}
+@media (max-width: 900px) {
+  .game-editorial-section { grid-template-columns: 1fr; gap: 24px; }
 }
 @media (max-width: 640px) {
   .home-game-list { grid-template-columns: 1fr; gap: 22px; }
