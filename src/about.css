@@ -26,7 +26,7 @@ html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-work p + p { margin-top: 12px; }
 .about-link { display: inline-flex; align-items: center; gap: 17px; min-height: 32px; font-size: 13px; color: #6e705f; white-space: nowrap; }
 .about-link > span { color: #99804b; font-family: 'Source Sans 3', sans-serif; }
-.about-link:hover, .about-company:hover, .about-social-directory a:hover { color: #8b703e; }
+.about-link:hover, .about-company:hover { color: #8b703e; }
 .about-page .about-practice-note { font-size: 14px; color: #74786e; }
 .about-section-intro { max-width: 760px; }
 .about-affiliations { margin-top: 24px; }
@@ -46,19 +46,6 @@ html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-qualifications ul { margin: 0; padding: 14px 20px 14px 33px; border-left: 1px solid #c8b98f; background: rgba(226,219,203,.13); color: #60685d; font-size: 14px; line-height: 1.95; }
 .about-qualifications li + li { margin-top: 7px; }
 
-.about-contact { padding-bottom: 0; }
-.about-mail { display: inline-flex; align-items: center; gap: 12px; margin-top: 14px; padding: 8px 0 13px; border-bottom: 1px solid #ad935c; font-family: 'Source Sans 3', sans-serif; font-size: 18px; line-height: 1.5; color: #2f4035; }
-.about-mail > span:last-child { flex: 0 0 auto; color: #927b4b; font-size: 14px; }
-.about-social-directory { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin: 26px 0; }
-.about-social-directory a { display: flex; align-items: center; gap: 9px; min-width: 0; min-height: 58px; }
-.about-social-icon { flex: 0 0 20px; width: 20px; }
-.about-social-icon svg { display: block; width: 20px; height: 20px; overflow: visible; stroke: currentColor; stroke-width: 1.2; }
-.about-social-copy { display: flex; flex-direction: column; min-width: 0; font-family: 'Source Sans 3', sans-serif; }
-.about-platform { font-size: 14px; line-height: 1.5; }
-.about-handle { margin-top: 4px; font-size: 12px; line-height: 1.5; color: #767c71; overflow-wrap: anywhere; }
-.about-public-profile { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 22px; border-top: 1px solid var(--line); padding-top: 20px; }
-.about-public-profile strong { font-weight: 400; font-size: 18px; white-space: nowrap; }
-.about-page .about-public-profile p { font-family: 'Source Sans 3','Noto Serif SC',sans-serif; color: #727b70; font-size: 12px; line-height: 1.8; }
 html[lang='en'] .about-identity h1 { font-size: 50px; letter-spacing: 0; }
 html[lang='en'] .about-page .about-alias { font-family: 'Noto Serif SC',serif; }
 html[lang='en'] .about-page .about-roles { font-family: 'Source Sans 3',sans-serif; }
@@ -66,13 +53,11 @@ html[lang='en'] .about-page .about-lead { font-size: 27px; }
 @media (max-width: 1100px) {
   .about-page { width: 88%; }
   .about-chapter { grid-template-columns: 160px minmax(0,1fr); gap: 36px; }
-  .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px 20px; }
 }
 @media (max-width: 900px) {
   .about-page { padding-top: 57px; padding-bottom: 62px; }
   .about-masthead { gap: 32px; padding-bottom: 42px; }
   .about-chapter { grid-template-columns: 1fr; gap: 27px; padding: 34px 0 40px; }
-  .about-social-directory { grid-template-columns: repeat(3,minmax(0,1fr)); }
 }
 @media (max-width: 620px) {
   .about-page { width: 86%; padding: 38px 0 48px; }
@@ -92,11 +77,8 @@ html[lang='en'] .about-page .about-lead { font-size: 27px; }
   .about-company-role { grid-column: 1; }
   .about-company > span:last-child { grid-column: 2; grid-row: 1 / 3; }
   .about-company strong { font-size: 22px; }
-  .about-mail { max-width: 100%; gap: 10px; font-size: 17px; }
-  .about-mail > span:first-child { overflow-wrap: anywhere; }
-  .about-social-directory { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 20px; margin: 22px 0; }
-  .about-public-profile { flex-direction: column; gap: 7px; }
 }
 
 
 .about-study p + p { margin-top: 12px; }
+.about-page > .about-chapter:last-child { padding-bottom: 0; }

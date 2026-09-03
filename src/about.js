@@ -1,5 +1,4 @@
 import { t } from './i18n.js'
-import { socialProfiles } from './social.js'
 
 const phrases = /《[^》]+》|『[^』]+』|AI Agent Intelligence Daily|Ink Duel: Hundred Arms|Foundation ALUX|A Mortal Life,|Born of One Thought|In Heaven’s Stead|Still Untitled|面向Steam的桌面游戏|AI智能体情报日报|AI智能体|AI产品|独立游戏|从古老的思想|到不断变化的技术|AI炼丹师|连续创业者|数百篇|原创词作|企业孵化|自2016年起|数字文明|心理学|神智学|神秘学|东西方精神传统|東西方精神傳統|不同体系|不同體系|日常生活|阳明心学|陽明心學|陽明学|儒学|儒學|易学|易學|道教|佛教诸宗|佛教諸宗|五行八卦|王凤仪|王鳳儀|赫尔墨斯思想|赫爾墨斯思想|北欧符文|北歐符文|家族系统排列|武当三丰派|十一資本/g
 const copy = key => t(key).replace(phrases, phrase => '<span class="about-phrase">' + phrase + '</span>')
@@ -84,15 +83,6 @@ export function aboutView() {
       </div>
     </section>
 
-    <section class="about-chapter about-contact" id="contact" aria-labelledby="about-contact-title">
-      <h2 id="about-contact-title">${t('about.contactTitle')}</h2>
-      <div class="about-chapter-body">
-        <p class="about-contact-intro">${t('about.contactIntro')}</p>
-        <a class="about-mail" href="mailto:info@elevencapital.ltd"><span>info@elevencapital.ltd</span>${arrow}</a>
-        <div class="about-social-directory">${socialProfiles.map(profile => '<a href="' + profile.href + '" target="_blank" rel="noopener"><span class="about-social-icon">' + profile.icon + '</span><span class="about-social-copy"><span class="about-platform">' + profile.name + '</span><span class="about-handle">' + profile.handle + '</span></span></a>').join('')}</div>
-        <div class="about-public-profile"><strong>@${t('brand.name')}</strong><p>${t('about.channels')}</p></div>
-      </div>
-    </section>
   </section>`
 }
 

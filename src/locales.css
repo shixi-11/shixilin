@@ -50,7 +50,7 @@ html:not([lang^='zh']) .alux-card p { text-wrap: pretty; }
 html:not([lang^='zh']) .home-book-name, html:not([lang^='zh']) .home-book-upcoming { font-family: 'Noto Serif SC', serif; }
 .home-ai-entry, .alux-card, .game-card-copy, .about-company > span { min-width: 0; }
 html:not([lang^='zh']) body .cloud-card { height: auto; min-height: 280px; }
-.route-caption, .wallet-address, .support-networks, #selected-network, .about-mail span, .footer-email > span:last-child, .about-handle { direction: ltr; unicode-bidi: isolate; }
+.route-caption, .wallet-address, .support-networks, #selected-network, .footer-email > span:last-child { direction: ltr; unicode-bidi: isolate; }
 html[dir='rtl'] body :is(p, h1, h2, h3, a, small, li, dt, dd, button, figcaption, summary) { letter-spacing: 0; }
 html[dir='rtl'] body :is(.support-page, .about-page, .quiet-page, .game-page, .game-directory) { font-family: var(--locale-serif); }
 html[dir='rtl'] .paper-hero-copy { text-align: right; }
