@@ -1,8 +1,8 @@
-.about-page { width: 84%; max-width: 1080px; margin: 0 auto; padding: 78px 0 82px; font-family: 'Noto Serif SC', 'Songti SC', serif; }
-.about-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: pretty; }
+.about-page { width: 84%; max-width: 1080px; margin: 0 auto; padding: 58px 0 72px; font-family: var(--locale-serif); }
+.about-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: balance; }
 .about-page h2, .about-page h3 { margin: 0; font-weight: 500; }
 .about-phrase { white-space: nowrap; }
-.about-masthead { display: grid; grid-template-columns: minmax(0,1fr); gap: 36px; padding-bottom: 65px; align-items: start; }
+.about-masthead { display: grid; grid-template-columns: minmax(0,1fr); gap: 28px; padding-bottom: 34px; align-items: start; }
 .about-identity { max-width: 760px; }
 .about-page .about-eyebrow { margin: 0 0 21px; font-size: 12px; color: #857344; letter-spacing: .16em; }
 .about-identity h1 { margin: 0; font-size: 54px; font-weight: 400; line-height: 1.35; letter-spacing: .045em; white-space: nowrap; }
@@ -14,12 +14,21 @@
 html[lang='ja'] .about-roles > .about-phrase + .about-phrase::before { content: '・'; }
 .about-introduction { min-width: 0; max-width: 760px; }
 .about-page .about-lead { max-width: 760px; margin-bottom: 20px; color: #2e453a; font-size: 28px; line-height: 1.7; text-wrap: balance; }
-.about-introduction > p:last-child { max-width: 650px; text-wrap: balance; }
+.about-introduction > p + p { margin-top: 14px; }
+.about-introduction > p:last-child { max-width: 720px; }
+.about-toc { display: flex; flex-wrap: wrap; gap: 4px 28px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper, #f6f5f0); }
+.about-toc a { display: inline-flex; align-items: center; min-height: 44px; color: #4c594e; font-size: 14px; line-height: 1.5; text-decoration: underline; text-decoration-color: #c8b98f; text-underline-offset: 7px; }
+.about-toc a:hover { color: #80682f; text-decoration-color: currentColor; }
+.about-toc a:focus-visible, .about-related-links a:focus-visible { outline: 2px solid #80682f; outline-offset: 5px; }
+.about-related-links { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 16px; }
+.about-related-links .about-link { min-height: 44px; white-space: normal; font-size: 15px; }
+.about-prose > p + p, .about-section-intro + .about-section-intro { margin-top: 16px; }
 
-.about-chapter { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 66px; padding: 43px 0 49px; border-top: 1px solid var(--line); }
+.about-chapter { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 56px; padding: 42px 0 46px; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+.about-toc + .about-chapter { border-top: 0; }
 .about-chapter > h2 { font-size: 24px; line-height: 1.7; color: #303c32; }
 html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
-.about-chapter-body { min-width: 0; }
+.about-chapter-body { min-width: 0; max-width: 720px; }
 .about-work + .about-work { margin-top: 29px; padding-top: 29px; border-top: 1px solid rgba(62,60,51,.08); }
 .about-work-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px 24px; margin-bottom: 13px; }
 .about-work h3, .about-study h3 { color: #564f3e; font-size: 19px; line-height: 1.65; }
@@ -27,7 +36,7 @@ html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-link { display: inline-flex; align-items: center; gap: 17px; min-height: 32px; font-size: 13px; color: #6e705f; white-space: nowrap; }
 .about-link > span { color: #99804b; font-family: 'Source Sans 3', sans-serif; }
 .about-link:hover, .about-company:hover { color: #8b703e; }
-.about-page .about-practice-note { font-size: 14px; color: #74786e; }
+.about-page .about-practice-note { font-size: 16px; color: #535b53; }
 .about-section-intro { max-width: 760px; }
 .about-affiliations { margin-top: 24px; }
 .about-company { display: grid; grid-template-columns: minmax(0,1fr) auto 14px; align-items: center; gap: 25px; padding: 21px 0; border-top: 1px solid rgba(62,60,51,.1); }
@@ -39,12 +48,12 @@ html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-study { margin-top: 28px; }
 .about-study h3 { margin-bottom: 10px; }
 .about-study > p { text-wrap: balance; }
-.about-qualifications { margin-top: 13px; }
-.about-qualifications summary { width: fit-content; padding: 8px 0; color: #827048; font-size: 13px; line-height: 1.6; cursor: pointer; }
-.about-qualifications summary::marker { font-size: .8em; }
-.about-qualifications[open] summary { margin-bottom: 8px; }
-.about-qualifications ul { margin: 0; padding: 14px 20px 14px 33px; border-left: 1px solid #c8b98f; background: rgba(226,219,203,.13); color: #60685d; font-size: 14px; line-height: 1.95; }
-.about-qualifications li + li { margin-top: 7px; }
+.about-credentials { margin: 22px 0 0; padding: 0; list-style: none; color: #435044; font-size: 16px; line-height: 1.9; }
+.about-credentials li { position: relative; padding: 12px 0 12px 20px; padding-inline: 20px 0; border-bottom: 1px solid rgba(62,60,51,.1); }
+.about-credentials li::before { content: ''; position: absolute; inset-inline-start: 0; top: 24px; width: 5px; height: 5px; background: #a18b56; border-radius: 50%; }
+.about-credentials li:first-child { border-top: 1px solid rgba(62,60,51,.1); }
+@media (min-width: 1280px) { .about-toc { position: sticky; top: 0; z-index: 5; } }
+@media (max-width: 1279px) { .about-chapter { scroll-margin-top: 24px; } }
 
 html[lang='en'] .about-identity h1 { font-size: 50px; letter-spacing: 0; }
 html[lang='en'] .about-page .about-alias { font-family: 'Noto Serif SC',serif; }
@@ -58,6 +67,7 @@ html[lang='en'] .about-page .about-lead { font-size: 27px; }
   .about-page { padding-top: 57px; padding-bottom: 62px; }
   .about-masthead { gap: 32px; padding-bottom: 42px; }
   .about-chapter { grid-template-columns: 1fr; gap: 27px; padding: 34px 0 40px; }
+  .about-chapter { scroll-margin-top: 24px; }
 }
 @media (max-width: 620px) {
   .about-page { width: 86%; padding: 38px 0 48px; }
@@ -66,13 +76,15 @@ html[lang='en'] .about-page .about-lead { font-size: 27px; }
   html[lang='en'] .about-identity h1 { font-size: 42px; }
   .about-page .about-alias { margin-top: 10px; }
   .about-page .about-roles { margin-top: 18px; }
-  .about-page p { font-size: 15px; line-height: 1.95; }
+  .about-page p { font-size: 16px; line-height: 1.9; }
   .about-page .about-lead, html[lang='en'] .about-page .about-lead { font-size: 24px; line-height: 1.7; margin-bottom: 18px; }
   .about-chapter > h2 { font-size: 23px; }
   .about-work-heading { flex-wrap: wrap; gap: 6px 20px; margin-bottom: 10px; }
   .about-work h3, .about-study h3 { font-size: 18px; }
   .about-work + .about-work { margin-top: 25px; padding-top: 25px; }
-  .about-page .about-practice-note { font-size: 13px; }
+  .about-page .about-practice-note { font-size: 16px; }
+  .about-toc { gap: 2px 22px; padding: 10px 0; }
+  .about-credentials { font-size: 16px; }
   .about-company { grid-template-columns: minmax(0,1fr) 14px; gap: 7px 20px; padding: 19px 0; }
   .about-company-role { grid-column: 1; }
   .about-company > span:last-child { grid-column: 2; grid-row: 1 / 3; }
