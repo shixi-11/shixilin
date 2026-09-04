@@ -232,5 +232,14 @@
     "height": 1024,
     "bytes": 225687,
     "frames": 2
+  },
+  {
+    "asset": "/assets/design/sticker-cover.jpg",
+    "source": "A:/1111/ALUX-吉祥物/01_母体设定/生成参考/阿禄猴四种正面形态.jpg",
+    "sha256": "0149ac2a888dc5bb26a03afa11b71c67f9ffc5bef5a113997f682cffaa2eff8d",
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1539324,
+    "frames": 1
   }
 ]

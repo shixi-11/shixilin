@@ -28,7 +28,7 @@ export function homeDesign() {
         <div class="design-preview-copy"><h3>${t('design.merch.title')}</h3><p>${t('design.merch.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
       <a class="design-preview internal-link" href="/design#stickers">
-        <div class="design-preview-media design-sticker-preview" aria-hidden="true">${['wave', 'shy', 'received'].map(key => `<img src="${asset(`sticker-${key}.png`)}" alt="" width="1024" height="1024" loading="lazy" />`).join('')}</div>
+        <div class="design-preview-media design-sticker-preview" aria-hidden="true"><img src="${asset('sticker-cover.jpg')}" alt="" width="3840" height="2160" loading="lazy" /></div>
         <div class="design-preview-copy"><h3>${t('design.stickers.title')}</h3><p>${t('design.stickers.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
     </div>

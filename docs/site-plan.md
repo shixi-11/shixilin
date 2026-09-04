@@ -214,3 +214,10 @@
 - 主页设计区预览保存为`A:/vibe coding/shixilin/design/20260904_主页设计展示.png`，已打开检查。本轮整页截图接口超时，未覆盖旧的主页长图，也不将旧长图作为本轮预览。
 - 功能提交`9ff6479`，已推送GitHub main；生产部署`dpl_24ED2jxMJYKeyUSBQNDACF8257tV`为READY，正式域名`https://shixilin.com/`。
 - 线上`/design`返回正确标题和canonical；首页及设计页引用的JS`/assets/index-CXpJWChn.js`、CSS`/assets/index-BFx4Z5PX.css`与本地验收构建逐字节一致。26个图片及动画文件全部下载核对SHA-256，与用户原文件完全一致，记录见`.vercel/review/design-production.json`。
+
+## 2026-09-04表情包封面
+
+- 主页表情包封面换为用户选中的`阿禄猴四种正面形态.jpg`，3840×2160原图逐字节复制到`/assets/design/sticker-cover.jpg`。
+- 维持与周边预览一致的2:1版位，原图等比完整显示；两侧余白采用接近原图底色的暖米色`#f9efe6`，不裁切、不拉伸、不改变角色颜色。
+- 电脑1440px、平板768px、手机390px均已检查，图像完整、无横向溢出；电脑与手机截图已实看。另检查英文与阿拉伯文手机页面，图片与分类入口正确。
+- 当前封面截图：`A:/vibe coding/shixilin/design/20260904_表情包封面.jpg`。设计子页继续保留原有六个表情包及动画播放功能。
