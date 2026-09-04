@@ -211,4 +211,6 @@
 - 新增34个翻译键，九种语言齐全；已更新现有字体子集并检查字形覆盖。没有修改首页既定的两句中文简介。
 - 设计页与首页在1440、768、390px下共54组检查通过，无横向溢出，主页两组预览等高，设计页均呈现14张周边和6个表情包。另检查901、1024、1201px导航，调整中等宽度间距后，901px德语导航与标志保持29px间隔。
 - 实际验证英文“查看全部设计”、中文手机菜单、表情包分类锚点、动画播放与暂停，以及设计页刷新。检查记录位于`.vercel/review/design-20260904.json`。
-- 主页设计区预览保存为`A:/vibe coding/shixilin/design/20260904_主页设计展示.png`。本轮整页截图接口超时，未覆盖旧的主页长图，也不将旧长图作为本轮预览。正式部署状态在发布完成后追加。
+- 主页设计区预览保存为`A:/vibe coding/shixilin/design/20260904_主页设计展示.png`，已打开检查。本轮整页截图接口超时，未覆盖旧的主页长图，也不将旧长图作为本轮预览。
+- 功能提交`9ff6479`，已推送GitHub main；生产部署`dpl_24ED2jxMJYKeyUSBQNDACF8257tV`为READY，正式域名`https://shixilin.com/`。
+- 线上`/design`返回正确标题和canonical；首页及设计页引用的JS`/assets/index-CXpJWChn.js`、CSS`/assets/index-BFx4Z5PX.css`与本地验收构建逐字节一致。26个图片及动画文件全部下载核对SHA-256，与用户原文件完全一致，记录见`.vercel/review/design-production.json`。
