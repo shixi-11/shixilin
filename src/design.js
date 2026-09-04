@@ -22,7 +22,7 @@ const merchandise = [
   { file: 'coaster-emblem.jpg', key: 'coasterEmblem' },
   { file: 'case.jpg', key: 'case' },
 ]
-const featuredMerchandise = ['shirtPurple', 'shirtBlack', 'tote', 'case'].map(key => merchandise.find(item => item.key === key))
+const featuredMerchandise = ['shirtPurple', 'jacket', 'tote', 'case'].map(key => merchandise.find(item => item.key === key))
 
 export function homeDesign() {
   return `<section class="home-design" aria-labelledby="design-title">
