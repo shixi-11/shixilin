@@ -3,8 +3,8 @@ import { t } from './i18n.js'
 const asset = name => `/assets/design/${name}`
 const stickers = ['wave', 'shy', 'received', 'facepalm', 'launch', 'tired']
 const jewelry = [
-  ['pendant-symbol.jpg', 'pendant-symbol-still.jpg', 'pendant-edge.jpg'],
-  ['pendant-engraving.jpg', 'pendant-engraving-hanging.jpg', 'pendant-engraving-still.jpg'],
+  ['pendant-symbol.jpg', 'pendant-engraving-hanging.jpg', 'pendant-edge.jpg'],
+  ['pendant-engraving.jpg', 'pendant-symbol-still.jpg', 'pendant-engraving-still.jpg'],
 ]
 const merchandise = [
   { file: 'shirt-purple.jpg', key: 'shirtPurple', wide: true },
