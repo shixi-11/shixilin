@@ -1,5 +1,15 @@
 import { complete } from './complete.js'
 export default complete({
+    "about.name.title": "Die Bedeutung meines Namens",
+    "about.name.intro": "In meinem Text 《领主简介》 von 2023 habe ich die Herkunft meines Künstlernamens 光之十一 erläutert. Er verbindet Zahlen, Traditionen und persönliche Erfahrungen.",
+    "about.name.eleven": "Elf verbindet das elfdimensionale Universum der M-Theorie, die Symbolik dieser Zahl in der westlichen Magie und den Tag des Monats, an dem ich geboren wurde. Die chinesischen Zeichen 十一 werden mit insgesamt drei Strichen geschrieben, und drei ist meine Glückszahl.",
+    "about.name.ten": "Zehn erinnert mich an die Zahlenfolge von eins bis zehn, an das Kreuz und die mit Lazarus verbundene Kreuzung sowie an die zusammengelegten Handflächen in der indischen Ayurveda-Tradition. In den Bildern der fünf Elemente Erde, Wasser, Feuer, Luft und Raum sowie der Vereinigung von links und rechts, Yin und Yang liegt für mich der Wunsch, selbst auferlegte Fesseln und Ängste loszulassen, demütig und freudig zu bleiben und einem umfassenden Bewusstsein dankbar zu sein.",
+    "about.name.one": "Eins verweist auf die daoistischen Worte: Das Dao bringt eins hervor, eins bringt zwei hervor, zwei bringt drei hervor, und drei bringt alle Dinge hervor; alles kehrt zum Dao zurück. Was ich auch erlebe, ich möchte meine Einfachheit bewahren, Wissen und Handeln vereinen, die Welt kennen, ohne zynisch zu werden, und meine spirituelle Praxis nicht vergessen. Auch angesichts des Unvermeidlichen hoffe ich, zu einem aufrichtigen Weg zurückzufinden und innerlich wie äußerlich klar zu bleiben.",
+    "about.name.light": "Licht steht für mich für den Ursprung und erinnert mich daran, mich immer wieder anzuspornen, während die Zeit verfliegt. Selbst wenn neun Dinge schiefgehen, möchte ich das eine gute sehen und sein Licht auf die anderen fallen lassen. Ich möchte selbst Licht sein und anderen Licht bringen.",
+    "about.name.mission": "In meiner persönlichen Symbolik umfasst Licht alles: alle Farben, auch Schwarz. Schwarz kann für die stille Stärke und Entschlossenheit von Obsidian stehen. Ich möchte andere auf natürliche Weise zu spirituellem Aufstieg begleiten, über die Fesseln dualistischen Denkens und der Gegensätze hinaus, auf einen Weg des freien Willens.",
+    "about.name.source": "Chinesischen Originaltext lesen",
+    "about.professional.history": "In 《领主简介》 aus dem Jahr 2023 beschrieb ich meine damals knapp siebenjährige Tätigkeit im Bereich der Psychologie sowie drei Jahre intensiver Teilnahme an Workshops zu Familienaufstellungen in der Tradition Hellingers.",
+    "about.interests": "Außerdem sammle ich mit Begeisterung Instrumentalmusik und schreibe in meiner freien Zeit. Musik und Worte gehören zu meinem Alltag.",
     "about.toc": "Auf dieser Seite",
     "about.welcome": "Willkommen im Reich des Lichts. Ich bin Shixi Lin, seine Hüterin. Hier teile ich, was ich über inneres Wachstum, spirituelle Praxis und digitale Zivilisation lerne und erlebe.",
     "about.journeyTitle": "Unterwegs im Leben",

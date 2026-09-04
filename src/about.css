@@ -52,7 +52,10 @@ html:is([lang='de'],[lang='es']) .about-chapter > h2 { hyphens: auto; }
 .about-credentials li { position: relative; padding: 12px 0 12px 20px; padding-inline: 20px 0; border-bottom: 1px solid rgba(62,60,51,.1); }
 .about-credentials li::before { content: ''; position: absolute; inset-inline-start: 0; top: 24px; width: 5px; height: 5px; background: #a18b56; border-radius: 50%; }
 .about-credentials li:first-child { border-top: 1px solid rgba(62,60,51,.1); }
-@media (min-width: 1280px) { .about-toc { position: sticky; top: 0; z-index: 5; } }
+@media (min-width: 1280px) {
+  .about-toc { position: sticky; top: 0; z-index: 5; }
+  html:is([lang='en'],[lang='es'],[lang='fr'],[lang='de']) .about-chapter { scroll-margin-top: 152px; }
+}
 @media (max-width: 1279px) { .about-chapter { scroll-margin-top: 24px; } }
 
 html[lang='en'] .about-identity h1 { font-size: 50px; letter-spacing: 0; }

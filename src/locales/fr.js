@@ -1,5 +1,15 @@
 import { complete } from './complete.js'
 export default complete({
+    "about.name.title": "Le sens de mon nom",
+    "about.name.intro": "Dans mon texte de 2023 《领主简介》, j’ai expliqué l’origine de mon nom de plume, 光之十一. Il réunit des nombres, des traditions et des expériences personnelles.",
+    "about.name.eleven": "Onze relie l’univers à onze dimensions de la théorie M, la symbolique de ce nombre dans la magie occidentale et le jour du mois où je suis née. Les caractères chinois 十一 s’écrivent en trois traits, et trois est mon chiffre porte-bonheur.",
+    "about.name.ten": "Dix m’évoque la suite des nombres de un à dix, la croix et le croisement associé à Lazare, ainsi que le geste des paumes jointes dans la tradition ayurvédique indienne. Dans les images de ses cinq éléments — terre, eau, feu, air et espace — et de l’union de la gauche et de la droite, du yin et du yang, je place le souhait de me libérer de mes propres entraves et de mes peurs, de rester humble et joyeuse et d’éprouver de la gratitude envers une conscience qui nous englobe.",
+    "about.name.one": "Un renvoie aux paroles taoïstes : le Dao engendre l’un, l’un engendre le deux, le deux engendre le trois, et le trois engendre toutes choses ; tout retourne au Dao. Quelles que soient mes expériences, je souhaite préserver ma simplicité, unir savoir et action, connaître le monde sans devenir cynique et ne pas oublier ma pratique spirituelle. Même face à ce qui m’échappe, j’espère retrouver une voie juste, dans la clarté intérieure et extérieure.",
+    "about.name.light": "La lumière représente pour moi la source et me rappelle de continuer à me remettre en mouvement tandis que le temps file. Même si neuf choses vont mal, je veux voir celle qui va bien et la laisser éclairer les autres. Je souhaite être lumière et en apporter aux autres.",
+    "about.name.mission": "Dans ma lecture symbolique, la lumière embrasse tout : toutes les couleurs, y compris le noir. Le noir peut aussi évoquer la retenue et la force de l’obsidienne. Je souhaite accompagner naturellement l’élévation spirituelle des autres, au-delà des contraintes de la pensée dualiste et des oppositions, vers un chemin de libre arbitre.",
+    "about.name.source": "Lire le texte original en chinois",
+    "about.professional.history": "Dans 《领主简介》, publié en 2023, j’ai évoqué près de sept années de travail antérieur dans le domaine de la psychologie et trois années de participation approfondie à des ateliers de constellations familiales dans la tradition de Hellinger.",
+    "about.interests": "Je collectionne aussi la musique instrumentale avec passion et j’écris pendant mon temps libre. La musique et les mots font partie de mon quotidien.",
     "about.toc": "Sur cette page",
     "about.welcome": "Bienvenue au Royaume de la Lumière. Je suis Shixi Lin, sa gardienne. J’y partage mes apprentissages et mon vécu autour de la croissance intérieure, de la pratique spirituelle et de la civilisation numérique.",
     "about.journeyTitle": "Le chemin d’une voyageuse",

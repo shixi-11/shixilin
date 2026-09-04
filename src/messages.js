@@ -9,6 +9,16 @@ import ar from './locales/ar.js'
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
   "zh": {
+    "about.name.title": "名字与初心",
+    "about.name.intro": "2023年，我在《领主简介》中写下笔名“光之十一”的由来。数字、传统与个人经历，共同构成了这个名字。",
+    "about.name.eleven": "“十一”联系着M理论中的十一维宇宙、西方魔法学赋予这个数字的象征意义，也对应我的生日日期。“十一”共三画，而三是我的幸运数字。",
+    "about.name.ten": "“十”让我想到从一到十的数序、十字架与拉撒路的交叉，也想到印度阿育吠陀传统中的合十手印。我借其中地、水、火、风、空五大元素，以及左右、阴阳合一的意象，寄托放下自我束缚与恐惧、保持谦卑与愉悦、感恩整体意识的愿望。",
+    "about.name.one": "“一”来自“道生一，一生二，二生三，三生万物”与“大道归一”。无论经历多少，我都希望见素抱朴、知行合一、知世故而不世故，不忘修行人的身份。纵然有再多无可奈何，最后仍能回向正道，内外澄清。",
+    "about.name.light": "“光”是我理解中的源头，也提醒我在白驹过隙般的时间里不断鞭策自己。即使遇到九件坏事，仍愿意看见那一件好事，让它给其余的事情带来光。我想自己成为光，也给他人带去光。",
+    "about.name.mission": "在我的象征理解中，光包罗万象，容纳所有色彩，也容纳黑色。黑色对我也意味着黑曜石般的内敛与坚毅。我希望自然而然地引导他人扬升，突破二元思维与对立的桎梏，开启拥有自由意志的旅程。",
+    "about.name.source": "阅读《领主简介》原文",
+    "about.professional.history": "在2023年发表的《领主简介》中，我记录了此前将近七年的心理学行业经历，以及深入参与海灵格体系家族系统排列工作坊三年的学习经历。",
+    "about.interests": "我也是纯音乐的收藏发烧友，闲来舞文弄墨，在音乐与文字之间安放日常。",
     "about.toc": "本页目录",
     "about.welcome": "欢迎至光之境，我是领主光之十一。在此与你分享心灵成长、灵修洞见，以及数字文明的所学所感。",
     "about.journeyTitle": "行者之路",
@@ -297,6 +307,16 @@ export const messages = {
     "about.tradition.practice": "灵气导师，武当三丰派传人。"
   },
   "en": {
+    "about.name.title": "The Meaning of My Name",
+    "about.name.intro": "In my 2023 essay 《领主简介》, I explained the origins of my pen name, 光之十一. It brings together numbers, traditions, and personal experience.",
+    "about.name.eleven": "Eleven connects the eleven-dimensional universe of M-theory, the symbolism of the number in Western magic, and the day of the month on which I was born. The Chinese characters 十一 take three strokes to write, and three is my lucky number.",
+    "about.name.ten": "Ten brings to mind the sequence from one to ten, the cross and the crossing associated with Lazarus, and the palms-together gesture in Indian Ayurvedic tradition. I draw on its imagery of earth, water, fire, air, and space, and of left and right, yin and yang coming together, to express a wish to let go of fear and self-imposed constraints, remain humble and joyful, and feel gratitude toward a greater, shared consciousness.",
+    "about.name.one": "One recalls the Daoist words: the Dao gives birth to one, one to two, two to three, and three to all things; all return to the Dao. Whatever I experience, I hope to remain simple and sincere, bring knowledge and action together, understand the world without becoming cynical, and remember my commitment to spiritual practice. Even when circumstances leave little choice, I hope to return to an upright path, clear within and without.",
+    "about.name.light": "Light is how I understand the source, and a reminder to keep challenging myself as time slips by. Even when nine things go wrong, I want to notice the one thing that goes right and let it cast light on the rest. I want to be light myself, and bring light to others.",
+    "about.name.mission": "In my personal symbolism, light embraces everything: every color, including black. Black can mean the quiet strength and resolve of obsidian. I hope to guide others naturally toward spiritual ascension, beyond the confines of dualistic thinking and opposition, and into a journey shaped by free will.",
+    "about.name.source": "Read the original essay in Chinese",
+    "about.professional.history": "In my 2023 essay 《领主简介》, I recorded nearly seven years of prior work in psychology and three years of intensive participation in workshops in the Hellinger tradition of family constellations.",
+    "about.interests": "I am also an avid collector of instrumental music, and I enjoy writing in my spare time. Music and words are part of my everyday life.",
     "about.toc": "On this page",
     "about.welcome": "Welcome to the Realm of Light. I’m Shixi Lin, its keeper. Here I share what I learn and experience in personal growth, spiritual practice, and digital civilization.",
     "about.journeyTitle": "A wayfarer’s path",

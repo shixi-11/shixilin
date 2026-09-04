@@ -2,6 +2,16 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
+    "about.name.title": "El sentido de mi nombre",
+    "about.name.intro": "En mi texto de 2023 《领主简介》 expliqué el origen de mi seudónimo, 光之十一. En él se reúnen números, tradiciones y experiencias personales.",
+    "about.name.eleven": "Once enlaza el universo de once dimensiones de la teoría M, el simbolismo de este número en la magia occidental y el día del mes en que nací. Los caracteres chinos 十一 se escriben con tres trazos, y el tres es mi número de la suerte.",
+    "about.name.ten": "Diez me recuerda la secuencia del uno al diez, la cruz y el cruce asociado a Lázaro, así como el gesto de unir las palmas en la tradición ayurvédica de la India. En las imágenes de sus cinco elementos —tierra, agua, fuego, aire y espacio— y de la unión de izquierda y derecha, yin y yang, deposito el deseo de soltar los miedos y las limitaciones que me impongo, conservar la humildad y la alegría, y agradecer una conciencia que nos abarca a todos.",
+    "about.name.one": "Uno remite a las palabras taoístas: el Dao engendra el uno; el uno, el dos; el dos, el tres; y el tres, todas las cosas. Todo regresa al Dao. Pase lo que pase, deseo conservar la sencillez, unir conocimiento y acción, conocer el mundo sin caer en el cinismo y recordar mi compromiso con la práctica espiritual. Incluso ante lo inevitable, espero volver al camino recto, con claridad interior y exterior.",
+    "about.name.light": "La luz representa para mí el origen y me recuerda que debo seguir exigiéndome mientras el tiempo pasa fugazmente. Aunque ocurran nueve cosas malas, quiero ver la única buena y dejar que ilumine las demás. Quiero ser luz y llevar luz a otros.",
+    "about.name.mission": "En mi universo simbólico, la luz lo abarca todo: todos los colores, incluido el negro. El negro también significa la serenidad y la firmeza de la obsidiana. Deseo acompañar de forma natural la ascensión espiritual de otros, más allá de las ataduras del pensamiento dualista y la oposición, hacia un camino de libre albedrío.",
+    "about.name.source": "Leer el texto original en chino",
+    "about.professional.history": "En 《领主简介》, publicado en 2023, dejé constancia de casi siete años de trabajo previo en el ámbito de la psicología y de tres años de participación intensa en talleres de constelaciones familiares de la tradición de Hellinger.",
+    "about.interests": "También colecciono música instrumental con pasión y escribo en mis ratos libres. La música y las palabras forman parte de mi vida cotidiana.",
     "about.toc": "En esta página",
     "about.welcome": "Bienvenidos al Reino de la Luz. Soy Shixi Lin, su guardiana. Aquí comparto lo que aprendo y vivo sobre el crecimiento interior, la práctica espiritual y la civilización digital.",
     "about.journeyTitle": "El camino de una viajera",
