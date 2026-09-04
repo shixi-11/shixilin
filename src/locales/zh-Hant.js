@@ -1,9 +1,11 @@
 export default {
+    "design.jewelry.title": "飾品設計",
+    "design.jewelry.text": "護符吊墜",
     "design.nav": "設計",
     "meta.design": "設計作品｜光之十一",
-    "meta.designDescription": "光之十一的設計作品：ALUX服裝與日常周邊、角色貼圖。",
+    "meta.designDescription": "光之十一的設計作品：ALUX服裝與日常周邊、護符吊墜和角色表情包。",
     "design.title": "設計作品",
-    "design.intro": "品牌周邊與貼圖作品。",
+    "design.intro": "品牌周邊、飾品設計與表情包作品。",
     "design.all": "查看全部設計",
     "design.view": "查看作品",
     "design.original": "查看原圖",

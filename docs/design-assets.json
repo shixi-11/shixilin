@@ -241,5 +241,59 @@
     "height": 2160,
     "bytes": 1539324,
     "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-symbol.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1601553665555.jpg",
+    "sha256": "ec1f7b74770249b26c1c6c1cbe31a1931ea41558efe46f2df28c995bba80f085",
+    "width": 3000,
+    "height": 2000,
+    "bytes": 2836961,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-symbol-still.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1601553659211.jpg",
+    "sha256": "98bce8482e7391d3695c786906dc3a04faa07290b5bd92abe6dd093a3e66079d",
+    "width": 3000,
+    "height": 4500,
+    "bytes": 6378373,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-edge.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1601553661245.jpg",
+    "sha256": "51049037a03d940373b2f512a78d923878af5bb2e8ca01785153e334a3a75697",
+    "width": 3000,
+    "height": 4500,
+    "bytes": 5949705,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-engraving.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1603002249220.jpg",
+    "sha256": "6170cdebff7456138ccfb1f622927e6b8a4f9ab67eda3e5efe10c59bee443b50",
+    "width": 3000,
+    "height": 2000,
+    "bytes": 3376512,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-engraving-hanging.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1603002225256.jpg",
+    "sha256": "f255128e9a80784866c235853d6584b09412f675f52c9a2963bf29f7075aebbb",
+    "width": 3000,
+    "height": 4500,
+    "bytes": 6058578,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/pendant-engraving-still.jpg",
+    "source": "A:\\shixi\\定制护符\\护符\\mmexport1603002240265.jpg",
+    "sha256": "2273903735253a490843872eadf4aa8d54c3869169ef38a5b39b78cf3a33376a",
+    "width": 3000,
+    "height": 4500,
+    "bytes": 6664906,
+    "frames": 1
   }
 ]

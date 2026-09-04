@@ -1,10 +1,12 @@
 import { complete } from './complete.js'
 export default complete({
+    "design.jewelry.title": "アクセサリーデザイン",
+    "design.jewelry.text": "お守りペンダント",
     "design.nav": "デザイン",
     "meta.design": "デザイン作品 | Shixi Lin",
-    "meta.designDescription": "Shixi Linのデザイン作品。ALUXのアパレルや日用品、キャラクタースタンプを紹介します。",
+    "meta.designDescription": "Shixi Linのデザイン作品。ALUXのアパレルや日用品、お守りペンダント、キャラクタースタンプを紹介します。",
     "design.title": "デザイン作品",
-    "design.intro": "ブランドグッズとスタンプの作品。",
+    "design.intro": "ブランドグッズ、アクセサリー、スタンプの作品。",
     "design.all": "デザインをすべて見る",
     "design.view": "作品を見る",
     "design.original": "元の画像を見る",

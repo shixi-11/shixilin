@@ -9,11 +9,13 @@ import ar from './locales/ar.js'
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
   "zh": {
+    "design.jewelry.title": "饰品设计",
+    "design.jewelry.text": "护符吊坠",
     "design.nav": "设计",
     "meta.design": "设计作品｜光之十一",
-    "meta.designDescription": "光之十一的设计作品：ALUX服装与日常周边、角色表情包。",
+    "meta.designDescription": "光之十一的设计作品：ALUX服装与日常周边、护符吊坠和角色表情包。",
     "design.title": "设计作品",
-    "design.intro": "品牌周边与表情包作品。",
+    "design.intro": "品牌周边、饰品设计与表情包作品。",
     "design.all": "查看全部设计",
     "design.view": "查看作品",
     "design.original": "查看原图",
@@ -279,11 +281,13 @@ export const messages = {
     "about.tradition.practice": "灵气导师，武当三丰派传人。"
   },
   "en": {
+    "design.jewelry.title": "Jewelry Design",
+    "design.jewelry.text": "Talisman pendants",
     "design.nav": "Design",
     "meta.design": "Design | Shixi Lin",
-    "meta.designDescription": "Design work by Shixi Lin: ALUX apparel, everyday merchandise and character stickers.",
+    "meta.designDescription": "Design work by Shixi Lin: ALUX apparel and everyday merchandise, talisman pendants and character stickers.",
     "design.title": "Design",
-    "design.intro": "Brand merchandise and stickers.",
+    "design.intro": "Branded merchandise, jewelry and stickers.",
     "design.all": "View all designs",
     "design.view": "View collection",
     "design.original": "Open full-size image",

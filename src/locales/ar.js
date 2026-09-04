@@ -1,10 +1,12 @@
 import { complete } from './complete.js'
 export default complete({
+    "design.jewelry.title": "تصميم المجوهرات",
+    "design.jewelry.text": "قلادات تمائم",
     "design.nav": "التصميم",
     "meta.design": "التصميم | Shixi Lin",
-    "meta.designDescription": "تصاميم Shixi Lin: ملابس ومنتجات يومية لعلامة ALUX، وملصقات شخصيات.",
+    "meta.designDescription": "أعمال تصميم شيشي لين: ملابس ومنتجات يومية من ALUX، وقلادات تمائم وملصقات شخصيات.",
     "design.title": "أعمال التصميم",
-    "design.intro": "منتجات تحمل هوية العلامة وملصقات.",
+    "design.intro": "منتجات تحمل هوية العلامة التجارية، ومجوهرات وملصقات.",
     "design.all": "عرض جميع التصاميم",
     "design.view": "عرض المجموعة",
     "design.original": "عرض الصورة الأصلية",

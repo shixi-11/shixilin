@@ -1,10 +1,12 @@
 import { complete } from './complete.js'
 export default complete({
+    "design.jewelry.title": "Schmuckdesign",
+    "design.jewelry.text": "Talisman-Anhänger",
     "design.nav": "Design",
     "meta.design": "Design | Shixi Lin",
-    "meta.designDescription": "Designs von Shixi Lin: ALUX-Kleidung, Alltagsgegenstände und Charakter-Sticker.",
+    "meta.designDescription": "Designs von Shixi Lin: ALUX-Kleidung und Alltagsgegenstände, Talisman-Anhänger und Charakter-Sticker.",
     "design.title": "Design",
-    "design.intro": "Markenartikel und Sticker.",
+    "design.intro": "Markenartikel, Schmuck und Sticker.",
     "design.all": "Alle Designs ansehen",
     "design.view": "Kollektion ansehen",
     "design.original": "Originalbild öffnen",

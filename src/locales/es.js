@@ -2,11 +2,13 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
+    "design.jewelry.title": "Diseño de joyas",
+    "design.jewelry.text": "Colgantes talismán",
     "design.nav": "Diseño",
     "meta.design": "Diseño | Shixi Lin",
-    "meta.designDescription": "Diseños de Shixi Lin: ropa y objetos cotidianos de ALUX, y stickers de personajes.",
+    "meta.designDescription": "Diseños de Shixi Lin: ropa y artículos cotidianos de ALUX, colgantes talismán y stickers de personajes.",
     "design.title": "Diseño",
-    "design.intro": "Artículos de marca y stickers.",
+    "design.intro": "Artículos de marca, joyas y stickers.",
     "design.all": "Ver todos los diseños",
     "design.view": "Ver colección",
     "design.original": "Ver imagen original",

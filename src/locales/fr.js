@@ -1,10 +1,12 @@
 import { complete } from './complete.js'
 export default complete({
+    "design.jewelry.title": "Création de bijoux",
+    "design.jewelry.text": "Pendentifs talismans",
     "design.nav": "Design",
     "meta.design": "Design | Shixi Lin",
-    "meta.designDescription": "Créations de Shixi Lin : vêtements et objets du quotidien ALUX, et stickers de personnages.",
+    "meta.designDescription": "Créations de Shixi Lin : vêtements et objets du quotidien ALUX, pendentifs talismans et stickers de personnages.",
     "design.title": "Design",
-    "design.intro": "Objets de marque et stickers.",
+    "design.intro": "Objets de marque, bijoux et stickers.",
     "design.all": "Voir tous les designs",
     "design.view": "Voir la collection",
     "design.original": "Voir l’image originale",

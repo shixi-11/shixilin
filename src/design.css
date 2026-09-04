@@ -26,6 +26,11 @@
 .design-work-wide .design-work-image { aspect-ratio: 2 / 1; }
 .design-work img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .design-work figcaption { margin-top: 12px; font-size: 14px; line-height: 1.7; text-wrap: balance; }
+.design-jewelry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.design-jewelry-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-content: start; }
+.design-jewelry-image { display: block; min-width: 0; }
+.design-jewelry-lead { grid-column: 1 / -1; }
+.design-jewelry-image img { display: block; width: 100%; height: auto; }
 .design-sticker-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
 .design-sticker { display: grid; justify-items: center; gap: 10px; min-width: 0; margin: 0; padding: 22px 24px 18px; background: #f0ede5; }
 .design-sticker img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
@@ -41,6 +46,8 @@ html[dir='rtl'] .design-action > span { transform: scaleX(-1); }
   .design-sticker-grid { gap: 18px; }
 }
 @media (max-width: 640px) {
+  .design-jewelry-grid { grid-template-columns: 1fr; gap: 28px; }
+  .design-jewelry-group { gap: 12px; }
   .design-page { width: 86%; padding: 36px 0 46px; }
   .design-header { margin-bottom: 28px; }
   .design-header h1 { font-size: 34px; }

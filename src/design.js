@@ -2,6 +2,10 @@ import { t } from './i18n.js'
 
 const asset = name => `/assets/design/${name}`
 const stickers = ['wave', 'shy', 'received', 'facepalm', 'launch', 'tired']
+const jewelry = [
+  ['pendant-symbol.jpg', 'pendant-symbol-still.jpg', 'pendant-edge.jpg'],
+  ['pendant-engraving.jpg', 'pendant-engraving-hanging.jpg', 'pendant-engraving-still.jpg'],
+]
 const merchandise = [
   { file: 'shirt-black.jpg', key: 'shirtBlack', wide: true },
   { file: 'shirt-blue.jpg', key: 'shirtBlue', wide: true },
@@ -44,6 +48,10 @@ export function designView() {
     <section class="design-collection" id="merchandise" aria-labelledby="merch-title">
       <div class="design-collection-heading"><div><h2 id="merch-title">${t('design.merch.title')}</h2><p>${t('design.merch.text')}</p></div></div>
       <div class="design-merch-grid">${merchandise.map(item => `<figure class="design-work${item.wide ? ' design-work-wide' : ''}"><a class="design-work-image" href="${asset(item.file)}" target="_blank" rel="noopener" aria-label="${t(`design.${item.key}`)} · ${t('design.original')}"><img src="${asset(item.file)}" alt="${t(`design.${item.key}`)}" loading="lazy" /></a><figcaption>${t(`design.${item.key}`)}</figcaption></figure>`).join('')}</div>
+    </section>
+    <section class="design-collection" id="jewelry" aria-labelledby="jewelry-title">
+      <div class="design-collection-heading"><div><h2 id="jewelry-title">${t('design.jewelry.title')}</h2><p>${t('design.jewelry.text')}</p></div></div>
+      <div class="design-jewelry-grid">${jewelry.map((group, groupIndex) => `<div class="design-jewelry-group">${group.map((file, index) => `<a class="design-jewelry-image${index === 0 ? ' design-jewelry-lead' : ''}" href="${asset(file)}" target="_blank" rel="noopener" aria-label="${t('design.jewelry.text')} ${groupIndex + 1} · ${index + 1} · ${t('design.original')}"><img src="${asset(file)}" alt="${t('design.jewelry.text')} ${groupIndex + 1} · ${index + 1}" width="3000" height="${index === 0 ? 2000 : 4500}" loading="lazy" /></a>`).join('')}</div>`).join('')}</div>
     </section>
     <section class="design-collection" id="stickers" aria-labelledby="stickers-title">
       <div class="design-collection-heading"><div><h2 id="stickers-title">${t('design.stickers.title')}</h2><p>${t('design.stickers.text')}</p></div><button class="design-animation-toggle" type="button" aria-pressed="false" aria-controls="sticker-gallery">${t('design.play')}</button></div>

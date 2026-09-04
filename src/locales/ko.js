@@ -1,10 +1,12 @@
 import { complete } from './complete.js'
 export default complete({
+    "design.jewelry.title": "장신구 디자인",
+    "design.jewelry.text": "부적 펜던트",
     "design.nav": "디자인",
     "meta.design": "디자인 작품 | Shixi Lin",
-    "meta.designDescription": "Shixi Lin의 디자인 작품. ALUX 의류와 생활용품, 캐릭터 이모티콘을 소개합니다.",
+    "meta.designDescription": "Shixi Lin의 디자인 작품: ALUX 의류와 생활용품, 부적 펜던트, 캐릭터 스티커.",
     "design.title": "디자인 작품",
-    "design.intro": "브랜드 굿즈와 이모티콘 작품.",
+    "design.intro": "브랜드 굿즈, 장신구 디자인, 스티커 작품.",
     "design.all": "모든 디자인 보기",
     "design.view": "작품 보기",
     "design.original": "원본 이미지 보기",
