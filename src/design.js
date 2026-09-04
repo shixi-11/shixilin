@@ -22,7 +22,7 @@ const merchandise = [
 export function homeDesign() {
   return `<section class="home-design" aria-labelledby="design-title">
     <div class="home-section-heading">
-      <h2 class="paper-section-title" id="design-title"><a class="internal-link" href="/design">${t('design.nav')}</a></h2>
+      <h2 class="paper-section-title" id="design-title"><a class="internal-link" href="/design">${t('design.title')}</a></h2>
       <a class="home-browse-all internal-link" href="/design">${t('design.all')}<span aria-hidden="true">→</span></a>
     </div>
     <div class="design-preview-grid">
