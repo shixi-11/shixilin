@@ -2,6 +2,8 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
+    "home.allProducts": "Ver todos los productos de IA",
+    "home.allGames": "Ver todos los juegos",
     "services.nav": "Colaborar",
     "meta.services": "Consultas y colaboración | Shixi Lin",
     "meta.servicesDescription": "Orientación psicológica, esoterismo y adivinación, orientación para emprender, enseñanza del uso de la IA, creación de productos con IA y diseño. Conoce la orientación, la enseñanza y la colaboración en proyectos que ofrece Shixi Lin.",

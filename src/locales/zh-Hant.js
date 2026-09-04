@@ -1,4 +1,6 @@
 export default {
+    "home.allProducts": "查看全部AI產品",
+    "home.allGames": "查看全部遊戲",
     "services.nav": "合作",
     "meta.services": "諮詢與合作｜光之十一",
     "meta.servicesDescription": "心理諮詢、神祕學與占卜、創業指導、AI使用教學、AI產品製作與設計。了解光之十一提供的諮詢、教學與專案合作。",

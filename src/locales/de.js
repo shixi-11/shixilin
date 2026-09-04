@@ -1,5 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
+    "home.allProducts": "Alle KI-Produkte ansehen",
+    "home.allGames": "Alle Spiele ansehen",
     "services.nav": "Zusammenarbeit",
     "meta.services": "Beratung und Zusammenarbeit | Shixi Lin",
     "meta.servicesDescription": "Psychologische Beratung, Esoterik und Wahrsagung, Gründungsberatung, Anleitung zur Nutzung von KI, Entwicklung von KI-Produkten und Design. Erfahren Sie mehr über die Beratung, Lehre und Projektzusammenarbeit von Shixi Lin.",

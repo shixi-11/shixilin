@@ -40,12 +40,13 @@ export function homeView() {
         </article>
         <div class="home-ai-list">
           <a class="home-ai-entry" href="${dailyUrl()}" target="_blank" rel="noopener">
-            <span class="home-ai-label">ALUX</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
+            <span class="home-ai-label" lang="en">AI News</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
           </a>
           <a class="home-ai-entry" href="https://github.com/shixi-11/mohe-pet" target="_blank" rel="noopener">
             <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${projectText('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
           </a>
         </div>
+        <a class="home-browse-all internal-link" href="/ai">${t('home.allProducts')}<span aria-hidden="true">→</span></a>
       </section>
       <section class="home-books" aria-labelledby="books-title">
         <h2 class="paper-section-title" id="books-title"><a class="internal-link" href="/books">${t('home.books')}</a></h2>
@@ -61,7 +62,8 @@ export function homeView() {
     <div class="home-project-grid">
     <section class="home-game" id="games" aria-labelledby="game-title">
       <h2 class="paper-section-title" id="game-title"><a class="internal-link" href="/games">${t('home.games')}</a></h2>
-      ${gameCards()}
+      ${gameCards({ featuredOnly: true })}
+      <a class="home-browse-all internal-link" href="/games">${t('home.allGames')}<span aria-hidden="true">→</span></a>
     </section>
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>

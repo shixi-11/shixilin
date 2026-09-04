@@ -1,5 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
+    "home.allProducts": "عرض جميع منتجات الذكاء الاصطناعي",
+    "home.allGames": "عرض جميع الألعاب",
     "services.nav": "التعاون",
     "meta.services": "الاستشارات والتعاون | Shixi Lin",
     "meta.servicesDescription": "الإرشاد النفسي، والمعارف الباطنية والعرافة، وإرشاد ريادة الأعمال، وتعليم استخدام الذكاء الاصطناعي، وصناعة منتجات الذكاء الاصطناعي، والتصميم. تعرّف على ما يقدمه Shixi Lin من استشارات وتعليم وتعاون في المشاريع.",

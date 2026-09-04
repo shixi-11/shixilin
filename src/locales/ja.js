@@ -1,5 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
+    "home.allProducts": "AIプロダクトをすべて見る",
+    "home.allGames": "ゲームをすべて見る",
     "services.nav": "ご依頼",
     "meta.services": "ご相談・ご依頼｜Shixi Lin",
     "meta.servicesDescription": "心理相談、神秘学と占い、起業支援、AI活用レッスン、AIプロダクト制作、デザイン。Shixi Linが提供する相談、指導、プロジェクトでの協働についてご案内します。",

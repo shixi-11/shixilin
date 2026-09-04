@@ -1,5 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
+    "home.allProducts": "Voir tous les produits IA",
+    "home.allGames": "Voir tous les jeux",
     "services.nav": "Collaborer",
     "meta.services": "Conseil et collaboration | Shixi Lin",
     "meta.servicesDescription": "Conseil psychologique, ésotérisme et divination, accompagnement entrepreneurial, apprentissage de l’IA, création de produits fondés sur l’IA et design. Découvrez les services de conseil, d’enseignement et de collaboration sur des projets proposés par Shixi Lin.",

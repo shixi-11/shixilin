@@ -9,6 +9,8 @@ import ar from './locales/ar.js'
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
   "zh": {
+    "home.allProducts": "查看全部AI产品",
+    "home.allGames": "查看全部游戏",
     "services.nav": "合作",
     "meta.services": "咨询与合作｜光之十一",
     "meta.servicesDescription": "心理咨询、神秘学与占卜、创业指导、AI使用教学、AI产品制作与设计。了解光之十一提供的咨询、教学与项目合作。",
@@ -243,6 +245,8 @@ export const messages = {
     "about.tradition.practice": "灵气导师，武当三丰派传人。"
   },
   "en": {
+    "home.allProducts": "View all AI products",
+    "home.allGames": "View all games",
     "services.nav": "Collaborate",
     "meta.services": "Consultations & Collaboration | Shixi Lin",
     "meta.servicesDescription": "Psychological counseling, esoterica and divination, entrepreneurship guidance, AI instruction, AI product development, and design. Explore the counseling, teaching, and project collaboration offered by Shixi Lin.",

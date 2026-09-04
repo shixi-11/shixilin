@@ -4,11 +4,11 @@ const gameText = key => t(key).replace(/《[^》]+》|中国武术|中国历史|
 
 const gameLink = (href, label, external = false) => `<a class="game-page-link${external ? '' : ' internal-link'}" href="${href}"${external ? ' target="_blank" rel="noopener"' : ''}>${label}<span aria-hidden="true">${external ? '↗' : '→'}</span></a>`
 
-export function gameCards() {
+export function gameCards({ featuredOnly = false } = {}) {
   return `<div class="home-game-list">${[
-    { href: '/games/baishishu', image: '/assets/baishishu-meadow.jpg', width: 3840, height: 2160, key: 'game' },
-    { href: '/games/ink-duel', image: '/assets/ink-duel-concept.png', width: 1672, height: 941, key: 'ink' },
-  ].map(game => `<a class="game-card internal-link" href="${game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>Steam · ${t('games.desktop')}</span><span>${t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
+    { href: '/games/baishishu', image: '/assets/baishishu-meadow.jpg', width: 3840, height: 2160, key: 'game', featured: true },
+    { href: '/games/ink-duel', image: '/assets/ink-duel-concept.png', width: 1672, height: 941, key: 'ink', featured: true },
+  ].filter(game => !featuredOnly || game.featured).map(game => `<a class="game-card internal-link" href="${game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>Steam · ${t('games.desktop')}</span><span>${t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
 }
 
 function gameFacts() {

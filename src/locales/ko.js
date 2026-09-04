@@ -1,5 +1,7 @@
 import { complete } from './complete.js'
 export default complete({
+    "home.allProducts": "AI 제품 모두 보기",
+    "home.allGames": "게임 모두 보기",
     "services.nav": "협업",
     "meta.services": "상담과 협업 | Shixi Lin",
     "meta.servicesDescription": "심리 상담, 신비학과 점술, 창업 안내, AI 활용 교육, AI 제품 제작, 디자인. Shixi Lin이 제공하는 상담, 교육, 프로젝트 협업을 알아보세요.",
