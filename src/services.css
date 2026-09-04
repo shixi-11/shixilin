@@ -15,6 +15,10 @@
 .service-item h2, .services-inquiry h2 { margin-bottom: 14px; color: #303c32; font-size: 24px; font-weight: 400; line-height: 1.6; }
 .service-item p { max-width: 440px; }
 .service-phrase { white-space: nowrap; }
+.service-copy-break { display: none; }
+@media (min-width: 901px) {
+  .service-copy-break { display: initial; }
+}
 .services-inquiry { max-width: 650px; margin-top: 62px; }
 .services-inquiry h2 { font-size: 22px; }
 .services-contact { display: inline-flex; align-items: center; gap: 30px; min-height: 44px; margin-top: 18px; border-bottom: 1px solid var(--amber); font-size: 15px; }
