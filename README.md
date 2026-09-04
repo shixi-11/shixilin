@@ -1,14 +1,14 @@
 # 光之十一｜Shixi Lin
 
-光之十一（Shixi Lin）的个人网站，汇集小说与诗词、AI产品，以及正在制作的独立游戏。
+光之十一（Shixi Lin）的个人网站，汇集小说与诗词、AI产品、设计作品，以及正在制作的独立游戏。
 
 **[进入网站 → shixilin.com](https://shixilin.com/)**
 
-网站支持简体中文、繁體中文、English、日本語、한국어、Français、Deutsch与العربية，可在手机、平板和电脑上浏览。其他语言均以中文内容为原文。
+网站支持简体中文、繁體中文、English、日本語、한국어、Español、Français、Deutsch与العربية，可在手机、平板和电脑上浏览。其他语言均以中文内容为原文。
 
 ## AI产品
 
-- **[ALUX AI智能体情报日报](https://ai.alux.network/daily/)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
+- **[AI智能体情报日报](https://ai.alux.network/daily/)**：持续关注AI智能体的发展，整理产品、技术与行业进展。
 - **[墨核](https://github.com/shixi-11/mohe-pet)**：AI Pet · Codex Pet。住在你电脑里的小小守护者，安静陪伴，偶尔调皮。
 - **[云笺](https://shixilin.com/ai/yunjian)**：从一张云的照片和一句当下所想出发，让AI写回一封信。
 
@@ -27,15 +27,22 @@
 
 [查看书籍与写作 →](https://shixilin.com/books)
 
-## 关于我与联系
+## [设计作品](https://shixilin.com/design)
+
+- **ALUX周边**：服装、帆布袋、杯垫与主题机箱视觉设计。
+- **表情包**：用角色的表情与动作，传递日常里的情绪。
+
+首页展示精选作品，可通过“查看全部设计”进入完整作品页。
+
+## 关于与联系
 
 我是光之十一，作家、连续创业者、游戏创作者，[十一資本](https://elevencapital.ltd/)创始人，也是[ALUX、Foundation ALUX](https://alux.network/)与[ConcurSys](https://concursys.io/)的联合创始人。ALUX是一条面向AI智能体的并发公链，正在构建全局逻辑虚拟机（GLVM）；ConcurSys专注并发计算与区块链基础设施。更多个人经历与创作介绍，见[关于我](https://shixilin.com/about)。
 
 合作联系：[info@elevencapital.ltd](mailto:info@elevencapital.ltd) · [十一資本](https://elevencapital.ltd/)
 
-[X](https://x.com/11Shixi) · [LinkedIn](https://www.linkedin.com/in/shixilin/) · [GitHub](https://github.com/shixi-11) · [Instagram](https://www.instagram.com/shixi_11/) · [Facebook](https://www.facebook.com/shixi11) · [TikTok](https://www.tiktok.com/@shixilin)
+[X](https://x.com/11Shixi) · [LinkedIn](https://www.linkedin.com/in/shixilin/) · [GitHub](https://github.com/shixi-11) · [Telegram](https://t.me/shixilin) · [Instagram](https://www.instagram.com/shixi_11/) · [Facebook](https://www.facebook.com/shixi11) · [TikTok](https://www.tiktok.com/@shixilin)
 
-微信公众号、小红书、微博、视频号：**@光之十一**
+微信公众号、视频号、小红书、微博：**@光之十一**
 
 如果你喜欢这里的文字、产品或游戏，欢迎[支持创作](https://shixilin.com/support)。
 

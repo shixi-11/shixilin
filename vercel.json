@@ -55,6 +55,10 @@
       "destination": "/games/baishishu/index.html"
     },
     {
+      "source": "/design",
+      "destination": "/design/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about/index.html"
     },

@@ -5,7 +5,7 @@ const template = await readFile(new URL('../dist/index.html', import.meta.url), 
 const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
 
 for (const [page, key, image] of [
-  ['ai', 'ai'], ['games', 'games'], ['books', 'books'], ['about', 'about'], ['services', 'services'], ['support', 'support'],
+  ['ai', 'ai'], ['games', 'games'], ['books', 'books'], ['design', 'design'], ['about', 'about'], ['services', 'services'], ['support', 'support'],
   ['games/ink-duel', 'inkDuel', '/assets/ink-duel-concept.png'],
   ['games/baishishu', 'baishishu', '/assets/baishishu-opening.jpg'],
 ]) {

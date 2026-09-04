@@ -1,10 +1,12 @@
 import { aboutView } from './about.js'
 import { servicesView } from './services.js'
+import { designView, bindDesign } from './design.js'
 import './styles.css'
 import './home.css'
 import './about.css'
 import './services.css'
 import './games.css'
+import './design.css'
 import './support.css'
 import './locales.css'
 import { supportView, bindSupport } from './support.js'
@@ -19,6 +21,7 @@ const routes = {
   '/ai': { titleKey: 'meta.ai', descriptionKey: 'meta.aiDescription', view: aiView },
   '/games': { titleKey: 'meta.games', descriptionKey: 'meta.gamesDescription', view: gamesView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
+  '/design': { titleKey: 'meta.design', descriptionKey: 'meta.designDescription', view: designView },
   '/about': { titleKey: 'meta.about', descriptionKey: 'meta.aboutDescription', view: aboutView },
   '/services': { titleKey: 'meta.services', descriptionKey: 'meta.servicesDescription', view: servicesView },
   '/support': { titleKey: 'meta.support', descriptionKey: 'meta.supportDescription', view: supportView },
@@ -66,6 +69,7 @@ function render() {
   if (locale.dir === 'rtl') isolateMixedText()
   bindNavigation()
   bindSupport()
+  bindDesign()
 
   if (window.location.hash) {
     const anchorId = decodeURIComponent(window.location.hash.slice(1))
@@ -89,6 +93,7 @@ function shell(content, pathname) {
             ${navLink('/ai', t('home.products'), activePath)}
             ${navLink('/games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
+            ${navLink('/design', t('design.nav'), activePath)}
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/services', t('services.nav'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}

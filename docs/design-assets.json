@@ -1,0 +1,236 @@
+[
+  {
+    "asset": "/assets/design/shirt-black.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\黑01.jpg",
+    "sha256": "0837b7104d4cc07a306a940202928270c12b9cc9f92075cfd4d6ee7602915053",
+    "width": 1600,
+    "height": 800,
+    "bytes": 210207,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-blue.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\克莱因蓝01.jpg",
+    "sha256": "d1cd7737283c36b0845cf86fc045dddc991c559f4586ec2acb256658b2b3a7fd",
+    "width": 1600,
+    "height": 800,
+    "bytes": 328146,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-light-blue.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\浅蓝01.jpg",
+    "sha256": "c53c3fda011aa212c29f1243b2de1b52fb8e8f2176ac2aa1da1304c06ff3a92c",
+    "width": 1600,
+    "height": 800,
+    "bytes": 236076,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-purple.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\紫01.jpg",
+    "sha256": "30635f5e8b281e2dddbd5c92d0a503e3be3c2094fbc97890a0c879dbbdcb2bc5",
+    "width": 1600,
+    "height": 800,
+    "bytes": 335332,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-outline.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\2.jpg",
+    "sha256": "6c8b498a351623d6f710097e577a4ae246f062f5cbcd22858e2a0c3b314b7705",
+    "width": 800,
+    "height": 800,
+    "bytes": 43902,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-aircraft.png",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\7.png",
+    "sha256": "763864773d15d2714b69a88d5645d7349ecf14ac87e7dcd1c79c647a18132c79",
+    "width": 800,
+    "height": 800,
+    "bytes": 217910,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-white-logo.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\10.jpg",
+    "sha256": "5d9afb1bdde90e2513526735e723fcff6cfbb186df52416c0c363f3aefa52bd6",
+    "width": 800,
+    "height": 798,
+    "bytes": 176972,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/shirt-gray-logo.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\短袖T恤\\11.jpg",
+    "sha256": "5c01a6a3f578165f1f1152b865bf3e56a112ab9e87df43e02daf7029eccfeb7b",
+    "width": 800,
+    "height": 798,
+    "bytes": 177353,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/jacket-navy.png",
+    "source": "A:\\1111\\周边设计\\衣服\\冲锋衣-藏青\\冲锋衣-藏青.png",
+    "sha256": "89106eb8042cc12e441cca5b0581d92c6fa125dcce1a353822d12005464c0c83",
+    "width": 1000,
+    "height": 798,
+    "bytes": 670527,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sweatshirt-blue.jpg",
+    "source": "A:\\1111\\周边设计\\衣服\\卫衣\\款式01\\克莱因蓝.jpg",
+    "sha256": "46383b07dd1fee8f9e6860b1827964384d994724d86c0ec785e673319b921084",
+    "width": 3794,
+    "height": 2081,
+    "bytes": 1773467,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/tote.jpg",
+    "source": "A:\\1111\\周边设计\\帆布袋\\设计稿\\02.jpg",
+    "sha256": "89c6380ce2f9b5e7dbfd5a17ed68340cdc6ca7ab9aa45199bd5978d71d9653bb",
+    "width": 3535,
+    "height": 2896,
+    "bytes": 7405291,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/coaster-blue.png",
+    "source": "A:\\1111\\周边设计\\杯垫\\20230718155244.png",
+    "sha256": "0116538975d14a222625d77764b4a181cc8234b9b5fa65ba6a52c98a2bb21926",
+    "width": 800,
+    "height": 800,
+    "bytes": 511862,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/coaster-emblem.jpg",
+    "source": "A:\\1111\\周边设计\\杯垫\\微信图片_20230720172508.jpg",
+    "sha256": "be77fb6f7944ae60ab6a80569db2e8ec27b4845d2a35eb40a01c4a5852fe41a1",
+    "width": 1280,
+    "height": 1280,
+    "bytes": 371581,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/case.jpg",
+    "source": "A:\\1111\\周边设计\\ALUX-主题机箱\\整机效果.jpg",
+    "sha256": "f26c0db47c37207376dcc6b90ee512f51974254f3d9e9e92de7bef860e6c87ce",
+    "width": 7087,
+    "height": 7087,
+    "bytes": 1983093,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-wave.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\好的_1024_01.png",
+    "sha256": "c4de25ca4376fba93a6352feb83250ce2fbfc5f12f439d73bc933247263a9b7b",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 441084,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-wave.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\好的_1024.gif",
+    "sha256": "84b7815c361bc1961f2892266ee54e7859ba69a30a22c6f6ef142b40bc597083",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 139990,
+    "frames": 2
+  },
+  {
+    "asset": "/assets/design/sticker-shy.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\害羞_1024_01.png",
+    "sha256": "36441ced7d860cfef59ba012996f8b19b2d719d3d69b246d9b0bf3abccf2c150",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 476254,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-shy.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\害羞_1024.gif",
+    "sha256": "4ea8da10e04bc79b3969559e523b8f0fdcfe5d97f92c9ea4ca74588e3ad772d3",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 173617,
+    "frames": 2
+  },
+  {
+    "asset": "/assets/design/sticker-received.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\收到_1024_01.png",
+    "sha256": "ee5f92ca3e9ded4e9a610c28ea7d7f0c88cc09a534109bf91ea83f9c349171f5",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 653032,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-received.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\收到_1024.gif",
+    "sha256": "f06f2dee75cbf001f1bd9e730ef1d53fb0cc759b833eec0a8351a73d190afdce",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 308935,
+    "frames": 3
+  },
+  {
+    "asset": "/assets/design/sticker-facepalm.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\扶额_1024_01.png",
+    "sha256": "1889fe5ac42f31b9c3a007234f0bb425d9f8400afa8a503b029a928321c6ea8b",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 513482,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-facepalm.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\扶额_1024.gif",
+    "sha256": "ea08481a17cfde23b3e75ff151169925eddb688129b2eb09232df1789ac759ba",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 365284,
+    "frames": 4
+  },
+  {
+    "asset": "/assets/design/sticker-launch.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\起飞了_1024_01.png",
+    "sha256": "3740eb49df1a436d7a30963ac41be52db730bbd037bbe90b19cee7dd3d021de5",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 566367,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-launch.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\起飞了_1024.gif",
+    "sha256": "54004bdb2b100546a874c4f803396330fdec7ee41524bbfc12b74193228386b4",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 225944,
+    "frames": 2
+  },
+  {
+    "asset": "/assets/design/sticker-tired.png",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\注册运行帧\\累了_1024_01.png",
+    "sha256": "4835afae54103588943eb00af025a7c1c4326150d7473628fab856ba8ddffe73",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 486183,
+    "frames": 1
+  },
+  {
+    "asset": "/assets/design/sticker-tired.gif",
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\候选2\\成稿高清动画\\累了_1024.gif",
+    "sha256": "5fc37672aed71c2d35bacd15e10ecc4e84d8fca1b6eb478558ab91ccfc4683c1",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 225687,
+    "frames": 2
+  }
+]

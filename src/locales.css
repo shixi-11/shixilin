@@ -68,7 +68,7 @@ html[dir='rtl'] :is(.about-company-role, .about-page .about-public-profile p, .g
 html[dir='rtl'] .about-qualifications ul { border-left: 0; border-right: 1px solid #c8b98f; padding-inline: 33px 20px; }
 html[dir='rtl'] .paper-section-title::after { left: auto; right: 0; }
 @media (min-width: 901px) and (max-width: 1200px) {
-  html:not([lang^='zh']) .site-nav { gap: 18px; }
+  html:not([lang^='zh']) .site-nav { gap: 14px; }
   html:not([lang^='zh']) .site-nav a { font-size: 13px; }
   .header-tools { gap: 18px; }
 }

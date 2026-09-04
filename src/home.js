@@ -2,6 +2,7 @@ import { socialProfiles } from './social.js'
 import { getLocale, t } from './i18n.js'
 import { books, dailyUrl } from './content.js'
 import { gameCards } from './games.js'
+import { homeDesign } from './design.js'
 
 export function cloudOrnament() {
   return `<svg class="cloud-ornament" viewBox="0 0 58 32" fill="none" aria-hidden="true"><path d="M15 25C5 26 3 19 8 15c2-2 5-2 8-1-1-6 3-10 8-10 5 0 8 3 9 7 5-5 13-2 12 4 8-2 13 2 11 5-2 3-9 2-14 3-9 4-17 5-27 2Z"/><path d="M17 19c-4-6 1-11 6-8 4 2 3 6 0 7m9-1c-1-4 5-6 8-3m-19 9c7 2 12-3 17-3"/></svg>`
@@ -65,6 +66,7 @@ export function homeView() {
       ${gameCards({ featuredOnly: true })}
       <a class="home-browse-all internal-link" href="/games">${t('home.allGames')}<span aria-hidden="true">→</span></a>
     </section>
+    ${homeDesign()}
     <section class="home-alux" aria-labelledby="alux-title">
       <h2 class="paper-section-title" id="alux-title">${t('home.collaborations')}</h2>
       <div class="home-collaborations">
