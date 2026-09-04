@@ -234,3 +234,4 @@
 
 - 主页栏目标题由“设计”改为“设计作品”，明确这里展示的是作品；导航栏继续使用简洁的“设计”。设计子页原有“设计作品”标题保持一致。
 - 中文、英文、阿拉伯文在1440px与390px下检查通过；导航与栏目标题使用各自对应文案，无横向溢出。
+- 功能提交`86c97ab`，生产部署`dpl_8M4zasZDrSHWnNoaBsUX4tB9fMwd`为READY，已绑定`https://shixilin.com/`；线上JS`/assets/index-SuRexXWu.js`与CSS`/assets/index-D1_kT7w3.css`和本地验收构建一致。
