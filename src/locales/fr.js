@@ -10,6 +10,7 @@ export default complete({
     "design.all": "Voir tous les designs",
     "design.view": "Voir la collection",
     "design.original": "Voir l’image originale",
+    "design.merch.homeTitle": "Objets de marque",
     "design.merch.title": "Objets ALUX",
     "design.merch.text": "L’identité de marque s’exprime dans les vêtements et les objets du quotidien.",
     "design.stickers.title": "Stickers",

@@ -7,10 +7,10 @@ const jewelry = [
   ['pendant-engraving.jpg', 'pendant-engraving-hanging.jpg', 'pendant-engraving-still.jpg'],
 ]
 const merchandise = [
+  { file: 'shirt-purple.jpg', key: 'shirtPurple', wide: true },
   { file: 'shirt-black.jpg', key: 'shirtBlack', wide: true },
   { file: 'shirt-blue.jpg', key: 'shirtBlue', wide: true },
   { file: 'shirt-light-blue.jpg', key: 'shirtLightBlue', wide: true },
-  { file: 'shirt-purple.jpg', key: 'shirtPurple', wide: true },
   { file: 'shirt-outline.jpg', key: 'shirtOutline' },
   { file: 'shirt-aircraft.png', key: 'shirtAircraft' },
   { file: 'shirt-white-logo.jpg', key: 'shirtWhiteLogo' },
@@ -22,6 +22,7 @@ const merchandise = [
   { file: 'coaster-emblem.jpg', key: 'coasterEmblem' },
   { file: 'case.jpg', key: 'case' },
 ]
+const featuredMerchandise = ['shirtPurple', 'shirtBlack', 'tote', 'case'].map(key => merchandise.find(item => item.key === key))
 
 export function homeDesign() {
   return `<section class="home-design" aria-labelledby="design-title">
@@ -31,8 +32,8 @@ export function homeDesign() {
     </div>
     <div class="design-preview-grid">
       <a class="design-preview internal-link" href="/design#merchandise">
-        <div class="design-preview-media design-merch-preview">${merchandise.slice(0, 4).map(item => `<img src="${asset(item.file)}" alt="${t(`design.${item.key}`)}" width="1600" height="800" loading="lazy" />`).join('')}</div>
-        <div class="design-preview-copy"><h3>${t('design.merch.title')}</h3><p>${t('design.merch.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
+        <div class="design-preview-media design-merch-preview">${featuredMerchandise.map(item => `<img class="design-feature-${item.key}" src="${asset(item.file)}" alt="${t(`design.${item.key}`)}" loading="lazy" />`).join('')}</div>
+        <div class="design-preview-copy"><h3>${t('design.merch.homeTitle')}</h3><p>${t('design.merch.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
       <a class="design-preview internal-link" href="/design#stickers">
         <div class="design-preview-media design-sticker-preview" aria-hidden="true"><img src="${asset('sticker-cover.jpg')}" alt="" width="3840" height="2160" loading="lazy" /></div>

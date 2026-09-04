@@ -10,6 +10,7 @@ export default complete({
     "design.all": "عرض جميع التصاميم",
     "design.view": "عرض المجموعة",
     "design.original": "عرض الصورة الأصلية",
+    "design.merch.homeTitle": "منتجات العلامة التجارية",
     "design.merch.title": "منتجات ALUX",
     "design.merch.text": "التعبير عن هوية العلامة من خلال الملابس والأشياء اليومية.",
     "design.stickers.title": "ملصقات",

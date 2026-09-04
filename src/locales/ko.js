@@ -10,6 +10,7 @@ export default complete({
     "design.all": "모든 디자인 보기",
     "design.view": "작품 보기",
     "design.original": "원본 이미지 보기",
+    "design.merch.homeTitle": "브랜드 굿즈",
     "design.merch.title": "ALUX 굿즈",
     "design.merch.text": "의류와 일상 속 사물로 표현하는 브랜드.",
     "design.stickers.title": "이모티콘",

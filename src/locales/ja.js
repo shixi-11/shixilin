@@ -10,6 +10,7 @@ export default complete({
     "design.all": "デザインをすべて見る",
     "design.view": "作品を見る",
     "design.original": "元の画像を見る",
+    "design.merch.homeTitle": "ブランドグッズ",
     "design.merch.title": "ALUXグッズ",
     "design.merch.text": "服や日常の道具で表現するブランドの世界。",
     "design.stickers.title": "スタンプ",

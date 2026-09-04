@@ -9,6 +9,7 @@ export default {
     "design.all": "查看全部設計",
     "design.view": "查看作品",
     "design.original": "查看原圖",
+    "design.merch.homeTitle": "品牌周邊",
     "design.merch.title": "ALUX周邊",
     "design.merch.text": "服裝與日常物件中的品牌表達。",
     "design.stickers.title": "貼圖",
