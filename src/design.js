@@ -21,7 +21,10 @@ const merchandise = [
 
 export function homeDesign() {
   return `<section class="home-design" aria-labelledby="design-title">
-    <h2 class="paper-section-title" id="design-title"><a class="internal-link" href="/design">${t('design.nav')}</a></h2>
+    <div class="home-section-heading">
+      <h2 class="paper-section-title" id="design-title"><a class="internal-link" href="/design">${t('design.nav')}</a></h2>
+      <a class="home-browse-all internal-link" href="/design">${t('design.all')}<span aria-hidden="true">→</span></a>
+    </div>
     <div class="design-preview-grid">
       <a class="design-preview internal-link" href="/design#merchandise">
         <div class="design-preview-media design-merch-preview">${merchandise.slice(0, 4).map(item => `<img src="${asset(item.file)}" alt="${t(`design.${item.key}`)}" width="1600" height="800" loading="lazy" />`).join('')}</div>
@@ -32,7 +35,6 @@ export function homeDesign() {
         <div class="design-preview-copy"><h3>${t('design.stickers.title')}</h3><p>${t('design.stickers.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
     </div>
-    <a class="home-browse-all internal-link" href="/design">${t('design.all')}<span aria-hidden="true">→</span></a>
   </section>`
 }
 

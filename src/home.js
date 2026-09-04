@@ -25,7 +25,10 @@ export function homeView() {
     </section>
     <div class="home-grid">
       <section class="home-products" id="products" aria-labelledby="products-title">
-        <h2 class="paper-section-title" id="products-title"><a class="internal-link" href="/ai">${t('home.products')}</a></h2>
+        <div class="home-section-heading">
+          <h2 class="paper-section-title" id="products-title"><a class="internal-link" href="/ai">${t('home.products')}</a></h2>
+          <a class="home-browse-all internal-link" href="/ai">${t('home.allProducts')}<span aria-hidden="true">→</span></a>
+        </div>
         <article class="cloud-card">
           <div class="cloud-picture">
             <img src="/assets/cloud.png" alt="${t('home.cloudAlt')}" width="1536" height="1024" />
@@ -47,7 +50,6 @@ export function homeView() {
             <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${projectText('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
           </a>
         </div>
-        <a class="home-browse-all internal-link" href="/ai">${t('home.allProducts')}<span aria-hidden="true">→</span></a>
       </section>
       <section class="home-books" aria-labelledby="books-title">
         <h2 class="paper-section-title" id="books-title"><a class="internal-link" href="/books">${t('home.books')}</a></h2>
@@ -62,9 +64,11 @@ export function homeView() {
     </div>
     <div class="home-project-grid">
     <section class="home-game" id="games" aria-labelledby="game-title">
-      <h2 class="paper-section-title" id="game-title"><a class="internal-link" href="/games">${t('home.games')}</a></h2>
+      <div class="home-section-heading">
+        <h2 class="paper-section-title" id="game-title"><a class="internal-link" href="/games">${t('home.games')}</a></h2>
+        <a class="home-browse-all internal-link" href="/games">${t('home.allGames')}<span aria-hidden="true">→</span></a>
+      </div>
       ${gameCards({ featuredOnly: true })}
-      <a class="home-browse-all internal-link" href="/games">${t('home.allGames')}<span aria-hidden="true">→</span></a>
     </section>
     ${homeDesign()}
     <section class="home-alux" aria-labelledby="alux-title">
