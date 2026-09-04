@@ -221,3 +221,4 @@
 - 维持与周边预览一致的2:1版位，原图等比完整显示；两侧余白采用接近原图底色的暖米色`#f9efe6`，不裁切、不拉伸、不改变角色颜色。
 - 电脑1440px、平板768px、手机390px均已检查，图像完整、无横向溢出；电脑与手机截图已实看。另检查英文与阿拉伯文手机页面，图片与分类入口正确。
 - 当前封面截图：`A:/vibe coding/shixilin/design/20260904_表情包封面.jpg`。设计子页继续保留原有六个表情包及动画播放功能。
+- 功能提交`81bf781`，生产部署`dpl_G6TpwkBV3h9sHB3ui6BfkFX6S1S3`为READY，已绑定`https://shixilin.com/`。线上JS`/assets/index-0ClRSAym.js`、CSS`/assets/index-Bb5I44kk.css`与本地验收构建一致，新封面下载后的SHA-256与用户原图一致。
