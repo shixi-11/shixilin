@@ -96,7 +96,7 @@ export function paperFooter() {
   return `<footer class="paper-footer">
     <a class="paper-footer-name internal-link" href="/">${t('brand.name')}${cloudOrnament()}</a>
     <p>${t('home.subtitle')}</p>
-    <div class="paper-socials">${socialProfiles.map(profile => `${profile.id === 'instagram' ? '<span aria-hidden="true"></span>' : ''}<a href="${profile.href}" target="_blank" rel="noopener" aria-label="${profile.name} · ${profile.handle}" title="${profile.name} · ${profile.handle}">${profile.icon}</a>`).join('')}</div>
+    <div class="paper-socials">${socialProfiles.map(profile => `${profile.id === 'bilibili' ? '<span aria-hidden="true"></span>' : ''}<a href="${profile.href}" target="_blank" rel="noopener" aria-label="${profile.name} · ${profile.handle}" title="${profile.name} · ${profile.handle}">${profile.icon}</a>`).join('')}</div>
     <div class="footer-contact" id="contact">
       <a class="footer-email" href="mailto:info@elevencapital.ltd"><span>${t('footer.collaborate')}</span><span>info@elevencapital.ltd</span></a>
       <p class="social-notes">${t('home.handles')}</p>

@@ -40,7 +40,7 @@
 
 合作联系：[info@elevencapital.ltd](mailto:info@elevencapital.ltd) · [十一資本](https://elevencapital.ltd/)
 
-[X](https://x.com/11Shixi) · [LinkedIn](https://www.linkedin.com/in/shixilin/) · [GitHub](https://github.com/shixi-11) · [Telegram](https://t.me/shixilin) · [Instagram](https://www.instagram.com/shixi_11/) · [Facebook](https://www.facebook.com/shixi11) · [TikTok](https://www.tiktok.com/@shixilin)
+[X](https://x.com/11Shixi) · [LinkedIn](https://www.linkedin.com/in/shixilin/) · [GitHub](https://github.com/shixi-11) · [Telegram](https://t.me/shixilin) · [Bilibili](https://space.bilibili.com/102812984) · [TikTok](https://www.tiktok.com/@shixilin) · [Instagram](https://www.instagram.com/shixi_11/) · [Facebook](https://www.facebook.com/shixi11)
 
 微信公众号、视频号、小红书、微博：**@光之十一**
 

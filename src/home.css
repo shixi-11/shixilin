@@ -91,7 +91,7 @@ html[dir='rtl'] .home-browse-all > span { transform: scaleX(-1); }
 .paper-socials a { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 44px; line-height: 0; }
 .paper-socials a:hover { color: #947638; }
 .paper-socials svg { display: block; width: 23px; height: 23px; overflow: visible; stroke: currentColor; stroke-width: 1.2; }
-.paper-socials > span { width: 1px; height: 19px; background: rgba(62, 60, 51, .3); }
+.paper-socials > span { flex-shrink: 0; width: 1px; height: 19px; background: rgba(62, 60, 51, .3); }
 html[lang='en'] .paper-name h1 { letter-spacing: .015em; }
 html[lang='en'] .paper-subtitle { font-size: 22px; letter-spacing: .015em; }
 html[lang='en'] .paper-intro { max-width: 450px; font-size: 15px; letter-spacing: 0; }
@@ -168,7 +168,10 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .cloud-card-copy > p { font-size: 14px; }
   .paper-name h1 { font-size: 60px; }
   .paper-subtitle { font-size: 25px; }
-  .paper-footer { padding-inline: 6%; }
+  .paper-footer { padding-inline: 6%; grid-template-columns: 1fr auto; }
+  .paper-socials { grid-column: 1 / -1; justify-content: center; }
+  .footer-contact { justify-self: center; text-align: center; }
+  .footer-email { justify-self: center; justify-content: center; }
   .paper-footer > p { font-size: 12px; }
 }
 @media (max-width: 900px) {
@@ -250,9 +253,10 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .book-card-caption h3 { font-size: 21px; }
   .paper-footer { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-height: 108px; padding: 16px 7%; }
   .paper-footer-name, .paper-footer > p { display: none; }
-  .paper-socials { gap: 22px; }
+  .paper-socials { display: grid; grid-template-columns: repeat(4, 44px); gap: 4px 16px; justify-content: center; }
+  .paper-socials a { width: 44px; }
   .paper-socials svg { width: 21px; height: 21px; }
-  .paper-socials > span { height: 17px; }
+  .paper-socials > span { display: none; }
   .footer-contact { justify-self: center; justify-items: center; margin: 0; text-align: center; }
   .footer-email { justify-self: center; justify-content: center; font-size: 12px; }
   .footer-contact .social-notes { font-size: 11px; }
@@ -269,7 +273,7 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .game-action { grid-column: 1; justify-content: space-between; margin-top: 8px; }
   .game-card p { font-size: 14px; }
   .alux-card { min-height: 235px; }
-  .paper-socials { gap: 16px; }
+  .paper-socials { gap: 4px 16px; }
   .reading-list { margin-top: 35px; }
   .reading-item h2 { font-size: 24px; }
   .about-details > div { grid-template-columns: 1fr; gap: 12px; }
