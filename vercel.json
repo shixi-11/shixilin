@@ -5,6 +5,16 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/ai/agent-daily",
+      "destination": "https://ai.alux.network/daily/",
+      "permanent": false
+    },
+    {
+      "source": "/ai/agent-daily/",
+      "destination": "https://ai.alux.network/daily/",
+      "permanent": false
+    },
+    {
       "source": "/notes/:path*",
       "destination": "/support",
       "permanent": true

@@ -66,3 +66,6 @@ npm run preview
 ```
 
 </details>
+
+
+Agent Daily 产品入口：`/ai/agent-daily` 自动跳转到 `https://ai.alux.network/daily/`。日报仍由原站更新，原地址和历史归档继续可访问。

@@ -5,5 +5,5 @@ export const books = [
 ]
 
 export function dailyUrl() {
-  return 'https://ai.alux.network/daily/'
+  return 'https://shixilin.com/ai/agent-daily'
 }
