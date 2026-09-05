@@ -47,8 +47,8 @@
       "destination": "/api/agent-daily"
     },
     {
-      "source": "/ai/agent-daily/:path*",
-      "destination": "/api/agent-daily?dailyPath=:path*"
+      "source": "/ai/agent-daily/(.*)",
+      "destination": "/api/agent-daily?dailyPath=$1"
     },
     {
       "source": "/ai/yunjian/",
