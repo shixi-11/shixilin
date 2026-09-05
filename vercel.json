@@ -5,16 +5,6 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/ai/agent-daily",
-      "destination": "https://ai.alux.network/daily/",
-      "permanent": false
-    },
-    {
-      "source": "/ai/agent-daily/",
-      "destination": "https://ai.alux.network/daily/",
-      "permanent": false
-    },
-    {
       "source": "/notes/:path*",
       "destination": "/support",
       "permanent": true
@@ -48,6 +38,18 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/ai/agent-daily",
+      "destination": "/api/agent-daily"
+    },
+    {
+      "source": "/ai/agent-daily/",
+      "destination": "/api/agent-daily"
+    },
+    {
+      "source": "/ai/agent-daily/:path*",
+      "destination": "/api/agent-daily?dailyPath=:path*"
+    },
     {
       "source": "/ai/yunjian/",
       "destination": "https://yunjian-omega.vercel.app/ai/yunjian"
