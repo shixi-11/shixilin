@@ -1,10 +1,19 @@
 import { complete } from './complete.js'
 export default complete({
+    "about.writing": "Ich schreibe Gedichte und Romane, entwickle KI-Produkte und Indie-Spiele und gründe Unternehmen.",
+    "about.perspective": "Von alten Denktraditionen bis zu Technologien im ständigen Wandel interessiert mich, wie sie Teil unseres Lebens werden.",
+    "about.earthling": "In diesem Leben: Erdenbewohnerin und Sternensaat (Starseed).",
+    "about.realName": "林拾汐",
+    "about.penNameLabel": "Pseudonym",
+    "about.englishNameLabel": "Englischer Name",
+    "about.daoistNameLabel": "Daoistischer Name",
+    "about.daoistName": "Daoistischer Name: Lin Shiyi (林师一)",
+    "about.credential5": "Lehrerin für Spiritual Response Therapy (SRT)",
     "about.name.title": "Die Bedeutung meines Namens",
     "about.name.intro": "In meinem Text 《领主简介》 von 2023 habe ich die Herkunft meines Künstlernamens 光之十一 erläutert. Er verbindet Zahlen, Traditionen und persönliche Erfahrungen.",
     "about.name.eleven": "Elf verbindet das elfdimensionale Universum der M-Theorie, die Symbolik dieser Zahl in der westlichen Magie und den Tag des Monats, an dem ich geboren wurde. Die chinesischen Zeichen 十一 werden mit insgesamt drei Strichen geschrieben, und drei ist meine Glückszahl.",
-    "about.name.ten": "Zehn erinnert mich an die Zahlenfolge von eins bis zehn, an das Kreuz und die mit Lazarus verbundene Kreuzung sowie an die zusammengelegten Handflächen in der indischen Ayurveda-Tradition. In den Bildern der fünf Elemente Erde, Wasser, Feuer, Luft und Raum sowie der Vereinigung von links und rechts, Yin und Yang liegt für mich der Wunsch, selbst auferlegte Fesseln und Ängste loszulassen, demütig und freudig zu bleiben und einem umfassenden Bewusstsein dankbar zu sein.",
-    "about.name.one": "Eins verweist auf die daoistischen Worte: Das Dao bringt eins hervor, eins bringt zwei hervor, zwei bringt drei hervor, und drei bringt alle Dinge hervor; alles kehrt zum Dao zurück. Was ich auch erlebe, ich möchte meine Einfachheit bewahren, Wissen und Handeln vereinen, die Welt kennen, ohne zynisch zu werden, und meine spirituelle Praxis nicht vergessen. Auch angesichts des Unvermeidlichen hoffe ich, zu einem aufrichtigen Weg zurückzufinden und innerlich wie äußerlich klar zu bleiben.",
+    "about.name.ten": "Zehn erinnert mich an die Zahlenfolge von eins bis zehn, an das Kreuz und die mit Lazarus verbundene Kreuzung sowie an die zusammengelegten Handflächen in der indischen Ayurveda-Tradition.\n\nIn den Bildern der fünf Elemente Erde, Wasser, Feuer, Luft und Raum sowie der Vereinigung von links und rechts, Yin und Yang liegt für mich der Wunsch, selbst auferlegte Fesseln und Ängste loszulassen, demütig und freudig zu bleiben und einem umfassenden Bewusstsein dankbar zu sein.",
+    "about.name.one": "Eins verweist auf die daoistischen Worte: Das Dao bringt eins hervor, eins bringt zwei hervor, zwei bringt drei hervor, und drei bringt alle Dinge hervor; alles kehrt zum Dao zurück.\n\nWas ich auch erlebe, ich möchte meine Einfachheit bewahren, Wissen und Handeln vereinen, die Welt kennen, ohne zynisch zu werden, und meine spirituelle Praxis nicht vergessen. Auch angesichts des Unvermeidlichen hoffe ich, zu einem aufrichtigen Weg zurückzufinden und innerlich wie äußerlich klar zu bleiben.",
     "about.name.light": "Licht steht für mich für den Ursprung und erinnert mich daran, mich immer wieder anzuspornen, während die Zeit verfliegt. Selbst wenn neun Dinge schiefgehen, möchte ich das eine gute sehen und sein Licht auf die anderen fallen lassen. Ich möchte selbst Licht sein und anderen Licht bringen.",
     "about.name.mission": "In meiner persönlichen Symbolik umfasst Licht alles: alle Farben, auch Schwarz. Schwarz kann für die stille Stärke und Entschlossenheit von Obsidian stehen. Ich möchte andere auf natürliche Weise zu spirituellem Aufstieg begleiten, über die Fesseln dualistischen Denkens und der Gegensätze hinaus, auf einen Weg des freien Willens.",
     "about.name.source": "Chinesischen Originaltext lesen",
@@ -205,5 +214,5 @@ export default complete({
   'about.gamesText': 'Ich entwickle die Desktop-Spiele 《百世书》 und 《墨斗·百兵》 für Steam. Das erste erzählt von Beziehungen und Entscheidungen über Wiedergeburten hinweg, das zweite widmet sich chinesischer Kampfkunst und Waffenduellen.',
   'about.browseGames': 'Spiele ansehen',
   'about.psychologyText': 'Psychologie und Hypnose sind Bereiche, in denen ich kontinuierlich lerne und praktiziere. Sie schärfen auch meinen Blick für innere Erfahrungen, Beziehungen und Verhalten.',
-  'about.qualifications': 'Qualifikationen und Praxis', 'about.tradition.practice': 'Reiki-Lehrerin und Angehörige der Wudang-Sanfeng-Traditionslinie.',
+  'about.qualifications': 'Qualifikationen und Praxis', "about.tradition.practice": "Reiki-Lehrerin und Schülerin der 15. Generation der Wudang-Sanfeng-Tradition, mit dem Generationszeichen Shi (师)",
 })

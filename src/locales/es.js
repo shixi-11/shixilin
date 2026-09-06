@@ -2,11 +2,20 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
+    "about.writing": "Escribo poesía y novelas, creo productos de IA y videojuegos independientes, y sigo emprendiendo.",
+    "about.perspective": "Desde el pensamiento antiguo hasta la tecnología en constante cambio, me interesa cómo llegan a formar parte de nuestras vidas.",
+    "about.earthling": "En esta vida: terrícola y semilla estelar (Starseed).",
+    "about.realName": "林拾汐",
+    "about.penNameLabel": "Seudónimo",
+    "about.englishNameLabel": "Nombre en inglés",
+    "about.daoistNameLabel": "Nombre taoísta",
+    "about.daoistName": "Nombre taoísta: Lin Shiyi (林师一)",
+    "about.credential5": "Instructora de Terapia de Respuesta Espiritual (SRT)",
     "about.name.title": "El sentido de mi nombre",
     "about.name.intro": "En mi texto de 2023 《领主简介》 expliqué el origen de mi seudónimo, 光之十一. En él se reúnen números, tradiciones y experiencias personales.",
     "about.name.eleven": "Once enlaza el universo de once dimensiones de la teoría M, el simbolismo de este número en la magia occidental y el día del mes en que nací. Los caracteres chinos 十一 se escriben con tres trazos, y el tres es mi número de la suerte.",
-    "about.name.ten": "Diez me recuerda la secuencia del uno al diez, la cruz y el cruce asociado a Lázaro, así como el gesto de unir las palmas en la tradición ayurvédica de la India. En las imágenes de sus cinco elementos —tierra, agua, fuego, aire y espacio— y de la unión de izquierda y derecha, yin y yang, deposito el deseo de soltar los miedos y las limitaciones que me impongo, conservar la humildad y la alegría, y agradecer una conciencia que nos abarca a todos.",
-    "about.name.one": "Uno remite a las palabras taoístas: el Dao engendra el uno; el uno, el dos; el dos, el tres; y el tres, todas las cosas. Todo regresa al Dao. Pase lo que pase, deseo conservar la sencillez, unir conocimiento y acción, conocer el mundo sin caer en el cinismo y recordar mi compromiso con la práctica espiritual. Incluso ante lo inevitable, espero volver al camino recto, con claridad interior y exterior.",
+    "about.name.ten": "Diez me recuerda la secuencia del uno al diez, la cruz y el cruce asociado a Lázaro, así como el gesto de unir las palmas en la tradición ayurvédica de la India.\n\nEn las imágenes de sus cinco elementos —tierra, agua, fuego, aire y espacio— y de la unión de izquierda y derecha, yin y yang, deposito el deseo de soltar los miedos y las limitaciones que me impongo, conservar la humildad y la alegría, y agradecer una conciencia que nos abarca a todos.",
+    "about.name.one": "Uno remite a las palabras taoístas: el Dao engendra el uno; el uno, el dos; el dos, el tres; y el tres, todas las cosas; y todo regresa al Dao.\n\nPase lo que pase, deseo conservar la sencillez, unir conocimiento y acción, conocer el mundo sin caer en el cinismo y recordar mi compromiso con la práctica espiritual. Incluso ante lo inevitable, espero volver al camino recto, con claridad interior y exterior.",
     "about.name.light": "La luz representa para mí el origen y me recuerda que debo seguir exigiéndome mientras el tiempo pasa fugazmente. Aunque ocurran nueve cosas malas, quiero ver la única buena y dejar que ilumine las demás. Quiero ser luz y llevar luz a otros.",
     "about.name.mission": "En mi universo simbólico, la luz lo abarca todo: todos los colores, incluido el negro. El negro también significa la serenidad y la firmeza de la obsidiana. Deseo acompañar de forma natural la ascensión espiritual de otros, más allá de las ataduras del pensamiento dualista y la oposición, hacia un camino de libre albedrío.",
     "about.name.source": "Leer el texto original en chino",
@@ -272,5 +281,5 @@ export default complete({
   'about.browseGames': 'Ver los juegos',
   'about.psychologyText': 'La psicología y la hipnosis son campos en los que sigo aprendiendo y practicando. También me llevan a prestar más atención a la experiencia interior, las relaciones y la conducta de las personas.',
   'about.qualifications': 'Formación y práctica',
-  'about.tradition.practice': 'Maestra de reiki y heredera del linaje Sanfeng de Wudang.',
+  "about.tradition.practice": "Maestra de reiki y discípula de la 15.ª generación del linaje Sanfeng de Wudang, correspondiente al carácter Shi (师)",
 })
