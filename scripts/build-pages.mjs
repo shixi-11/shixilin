@@ -19,6 +19,7 @@ for (const [page, key, image] of [
     .replace(/(<meta property="og:description" content=")[^"]*/, `$1${description}`)
     .replace(/(<meta property="og:url" content=")[^"]*/, `$1${canonicalUrl}`)
     .replace(/(<meta property="og:image" content=")[^"]*/, (match, prefix) => image ? `${prefix}https://shixilin.com${image}` : match)
+    .replace(/(<meta property="og:image:alt" content=")[^"]*/, (match, prefix) => image ? `${prefix}${title}` : match)
     .replace(/(<meta property="og:image:width" content=")[^"]*/, `$1${key === 'inkDuel' ? '1672' : '1200'}`)
     .replace(/(<meta property="og:image:height" content=")[^"]*/, `$1${key === 'inkDuel' ? '941' : key === 'baishishu' ? '675' : '630'}`)
     .replace(/(<link rel="canonical" href=")[^"]*/, `$1${canonicalUrl}`)

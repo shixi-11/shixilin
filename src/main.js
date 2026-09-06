@@ -57,7 +57,8 @@ function render() {
   document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
   document.querySelector('link[rel="canonical"]').href = canonicalUrl
   document.querySelector('meta[property="og:url"]').content = canonicalUrl
-  document.querySelector('meta[property="og:image"]').content = new URL(route.image || '/assets/og-shixilin.jpg', 'https://shixilin.com').href
+  document.querySelector('meta[property="og:image"]').content = new URL(route.image || '/assets/og-shixilin.jpg?v=20260906', 'https://shixilin.com').href
+  document.querySelector('meta[property="og:image:alt"]').content = route.image ? t(route.titleKey) : '光之十一 Shixi Lin｜独立作品与长期实验'
   document.querySelector('meta[property="og:image:width"]').content = pathname === '/games/ink-duel' ? '1672' : '1200'
   document.querySelector('meta[property="og:image:height"]').content = pathname === '/games/ink-duel' ? '941' : pathname === '/games/baishishu' ? '675' : '630'
   const locale = locales.find(item => item.id === getLocale())
