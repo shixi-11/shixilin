@@ -2,7 +2,7 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
-    "about.writing": "Escribo poesía y novelas, creo productos de IA y videojuegos independientes, y sigo emprendiendo.",
+    "about.writing": "Escribo poesía y ficción, desarrollo productos de IA, videojuegos y aplicaciones, y sigo emprendiendo.",
     "about.perspective": "Desde el pensamiento antiguo hasta la tecnología en constante cambio, me interesa cómo llegan a formar parte de nuestras vidas.",
     "about.earthling": "En esta vida: terrícola y semilla estelar (Starseed).",
     "about.realName": "林拾汐",
@@ -19,13 +19,15 @@ export default complete({
     "about.name.light": "La luz representa para mí el origen y me recuerda que debo seguir exigiéndome mientras el tiempo pasa fugazmente. Aunque ocurran nueve cosas malas, quiero ver la única buena y dejar que ilumine las demás. Quiero ser luz y llevar luz a otros.",
     "about.name.mission": "En mi universo simbólico, la luz lo abarca todo: todos los colores, incluido el negro. El negro también significa la serenidad y la firmeza de la obsidiana.\n\nDeseo guiar de forma natural a otros hacia el despertar y la ascensión espiritual, más allá de las ataduras del pensamiento dualista y la oposición, hacia un camino de libre albedrío.",
     "about.name.source": "Leer el texto original en chino",
-    "about.professional.history": "En mi ensayo 《领主简介》, escrito en 2020 y publicado en 2023, recogí mi experiencia hasta entonces: casi siete años en el ámbito de la psicología y tres años de participación intensiva en talleres de constelaciones familiares de la tradición de Hellinger.",
+    "about.professional.history": "En mis primeros años profesionales, trabajé casi siete años en el ámbito de la psicología y participé durante tres años en talleres de constelaciones familiares de Hellinger.",
+    "about.creation.scope": "Mi trabajo creativo y técnico abarca la producción de videojuegos, el desarrollo de aplicaciones, el dibujo y el diseño, la edición de vídeo, la locución y la composición musical, la escritura y la traducción, la investigación y la configuración y el despliegue de entornos informáticos.",
+    "about.agentsText": "Construyo mis propios agentes de IA y exploro cómo dotarlos de personajes y formas de interacción más humanos.",
     "about.interests": "También colecciono música instrumental con pasión y escribo en mis ratos libres. La música y las palabras forman parte de mi vida cotidiana.",
     "about.toc": "En esta página",
     "about.welcome": "Bienvenidos al Reino de la Luz. Soy Shixi Lin, su guardiana. Aquí comparto lo que aprendo y vivo sobre el crecimiento interior, la práctica espiritual y la civilización digital.",
     "about.journeyTitle": "El camino de una viajera",
     "about.journey.self": "Una caballera errante, una practicante zen atraída por la estética de la violencia, con la aspiración de ser observadora del cosmos al servicio del gurú: así describo mi camino espiritual en el mundo cotidiano.",
-    "about.journey.experience": "He vivido muchas experiencias extraordinarias, incluidos momentos que sentí como milagrosos. Los viajes, el estudio y la experiencia personal me fueron llevando a investigar la teosofía y el esoterismo.",
+    "about.journey.experience": "Los viajes, el estudio y muchas experiencias personales que me resultaron extraordinarias me fueron llevando a investigar la teosofía y el esoterismo.",
     "about.journey.hanfu": "También soy aficionada al hanfu, la vestimenta tradicional china, y actriz que actúa con estas prendas. A través del vestuario y la interpretación, deseo acercar la cultura china a más personas y contribuir al renacimiento de la civilización Huaxia.",
     "about.business.identity": "Promuevo Web3, Web4 y la tecnología blockchain. También soy nómada digital, emprendedora en serie y comerciante dedicada de lleno a la exportación.",
     "about.professionalTitle": "Trayectoria profesional",
