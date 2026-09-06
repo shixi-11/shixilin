@@ -30,6 +30,7 @@ const routes = {
 }
 
 const projects = [
+  { slug: 'prism', category: 'work.prism.category', title: 'work.prism.title', text: 'work.prism.text', href: 'https://github.com/shixi-11/prism-desk', action: 'work.github' },
   { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
   { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
   { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },

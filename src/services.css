@@ -8,10 +8,10 @@
 }
 .services-header { max-width: 720px; margin-bottom: 54px; }
 .services-header h1 { margin-bottom: 22px; font-size: 42px; font-weight: 400; line-height: 1.4; }
-.services-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: balance; }
+.services-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: wrap; }
 .service-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 72px; margin: 0; padding: 0; list-style: none; }
 .service-item { min-width: 0; }
-.service-number { display: block; margin-bottom: 10px; color: #857344; font-family: 'Source Sans 3', sans-serif; font-size: 12px; line-height: 1.5; }
+.service-number { display: block; margin-bottom: 10px; color: #857344; font-family: 'Source Sans 3', var(--locale-serif); font-size: 12px; line-height: 1.5; }
 .service-item h2, .services-inquiry h2 { margin-bottom: 14px; color: #303c32; font-size: 24px; font-weight: 400; line-height: 1.6; }
 .service-item p { max-width: 440px; }
 .service-phrase { white-space: nowrap; }

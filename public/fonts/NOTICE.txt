@@ -13,3 +13,14 @@ This website includes a WOFF2 character subset. Arabic shaping features are pres
 
 Source Sans 3: see OFL-SourceSans3.txt.
 Source Serif 4: see SOURCE-SERIF-LICENSE.md.
+
+Updating CJK subsets:
+1. Install fonttools[woff] and brotli in a local Python environment.
+2. node scripts/font-corpus.mjs <corpus.txt>
+3. python scripts/build-fonts.py --source-dir <licensed-full-font-directory> --corpus <corpus.txt>
+4. npm run check:fonts
+
+The build script records glyph coverage and source SHA-256 values in
+scripts/font-coverage.json and updates content-versioned font URLs.
+The normal site build verifies current text coverage without requiring Python
+or the original desktop fonts. Keep this notice and the license files intact.

@@ -11,25 +11,25 @@
 .design-feature-case { grid-area: 2 / 2; }
 .design-sticker-preview { background: #f9efe6; }
 .design-preview-copy { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 20px 0 18px; }
-.design-preview h3 { margin: 0 0 12px; font-size: 28px; line-height: 1.5; font-weight: 500; text-wrap: balance; }
-.design-preview p { margin: 0 0 20px; color: #555752; font-size: 15px; line-height: 1.9; text-wrap: balance; }
+.design-preview h3 { margin: 0 0 12px; font-size: 28px; line-height: 1.5; font-weight: 500; text-wrap: wrap; }
+.design-preview p { margin: 0 0 20px; color: #555752; font-size: 15px; line-height: 1.9; text-wrap: wrap; }
 .design-action { display: inline-flex; align-items: center; gap: 25px; min-height: 36px; margin-top: auto; font-size: 14px; }
 .design-action > span { color: #947638; }
 .design-page { width: 84%; max-width: 1200px; margin: 0 auto; padding: 58px 0 70px; }
 .design-header { margin-bottom: 42px; }
 .design-header h1 { margin: 0 0 16px; font-size: 44px; line-height: 1.5; font-weight: 500; }
-.design-header p, .design-collection-heading p { max-width: 680px; margin: 0; color: #555752; font-size: 16px; line-height: 1.9; text-wrap: balance; }
+.design-header p, .design-collection-heading p { max-width: 680px; margin: 0; color: #555752; font-size: 16px; line-height: 1.9; text-wrap: wrap; }
 .design-collection { scroll-margin-top: 30px; }
 .design-collection + .design-collection { margin-top: 60px; padding-top: 36px; border-top: 1px solid var(--line); }
 .design-collection-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
-.design-collection h2 { margin: 0 0 10px; color: #34453c; font-size: 28px; line-height: 1.5; font-weight: 500; text-wrap: balance; }
+.design-collection h2 { margin: 0 0 10px; color: #34453c; font-size: 28px; line-height: 1.5; font-weight: 500; text-wrap: wrap; }
 .design-merch-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
 .design-work { min-width: 0; margin: 0; }
 .design-work-wide { grid-column: span 2; }
 .design-work-image { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; background: #fff; }
 .design-work-wide .design-work-image { aspect-ratio: 2 / 1; }
 .design-work img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.design-work figcaption { margin-top: 12px; font-size: 14px; line-height: 1.7; text-wrap: balance; }
+.design-work figcaption { margin-top: 12px; font-size: 14px; line-height: 1.7; text-wrap: wrap; }
 .design-jewelry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
 .design-jewelry-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-content: start; }
 .design-jewelry-image { display: block; min-width: 0; }
