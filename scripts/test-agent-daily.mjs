@@ -18,7 +18,7 @@ await assert.rejects(readDaily('', async()=>new Response(null,{status:307,header
 console.log('Agent Daily path validation, canonical/navigation/assets rewriting and loop protection passed.');
 
 const branded = rewriteDailyText('<head><title>ALUX AI智能体情报日报</title></head>');
-assert(branded.includes('<title>Agent Daily · AI 日报</title>'));
+assert(branded.includes('<title>Agent Daily · AI智能体日报</title>'));
 assert(!branded.includes('ALUX'));
 assert.equal(rewriteDailyText(branded), branded);
 assert(!rewriteDailyText('<title>2026-09-05 | ALUX AI智能体情报日报</title>').includes('ALUX'));
