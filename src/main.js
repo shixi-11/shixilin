@@ -1,4 +1,4 @@
-import { aboutView } from './about.js'
+import { aboutView, bindAbout } from './about.js'
 import { servicesView } from './services.js'
 import { designView, bindDesign } from './design.js'
 import './styles.css'
@@ -69,6 +69,7 @@ function render() {
   composeLocaleHeadings(app, locale.id)
   if (locale.dir === 'rtl') isolateMixedText()
   bindNavigation()
+  bindAbout()
   bindSupport()
   bindDesign()
 
