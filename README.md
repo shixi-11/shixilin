@@ -66,3 +66,6 @@ npm run preview
 ```
 
 </details>
+
+
+Agent Daily 产品入口：`/ai/agent-daily` 直接呈现日报，浏览器地址保持在 shixilin.com。服务端从日报的固定部署源读取最新成品并转换页面、资源、语言切换与归档链接；原日报域名仍作为兼容跳转入口，内容继续由原发布流程更新。

@@ -39,6 +39,18 @@
   ],
   "rewrites": [
     {
+      "source": "/ai/agent-daily",
+      "destination": "/api/agent-daily"
+    },
+    {
+      "source": "/ai/agent-daily/",
+      "destination": "/api/agent-daily"
+    },
+    {
+      "source": "/ai/agent-daily/(.*)",
+      "destination": "/api/agent-daily?dailyPath=$1"
+    },
+    {
       "source": "/ai/yunjian/",
       "destination": "https://yunjian-omega.vercel.app/ai/yunjian"
     },
