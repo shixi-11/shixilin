@@ -5,6 +5,7 @@ import es from './locales/es.js'
 import fr from './locales/fr.js'
 import de from './locales/de.js'
 import ar from './locales/ar.js'
+import { respawnCopy } from './locales/respawn.js'
 
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
@@ -642,4 +643,7 @@ export const messages = {
     "about.qualifications": "Qualifications & practice",
     "about.tradition.practice": "A 15th-generation disciple of the Wudang Sanfeng lineage, bearing the generational character Shi (师)"
   }
+}
+for (const [locale, [title, category, text]] of Object.entries(respawnCopy)) {
+  Object.assign(messages[locale], { 'work.respawn.title': title, 'work.respawn.category': category, 'work.respawn.text': text })
 }

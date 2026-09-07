@@ -5,6 +5,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/ai/codex-reset",
+      "destination": "/ai/codex-reset/",
+      "permanent": true
+    },
+    {
       "source": "/notes/:path*",
       "destination": "/support",
       "permanent": true
@@ -38,6 +43,18 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/ai/codex-reset",
+      "destination": "https://shixi-11.github.io/codex-respawn/index.html"
+    },
+    {
+      "source": "/ai/codex-reset/",
+      "destination": "https://shixi-11.github.io/codex-respawn/index.html"
+    },
+    {
+      "source": "/ai/codex-reset/:path*",
+      "destination": "https://shixi-11.github.io/codex-respawn/:path*"
+    },
     {
       "source": "/ai/agent-daily",
       "destination": "/api/agent-daily"
