@@ -43,14 +43,11 @@ export function homeView() {
           </div>
         </article>
         <div class="home-ai-list">
-          <a class="home-ai-entry" href="https://github.com/shixi-11/prism-desk" target="_blank" rel="noopener">
-            <span class="home-ai-label">${t('work.prism.category')}</span><h3>${t('work.prism.title')}</h3><p>${t('work.prism.text')}</p><span class="home-ai-action">${t('work.github')} <span aria-hidden="true">↗</span></span>
-          </a>
           <a class="home-ai-entry" href="${dailyUrl()}" target="_blank" rel="noopener">
             <span class="home-ai-label" lang="en">AI News</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
           </a>
-          <a class="home-ai-entry" href="https://github.com/shixi-11/mohe-pet" target="_blank" rel="noopener">
-            <span class="home-ai-label">${t('work.mohe.category')}</span><h3>${t('work.mohe.title')}</h3><p>${projectText('home.moheText')}</p><span class="home-ai-action">${t('home.openMohe')} <span aria-hidden="true">↗</span></span>
+          <a class="home-ai-entry" href="https://github.com/shixi-11/prism-desk" target="_blank" rel="noopener">
+            <span class="home-ai-label">${t('work.prism.category')}</span><h3>${t('work.prism.title')}</h3><p>${t('work.prism.text')}</p><span class="home-ai-action">${t('work.github')} <span aria-hidden="true">↗</span></span>
           </a>
         </div>
       </section>
