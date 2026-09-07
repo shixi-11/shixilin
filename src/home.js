@@ -9,7 +9,7 @@ export function cloudOrnament() {
 }
 
 export function homeView() {
-  const projectText = key => t(key).replace(/小小守护者|小小守護者|安静陪伴|安靜陪伴|偶尔调皮|偶爾調皮|AI智能体|并发公链|全局逻辑虚拟机|去中心化|分布式执行|国际贸易|企业孵化|商业实践/g, phrase => `<span class="home-phrase">${phrase}</span>`)
+  const projectText = key => t(key).replace(/值得关注|值得關注|对话与进度|對話與進度|小小守护者|小小守護者|安静陪伴|安靜陪伴|偶尔调皮|偶爾調皮|AI智能体|并发公链|全局逻辑虚拟机|去中心化|分布式执行|国际贸易|企业孵化|商业实践/g, phrase => `<span class="home-phrase">${phrase}</span>`)
   const subtitle = getLocale() === 'en'
     ? t('home.subtitle').split(', ').map((part, index) => `<span class="subtitle-phrase">${part}${index === 0 ? ',' : ''}</span>`).join(' ')
     : t('home.subtitle')
@@ -44,10 +44,10 @@ export function homeView() {
         </article>
         <div class="home-ai-list">
           <a class="home-ai-entry" href="${dailyUrl()}" target="_blank" rel="noopener">
-            <span class="home-ai-label" lang="en">AI News</span><h3>${t('home.dailyTitle')}</h3><p>${t('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
+            <span class="home-ai-label">${t('home.dailyCategory')}</span><h3>${t('home.dailyTitle')}</h3><p>${projectText('home.dailyText')}</p><span class="home-ai-action">${t('home.readDaily')} <span aria-hidden="true">↗</span></span>
           </a>
           <a class="home-ai-entry" href="https://github.com/shixi-11/prism-desk" target="_blank" rel="noopener">
-            <span class="home-ai-label">${t('work.prism.category')}</span><h3>${t('work.prism.title')}</h3><p>${t('work.prism.text')}</p><span class="home-ai-action">${t('work.github')} <span aria-hidden="true">↗</span></span>
+            <span class="home-ai-label">${t('work.prism.category')}</span><h3>${t('work.prism.title')}</h3><p>${projectText('home.prismText')}</p><span class="home-ai-action">${t('home.openPrism')} <span aria-hidden="true">↗</span></span>
           </a>
         </div>
       </section>
