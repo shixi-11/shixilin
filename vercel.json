@@ -44,6 +44,86 @@
   ],
   "rewrites": [
     {
+      "destination": "https://shixi-11.github.io/codex-respawn/zh/index.html",
+      "source": "/ai/codex-reset/zh"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/zh/index.html",
+      "source": "/ai/codex-reset/zh/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/zh-Hant/index.html",
+      "source": "/ai/codex-reset/zh-Hant"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/zh-Hant/index.html",
+      "source": "/ai/codex-reset/zh-Hant/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ja/index.html",
+      "source": "/ai/codex-reset/ja"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ja/index.html",
+      "source": "/ai/codex-reset/ja/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ko/index.html",
+      "source": "/ai/codex-reset/ko"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ko/index.html",
+      "source": "/ai/codex-reset/ko/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/es/index.html",
+      "source": "/ai/codex-reset/es"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/es/index.html",
+      "source": "/ai/codex-reset/es/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/fr/index.html",
+      "source": "/ai/codex-reset/fr"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/fr/index.html",
+      "source": "/ai/codex-reset/fr/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/de/index.html",
+      "source": "/ai/codex-reset/de"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/de/index.html",
+      "source": "/ai/codex-reset/de/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ar/index.html",
+      "source": "/ai/codex-reset/ar"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/ar/index.html",
+      "source": "/ai/codex-reset/ar/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/events/:id/index.html",
+      "source": "/ai/codex-reset/events/:id"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/:locale/events/:id/index.html",
+      "source": "/ai/codex-reset/:locale/events/:id"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/events/:id/index.html",
+      "source": "/ai/codex-reset/events/:id/"
+    },
+    {
+      "destination": "https://shixi-11.github.io/codex-respawn/:locale/events/:id/index.html",
+      "source": "/ai/codex-reset/:locale/events/:id/"
+    },
+    {
       "source": "/ai/codex-reset",
       "destination": "https://shixi-11.github.io/codex-respawn/index.html"
     },
