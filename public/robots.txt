@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shixilin.com/ai/codex-reset/sitemap.xml
