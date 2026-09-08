@@ -1,6 +1,6 @@
-@font-face { font-family: 'Noto Serif TC'; src: url('/fonts/noto-serif-tc.woff2?v=0afe3c1e2a2a') format('woff2'); font-weight: 200 900; font-display: swap; }
-@font-face { font-family: 'Noto Serif JP'; src: url('/fonts/noto-serif-jp.woff2?v=b273a070b0f6') format('woff2'); font-weight: 200 900; font-display: swap; }
-@font-face { font-family: 'Noto Serif KR'; src: url('/fonts/noto-serif-kr.woff2?v=0368f17de187') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Serif TC'; src: url('/fonts/noto-serif-tc.woff2?v=c6b064d01473') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Serif JP'; src: url('/fonts/noto-serif-jp.woff2?v=ebec446191f6') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Noto Serif KR'; src: url('/fonts/noto-serif-kr.woff2?v=889c4ba55c08') format('woff2'); font-weight: 200 900; font-display: swap; }
 @font-face { font-family: 'Noto Naskh Arabic'; src: url('/fonts/noto-naskh-arabic.woff2?v=2146b8cfaf5b') format('woff2'); font-weight: 400 700; font-display: swap; }
 
 .language-picker { position: relative; flex: 0 0 auto; color: #606761; }
