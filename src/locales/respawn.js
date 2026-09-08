@@ -1,11 +1,47 @@
 export const respawnCopy = {
-  en: ['Codex & Claude Resets', 'Codex & Claude reset tracker', 'See confirmed reset times, local countdowns and extra-usage offers for Codex and Claude, with original sources. Free, open source, in nine languages.'],
-  zh: ['Codex & Claude Resets', 'Codex与Claude重置追踪', '查看Codex和Claude已确认的重置时间、本地倒计时、重置卡与额外额度消息，附原始来源。免费开源，支持九种语言。'],
-  'zh-Hant': ['Codex & Claude Resets', 'Codex與Claude重置追蹤', '查看Codex和Claude已確認的重置時間、當地倒計時、重置卡與額外額度消息，附原始來源。免費開源，支援九種語言。'],
-  ja: ['Codex & Claude Resets', 'Codex・Claudeリセット情報', '確認済みのリセット時刻、現地時間のカウントダウン、追加利用枠の特典を情報源とともに表示。9言語対応の無料オープンソースツールです。'],
-  ko: ['Codex & Claude Resets', 'Codex 및 Claude 초기화 추적', '확인된 초기화 시각, 현지 시간 카운트다운과 추가 사용량 혜택을 원문 출처와 함께 확인하세요. 9개 언어를 지원하는 무료 오픈소스 도구입니다.'],
-  es: ['Codex & Claude Resets', 'Restablecimientos de Codex y Claude', 'Consulta horarios confirmados, cuentas atrás locales y ofertas de uso extra de Codex y Claude con sus fuentes. Gratis y de código abierto en nueve idiomas.'],
-  fr: ['Codex & Claude Resets', 'Réinitialisations de Codex et Claude', 'Consultez les horaires confirmés, les comptes à rebours locaux et les offres d’utilisation supplémentaire avec leurs sources. Gratuit et open source en neuf langues.'],
-  de: ['Codex & Claude Resets', 'Codex- und Claude-Resets', 'Bestätigte Reset-Zeiten, Countdowns in deiner Ortszeit und Angebote für zusätzliche Nutzung mit Originalquellen. Kostenlos, quelloffen und in neun Sprachen.'],
-  ar: ['Codex & Claude Resets', 'متابعة إعادة ضبط Codex وClaude', 'اطّلع على المواعيد المؤكدة والعد التنازلي بتوقيتك المحلي وعروض الاستخدام الإضافي مع المصادر الأصلية. أداة مجانية ومفتوحة المصدر بتسع لغات.'],
-}
+  "en": [
+    "Codex & Claude Resets",
+    "Codex & Claude reset tracker",
+    "When is the next reset? See the latest related posts, their publication times and the last confirmed reset for Codex and Claude. Source-linked and available in nine languages."
+  ],
+  "zh": [
+    "Codex & Claude Resets",
+    "Codex与Claude重置追踪",
+    "查看Codex与Claude最新相关消息、发布时间和上次重置记录，附原始来源，支持九种语言。"
+  ],
+  "zh-Hant": [
+    "Codex & Claude Resets",
+    "Codex與Claude重置追蹤",
+    "查看Codex與Claude最新相關消息、發佈時間和上次重置記錄，附原始來源，支援九種語言。"
+  ],
+  "ja": [
+    "Codex & Claude Resets",
+    "Codex・Claudeリセット情報",
+    "次回のリセット情報。CodexとClaudeの最新関連投稿、投稿時刻、前回のリセット記録を情報源とともに確認。9言語対応。"
+  ],
+  "ko": [
+    "Codex & Claude Resets",
+    "Codex 및 Claude 초기화 추적",
+    "다음 초기화는 언제인가요? Codex와 Claude의 최신 관련 게시물, 게시 시각과 지난 초기화 기록을 원문 출처와 함께 확인하세요. 9개 언어 지원."
+  ],
+  "es": [
+    "Codex & Claude Resets",
+    "Restablecimientos de Codex y Claude",
+    "¿Cuándo será el próximo restablecimiento? Consulta las últimas publicaciones, sus fechas y el último restablecimiento de Codex y Claude, con fuentes y en nueve idiomas."
+  ],
+  "fr": [
+    "Codex & Claude Resets",
+    "Réinitialisations de Codex et Claude",
+    "Quand aura lieu la prochaine réinitialisation ? Consultez les dernières publications, leurs dates et le dernier reset de Codex et Claude, avec les sources, en neuf langues."
+  ],
+  "de": [
+    "Codex & Claude Resets",
+    "Codex- und Claude-Resets",
+    "Wann kommt der nächste Reset? Neueste Beiträge, Veröffentlichungszeiten und der letzte bestätigte Reset von Codex und Claude, mit Quellen in neun Sprachen."
+  ],
+  "ar": [
+    "Codex & Claude Resets",
+    "متابعة إعادة ضبط Codex وClaude",
+    "متى تكون إعادة الضبط التالية؟ اطّلع على أحدث المنشورات وأوقات نشرها وآخر إعادة ضبط مؤكّدة لـCodex وClaude، مع المصادر وبتسع لغات."
+  ]
+};
