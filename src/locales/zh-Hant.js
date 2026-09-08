@@ -1,4 +1,5 @@
 export default {
+    "footer.support": "支持我的創作",
     "about.writing": "我寫詩詞與小說，開發AI產品、遊戲與應用，也持續創業。",
     "about.perspective": "從古老的思想到不斷變化的技術，我關心它們怎樣進入人的生活。",
     "about.earthling": "現世身分：地球人，也是一顆星際種子（Starseed）",

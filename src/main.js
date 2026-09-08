@@ -112,7 +112,7 @@ function shell(content, pathname) {
         </div>
       </header>
       <main>${content}</main>
-      ${paperFooter()}
+      ${paperFooter(activePath === '/')}
     </div>
   `
 }

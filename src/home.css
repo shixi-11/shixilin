@@ -87,6 +87,9 @@ html[dir='rtl'] .home-browse-all > span { transform: scaleX(-1); }
 .footer-email:hover { color: #947638; }
 .footer-email:hover > span:last-child { text-decoration: underline; text-underline-offset: 4px; }
 .footer-contact .social-notes { margin: 0; color: #62635d; font-size: 12px; letter-spacing: .04em; line-height: 1.8; }
+.footer-support { grid-column: 1 / -1; justify-self: center; display: inline-flex; align-items: center; min-height: 44px; color: #34453c; font-family: 'Source Sans 3', var(--locale-serif); font-size: 16px; line-height: 1.7; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.footer-support:hover { color: #947638; }
+.footer-support:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .paper-socials { display: flex; justify-content: flex-end; align-items: center; gap: 20px; }
 .paper-socials a { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 44px; line-height: 0; }
 .paper-socials a:hover { color: #947638; }

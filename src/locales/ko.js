@@ -1,5 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
+    "footer.support": "창작 활동 후원하기",
     "about.writing": "시와 소설을 쓰고 AI 제품, 게임, 앱을 개발하며, 창업도 이어가고 있습니다.",
     "about.perspective": "오래된 사상부터 끊임없이 변하는 기술까지, 그것들이 사람의 삶에 어떻게 스며드는지에 관심이 있습니다.",
     "about.earthling": "이번 생에서는 지구인, 그리고 스타시드(Starseed).",

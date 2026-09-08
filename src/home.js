@@ -92,7 +92,7 @@ export function homeView() {
   `
 }
 
-export function paperFooter() {
+export function paperFooter(showSupport = false) {
   return `<footer class="paper-footer">
     <a class="paper-footer-name internal-link" href="/">${t('brand.name')}${cloudOrnament()}</a>
     <p>${t('home.subtitle')}</p>
@@ -101,5 +101,6 @@ export function paperFooter() {
       <a class="footer-email" href="mailto:info@elevencapital.ltd"><span>${t('footer.collaborate')}</span><span>info@elevencapital.ltd</span></a>
       <p class="social-notes">${t('home.handles')}</p>
     </div>
+    ${showSupport ? `<a class="footer-support internal-link" href="/support">${t('footer.support')}</a>` : ''}
   </footer>`
 }
