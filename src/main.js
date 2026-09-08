@@ -1,6 +1,6 @@
 import { aboutView, bindAbout } from './about.js'
 import { servicesView } from './services.js'
-import { designView, bindDesign } from './design.js'
+import { designView } from './design.js'
 import './styles.css'
 import './home.css'
 import './about.css'
@@ -73,7 +73,6 @@ function render() {
   bindNavigation()
   bindAbout()
   bindSupport()
-  bindDesign()
 
   if (window.location.hash) {
     const anchorId = decodeURIComponent(window.location.hash.slice(1))

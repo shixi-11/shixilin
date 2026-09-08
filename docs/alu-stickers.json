@@ -1,0 +1,402 @@
+[
+  {
+    "name": "好的",
+    "size": [
+      702,
+      909
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      560,
+      760
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\好的.gif",
+    "file": "alu-hello-82521041.gif",
+    "sha256": "8252104122aaaf8f9087be9cfbfae46ad88cb543e1134420d310da01a7bd3b33"
+  },
+  {
+    "name": "谢谢",
+    "size": [
+      550,
+      709
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      650,
+      950
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\谢谢.gif",
+    "file": "alu-thanks-5ec88c50.gif",
+    "sha256": "5ec88c5080e7b3bb8a2927361617800162802af006479f04e4ecaaa9819a6100"
+  },
+  {
+    "name": "喜欢",
+    "size": [
+      839,
+      900
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      600,
+      800
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\喜欢.gif",
+    "file": "alu-love-c7659c15.gif",
+    "sha256": "c7659c15621cbe9f4909c22485740a52c9bd6c0b073cf7448bcf8154f2f8ddb5"
+  },
+  {
+    "name": "害羞",
+    "size": [
+      661,
+      900
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      650,
+      850
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\害羞.gif",
+    "file": "alu-shy-49c8c726.gif",
+    "sha256": "49c8c7261a7552885a3e60f070af515cb021accb368b6b373b89f2093876ca62"
+  },
+  {
+    "name": "丑拒",
+    "size": [
+      695,
+      920
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      380,
+      620
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\丑拒.gif",
+    "file": "alu-nope-934d1dbd.gif",
+    "sha256": "934d1dbd4c7d2079869daf5fb303197700e4c328c268dc40094144b74df6e7a1"
+  },
+  {
+    "name": "扶额",
+    "size": [
+      647,
+      862
+    ],
+    "frames": 4,
+    "loop": 0,
+    "durations": [
+      320,
+      260,
+      640,
+      260
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\扶额.gif",
+    "file": "alu-facepalm-508905ff.gif",
+    "sha256": "508905ff8a7cf10a55cc4340efbfddbc6e1eba50315aa4518efcf65d291e305c"
+  },
+  {
+    "name": "好饱",
+    "size": [
+      768,
+      880
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      620,
+      360,
+      920
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\好饱.gif",
+    "file": "alu-full-50d8e898.gif",
+    "sha256": "50d8e898a1db51683a2dd0d138506ef6ca31a58bb408f2b20b0e3cebe5a943d2"
+  },
+  {
+    "name": "收到",
+    "size": [
+      878,
+      816
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      600,
+      500,
+      850
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\收到.gif",
+    "file": "alu-received-ceb5f375.gif",
+    "sha256": "ceb5f37594c2bc280a72aa76505aa30c34be96acfd8d08ff5982b344a91a7241"
+  },
+  {
+    "name": "码住",
+    "size": [
+      936,
+      889
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      280,
+      100,
+      320
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\码住.gif",
+    "file": "alu-typing-ef147eeb.gif",
+    "sha256": "ef147eeb47012f757782f92d60d1dd0b9d7bae6e8312f97d9aa0036691f99fd2"
+  },
+  {
+    "name": "起飞",
+    "size": [
+      752,
+      889
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      350,
+      500
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\起飞.gif",
+    "file": "alu-launch-99fe4cec.gif",
+    "sha256": "99fe4cec3c6add32310d1f54ecf755bdb90e9ef64ab8b9f811b05fe364732d56"
+  },
+  {
+    "name": "来了",
+    "size": [
+      952,
+      962
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      420,
+      500,
+      650
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\来了.gif",
+    "file": "alu-coming-d38910db.gif",
+    "sha256": "d38910dbc72a2930aa2b5d058325ac20811986fdf3d6e70b9180f3fbfda51dba"
+  },
+  {
+    "name": "来啊",
+    "size": [
+      1073,
+      1110
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      420,
+      180,
+      320
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\来啊.gif",
+    "file": "alu-challenge-66d1e6ec.gif",
+    "sha256": "66d1e6eca35cca9848cdda84c0e41c06e22c0698359b0141569b402622c98471"
+  },
+  {
+    "name": "看我的",
+    "size": [
+      924,
+      877
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      420,
+      220,
+      650
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\看我的.gif",
+    "file": "alu-watch-me-f31e2ea6.gif",
+    "sha256": "f31e2ea6644338cf68373f19623a61c18d44976072f60950b11a618e1d32c1f7"
+  },
+  {
+    "name": "求求了",
+    "size": [
+      850,
+      920
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      650,
+      850
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\求求了.gif",
+    "file": "alu-please-dac42b1f.gif",
+    "sha256": "dac42b1fe6c50dc059c6c3fe55c10c242f243adcbcfef276d09f4704c9e15e48"
+  },
+  {
+    "name": "哭哭",
+    "size": [
+      934,
+      804
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      400,
+      700
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\哭哭.gif",
+    "file": "alu-crying-7efcc276.gif",
+    "sha256": "7efcc2762c7bf4b80d914e3f89522cc5aabfa3da39bd58a2374d9881c9cce56e"
+  },
+  {
+    "name": "什么",
+    "size": [
+      967,
+      820
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      650,
+      900
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\什么.gif",
+    "file": "alu-what-2d81a700.gif",
+    "sha256": "2d81a7005dc31e368cbc8ca5968b1fc0b76fbc5cbf53dc10b4c8524eb1983497"
+  },
+  {
+    "name": "嘘",
+    "size": [
+      981,
+      930
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      360,
+      850
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\嘘.gif",
+    "file": "alu-shh-4f2a3824.gif",
+    "sha256": "4f2a3824fe73d835a4485564149d38619048b0070f843cd7506e8454c7ee58d1"
+  },
+  {
+    "name": "有情况",
+    "size": [
+      953,
+      900
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      360,
+      640
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\有情况.gif",
+    "file": "alu-alert-afd3a0df.gif",
+    "sha256": "afd3a0dff8eda23165c936e3d08222e2fd191adb1c75d482426fb2dd29678d34"
+  },
+  {
+    "name": "生气了",
+    "size": [
+      808,
+      920
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      620,
+      880
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\生气了.gif",
+    "file": "alu-angry-102ba1b0.gif",
+    "sha256": "102ba1b04c4e0304cdfa6ec3206606adac3018161dc83981900fe026feb0fcac"
+  },
+  {
+    "name": "累了",
+    "size": [
+      708,
+      960
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      620,
+      820
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\累了.gif",
+    "file": "alu-tired-3a541c9f.gif",
+    "sha256": "3a541c9f8946ee1da92b5a7ae2cac9911388ed5b20f3239b5946185e088c6222"
+  },
+  {
+    "name": "裂开",
+    "size": [
+      937,
+      900
+    ],
+    "frames": 3,
+    "loop": 0,
+    "durations": [
+      520,
+      420,
+      900
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\裂开.gif",
+    "file": "alu-broken-9af737eb.gif",
+    "sha256": "9af737ebf3f70b1f8998858e982b730d8d8c543b2a962785787f46ab3ac2357d"
+  },
+  {
+    "name": "晕了",
+    "size": [
+      790,
+      918
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      480,
+      720
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\晕了.gif",
+    "file": "alu-dizzy-f758fddb.gif",
+    "sha256": "f758fddb9f3ee6fc73915cf4591702fd14ecd1305bcf5bfaf15e45af073f9599"
+  },
+  {
+    "name": "谁在放屁",
+    "size": [
+      623,
+      826
+    ],
+    "frames": 2,
+    "loop": 0,
+    "durations": [
+      600,
+      850
+    ],
+    "transparent": true,
+    "source": "A:\\1111\\ALUX-吉祥物\\02_表情包\\阿禄猴1\\高清动图\\谁在放屁.gif",
+    "file": "alu-who-farted-290ed4fd.gif",
+    "sha256": "290ed4fd40151e75ac8ec0b9a36e8e16334731786a19b32c363da321ff2f0f35"
+  }
+]

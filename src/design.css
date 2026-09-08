@@ -9,7 +9,8 @@
 .design-feature-jacket { grid-area: 2 / 1; }
 .design-feature-tote { grid-area: 1 / 2; }
 .design-feature-case { grid-area: 2 / 2; }
-.design-sticker-preview { background: #f9efe6; }
+.design-sticker-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 12px 20px; padding: 16px; background: transparent; }
+.design-sticker-preview img { justify-self: center; max-width: 120px; max-height: 120px; }
 .design-preview-copy { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 20px 0 18px; }
 .design-preview h3 { margin: 0 0 12px; font-size: 28px; line-height: 1.5; font-weight: 500; text-wrap: wrap; }
 .design-preview p { margin: 0 0 20px; color: #555752; font-size: 15px; line-height: 1.9; text-wrap: wrap; }
@@ -35,19 +36,17 @@
 .design-jewelry-image { display: block; min-width: 0; }
 .design-jewelry-lead { grid-column: 1 / -1; }
 .design-jewelry-image img { display: block; width: 100%; height: auto; }
-.design-sticker-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
-.design-sticker { display: grid; justify-items: center; gap: 10px; min-width: 0; margin: 0; padding: 22px 24px 18px; background: #f0ede5; }
-.design-sticker img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.design-sticker-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px 18px; }
+.design-sticker { display: grid; align-content: start; justify-items: center; gap: 10px; min-width: 0; margin: 0; padding: 4px; background: transparent; }
+.design-sticker img { display: block; width: 100%; max-width: 140px; height: 140px; object-fit: contain; }
 .design-sticker figcaption { color: #555752; font-size: 14px; line-height: 1.7; }
-.design-animation-toggle { flex: 0 0 auto; min-height: 44px; padding: 7px 0; border: 0; border-bottom: 1px solid #b39451; background: transparent; color: #34453c; font: inherit; font-size: 14px; cursor: pointer; }
-.design-animation-toggle:hover { color: #947638; }
 html[dir='rtl'] .design-action > span { transform: scaleX(-1); }
 @media (max-width: 1100px) { .design-page { width: 88%; } }
 @media (max-width: 900px) {
   .design-merch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .design-work-wide { grid-column: auto; }
   .design-preview-grid { gap: 24px; }
-  .design-sticker-grid { gap: 18px; }
+  .design-sticker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 18px; }
 }
 @media (max-width: 640px) {
   .design-jewelry-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -65,8 +64,9 @@ html[dir='rtl'] .design-action > span { transform: scaleX(-1); }
   .design-work-wide { grid-column: span 2; }
   .design-merch-grid { gap: 24px 16px; }
   .design-work figcaption { font-size: 13px; }
-  .design-sticker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-  .design-sticker { padding: 12px 8px; }
-  .design-sticker figcaption { font-size: 13px; }
+  .design-sticker-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 12px; }
+  .design-sticker { padding: 0; }
+  .design-sticker img { height: 100px; max-width: 100px; }
+  .design-sticker figcaption { font-size: 13px; text-align: center; }
   .design-collection + .design-collection { margin-top: 38px; padding-top: 28px; }
 }

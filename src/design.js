@@ -1,7 +1,9 @@
-import { t } from './i18n.js'
+import { t, getLocale } from './i18n.js'
+import { aluStickers, aluStickerLabels } from './alu-stickers.js'
 
 const asset = name => `/assets/design/${name}`
-const stickers = ['wave', 'shy', 'received', 'facepalm', 'launch', 'tired']
+const stickerLabel = index => aluStickerLabels[getLocale()][index]
+const previewStickers = ['hello', 'love', 'thanks', 'launch', 'received', 'challenge'].map(id => aluStickers.find(item => item.id === id))
 const jewelry = [
   ['pendant-symbol.jpg', 'pendant-engraving-hanging.jpg', 'pendant-edge.jpg'],
   ['pendant-engraving.jpg', 'pendant-symbol-still.jpg', 'pendant-engraving-still.jpg'],
@@ -36,7 +38,7 @@ export function homeDesign() {
         <div class="design-preview-copy"><h3>${t('design.merch.homeTitle')}</h3><p>${t('design.merch.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
       <a class="design-preview internal-link" href="/design#stickers">
-        <div class="design-preview-media design-sticker-preview" aria-hidden="true"><img src="${asset('sticker-cover.jpg')}" alt="" width="3840" height="2160" loading="lazy" /></div>
+        <div class="design-preview-media design-sticker-preview" aria-hidden="true">${previewStickers.map(item => `<img src="${asset(item.file)}" alt="" width="${item.width}" height="${item.height}" loading="lazy" />`).join('')}</div>
         <div class="design-preview-copy"><h3>${t('design.stickers.title')}</h3><p>${t('design.stickers.text')}</p><span class="design-action">${t('design.view')}<span aria-hidden="true">→</span></span></div>
       </a>
     </div>
@@ -55,20 +57,8 @@ export function designView() {
       <div class="design-jewelry-grid">${jewelry.map((group, groupIndex) => `<div class="design-jewelry-group">${group.map((file, index) => `<a class="design-jewelry-image${index === 0 ? ' design-jewelry-lead' : ''}" href="${asset(file)}" target="_blank" rel="noopener" aria-label="${t('design.jewelry.text')} ${groupIndex + 1} · ${index + 1} · ${t('design.original')}"><img src="${asset(file)}" alt="${t('design.jewelry.text')} ${groupIndex + 1} · ${index + 1}" width="3000" height="${index === 0 ? 2000 : 4500}" loading="lazy" /></a>`).join('')}</div>`).join('')}</div>
     </section>
     <section class="design-collection" id="stickers" aria-labelledby="stickers-title">
-      <div class="design-collection-heading"><div><h2 id="stickers-title">${t('design.stickers.title')}</h2><p>${t('design.stickers.text')}</p></div><button class="design-animation-toggle" type="button" aria-pressed="false" aria-controls="sticker-gallery">${t('design.play')}</button></div>
-      <div class="design-sticker-grid" id="sticker-gallery">${stickers.map(key => `<figure class="design-sticker"><img src="${asset(`sticker-${key}.png`)}" data-still="${asset(`sticker-${key}.png`)}" data-animation="${asset(`sticker-${key}.gif`)}" alt="${t(`design.${key}`)}" width="1024" height="1024" loading="lazy" /><figcaption>${t(`design.${key}`)}</figcaption></figure>`).join('')}</div>
+      <div class="design-collection-heading"><div><h2 id="stickers-title">${t('design.stickers.title')}</h2><p>${t('design.stickers.text')}</p></div></div>
+      <div class="design-sticker-grid" id="sticker-gallery">${aluStickers.map((item, index) => `<figure class="design-sticker"><img src="${asset(item.file)}" alt="${stickerLabel(index)}" width="${item.width}" height="${item.height}" loading="lazy" /><figcaption>${stickerLabel(index)}</figcaption></figure>`).join('')}</div>
     </section>
   </article>`
-}
-
-export function bindDesign() {
-  const toggle = document.querySelector('.design-animation-toggle')
-  toggle?.addEventListener('click', () => {
-    const playing = toggle.getAttribute('aria-pressed') !== 'true'
-    document.querySelectorAll('#sticker-gallery img').forEach(img => {
-      img.src = playing ? img.dataset.animation : img.dataset.still
-    })
-    toggle.setAttribute('aria-pressed', String(playing))
-    toggle.textContent = t(playing ? 'design.pause' : 'design.play')
-  })
 }
