@@ -2,6 +2,7 @@ import { complete } from './complete.js'
 
 // Translated from the Chinese source; proper names retain their established forms.
 export default complete({
+    "footer.support": "Apoya mi trabajo",
     "about.writing": "Escribo poesía y ficción, desarrollo productos de IA, videojuegos y aplicaciones, y sigo emprendiendo.",
     "about.perspective": "Desde el pensamiento antiguo hasta la tecnología en constante cambio, me interesa cómo llegan a formar parte de nuestras vidas.",
     "about.earthling": "En esta vida: terrícola y semilla estelar (Starseed).",

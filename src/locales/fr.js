@@ -1,5 +1,6 @@
 import { complete } from './complete.js'
 export default complete({
+    "footer.support": "Soutenir mon travail",
     "about.writing": "J’écris de la poésie et des romans, je développe des produits d’IA, des jeux et des applications, et je continue à entreprendre.",
     "about.perspective": "Des pensées anciennes aux technologies qui évoluent sans cesse, je m’intéresse à la place qu’elles prennent dans nos vies.",
     "about.earthling": "Dans cette vie : terrienne et graine d’étoile (Starseed).",
