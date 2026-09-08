@@ -30,7 +30,7 @@ const routes = {
 }
 
 const projects = [
-  { slug: 'respawn', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-reset/', action: 'work.open' },
+  { slug: 'respawn', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-claude-resets/', action: 'work.open' },
   { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
   { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
   { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },

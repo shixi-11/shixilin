@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shixilin.com/ai/codex-reset/sitemap.xml
+Sitemap: https://shixilin.com/ai/codex-claude-resets/sitemap.xml
