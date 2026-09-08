@@ -5,6 +5,66 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/ai/codex-reset/",
+      "destination": "/ai/codex-claude-resets/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-reset/:path*/",
+      "destination": "/ai/codex-claude-resets/:path*/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/zh",
+      "destination": "/ai/codex-claude-resets/zh/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/zh-Hant",
+      "destination": "/ai/codex-claude-resets/zh-Hant/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/ja",
+      "destination": "/ai/codex-claude-resets/ja/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/ko",
+      "destination": "/ai/codex-claude-resets/ko/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/es",
+      "destination": "/ai/codex-claude-resets/es/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/fr",
+      "destination": "/ai/codex-claude-resets/fr/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/de",
+      "destination": "/ai/codex-claude-resets/de/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/ar",
+      "destination": "/ai/codex-claude-resets/ar/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/events/:id",
+      "destination": "/ai/codex-claude-resets/events/:id/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/codex-claude-resets/:locale/events/:id",
+      "destination": "/ai/codex-claude-resets/:locale/events/:id/",
+      "permanent": true
+    },
+    {
       "source": "/ai/codex-reset",
       "destination": "/ai/codex-claude-resets/",
       "permanent": true
