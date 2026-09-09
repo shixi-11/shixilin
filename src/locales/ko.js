@@ -154,7 +154,7 @@ export default complete({
   'about.credential3': '헬링거 체계 가족세우기 실무자',
   'about.contactTitle': '협업과 연락', 'about.channels': '위챗 공식 계정 · 위챗 채널 · 샤오홍슈 · 웨이보',
   'about.mailLabel': '협업 이메일', 'about.writeEmail': '이메일 보내기',
-  "aiPage.intro": "AI 산업 일보, 데스크톱 친구, 구름 점술, 데스크톱 작업 공간.",
+  "aiPage.intro": "일상의 필요와 호기심에서 출발해 일, 생활, 창작 속 AI의 다양한 가능성을 꾸준히 탐구합니다.",
   'games.nav': '게임', 'games.details': '게임 알아보기', 'games.breadcrumb': '현재 위치', 'games.home': '홈',
   'games.development': '개발 중', 'games.progress': '개발 현황', 'games.platform': '플랫폼', 'games.device': '지원 기기',
   'games.desktop': '데스크톱', 'games.status': '상태', 'games.another': '또 다른 인디 게임',

@@ -195,7 +195,7 @@ export default complete({
   'about.channels': 'Cuenta oficial de WeChat · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'Correo para colaboraciones',
   'about.writeEmail': 'Escribir un correo',
-  "aiPage.intro": "Noticias del sector de la IA, compañeros de escritorio, adivinación con nubes y un espacio de trabajo de escritorio.",
+  "aiPage.intro": "A partir de las necesidades cotidianas y la curiosidad, sigo explorando las posibilidades de la IA en el trabajo, la vida y la creación.",
   'games.nav': 'Juegos',
   'games.details': 'Conocer el juego',
   'games.breadcrumb': 'Ruta de navegación',

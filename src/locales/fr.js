@@ -159,7 +159,7 @@ export default complete({
   'about.credential3': 'Praticienne en constellations familiales selon l’approche de Hellinger',
   'about.contactTitle': 'Collaborations et contact', 'about.channels': 'Compte officiel WeChat · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'Adresse pour les collaborations', 'about.writeEmail': 'Écrire un e-mail',
-  "aiPage.intro": "Une veille sur l’IA, des compagnons de bureau, la divination par les nuages et un espace de travail sur ordinateur.",
+  "aiPage.intro": "À partir des besoins du quotidien et de ma curiosité, j’explore les multiples possibilités de l’IA dans le travail, la vie et la création.",
   'games.nav': 'Jeux', 'games.details': 'Découvrir le jeu', 'games.breadcrumb': 'Fil d’Ariane', 'games.home': 'Accueil',
   'games.development': 'En développement', 'games.progress': 'Avancement', 'games.platform': 'Plateforme', 'games.device': 'Appareil',
   'games.desktop': 'Ordinateur', 'games.status': 'Statut', 'games.another': 'Un autre jeu indépendant',

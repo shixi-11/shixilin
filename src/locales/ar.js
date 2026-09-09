@@ -157,7 +157,7 @@ export default complete({
   'about.credential3': 'مُمارسة للتمثيل المنظومي العائلي وفق منهج هيلينغر',
   'about.contactTitle': 'للتعاون والتواصل', 'about.channels': 'حساب WeChat الرسمي · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'بريد التعاون', 'about.writeEmail': 'اكتب رسالة',
-  "aiPage.intro": "أخبار قطاع الذكاء الاصطناعي، ورفقاء لسطح المكتب، والعرافة بالغيوم، ومساحة عمل مكتبية.",
+  "aiPage.intro": "انطلاقاً من احتياجات الحياة اليومية والفضول، أواصل استكشاف الإمكانات المتنوعة للذكاء الاصطناعي في العمل والحياة والإبداع.",
   'games.nav': 'الألعاب', 'games.details': 'اكتشف اللعبة', 'games.breadcrumb': 'مسار الصفحة', 'games.home': 'الرئيسية',
   'games.development': 'قيد التطوير', 'games.progress': 'تقدّم العمل', 'games.platform': 'المنصة', 'games.device': 'الجهاز',
   'games.desktop': 'الحاسوب', 'games.status': 'الحالة', 'games.another': 'لعبة مستقلة أخرى',

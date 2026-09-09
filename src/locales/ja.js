@@ -175,7 +175,7 @@ export default complete({
   'about.credential3': 'ヘリンガー方式のファミリー・コンステレーション実践者',
   'about.contactTitle': 'ご相談・連絡先', 'about.channels': 'WeChat公式アカウント・WeChat Channels・小紅書・微博',
   'about.mailLabel': 'お仕事の連絡先', 'about.writeEmail': 'メールを書く',
-  "aiPage.intro": "AI業界の日報、デスクトップの仲間、雲占い、デスクトップワークスペース。",
+  "aiPage.intro": "日々のニーズと好奇心を出発点に、仕事・暮らし・創作におけるAIのさまざまな可能性を探り続けています。",
   'games.nav': 'ゲーム', 'games.details': 'ゲームについて', 'games.breadcrumb': '現在のページ', 'games.home': 'ホーム',
   'games.development': '開発中', 'games.progress': '開発状況', 'games.platform': 'プラットフォーム', 'games.device': '対応端末',
   'games.desktop': 'デスクトップ', 'games.status': '状況', 'games.another': 'もう一つのインディーゲーム',

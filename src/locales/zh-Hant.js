@@ -213,7 +213,7 @@ export default {
   "about.companyAlias": "Eleven Capital Limited",
   "about.writeEmail": "寫郵件",
   "aiPage.title": "AI產品",
-  "aiPage.intro": "AI行業日報、桌面夥伴、雲象占卜與桌面工作台。",
+  "aiPage.intro": "從日常需求與好奇心出發，持續探索AI在工作、生活與創作中的多種可能。",
   "games.nav": "遊戲",
   "games.details": "瞭解遊戲",
   "games.breadcrumb": "頁面位置",

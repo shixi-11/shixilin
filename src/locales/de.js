@@ -156,7 +156,7 @@ export default complete({
   'about.credential3': 'Praktikerin für systemische Familienaufstellungen nach Hellinger',
   'about.contactTitle': 'Zusammenarbeit und Kontakt', 'about.channels': 'Offizieller WeChat-Account · WeChat Channels · Xiaohongshu · Weibo',
   'about.mailLabel': 'E-Mail für Anfragen', 'about.writeEmail': 'E-Mail schreiben',
-  "aiPage.intro": "KI-Branchennews, Desktop-Begleiter, Wolkenorakel und eine Desktop-Arbeitsumgebung.",
+  "aiPage.intro": "Aus alltäglichen Bedürfnissen und Neugier heraus erkunde ich immer neue Möglichkeiten für KI in Arbeit, Alltag und kreativem Schaffen.",
   'games.nav': 'Spiele', 'games.details': 'Spiel entdecken', 'games.breadcrumb': 'Seitennavigation', 'games.home': 'Startseite',
   'games.development': 'In Entwicklung', 'games.progress': 'Entwicklungsstand', 'games.platform': 'Plattform', 'games.device': 'Gerät',
   'games.desktop': 'Desktop', 'games.status': 'Status', 'games.another': 'Ein weiteres Indie-Spiel',
