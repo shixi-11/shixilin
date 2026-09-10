@@ -256,7 +256,7 @@ html[lang='en'] .reading-item h2 { font-size: 25px; }
   .book-card-caption h3 { font-size: 21px; }
   .paper-footer { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-height: 108px; padding: 16px 7%; }
   .paper-footer-name, .paper-footer > p { display: none; }
-  .paper-socials { display: grid; grid-template-columns: repeat(4, 44px); gap: 4px 16px; justify-content: center; }
+  .paper-socials { display: grid; grid-template-columns: repeat(3, 44px); gap: 4px 16px; justify-content: center; }
   .paper-socials a { width: 44px; }
   .paper-socials svg { width: 21px; height: 21px; }
   .paper-socials > span { display: none; }

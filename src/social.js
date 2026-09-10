@@ -28,6 +28,13 @@ export const socialProfiles = [
     "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" stroke=\"none\" d=\"M21.5 3.6 18.2 20c-.2.8-.8 1-1.5.5l-5-3.7-2.4 2.3c-.3.3-.5.4-1 .4l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.9 12.9l-5-1.6c-1-.3-1-1 .2-1.4L20.5 2.4c.9-.3 1.3.2 1 1.2Z\"/></svg>"
   },
   {
+    "id": "youtube",
+    "name": "YouTube",
+    "handle": "@shixilin",
+    "href": "https://www.youtube.com/@shixilin",
+    "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\" d=\"M5 5h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Zm5 4v6l6-3-6-3Z\"/></svg>"
+  },
+  {
     "id": "bilibili",
     "name": "Bilibili",
     "handle": "UID 102812984",
