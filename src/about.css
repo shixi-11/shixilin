@@ -2,6 +2,8 @@
 .about-page p { margin: 0; color: #535b53; font-size: 16px; line-height: 1.95; text-wrap: wrap; line-break: strict; }
 .about-page h2, .about-page h3 { margin: 0; font-weight: 500; }
 .about-phrase { white-space: nowrap; }
+.about-life-photo { margin: 28px 0 0; }
+.about-life-photo img { display: block; width: 100%; height: auto; }
 .about-masthead { display: grid; grid-template-columns: minmax(0,1fr); gap: 28px; padding-bottom: 34px; align-items: start; }
 .about-identity { max-width: 760px; }
 .about-page .about-eyebrow { margin: 0 0 21px; font-size: 12px; color: #857344; letter-spacing: .16em; }

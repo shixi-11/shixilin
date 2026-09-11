@@ -71,6 +71,9 @@ export function aboutView() {
         ${paragraphs('about.journey.experience')}
         ${paragraphs('about.journey.hanfu')}
         <p>${copy('about.interests')}</p>
+        <figure class="about-life-photo">
+          <img src="/assets/about/shixi-archery-1920.jpg" srcset="/assets/about/shixi-archery-960.jpg 960w, /assets/about/shixi-archery-1920.jpg 1920w" sizes="(max-width: 620px) 86vw, (max-width: 999px) 88vw, 780px" width="1920" height="1280" alt="Shixi Lin practicing archery" lang="en" loading="lazy" decoding="async" />
+        </figure>
       </div>
     </section>
 
