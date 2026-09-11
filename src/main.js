@@ -93,11 +93,11 @@ function shell(content, pathname) {
         </a>
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
+            ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/ai', t('home.products'), activePath)}
             ${navLink('/games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/design', t('design.nav'), activePath)}
-            ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/services', t('services.nav'), activePath)}
             ${navLink('/support', t('support.nav'), activePath)}
           </nav>
