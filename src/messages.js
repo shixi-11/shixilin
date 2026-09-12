@@ -6,6 +6,7 @@ import fr from './locales/fr.js'
 import de from './locales/de.js'
 import ar from './locales/ar.js'
 import { respawnCopy } from './locales/respawn.js'
+import { descriptions as bookDescriptions } from './book-copy.js'
 
 export const messages = {
   'zh-Hant': traditional, ja, ko, es, fr, de, ar,
@@ -648,4 +649,11 @@ export const messages = {
 }
 for (const [locale, [title, category, text]] of Object.entries(respawnCopy)) {
   Object.assign(messages[locale], { 'work.respawn.title': title, 'work.respawn.category': category, 'work.respawn.text': text })
+}
+for (const [locale, titles] of Object.entries(bookDescriptions)) {
+  if (locale.startsWith('zh')) continue
+  for (const [key, index] of [['book.poetry.title', 0], ['book.yinian.title', 1]]) {
+    const original = messages[locale][key].split(' · ')[0]
+    messages[locale][key] = original.replace(/[《》]/g, '') === titles[index] ? original : `${original} · ${titles[index]}`
+  }
 }

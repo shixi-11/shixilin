@@ -8,7 +8,7 @@ export async function fontCorpus() {
   const text = Object.values(messages).flatMap(locale => Object.values(locale))
   if (text.some(value => typeof value !== 'string')) throw new Error('Locale copy must be flat strings')
   for (const entry of await readdir(new URL('../src/', import.meta.url), { recursive: true })) {
-    if (/\.(js|css)$/.test(entry) && entry !== 'messages.js') {
+    if (/\.(js|css|json)$/.test(entry) && entry !== 'messages.js') {
       text.push(await readFile(new URL(`../src/${entry.replaceAll('\\', '/')}`, import.meta.url), 'utf8'))
     }
   }

@@ -1,5 +1,6 @@
 import { aboutView, bindAbout } from './about.js'
 import { bookEditions, poetryView, poemView, bindPoetry } from './poetry.js'
+import { loadBookLocale, bookPageMeta, bookUi } from './book-language.js'
 import './poetry.css'
 import { servicesView } from './services.js'
 import { designView } from './design.js'
@@ -32,9 +33,9 @@ const routes = {
 }
 
 for (const book of bookEditions) {
-  routes[book.path] = { title: `${book.title} · 光之十一`, description: book.intro, image: book.cover, imageWidth: 900, imageHeight: 1200, view: () => poetryView(book) }
+  routes[book.path] = { bookMeta: () => bookPageMeta(book), image: book.cover, imageWidth: 900, imageHeight: 1200, view: () => poetryView(book) }
   for (const poem of book.poems) {
-    routes[`${book.path}/${poem.id}`] = { title: `${poem.title} · ${book.title} · 光之十一`, description: poem.stanzas[0].join(''), image: poem.image?.src || book.cover, imageWidth: poem.image?.width || 900, imageHeight: poem.image?.height || 1200, view: () => poemView(book, poem) }
+    routes[`${book.path}/${poem.id}`] = { bookMeta: () => bookPageMeta(book, poem), image: poem.image?.src || book.cover, imageWidth: poem.image?.width || 900, imageHeight: poem.image?.height || 1200, view: () => poemView(book, poem) }
   }
 }
 
@@ -53,16 +54,34 @@ function normalizePath(pathname) {
   return pathname.replace(/\/$/, '')
 }
 
-function render() {
+let renderVersion = 0
+async function render() {
+  const version = ++renderVersion
   const pathname = normalizePath(window.location.pathname)
   const route = routes[pathname] || routes['/']
   const canonicalPath = route.canonicalPath || (routes[pathname] ? pathname : '/')
   const canonicalUrl = new URL(canonicalPath, 'https://shixilin.com').href
+  if (route.bookMeta) {
+    try { await loadBookLocale(getLocale()) }
+    catch (error) {
+      if (version !== renderVersion) return
+      const ui = bookUi()
+      const failedLocale = locales.find(item => item.id === getLocale())
+      document.documentElement.lang = failedLocale.lang
+      document.documentElement.dir = failedLocale.dir || 'ltr'
+      app.innerHTML = shell(`<section class="quiet-page"><p role="alert">${ui.loadError}</p><a class="text-link" href="${localizedHref(pathname)}">${ui.retry}</a></section>`, pathname)
+      bindNavigation()
+      console.error(error)
+      return
+    }
+    if (version !== renderVersion) return
+  }
+  const meta = route.bookMeta?.() || route
 
-  document.title = route.title || t(route.titleKey)
-  document.querySelector('meta[name="description"]').content = route.description || t(route.descriptionKey)
+  document.title = meta.title || t(route.titleKey)
+  document.querySelector('meta[name="description"]').content = meta.description || t(route.descriptionKey)
   document.querySelector('meta[property="og:title"]').content = document.title
-  document.querySelector('meta[property="og:description"]').content = route.description || t(route.descriptionKey)
+  document.querySelector('meta[property="og:description"]').content = meta.description || t(route.descriptionKey)
   document.querySelector('meta[property="og:site_name"]').content = t('brand.name')
   document.querySelector('meta[name="application-name"]').content = t('brand.name')
   document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
