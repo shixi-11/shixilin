@@ -191,7 +191,7 @@ export default complete({
   'meta.supportDescription': '光之十一의 글쓰기, 독립 제품, 게임 창작을 응원해 주세요. Ethereum, Arbitrum, Base를 지원합니다.',
   'home.dailyTitle': 'AI 에이전트 동향 일보', "home.dailyCategory": "AI 업계 소식",
     "home.dailyText": "AI 신기능, 오픈 소스 프로젝트, 업계 동향 중 주목할 소식을 매일 골라 전합니다.",
-    "home.prismText": "Codex, Claude, Grok 등 구독형 AI 명령줄 도구를 한곳에서 사용하는 Windows 데스크톱 작업 공간입니다. 프로젝트별로 작업을 관리하고 모델을 바꾸며 남은 사용량을 확인할 수 있습니다. 한 계정의 사용 한도에 도달하면 저장된 대화, 진행 메모, 도구 기록을 다른 계정에 넘겨 같은 프로젝트를 이어갑니다.",
+    "home.prismText": "Codex, Claude, Grok 등 구독형 AI 명령줄 도구를 모은 Windows 작업 공간. 프로젝트 관리, 모델 전환, 계정 간 작업 이어하기를 지원합니다.",
     "home.openPrism": "Prism Desk 알아보기",
   'home.readDaily': '일보 읽기', 'home.moheText': '컴퓨터 안에 사는 작은 수호자. 조용히 곁을 지키다, 가끔은 장난도 칩니다.', 'home.openMohe': '墨核 알아보기',
   'meta.gamesDescription': '光之十一가 제작 중인 Steam 게임, 《百世书》와 《墨斗·百兵》.',

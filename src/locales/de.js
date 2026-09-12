@@ -194,7 +194,7 @@ export default complete({
   'meta.supportDescription': 'Shixi Lins Schreiben, unabhängige Produkte und Spiele unterstützen. Ethereum, Arbitrum und Base werden unterstützt.',
   'home.dailyTitle': 'Täglicher Überblick zu KI-Agenten', "home.dailyCategory": "Neuigkeiten aus der KI-Branche",
     "home.dailyText": "Jeden Tag eine Auswahl neuer KI-Funktionen, Open-Source-Projekte und lesenswerter Neuigkeiten aus der Branche.",
-    "home.prismText": "Eine Windows-Arbeitsumgebung für KI-Kommandozeilenwerkzeuge mit Abonnement wie Codex, Claude und Grok. Aufgaben nach Projekten ordnen, Modelle wechseln und verfügbare Kontingente prüfen. Ist das Kontingent eines Kontos aufgebraucht, kann ein anderes mit dem gespeicherten Gespräch, Fortschrittsnotizen und Werkzeugprotokollen im selben Projekt weiterarbeiten.",
+    "home.prismText": "Ein Windows-Arbeitsbereich für KI-Kommandozeilentools im Abo wie Codex, Claude und Grok. Projekte verwalten, Modelle wechseln und Aufgaben mit einem anderen Konto fortsetzen.",
     "home.openPrism": "Prism Desk entdecken", 'home.readDaily': 'Überblick lesen',
   'home.moheText': 'Ein kleiner Wächter in deinem Rechner. Still an deiner Seite, gelegentlich zu Streichen aufgelegt.', 'home.openMohe': 'Mohe kennenlernen',
   'meta.gamesDescription': 'Shixi Lins Steam-Spiele in Entwicklung: 《百世书》 und 《墨斗·百兵》.',

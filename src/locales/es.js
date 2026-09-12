@@ -252,7 +252,7 @@ export default complete({
   'home.dailyTitle': 'Boletín diario sobre agentes de IA',
   "home.dailyCategory": "Noticias del sector de la IA",
     "home.dailyText": "Una selección diaria de nuevas funciones de IA, proyectos de código abierto y novedades del sector que merece la pena seguir.",
-    "home.prismText": "Un espacio de trabajo de escritorio para Windows que reúne herramientas de IA por suscripción y línea de comandos, como Codex, Claude y Grok. Organiza tareas por proyecto, cambia de modelo y consulta el uso disponible. Si una cuenta agota su cuota, continúa con otra en el mismo proyecto a partir de la conversación, las notas de progreso y los registros de herramientas guardados.",
+    "home.prismText": "Un espacio de trabajo Windows para herramientas de IA por suscripción y línea de comandos como Codex, Claude y Grok. Gestiona proyectos, cambia de modelo y continúa tareas con otra cuenta.",
     "home.openPrism": "Descubrir Prism Desk",
   'home.readDaily': 'Leer el boletín',
   'home.moheText': 'Un pequeño guardián en tu computadora. Te acompaña en silencio, a veces con alguna travesura.',

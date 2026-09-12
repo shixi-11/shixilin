@@ -217,7 +217,7 @@ export default complete({
   'meta.supportDescription': '光之十一の執筆、独立したプロダクト、ゲーム制作を応援する。Ethereum、Arbitrum、Baseに対応。',
   'home.dailyTitle': 'AIエージェント情報日報', "home.dailyCategory": "AI業界ニュース",
     "home.dailyText": "AIの新機能、オープンソースプロジェクト、業界動向から、注目の話題を毎日厳選。",
-    "home.prismText": "Codex、Claude、Grokなど、サブスクリプションで使うAIコマンドラインツールをまとめたWindowsデスクトップワークスペース。プロジェクトごとにタスクを管理し、モデルの切り替えや利用枠の確認ができます。利用枠を使い切ったら、保存済みの会話・進捗メモ・ツール記録を別のアカウントへ引き継ぎ、同じプロジェクトを続けられます。",
+    "home.prismText": "Codex、Claude、Grokなどのサブスクリプション型AIコマンドラインツールをまとめたWindowsワークスペース。プロジェクト管理、モデル切り替え、別アカウントへのタスク引き継ぎに対応。",
     "home.openPrism": "Prism Deskを見る",
   'home.readDaily': '日報を読む', 'home.moheText': 'パソコンに住む小さな守り手。静かに寄り添い、ときどきいたずら。', 'home.openMohe': '墨核について',
   'meta.gamesDescription': '光之十一が制作中のSteam向けゲーム：《百世书》と《墨斗·百兵》。',

@@ -199,7 +199,7 @@ export default complete({
   'home.dailyTitle': 'Veille quotidienne sur les agents IA',
   "home.dailyCategory": "Actualités du secteur de l’IA",
     "home.dailyText": "Chaque jour, une sélection de nouvelles fonctionnalités IA, de projets open source et d’évolutions du secteur à suivre.",
-    "home.prismText": "Un espace de travail Windows qui réunit des outils IA en ligne de commande accessibles par abonnement, comme Codex, Claude et Grok. Organisez les tâches par projet, changez de modèle et consultez les quotas disponibles. Lorsqu’un compte atteint sa limite, un autre peut reprendre le même projet à partir de la conversation, des notes d’avancement et des traces d’outils enregistrées.",
+    "home.prismText": "Un espace Windows pour les outils IA en ligne de commande par abonnement, comme Codex, Claude et Grok. Gérez vos projets, changez de modèle et poursuivez vos tâches avec un autre compte.",
     "home.openPrism": "Découvrir Prism Desk", 'home.readDaily': 'Lire la veille',
   'home.moheText': 'Un petit gardien dans votre ordinateur. Une présence discrète, parfois espiègle.', 'home.openMohe': 'Découvrir Mohe',
   'meta.gamesDescription': 'Les jeux Steam en cours de création par Shixi Lin : 《百世书》 et 《墨斗·百兵》.',
