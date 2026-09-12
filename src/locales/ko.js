@@ -211,7 +211,7 @@ export default complete({
   'baishishu.watch': '영상 보기', 'baishishu.videoFallback': '영상 다운로드',
   "about.creation.intro": "온라인 작가로서 전통 사(詞), 현대시, 소설, 노랫말, 디지털 문명에 관한 수필을 씁니다. 지금까지 수백 편의 독창적인 노랫말과 고전 시가를 창작했으며, 계속 글을 쓰고 있습니다.",
   "about.credential4": "브라이언 와이스 박사의 퇴행 치료 기법 전문",
-  "about.creation.books": "저서로는 사집 《一念凡生》, 여제를 소재로 한 장편소설 《代天行》, 현대시집 《还没取名儿呢》가 있습니다. 앞의 두 작품은 치뎬에서 연재 중이며, 현대시집은 정리 중입니다.",
+  "about.creation.books": "저서로는 사집 《一念凡生》, 여제를 소재로 한 장편소설 《代天行》, 현대시집 《还没取名儿呢》가 있습니다. 앞의 두 작품은 치뎬에서 연재 중입니다.",
   'about.contactIntro': '작품, 제품, 프로젝트 협업에 관해 편하게 이메일을 보내 주세요.',
   'home.elevenRole': '창업자', 'home.elevenText': '국제 무역, 투자, 기업 육성을 바탕으로 아이디어를 사업 현장과 연결합니다.', 'home.openEleven': '十一資本 보기',
   "about.productsText": "AI 에이전트 동향 일보, 墨核, 云笺, Prism Desk를 만들며 정보 정리, 로컬 AI 동반자, 구름 점술, AI 작업 인계를 탐구합니다.",

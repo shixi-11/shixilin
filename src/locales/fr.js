@@ -220,7 +220,7 @@ export default complete({
   'baishishu.watch': 'Voir l’extrait', 'baishishu.videoFallback': 'Télécharger la vidéo',
   "about.creation.intro": "J’écris en ligne des poèmes ci chinois, des vers modernes, des romans, des paroles de chansons et des essais sur la civilisation numérique. J’ai composé des centaines de textes de chansons et de poèmes classiques originaux, et continue d’écrire.",
   "about.credential4": "Spécialisation dans les méthodes de thérapie régressive du Dr Brian Weiss",
-  "about.creation.books": "Mes ouvrages comprennent le recueil de ci 《一念凡生》, le roman centré sur une impératrice 《代天行》 et le recueil de poésie moderne 《还没取名儿呢》. Les deux premiers paraissent en feuilleton sur Qidian ; le recueil moderne est en cours de préparation.",
+  "about.creation.books": "Mes ouvrages comprennent le recueil de ci 《一念凡生》, le roman centré sur une impératrice 《代天行》 et le recueil de poésie moderne 《还没取名儿呢》. Les deux premiers paraissent en feuilleton sur Qidian.",
   'about.contactIntro': 'Pour échanger autour des œuvres, des produits ou d’un projet commun, écrivez-moi.',
   'home.elevenRole': 'Fondatrice', 'home.elevenText': 'Commerce international, investissement et incubation d’entreprises : relier les idées à la pratique des affaires.', 'home.openEleven': 'Découvrir Eleven Capital',
   "about.productsText": "Je crée AI Agent Intelligence Daily, Mohe, Yunjian et Prism Desk pour explorer l’organisation de l’information, la compagnie d’une IA locale, la divination par les nuages et la continuité des tâches d’IA.",

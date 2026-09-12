@@ -1,4 +1,6 @@
 import { aboutView, bindAbout } from './about.js'
+import { bookEditions, poetryView, poemView, bindPoetry } from './poetry.js'
+import './poetry.css'
 import { servicesView } from './services.js'
 import { designView } from './design.js'
 import './styles.css'
@@ -29,6 +31,13 @@ const routes = {
   '/games/baishishu': { titleKey: 'meta.baishishu', descriptionKey: 'meta.baishishuDescription', image: '/assets/baishishu-opening.jpg', view: baishishuView },
 }
 
+for (const book of bookEditions) {
+  routes[book.path] = { title: `${book.title} · 光之十一`, description: book.intro, image: book.cover, imageWidth: 900, imageHeight: 1200, view: () => poetryView(book) }
+  for (const poem of book.poems) {
+    routes[`${book.path}/${poem.id}`] = { title: `${poem.title} · ${book.title} · 光之十一`, description: poem.stanzas[0].join(''), image: poem.image?.src || book.cover, imageWidth: poem.image?.width || 900, imageHeight: poem.image?.height || 1200, view: () => poemView(book, poem) }
+  }
+}
+
 const projects = [
   { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
   { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
@@ -50,19 +59,19 @@ function render() {
   const canonicalPath = route.canonicalPath || (routes[pathname] ? pathname : '/')
   const canonicalUrl = new URL(canonicalPath, 'https://shixilin.com').href
 
-  document.title = t(route.titleKey)
-  document.querySelector('meta[name="description"]').content = t(route.descriptionKey)
-  document.querySelector('meta[property="og:title"]').content = t(route.titleKey)
-  document.querySelector('meta[property="og:description"]').content = t(route.descriptionKey)
+  document.title = route.title || t(route.titleKey)
+  document.querySelector('meta[name="description"]').content = route.description || t(route.descriptionKey)
+  document.querySelector('meta[property="og:title"]').content = document.title
+  document.querySelector('meta[property="og:description"]').content = route.description || t(route.descriptionKey)
   document.querySelector('meta[property="og:site_name"]').content = t('brand.name')
   document.querySelector('meta[name="application-name"]').content = t('brand.name')
   document.querySelector('meta[name="apple-mobile-web-app-title"]').content = t('brand.name')
   document.querySelector('link[rel="canonical"]').href = canonicalUrl
   document.querySelector('meta[property="og:url"]').content = canonicalUrl
   document.querySelector('meta[property="og:image"]').content = new URL(route.image || '/assets/og-shixilin.jpg?v=20260906', 'https://shixilin.com').href
-  document.querySelector('meta[property="og:image:alt"]').content = route.image ? t(route.titleKey) : '光之十一 Shixi Lin｜独立作品与长期实验'
-  document.querySelector('meta[property="og:image:width"]').content = pathname === '/games/ink-duel' ? '1672' : '1200'
-  document.querySelector('meta[property="og:image:height"]').content = pathname === '/games/ink-duel' ? '941' : pathname === '/games/baishishu' ? '675' : '630'
+  document.querySelector('meta[property="og:image:alt"]').content = route.image ? document.title : '光之十一 Shixi Lin｜独立作品与长期实验'
+  document.querySelector('meta[property="og:image:width"]').content = route.image && route.imageWidth ? String(route.imageWidth) : pathname === '/games/ink-duel' ? '1672' : '1200'
+  document.querySelector('meta[property="og:image:height"]').content = route.image && route.imageHeight ? String(route.imageHeight) : pathname === '/games/ink-duel' ? '941' : pathname === '/games/baishishu' ? '675' : '630'
   const locale = locales.find(item => item.id === getLocale())
   document.documentElement.lang = locale.lang
   document.documentElement.dir = locale.dir || 'ltr'
@@ -72,6 +81,7 @@ function render() {
   if (locale.dir === 'rtl') isolateMixedText()
   bindNavigation()
   bindAbout()
+  bindPoetry()
   bindSupport()
 
   if (window.location.hash) {
@@ -117,7 +127,7 @@ function shell(content, pathname) {
 }
 
 function navLink(href, label, pathname) {
-  const gameSection = href === '/games' && pathname.startsWith('/games/')
+  const gameSection = ['/games', '/books'].includes(href) && pathname.startsWith(href + '/')
   const active = pathname === href || gameSection
   return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ` aria-current="${gameSection ? 'location' : 'page'}"` : ''}>${label}</a>`
 }
@@ -136,8 +146,11 @@ function aiView() {
 
 function booksView() {
   return `<section class="quiet-page"><h1>${t('home.books')}</h1><p>${t('booksPage.intro')}</p>
-    <div class="reading-list">${books.map(book => `<article class="reading-item" id="${book.title.split('.')[1]}"><small>${t(book.category)}</small><h2>${t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')}</h2><p>${t(book.text)}</p>${book.href ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`).join('')}</div>
-    <p class="book-status">${t('books.status')}</p>
+    <div class="reading-list">${books.map(book => {
+      const title = t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')
+      const internal = book.href?.startsWith('/')
+      return `<article class="reading-item" id="${book.title.split('.')[1]}"><small>${t(book.category)}</small><h2>${internal ? `<a class="internal-link" href="${book.href}">${title}</a>` : title}</h2><p>${t(book.text)}</p>${book.href && !internal ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`
+    }).join('')}</div>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`
 }

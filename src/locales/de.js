@@ -215,7 +215,7 @@ export default complete({
   'baishishu.watch': 'Ausschnitt ansehen', 'baishishu.videoFallback': 'Video herunterladen',
   "about.creation.intro": "Ich veröffentliche online klassische chinesische Ci-Lyrik, moderne Gedichte, Romane, Liedtexte und Essays über digitale Zivilisation. Bis heute sind Hunderte eigener Liedtexte und klassischer Gedichte entstanden, und ich schreibe weiter.",
   "about.credential4": "Spezialisiert auf die Methoden der Regressionstherapie nach Dr. Brian Weiss",
-  "about.creation.books": "Zu meinen Werken zählen die Ci-Sammlung 《一念凡生》, der Roman über eine Kaiserin 《代天行》 und der moderne Gedichtband 《还没取名儿呢》. Die ersten beiden erscheinen als Fortsetzungen auf Qidian; der moderne Gedichtband wird derzeit zusammengestellt.",
+  "about.creation.books": "Zu meinen Werken zählen die Ci-Sammlung 《一念凡生》, der Roman über eine Kaiserin 《代天行》 und der moderne Gedichtband 《还没取名儿呢》. Die ersten beiden erscheinen als Fortsetzungen auf Qidian.",
   'about.contactIntro': 'Für einen Austausch über Werke, Produkte oder gemeinsame Projekte freue ich mich über eine Nachricht.',
   'home.elevenRole': 'Gründerin', 'home.elevenText': 'Internationaler Handel, Investitionen und Unternehmensinkubation verbinden Ideen mit unternehmerischer Praxis.', 'home.openEleven': 'Eleven Capital entdecken',
   "about.productsText": "Ich entwickle AI Agent Intelligence Daily, Mohe, Yunjian und Prism Desk und erkunde Informationsaufbereitung, lokale KI-Begleitung, Wolkenorakel und die Übergabe von KI-Aufgaben.",

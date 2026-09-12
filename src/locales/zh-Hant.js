@@ -301,7 +301,7 @@ export default {
   "baishishu.videoFallback": "下載影片觀看",
   "about.creation.intro": "我是一名網路作家，寫傳統詞作、現代詩，也寫小說、歌詞與數位文明隨筆。\n\n累計創作數百首原創歌詞與古詩詞，筆耕不輟。",
   "about.credential4": "擅長布萊恩·魏斯博士的時間回溯療法",
-  "about.creation.books": "著有古詞牌集《一念凡生》、女帝題材長篇小說《代天行》，以及現代詩集《還沒取名兒呢》。\n\n《一念凡生》與《代天行》在起點連載，現代詩集正在整理中。",
+  "about.creation.books": "著有古詞牌集《一念凡生》、女帝題材長篇小說《代天行》，以及現代詩集《還沒取名兒呢》。\n\n《一念凡生》與《代天行》在起點連載。",
   "about.contactIntro": "關於作品、產品與項目合作，歡迎來信。",
   "home.elevenRole": "創始人",
   "home.elevenText": "立足國際貿易、投資與企業孵化，連接想法與商業實踐。",

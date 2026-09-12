@@ -56,8 +56,8 @@ export function homeView() {
         <div class="paper-book-card">
           <div class="home-book-links">${books.filter(book => book.href).map(book => {
             const [original, translation] = t(book.title).split(' · ')
-            return `<a href="${book.href}" target="_blank" rel="noopener"><span class="home-book-name">${original}${translation ? `<small>${translation}</small>` : ''}</span><span aria-hidden="true">↗</span></a>`
-          }).join('')}<div class="home-book-upcoming"><span>${t('book.poetry.title').split(' · ').map((part,index) => index ? '<small>' + part + '</small>' : part).join('')}</span></div><a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
+            return `<a href="${book.href}"${book.href.startsWith('/') ? ' class="internal-link"' : ' target="_blank" rel="noopener"'}><span class="home-book-name">${original}${translation ? `<small>${translation}</small>` : ''}</span><span aria-hidden="true">${book.href.startsWith('/') ? '→' : '↗'}</span></a>`
+          }).join('')}<a class="book-shelf-link internal-link" href="/books">${t('home.browseBooks')} <span aria-hidden="true">→</span></a></div>
           <img src="/assets/books.png" alt="" width="1536" height="1024" loading="lazy" />
         </div>
       </section>

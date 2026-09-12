@@ -279,7 +279,7 @@ export default complete({
   'baishishu.videoFallback': 'Descargar el vídeo',
   "about.creation.intro": "Escribo en internet poesía ci china, verso moderno, novelas, letras de canciones y ensayos sobre la civilización digital. He creado cientos de letras y poemas clásicos originales, y sigo escribiendo.",
   "about.credential4": "Especializada en los métodos de terapia regresiva del Dr. Brian Weiss",
-  "about.creation.books": "Mis obras incluyen el poemario ci 《一念凡生》, la novela sobre una emperatriz 《代天行》 y el poemario moderno 《还没取名儿呢》. Las dos primeras se publican por entregas en Qidian; el poemario moderno está en preparación.",
+  "about.creation.books": "Mis obras incluyen el poemario ci 《一念凡生》, la novela sobre una emperatriz 《代天行》 y el poemario moderno 《还没取名儿呢》. Las dos primeras se publican por entregas en Qidian.",
   'about.contactIntro': 'Para hablar de obras, productos o posibles colaboraciones, escríbeme.',
   'home.elevenRole': 'Fundadora',
   'home.elevenText': 'Comercio internacional, inversión e incubación de empresas: conectar las ideas con la práctica empresarial.',

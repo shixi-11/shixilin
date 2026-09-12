@@ -239,7 +239,7 @@ export default complete({
   'baishishu.watch': '映像を見る', 'baishishu.videoFallback': '動画をダウンロード',
   "about.creation.intro": "ネット作家として、伝統的な詞、現代詩、小説、歌詞、デジタル文明についての随筆を書いています。これまで数百篇のオリジナルの歌詞と漢詩・詞を創作し、今も筆を執り続けています。",
   "about.credential4": "ブライアン・ワイス博士の退行療法を得意分野とする",
-  "about.creation.books": "著作に詞集《一念凡生》、女帝を題材にした長編小説《代天行》、現代詩集《还没取名儿呢》があります。最初の二作は起点で連載中で、現代詩集は編集中です。",
+  "about.creation.books": "著作に詞集《一念凡生》、女帝を題材にした長編小説《代天行》、現代詩集《还没取名儿呢》があります。最初の二作は起点で連載中です。",
   'about.contactIntro': '作品、プロダクト、プロジェクトのご相談は、メールでどうぞ。',
   'home.elevenRole': '創業者', 'home.elevenText': '国際貿易、投資、企業育成を通じて、アイデアを事業の実践につなげます。', 'home.openEleven': '十一資本を見る',
   "about.productsText": "AIエージェント情報日報、墨核、雲箋、Prism Deskを制作し、情報整理、ローカルAIとの触れ合い、雲占い、AIタスクの引き継ぎを探っています。",

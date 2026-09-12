@@ -87,7 +87,7 @@ export function aboutView() {
           ${paragraphs('about.creation.books')}
           <div class="about-related-links">${['yinian', 'daitian', 'poetry'].map(id => {
             const book = books.find(item => item.title === `book.${id}.title`)
-            return book.href ? `<a class="about-link" href="${book.href}" target="_blank" rel="noopener"><span class="about-link-label">${copy(book.title)}</span>${arrow}</a>` : link(`/books#${id}`, book.title)
+            return book.href?.startsWith('/') ? link(book.href, book.title) : book.href ? `<a class="about-link" href="${book.href}" target="_blank" rel="noopener"><span class="about-link-label">${copy(book.title)}</span>${arrow}</a>` : link(`/books#${id}`, book.title)
           }).join('')}</div>
         </article>
         <article class="about-work">
