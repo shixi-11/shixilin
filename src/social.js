@@ -54,12 +54,5 @@ export const socialProfiles = [
     "handle": "@shixi_11",
     "href": "https://www.instagram.com/shixi_11/",
     "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/><circle cx=\"17.5\" cy=\"6.5\" r=\".7\" fill=\"currentColor\" stroke=\"none\"/></svg>"
-  },
-  {
-    "id": "facebook",
-    "name": "Facebook",
-    "handle": "@shixi11",
-    "href": "https://www.facebook.com/shixi11",
-    "icon": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" stroke=\"none\" d=\"M14 22v-9h3l.5-3.5H14V7.3c0-1 .3-1.8 1.8-1.8h1.9V2.4c-.4-.1-1.5-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.8v2.5H7V13h3.2v9H14Z\"/></svg>"
   }
 ]

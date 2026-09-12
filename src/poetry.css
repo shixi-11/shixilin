@@ -35,7 +35,7 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poetry-contents-heading h2 { margin: 0; font-weight: 500; font-size: 26px; }
 .poetry-contents-heading > span { color: #848574; font-size: 12px; }
 .poetry-year { margin-top: 27px; }
-.poetry-year h3 { margin: 0 0 10px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; color: #958157; }
+.poetry-year h3 { margin: 0 0 10px; font-family: var(--locale-serif); font-size: 14px; font-weight: 400; color: #958157; }
 .poetry-year > h3 { font-size: 22px; font-weight: 500; margin-bottom: 16px; line-height: 1.5; }
 .poetry-year ol { list-style: none; margin: 0; padding: 0; }
 .poetry-year a { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 15px 0; border-bottom: 1px solid #555b4c16; line-height: 1.7; font-size: 16px; }
