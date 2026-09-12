@@ -33,7 +33,7 @@ const routes = {
 }
 
 for (const book of bookEditions) {
-  routes[book.path] = { bookMeta: () => bookPageMeta(book), image: book.cover, imageWidth: 900, imageHeight: 1200, view: () => poetryView(book) }
+  routes[book.path] = { bookMeta: () => bookPageMeta(book), image: book.cover, imageWidth: book.coverWidth || 900, imageHeight: book.coverHeight || 1200, view: () => poetryView(book) }
   for (const poem of book.poems) {
     routes[`${book.path}/${poem.id}`] = { bookMeta: () => bookPageMeta(book, poem), image: poem.image?.src || book.cover, imageWidth: poem.image?.width || 900, imageHeight: poem.image?.height || 1200, view: () => poemView(book, poem) }
   }

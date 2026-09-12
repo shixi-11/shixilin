@@ -31,7 +31,7 @@ for (const [page, key, image] of [
 
 // Each book and poem has its own shareable URL and readable static content.
 for (const book of bookEditions) {
-  const entries = [{ path: book.path, title: book.title, description: book.intro.replace(/\n+/g, ' '), image: book.cover, width: 900, height: 1200,
+  const entries = [{ path: book.path, title: book.title, description: book.intro.replace(/\n+/g, ' '), image: book.cover, width: book.coverWidth || 900, height: book.coverHeight || 1200,
     body: `<h1>${escape(book.title)}</h1><p>光之十一</p><ol>${book.poems.map(poem => `<li><a href="${book.path}/${poem.id}">${escape(poem.title)}</a> <time datetime="${poem.date}">${poem.date}</time></li>`).join('')}</ol>` },
   ...book.poems.map(poem => ({ path: `${book.path}/${poem.id}`, title: `${poem.title} · ${book.title}`, description: poem.stanzas[0].join(''), image: poem.image?.src || book.cover, width: poem.image?.width || 900, height: poem.image?.height || 1200,
     body: `<a href="${book.path}">${escape(book.title)}</a><h1>${escape(poem.title)}</h1><p>光之十一 · <time datetime="${poem.date}">${poem.date}</time></p>${poem.image ? `<img src="${poem.image.src}" width="${poem.image.width}" height="${poem.image.height}" alt="${escape(poem.title)}" style="max-width:100%;height:auto">` : ''}${poem.stanzas.map(stanza => `<p>${stanza.map(escape).join('<br>')}</p>`).join('')}${(poem.notes || []).map(stanza => `<p>${stanza.map(escape).join('<br>')}</p>`).join('')}${poem.credit ? `<p>${escape(poem.credit)}</p>` : ''}` }))]
