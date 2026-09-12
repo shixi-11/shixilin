@@ -1,3 +1,4 @@
+// Original text and writing dates from the author’s DOCX.
 export const poems = [
   {
     "id": "2018-07-30",
@@ -241,7 +242,12 @@ export const poems = [
         "是微风或飓风",
         "且让一让"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2022-06-19.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2022-10-16",
@@ -279,7 +285,12 @@ export const poems = [
         "永恒即刹那的",
         "——最美"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2022-10-16.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2022-12-16",
@@ -311,7 +322,12 @@ export const poems = [
         "幽冥的河水在飘摇",
         "衔接——"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2022-12-16.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2022-12-28",
@@ -345,7 +361,12 @@ export const poems = [
         "所以 我允许了去经历",
         "合成身临其境的不停止"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2022-12-28.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-01-07",
@@ -411,7 +432,12 @@ export const poems = [
         "于是，恢复，",
         "如常，有条不紊的。"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-01-07.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-01-13",
@@ -459,7 +485,12 @@ export const poems = [
         "窗外——",
         "只有现在"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-01-13.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-01-18",
@@ -493,7 +524,12 @@ export const poems = [
         "信仰",
         "总有人守候"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-01-18.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-08-14",
@@ -517,7 +553,12 @@ export const poems = [
         "道此",
         "长生"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-08-14.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-08-15",
@@ -547,7 +588,12 @@ export const poems = [
         "所以舍",
         "所以舍了又得"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-08-15.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-08-24",
@@ -591,7 +637,12 @@ export const poems = [
         "永恒的尽头",
         "无尽的无尽"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-08-24.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-08-26",
@@ -640,7 +691,12 @@ export const poems = [
         "心跳告诉鲜活的",
         "——这"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-08-26.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-10-07",
@@ -700,7 +756,12 @@ export const poems = [
         "经年不衰 ",
         "回归于世"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-10-07.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2023-12-12",
@@ -747,7 +808,12 @@ export const poems = [
         "一个人的故事",
         "——从头至尾"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2023-12-12.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2024-02-17",
@@ -794,7 +860,12 @@ export const poems = [
       [
         "你心中可有花骨朵在开？"
       ]
-    ]
+    ],
+    "image": {
+      "src": "/assets/poetry/2024-02-17.jpg",
+      "width": 1600,
+      "height": 900
+    }
   },
   {
     "id": "2024-04-11",
