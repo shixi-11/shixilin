@@ -12,7 +12,7 @@ const number = index => String(index + 1).padStart(2, '0')
 
 function contents(book, active) {
   const groups = [...new Set(book.poems.map(poem => poem.volume || poem.date.slice(0, 4)))]
-  return groups.map(group => `<section class="poetry-year"><h3>${group}</h3><ol>${book.poems.map((poem, index) => (poem.volume || poem.date.slice(0, 4)) === group ? `<li><a class="internal-link" href="${href(book, poem)}"${active === poem.id ? ' aria-current="page"' : ''}><span class="poetry-number" aria-hidden="true">${number(index)}</span><span>${escape(poem.title)}</span>${date(poem)}</a></li>` : '').join('')}</ol></section>`).join('')
+  return groups.map(group => `<section class="poetry-year${book.poems.some(poem => poem.volume === group) ? ' poetry-volume' : ''}"><h3>${group}</h3><ol>${book.poems.map((poem, index) => (poem.volume || poem.date.slice(0, 4)) === group ? `<li><a class="internal-link" href="${href(book, poem)}"${active === poem.id ? ' aria-current="page"' : ''}><span class="poetry-number" aria-hidden="true">${number(index)}</span><span>${escape(poem.title)}</span>${date(poem)}</a></li>` : '').join('')}</ol></section>`).join('')
 }
 
 export function poetryView(source) {

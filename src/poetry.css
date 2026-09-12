@@ -36,8 +36,9 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poetry-contents-heading > span { color: #848574; font-size: 12px; }
 .poetry-year { margin-top: 27px; }
 .poetry-year h3 { margin: 0 0 10px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; color: #958157; }
+.poetry-year > h3 { font-size: 22px; font-weight: 500; margin-bottom: 16px; line-height: 1.5; }
 .poetry-year ol { list-style: none; margin: 0; padding: 0; }
-.poetry-year a { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 15px 0; border-bottom: 1px solid #555b4c16; line-height: 1.7; font-size: 17px; }
+.poetry-year a { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 15px 0; border-bottom: 1px solid #555b4c16; line-height: 1.7; font-size: 16px; }
 .poetry-number, .poetry-year time { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-variant-numeric: tabular-nums; color: #8b8b7d; }
 .poetry-year a:hover, .poetry-back:hover, .poem-pagination a:hover { color: #967b40; }
 .poetry-year a[aria-current] { color: #846b35; }
@@ -48,6 +49,7 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poetry-reader-directory > summary span { display: none; }
 .poetry-reader-directory .poetry-year { margin-top: 18px; }
 .poetry-reader-directory .poetry-year a { grid-template-columns: 20px minmax(0, 1fr); gap: 7px; padding: 10px 0; font-size: 13px; }
+.poetry-reader-directory .poetry-year > h3 { font-size: 17px; }
 .poetry-reader-directory time { display: none; }
 .poetry-page { min-width: 0; }
 .poem-heading h1 { font-size: 32px; font-weight: 500; line-height: 1.65; margin: 0; }
@@ -60,7 +62,9 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poetry-external { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #74633e; font-size: 14px; }
 .poetry-external:hover { color: #74633e; }
 .reading-item.linked-book { padding: 0; }
-.book-entry { display: block; padding: 30px 0; }
+.book-entry { display: grid; grid-template-columns: 144px minmax(0, 1fr); align-items: center; gap: 36px; padding: 30px 0; }
+.book-list-cover { display: block; width: 100%; height: auto; box-shadow: 3px 5px 14px #282b241a; }
+.book-entry-copy { min-width: 0; }
 .book-entry:hover h2, .book-entry:focus-visible h2 { color: #8a7b57; }
 .book-entry:focus-visible { outline: 1px solid #9b814c; outline-offset: 5px; }
 .poem-illustration { margin: 0 0 44px; }
@@ -86,6 +90,7 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
   .poetry-frontispiece h1 { font-size: 32px; }
 }
 @media (max-width: 620px) {
+  .book-entry { grid-template-columns: 84px minmax(0, 1fr); gap: 20px; align-items: start; }
   .poetry-book, .poetry-reader { padding: 24px 0 52px; }
   .poetry-frontispiece { display: flow-root; padding: 25px 0 38px; }
   .poetry-book-cover, .poetry-title-leaf { float: inline-start; width: 112px; margin-inline-end: 22px; margin-bottom: 20px; }
@@ -101,7 +106,8 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
   .poetry-start { margin-top: 18px; }
   .poetry-contents-heading { padding-top: 24px; }
   .poetry-contents-heading > span { font-size: 10px; }
-  .poetry-year a { gap: 9px; grid-template-columns: 20px minmax(0, 1fr) auto; font-size: 16px; }
+  .poetry-year > h3 { font-size: 20px; }
+  .poetry-year a { gap: 9px; grid-template-columns: 20px minmax(0, 1fr) auto; font-size: 15px; }
   .poetry-year time { font-size: 11px; }
   .poem-heading h1 { font-size: 27px; }
   .poem-verses { font-size: 17px; margin-top: 30px; }

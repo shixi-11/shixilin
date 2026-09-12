@@ -168,7 +168,7 @@ function booksView() {
     <div class="reading-list">${books.map(book => {
       const title = t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')
       const internal = book.href?.startsWith('/')
-      return internal ? `<article class="reading-item linked-book" id="${book.title.split('.')[1]}"><a class="book-entry internal-link" href="${book.href}"><small>${t(book.category)}</small><h2>${title}</h2><p>${t(book.text)}</p><span class="text-link book-read">${bookUi().start} <span aria-hidden="true">→</span></span></a></article>` : `<article class="reading-item" id="${book.title.split('.')[1]}"><small>${t(book.category)}</small><h2>${title}</h2><p>${t(book.text)}</p>${book.href ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`
+      return `<article class="reading-item linked-book" id="${book.title.split('.')[1]}"><a class="book-entry${internal ? ' internal-link' : ''}" href="${book.href}"${internal ? '' : ' target="_blank" rel="noopener"'}><img class="book-list-cover" src="${book.cover}" width="180" height="240" alt="${bookUi().cover}" decoding="async" /><div class="book-entry-copy"><small>${t(book.category)}</small><h2>${title}</h2><p>${t(book.text)}</p><span class="text-link book-read">${internal ? bookUi().start : t('books.read')} <span aria-hidden="true">${internal ? '→' : '↗'}</span></span></div></a></article>`
     }).join('')}</div>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`
