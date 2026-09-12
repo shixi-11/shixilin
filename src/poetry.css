@@ -57,7 +57,7 @@ html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poem-byline time { font-family: inherit; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .poem-meta-separator { color: #a09b88; }
 .poetry-actions { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 26px; }
-.poetry-external { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #777a69; font-size: 13px; }
+.poetry-external { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #74633e; font-size: 14px; }
 .poetry-external:hover { color: #74633e; }
 .reading-item.linked-book { padding: 0; }
 .book-entry { display: block; padding: 30px 0; }
