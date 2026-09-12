@@ -19,7 +19,7 @@ export function poetryView(book) {
     <a class="poetry-back internal-link" href="/books">← 书籍</a>
     <header class="poetry-frontispiece">
       ${book.cover ? `<img class="poetry-book-cover" src="${book.cover}" width="900" height="1200" alt="《${book.title}》书封" decoding="async" />` : `<div class="poetry-title-leaf" aria-hidden="true"><span>一念凡生</span><small>光之十一</small></div>`}
-      <div><p class="poetry-kicker">${book.category} · ${book.years}</p><h1>${book.title}</h1><p class="poetry-author">光之十一 著</p><p class="poetry-intro">${book.intro}</p><a class="poetry-start internal-link" href="${href(book, book.poems[0])}">开始阅读 <span aria-hidden="true">→</span></a></div>
+      <div><p class="poetry-kicker">${book.category} · ${book.years}</p><h1>${book.title}</h1><p class="poetry-author">光之十一 著</p><p class="poetry-intro">${book.intro}</p><div class="poetry-actions"><a class="poetry-start internal-link" href="${href(book, book.poems[0])}">开始阅读 <span aria-hidden="true">→</span></a>${book.external ? `<a class="poetry-external" href="${book.external}" target="_blank" rel="noopener">起点阅读 <span aria-hidden="true">↗</span></a>` : ''}</div></div>
     </header>
     <section class="poetry-contents" id="contents" aria-labelledby="poetry-contents-title"><div class="poetry-contents-heading"><h2 id="poetry-contents-title">目录</h2><span>${book.poems.length} 篇 · ${book.years}</span></div>${contents(book)}</section>
   </section>`

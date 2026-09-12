@@ -149,7 +149,7 @@ function booksView() {
     <div class="reading-list">${books.map(book => {
       const title = t(book.title).split(' · ').map((part, index) => `<span class="${index ? 'book-translation' : 'book-original'}">${part}</span>`).join('')
       const internal = book.href?.startsWith('/')
-      return `<article class="reading-item" id="${book.title.split('.')[1]}"><small>${t(book.category)}</small><h2>${internal ? `<a class="internal-link" href="${book.href}">${title}</a>` : title}</h2><p>${t(book.text)}</p>${book.href && !internal ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`
+      return internal ? `<article class="reading-item linked-book" id="${book.title.split('.')[1]}"><a class="book-entry internal-link" href="${book.href}"><small>${t(book.category)}</small><h2>${title}</h2><p>${t(book.text)}</p><span class="book-entry-arrow" aria-hidden="true">→</span></a></article>` : `<article class="reading-item" id="${book.title.split('.')[1]}"><small>${t(book.category)}</small><h2>${title}</h2><p>${t(book.text)}</p>${book.href ? `<a class="text-link" href="${book.href}" target="_blank" rel="noopener">${t('books.read')} <span aria-hidden="true">↗</span></a>` : ''}</article>`
     }).join('')}</div>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`

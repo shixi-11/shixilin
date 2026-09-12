@@ -39,8 +39,17 @@
 .poem-heading h1 { font-size: 32px; font-weight: 500; line-height: 1.65; margin: 0; }
 .poetry-word { white-space: nowrap; }
 .poem-subtitle { display: block; margin-top: 10px; font-size: .65em; font-weight: 400; color: #757767; }
-.poem-byline { display: flex; flex-wrap: wrap; gap: 22px; margin: 20px 0 32px; color: #7d806f; font-size: 13px; }
-.poem-byline time { font-family: 'Source Sans 3', sans-serif; font-variant-numeric: tabular-nums; }
+.poem-byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin: 16px 0 32px; color: #7d806f; font-size: 12px; line-height: 1.7; }
+.poem-byline time { font-family: inherit; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.poem-byline time::before { content: '·'; display: inline-block; margin-inline-end: 12px; color: #a09b88; }
+.poetry-actions { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 26px; }
+.poetry-external { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #777a69; font-size: 13px; }
+.poetry-external:hover { color: #74633e; }
+.reading-item.linked-book { padding: 0; }
+.book-entry { display: block; position: relative; padding: 30px 46px 30px 0; padding-inline: 0 46px; }
+.book-entry-arrow { position: absolute; inset-inline-end: 8px; top: 50%; color: #8a7b57; font-size: 23px; transform: translateY(-50%); }
+.book-entry:hover h2, .book-entry:focus-visible h2 { color: #8a7b57; }
+.book-entry:focus-visible { outline: 1px solid #9b814c; outline-offset: 5px; }
 .poem-illustration { margin: 0 0 44px; }
 .poem-illustration img { width: 100%; height: auto; display: block; }
 .poem-verses { margin: 38px 0 64px; font-size: 18px; line-height: 2; }
@@ -65,13 +74,15 @@
 }
 @media (max-width: 620px) {
   .poetry-book, .poetry-reader { padding: 24px 0 52px; }
-  .poetry-frontispiece { grid-template-columns: 112px minmax(0, 1fr); gap: 22px; align-items: start; padding: 25px 0 38px; }
+  .poetry-frontispiece { display: flow-root; padding: 25px 0 38px; }
+  .poetry-book-cover, .poetry-title-leaf { float: inline-start; width: 112px; margin-inline-end: 22px; margin-bottom: 20px; }
   .poetry-frontispiece h1 { font-size: 25px; line-height: 1.6; }
-  .poetry-title-leaf { gap: 12px; }
-  .poetry-title-leaf > span { font-size: 24px; letter-spacing: .1em; }
+  .poetry-title-leaf { gap: 8px; padding: 14px; box-sizing: border-box; }
+  .poetry-title-leaf > span { font-size: 22px; letter-spacing: .1em; }
+  .poetry-title-leaf small { font-size: 9px; }
   .poetry-kicker { font-size: 10px; margin-bottom: 14px; letter-spacing: 0; }
   .poetry-author { font-size: 13px; margin-top: 12px; }
-  .poetry-intro { font-size: 14px; margin-top: 20px; line-height: 1.9; }
+  .poetry-intro { clear: both; font-size: 14px; margin-top: 20px; padding-top: 4px; line-height: 1.9; }
   .poetry-start { gap: 22px; margin-top: 18px; }
   .poetry-contents-heading { padding-top: 24px; }
   .poetry-contents-heading > span { font-size: 10px; }
