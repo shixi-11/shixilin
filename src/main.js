@@ -40,11 +40,11 @@ for (const book of bookEditions) {
 }
 
 const projects = [
-  { slug: 'daily', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
-  { slug: 'mohe', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
-  { slug: 'yunjian', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
-  { slug: 'prism', category: 'work.prism.category', title: 'work.prism.title', text: 'work.prism.text', href: 'https://github.com/shixi-11/prism-desk', action: 'work.github' },
-  { slug: 'respawn', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-claude-resets/', action: 'work.open' },
+  { slug: 'daily', image: '/assets/ai/daily.png', category: 'work.daily.category', title: 'work.daily.title', text: 'work.daily.text', href: dailyUrl(), action: 'home.readDaily' },
+  { slug: 'mohe', image: '/assets/mohe-idle-v2-cutout.png', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
+  { slug: 'yunjian', image: '/assets/cloud.png', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
+  { slug: 'prism', image: '/assets/ai/prism.png', category: 'work.prism.category', title: 'work.prism.title', text: 'work.prism.text', href: 'https://github.com/shixi-11/prism-desk', action: 'work.github' },
+  { slug: 'respawn', image: '/assets/ai/resets.jpg', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-claude-resets/', action: 'work.open' },
 ]
 
 const app = document.querySelector('#app')
@@ -155,10 +155,11 @@ function aiView() {
   return `<section class="quiet-page"><h1>${t('aiPage.title')}</h1><p>${t('aiPage.intro')}</p>
     <ol class="reading-list ai-list">${projects.map((project, index) => {
       const href = project.href
-      return `<li class="reading-item">
-      <small class="ai-item-meta"><span class="ai-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${t(project.category)}</small><h2>${t(project.title).replace(/AI智能体|情报日报/g, phrase => `<span class="title-phrase">${phrase}</span>`)}</h2><p>${t(project.text)}</p>
+      return `<li class="reading-item ai-product">
+      <a class="ai-product-image ai-product-${project.slug}" href="${href}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}><img src="${project.image}" alt="${t(project.title)}" loading="lazy" decoding="async"></a>
+      <div class="ai-product-copy"><small class="ai-item-meta"><span class="ai-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${t(project.category)}</small><h2>${t(project.title).replace(/AI智能体|情报日报/g, phrase => `<span class="title-phrase">${phrase}</span>`)}</h2><p>${t(project.text)}</p>
       <a class="text-link" href="${href}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${href.startsWith('https:') ? '↗' : '→'}</span></a>
-    </li>`}).join('')}</ol>
+    </div></li>`}).join('')}</ol>
     <a class="text-link internal-link" href="/">${t('books.back')} <span aria-hidden="true">←</span></a>
   </section>`
 }
