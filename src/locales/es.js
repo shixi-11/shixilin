@@ -154,7 +154,7 @@ export default complete({
   'book.daitian.category': 'Novela',
   'book.daitian.text': 'En una época de caos entre quince reinos, Yan An es nombrada heredera al trono en plena crisis. Así comienza el camino que la llevará a convertirse en la emperatriz de la unificación.',
   'book.poetry.category': 'Poesía contemporánea',
-  'book.poetry.text': 'Poemas escritos entre 2018 y 2026 sobre el cuerpo, las relaciones, los viajes lejanos y cómo los cambios transforman a una persona.',
+  'book.poetry.text': "Poemas modernos sobre el cuerpo, las relaciones, los viajes y cómo el cambio transforma a una persona.",
   'books.status': 'El poemario contemporáneo 《还没取名儿呢》 está en preparación.',
   'books.back': 'Volver al inicio',
   'booksPage.title': 'Escritura y manuscritos',

@@ -143,7 +143,7 @@ export default complete({
   'book.daitian.category': '長編小説',
   'book.daitian.text': '十五の国が争う乱世。言安は危機のなかで皇位継承者に立てられ、統一を成し遂げる女帝への道を歩みます。',
   'book.poetry.category': '現代詩集',
-  'book.poetry.text': '2018–2026年の現代詩を収録。身体、人との関係、遠い旅、そして変化が人をどう形作り直すかを綴ります。',
+  'book.poetry.text': "身体、関係、旅、そして変化が人を新たに形づくる過程を綴る現代詩。",
   'books.status': '現代詩集《还没取名儿呢》は現在編集中です。',
   'books.back': 'ホームへ戻る',
   'about.travel.term': '旅',

@@ -32,5 +32,5 @@ export function localizeBook(source) {
 export function bookPageMeta(source, original) {
   const book = localizeBook(source)
   const poem = original && book.poems.find(item => item.id === original.id)
-  return {title: `${poem ? poem.title+' · ' : ''}${book.title} · ${bookUi().author}`,description: poem ? poem.stanzas[0].join(' ') : book.intro}
+  return {title: `${poem ? poem.title+' · ' : ''}${book.title} · ${bookUi().author}`,description: poem ? poem.stanzas[0].join(' ') : book.intro.replace(/\n+/g, ' ')}
 }

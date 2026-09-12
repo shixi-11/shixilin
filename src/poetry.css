@@ -9,7 +9,7 @@
 .poetry-reader[dir='rtl'] .poem-next { text-align: left; }
 .poetry-reader[dir='rtl'] .poetry-reader-directory { padding-right: 0; padding-left: 16px; }
 .poetry-book[dir='rtl'] .poetry-start > span { transform: scaleX(-1); }
-html[dir='rtl'] .book-entry-arrow { transform: translateY(-50%) scaleX(-1); }
+html[dir='rtl'] .book-read > span { transform: scaleX(-1); }
 .poetry-reader:not(:lang(zh)) .poem-verses { line-height: 1.9; }
 .poetry-back { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: #777a69; }
 .poetry-frontispiece { display: grid; grid-template-columns: 240px minmax(0, 1fr); align-items: center; gap: 76px; padding: 34px 0 64px; }
@@ -27,6 +27,8 @@ html[dir='rtl'] .book-entry-arrow { transform: translateY(-50%) scaleX(-1); }
 .poetry-frontispiece h1 { margin: 0; font-size: 40px; font-weight: 500; line-height: 1.55; }
 .poetry-author { margin: 20px 0 0; font-size: 15px; color: #666d60; }
 .poetry-intro { margin: 30px 0 0; max-width: 480px; font-size: 16px; line-height: 2; color: #636a5f; }
+.poetry-intro > p { margin: 0 0 1em; }
+.poetry-intro > p:last-child { margin-bottom: 0; }
 .poetry-start { display: inline-flex; gap: 40px; align-items: center; min-height: 44px; margin-top: 24px; color: #74633e; border-bottom: 1px solid #ac9766; font-size: 14px; }
 .poetry-contents { max-width: 840px; margin: 0 auto; scroll-margin-top: 24px; }
 .poetry-contents-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 30px 0 10px; }
@@ -58,8 +60,7 @@ html[dir='rtl'] .book-entry-arrow { transform: translateY(-50%) scaleX(-1); }
 .poetry-external { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #777a69; font-size: 13px; }
 .poetry-external:hover { color: #74633e; }
 .reading-item.linked-book { padding: 0; }
-.book-entry { display: block; position: relative; padding: 30px 46px 30px 0; padding-inline: 0 46px; }
-.book-entry-arrow { position: absolute; inset-inline-end: 8px; top: 50%; color: #8a7b57; font-size: 23px; transform: translateY(-50%); }
+.book-entry { display: block; padding: 30px 0; }
 .book-entry:hover h2, .book-entry:focus-visible h2 { color: #8a7b57; }
 .book-entry:focus-visible { outline: 1px solid #9b814c; outline-offset: 5px; }
 .poem-illustration { margin: 0 0 44px; }

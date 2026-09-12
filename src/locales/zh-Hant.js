@@ -162,7 +162,7 @@ export default {
   "book.daitian.text": "十五國亂世中，言安於危局中立儲，走向開創一統的女帝之路。",
   "book.poetry.category": "現代詩集",
   "book.poetry.title": "《還沒取名兒呢》",
-  "book.poetry.text": "收錄2018–2026年的現代詩，寫身體、關係、遠行，以及變化如何重新塑造一個人。",
+  "book.poetry.text": "關於身體、關係、遠行的現代詩，也寫變化如何重新塑造一個人。",
   "books.status": "現代詩集《還沒取名兒呢》正在整理中。",
   "books.back": "返回首頁",
   "about.travel.term": "行走",

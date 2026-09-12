@@ -131,7 +131,7 @@ export default complete({
   'book.daitian.category': 'Roman',
   'book.daitian.text': 'Dans le chaos de quinze royaumes, Yan An est désignée héritière du trône au cœur d’une crise. Elle s’engage sur la voie qui la mènera à devenir l’impératrice de l’unification.',
   'book.poetry.category': 'Poésie contemporaine',
-  'book.poetry.text': 'Des poèmes écrits entre 2018 et 2026, sur le corps, les relations, les voyages lointains et la façon dont le changement transforme une personne.',
+  'book.poetry.text': "Des poèmes modernes sur le corps, les relations, les voyages et la façon dont le changement transforme une personne.",
   'books.status': 'Le recueil de poésie contemporaine 《还没取名儿呢》 est en cours de préparation.', 'books.back': 'Retour à l’accueil',
   'about.travel.term': 'Voyages',
   'about.travel.text': 'J’ai parcouru seule près de la moitié de la Chine et plus de trente pays à l’étranger. Je découvre le monde à travers les cultures, les croyances et la vie quotidienne. Le voyage continue.',

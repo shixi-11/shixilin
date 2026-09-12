@@ -129,7 +129,7 @@ export default complete({
   'book.daitian.category': '장편소설',
   'book.daitian.text': '열다섯 나라가 다투는 난세, 위기 속에서 후계자로 세워진 言安이 통일을 이루는 여제로 나아가는 이야기.',
   'book.poetry.category': '현대 시집',
-  'book.poetry.text': '2018–2026년에 쓴 현대시를 모았습니다. 몸과 관계, 먼 여행, 그리고 변화가 한 사람을 다시 빚어 가는 과정을 담습니다.',
+  'book.poetry.text': "몸과 관계, 여정, 그리고 변화가 한 사람을 새롭게 빚어 가는 과정을 담은 현대시.",
   'books.status': '현대 시집 《还没取名儿呢》는 현재 정리 중입니다.', 'books.back': '홈으로 돌아가기',
   'about.travel.term': '여행',
   'about.travel.text': '중국의 절반가량과 해외 서른 개가 넘는 나라를 혼자 여행했습니다. 서로 다른 문화와 신앙, 일상 속에서 세계를 알아가고 있습니다. 여전히 길 위에 있습니다.',

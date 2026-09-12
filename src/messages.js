@@ -174,7 +174,7 @@ export const messages = {
     "book.daitian.text": "十五国乱世中，言安于危局中立储，走向开创一统的女帝之路。",
     "book.poetry.category": "现代诗集",
     "book.poetry.title": "《还没取名儿呢》",
-    "book.poetry.text": "收录2018–2026年的现代诗，写身体、关系、远行，以及变化如何重新塑造一个人。",
+    "book.poetry.text": "关于身体、关系、远行的现代诗，也写变化如何重新塑造一个人。",
     "books.status": "现代诗集《还没取名儿呢》正在整理中。",
     "books.back": "返回首页",
     "about.travel.term": "行走",
@@ -492,7 +492,7 @@ export const messages = {
     "book.daitian.text": "In an age of fifteen warring states, Yan An is named heir amid a crisis and begins her path toward becoming the empress who unites them.",
     "book.poetry.category": "MODERN POETRY",
     "book.poetry.title": "《还没取名儿呢》 · Still Untitled",
-    "book.poetry.text": "A collection of poems from 2018–2026 about the body, relationships, journeys, and how change reshapes a person.",
+    "book.poetry.text": "Modern poems about the body, relationships and journeys, and how change reshapes a person.",
     "books.status": "The modern poetry collection Still Untitled is being compiled.",
     "books.back": "Back to homepage",
     "about.travel.term": "Travel",
@@ -651,6 +651,7 @@ for (const [locale, [title, category, text]] of Object.entries(respawnCopy)) {
   Object.assign(messages[locale], { 'work.respawn.title': title, 'work.respawn.category': category, 'work.respawn.text': text })
 }
 for (const [locale, titles] of Object.entries(bookDescriptions)) {
+  messages[locale]['book.poetry.text'] = titles[4]
   if (locale.startsWith('zh')) continue
   for (const [key, index] of [['book.poetry.title', 0], ['book.yinian.title', 1]]) {
     const original = messages[locale][key].split(' · ')[0]

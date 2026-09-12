@@ -131,7 +131,7 @@ export default complete({
   'book.daitian.category': 'Roman',
   'book.daitian.text': 'In einer von fünfzehn Reichen umkämpften Welt wird Yan An während einer Krise zur Thronerbin ernannt. Ihr Weg führt sie zur Kaiserin, die das Land eint.',
   'book.poetry.category': 'Moderner Gedichtband',
-  'book.poetry.text': 'Gedichte aus den Jahren 2018–2026 über den Körper, Beziehungen, weite Reisen und darüber, wie Veränderungen einen Menschen neu prägen.',
+  'book.poetry.text': "Moderne Gedichte über den Körper, Beziehungen, Reisen und darüber, wie Veränderungen einen Menschen neu formen.",
   'books.status': 'Der moderne Gedichtband 《还没取名儿呢》 wird derzeit zusammengestellt.', 'books.back': 'Zurück zur Startseite',
   'about.travel.term': 'Unterwegs',
   'about.travel.text': 'Allein habe ich etwa die Hälfte Chinas und mehr als dreißig Länder im Ausland bereist. Durch unterschiedliche Kulturen, Glaubensvorstellungen und Alltagswelten lerne ich die Welt kennen. Ich bin noch immer unterwegs.',

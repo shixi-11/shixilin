@@ -21,9 +21,9 @@ export function poetryView(source) {
     <a class="poetry-back internal-link" href="/books">${locale.dir === 'rtl' ? '→' : '←'} ${ui.books}</a>
     <header class="poetry-frontispiece">
       ${book.cover ? `<img class="poetry-book-cover" src="${book.cover}" width="900" height="1200" alt="${escape(book.title)} · ${ui.cover}" decoding="async" />` : `<div class="poetry-title-leaf" aria-hidden="true" lang="zh-Hans"><span>一念凡生</span><small>光之十一</small></div>`}
-      <div><p class="poetry-kicker">${book.category} · <bdi>${book.years}</bdi></p><h1>${escape(book.title)}</h1><p class="poetry-author">${ui.author}${locale.id.startsWith('zh') ? ' 著' : ''}</p><p class="poetry-intro">${book.intro}</p><div class="poetry-actions"><a class="poetry-start internal-link" href="${href(book, book.poems[0])}">${ui.start} <span aria-hidden="true">→</span></a>${book.external ? `<a class="poetry-external" href="${book.external}" target="_blank" rel="noopener">${ui.qidian} <span aria-hidden="true">↗</span></a>` : ''}</div></div>
+      <div><p class="poetry-kicker">${book.category}</p><h1>${escape(book.title)}</h1><p class="poetry-author">${ui.author}${locale.id.startsWith('zh') ? ' 著' : ''}</p><div class="poetry-intro">${book.intro.split(/\n\n/).map(paragraph => `<p>${escape(paragraph)}</p>`).join('')}</div><div class="poetry-actions"><a class="poetry-start internal-link" href="${href(book, book.poems[0])}">${ui.start} <span aria-hidden="true">→</span></a>${book.external ? `<a class="poetry-external" href="${book.external}" target="_blank" rel="noopener">${ui.qidian} <span aria-hidden="true">↗</span></a>` : ''}</div></div>
     </header>
-    <section class="poetry-contents" id="contents" aria-labelledby="poetry-contents-title"><div class="poetry-contents-heading"><h2 id="poetry-contents-title">${ui.contents}</h2><span>${book.poems.length} ${ui.works} · <bdi>${book.years}</bdi></span></div>${contents(book)}</section>
+    <section class="poetry-contents" id="contents" aria-labelledby="poetry-contents-title"><div class="poetry-contents-heading"><h2 id="poetry-contents-title">${ui.contents}</h2><span>${book.poems.length} ${ui.works}</span></div>${contents(book)}</section>
   </section>`
 }
 
