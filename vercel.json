@@ -118,6 +118,10 @@
       "destination": "https://lianzhu.vercel.app/games/lianzhu/"
     },
     {
+      "source": "/games/lianzhu/",
+      "destination": "https://lianzhu.vercel.app/games/lianzhu/"
+    },
+    {
       "source": "/games/lianzhu/:path*",
       "destination": "https://lianzhu.vercel.app/games/lianzhu/:path*"
     },
