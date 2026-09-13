@@ -2,6 +2,8 @@
 .home-game-list .game-card { display: flex; flex-direction: column; align-items: stretch; gap: 0; min-height: 0; padding: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--line); background: none; }
 .home-game-list .game-card:hover { border-bottom-color: #b39451; }
 .home-game-list .game-card > img { display: block; width: 100%; height: auto; }
+.game-directory .game-card > img { aspect-ratio: 16 / 9; object-fit: contain; object-position: top left; }
+html[dir='rtl'] .game-directory .game-card > img { object-position: top right; }
 .home-game-list .game-card > div { display: flex; flex-direction: column; align-items: stretch; flex: 1; padding: 20px 0 18px; }
 .game-card-meta { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; color: #73766c; font-family: 'Source Sans 3', var(--locale-serif); font-size: 12px; line-height: 1.5; }
 .home-game-list .game-card h3 { margin: 12px 0 13px; font-size: 30px; line-height: 1.5; letter-spacing: .035em; }

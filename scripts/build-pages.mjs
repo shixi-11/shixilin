@@ -7,6 +7,8 @@ const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;
 
 for (const [page, key, image] of [
   ['ai', 'ai'], ['games', 'games'], ['books', 'books'], ['design', 'design'], ['about', 'about'], ['services', 'services'], ['support', 'support'],
+  ['ai-films', 'aiFilms'], ['on-camera', 'personalFilms'],
+  ['ai-films/renjian-weiguang', 'weiguang'], ['ai-films/huaxia-fuxing', 'huaxia'],
   ['games/ink-duel', 'inkDuel', '/assets/ink-duel-concept.png'],
   ['games/baishishu', 'baishishu', '/assets/baishishu-opening.jpg'],
 ]) {

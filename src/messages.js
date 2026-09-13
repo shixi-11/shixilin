@@ -6,6 +6,9 @@ import fr from './locales/fr.js'
 import de from './locales/de.js'
 import ar from './locales/ar.js'
 import { respawnCopy } from './locales/respawn.js'
+import { lianzhuCopy } from './locales/lianzhu.js'
+import { filmCopy } from './locales/films.js'
+import { onCameraCopy } from './locales/on-camera.js'
 import { descriptions as bookDescriptions } from './book-copy.js'
 
 export const messages = {
@@ -285,7 +288,7 @@ export const messages = {
     "home.dailyTitle": "AI智能体情报日报",
     "home.dailyCategory": "AI行业资讯",
     "home.dailyText": "精选AI新功能、开源项目与行业动态，每天了解值得关注的新进展。",
-    "home.prismText": "整合Codex、Claude、Grok等订阅AI命令行工具的Windows桌面工作台，支持项目管理、模型切换与换号接续。",
+    "home.prismText": "整合Codex、Claude、Grok的Windows工作台，支持项目管理、模型切换与换号接续。",
     "home.openPrism": "了解棱镜",
     "home.readDaily": "阅读日报",
     "home.moheText": "住在你电脑里的小小守护者，安静陪伴，偶尔调皮。",
@@ -649,6 +652,20 @@ export const messages = {
 }
 for (const [locale, [title, category, text]] of Object.entries(respawnCopy)) {
   Object.assign(messages[locale], { 'work.respawn.title': title, 'work.respawn.category': category, 'work.respawn.text': text })
+}
+for (const [locale, copy] of Object.entries(lianzhuCopy)) {
+  for (const [index, key] of ['name', 'short', 'imageAlt', 'platform', 'status', 'play'].entries()) messages[locale][`lianzhu.${key}`] = copy[index]
+}
+for (const [locale, copy] of Object.entries(filmCopy)) {
+  const keys = ['ai', 'personal', 'aiIntro', 'personalIntro', 'weiguang', 'huaxia', 'openCollection', 'empty', 'later', 'personalNav']
+  for (const [index, key] of keys.entries()) messages[locale][`films.${key}`] = copy[index]
+  for (const [key, titleIndex, descriptionIndex] of [['aiFilms', 0, 2], ['personalFilms', 1, 3], ['weiguang', 4, 2], ['huaxia', 5, 2]]) {
+    messages[locale][`meta.${key}`] = `${copy[titleIndex]} · ${messages[locale]['brand.name']}`
+    messages[locale][`meta.${key}Description`] = copy[descriptionIndex]
+  }
+}
+for (const [locale, copy] of Object.entries(onCameraCopy)) {
+  for (const [index, key] of ['dunhuangWind', 'sword', 'silkRoad', 'watchBilibili', 'watchYoutube', 'bowstring', 'windDream', 'eightDirections', 'foxSpirit'].entries()) messages[locale][`films.${key}`] = copy[index]
 }
 for (const [locale, titles] of Object.entries(bookDescriptions)) {
   messages[locale]['book.poetry.text'] = titles[4]

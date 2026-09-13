@@ -31,7 +31,7 @@
 - 联系板块删除已发布：`96ba2bd`；部署 `dpl_G19iqvdGu1ri8hDfmLxHQKBxJSKF`，READY，生产JS/CSS与本地一致。
 - 新增服务页：九语种各20项；54组六种屏宽检查通过；手机导航、刷新语言、活动状态和联系锚点通过。已补充字体字符子集，保留原有字体与许可。新增页面后的全站复核共270组，通过；证据为 `.vercel/review/website-services-20260904.json`。
 - 服务页已发布：`91d8abf`；部署 `dpl_GyWFZ2mjubA4UhqMBAxHbkNcWgbV`，READY，正式入口 `https://shixilin.com/services`。生产JS `/assets/index-C8NubCp2.js` 与CSS `/assets/index-Cq4CxvXW.css` 和本地构建逐字节一致；九个语言URL的服务页HTML均与构建一致，证据为 `.vercel/review/services-production-20260904.json`。
-- 改名前的服务页预览：`A:/vibe coding/shixilin/design/20260904_服务与合作.jpg`，2844×2986px，保留为首次交付记录；现行名称以“合作／咨询与合作”为准。
+- 改名前的服务页预览：`A:/vibe coding/01_网站维护/shixilin/design/20260904_服务与合作.jpg`，2844×2986px，保留为首次交付记录；现行名称以“合作／咨询与合作”为准。
 - 名称调整已发布：`49673b0`；部署 `dpl_A44czLK5FdTF1SUsMh2A5qFNUMgD`，READY。九语种导航、页面标题与浏览器标题同步，45组屏宽与语言检查通过；生产JS `/assets/index-IIaJrOvb.js`、CSS `/assets/index-Cq4CxvXW.css`及九个语言URL的服务页HTML均与本地构建一致。
 - 本轮已确定事项已完成实施、验证与发布；用户视觉验收仍待反馈。
 - 设计范围扩展已发布：`f94ae1c`；部署 `dpl_HtRVat2gQBvjMJ1eBDAgaXGr1td7`，READY。设计项九语种各保留一段简述，36组语言与屏宽检查通过；生产JS `/assets/index-zdcuqUPh.js`、CSS `/assets/index-Cq4CxvXW.css`及服务页HTML与本地构建一致。
@@ -56,8 +56,8 @@
 
 2026-09-03 19:52（北京时间）重新从与正式站相同的本地生产构建进行Chrome高分辨率渲染，直接保存JPEG，未放大旧截图。字体与图片加载完成后截取，已逐张打开检查，临时视口已恢复。此前18:51–18:53和19:43–19:45的压缩截图不再作为当前高清交付。
 
-- 桌面整页：`A:/vibe coding/shixilin/design/20260903_光之十一主页_桌面.jpg`，实际3840×6021px。
-- 手机首屏：`A:/vibe coding/shixilin/design/20260903_光之十一主页_手机.jpg`，实际1560×4000px，包含已恢复的两句介绍。
+- 桌面整页：`A:/vibe coding/01_网站维护/shixilin/design/20260903_光之十一主页_桌面.jpg`，实际3840×6021px。
+- 手机首屏：`A:/vibe coding/01_网站维护/shixilin/design/20260903_光之十一主页_手机.jpg`，实际1560×4000px，包含已恢复的两句介绍。
 - 预览说明同步本次来源与实际尺寸；旧聊天的.png路径仅保留旧截图兼容，不代表当前页面。
 
 图片新稿不再是本轮待办。Adobe最后一次实际编辑仍为HTTP 403、无输出图片；用户随后明确按现状定图，因此不将该外部连接问题继续列为网站交付阻断。
@@ -68,8 +68,8 @@
 
 用户回复“按照建议”，确认采用现有美术的选用方案。主页和游戏目录的百世书封面改用3840×2160的“女主梦蝶草地CG”；介绍页故事段落加入3840×2160的“兔灯相见CG”，中英文图注与替代文字齐全。两份JPG逐字节复制现有美术，没有重绘、裁切或拉伸。视频仍保留与片段对应的原封面，墨斗仍使用原雨夜对战图。
 
-- 梦蝶来源：`A:/vibe coding/baishishu/美术资产/游戏场景/01_卷一_小薛/BSS-V01-S010_入世过渡_女主梦蝶草地CG.jpg`；网站路径：`/assets/baishishu-meadow.jpg`；SHA-256：`491032363A96D9A11165485D92235FDF38C8D0863E8810DD35B67C76040947B0`。
-- 兔灯来源：`A:/vibe coding/baishishu/美术资产/游戏场景/01_卷一_小薛/BSS-V01-S250_上元灯下再入暗处_兔灯相见CG.jpg`；网站路径：`/assets/baishishu-lantern.jpg`；SHA-256：`19A572D3AF2311A9F3EF2ABFED9CD8C1C014E5C7BC37BCAF0E6BD130B098476E`。
+- 梦蝶来源：`A:/vibe coding/02_游戏开发/baishishu/美术资产/游戏场景/01_卷一_小薛/BSS-V01-S010_入世过渡_女主梦蝶草地CG.jpg`；网站路径：`/assets/baishishu-meadow.jpg`；SHA-256：`491032363A96D9A11165485D92235FDF38C8D0863E8810DD35B67C76040947B0`。
+- 兔灯来源：`A:/vibe coding/02_游戏开发/baishishu/美术资产/游戏场景/01_卷一_小薛/BSS-V01-S250_上元灯下再入暗处_兔灯相见CG.jpg`；网站路径：`/assets/baishishu-lantern.jpg`；SHA-256：`19A572D3AF2311A9F3EF2ABFED9CD8C1C014E5C7BC37BCAF0E6BD130B098476E`。
 
 游戏介绍页在900px及以下改为单列，避免平板窄标题栏拆开长标题；故事段落使用均衡断行，并保护“不同时代”“与他们”“百世间”“归简台”等词组。210项中英文键一致，主页／游戏目录／百世书介绍页的两语言×三屏宽完成定向检查；最终游戏详情页另有六组检查，平板的两款游戏、两语言补充四组检查。记录为`.vercel/review/approved-art-layout.json`、`approved-art-final-layout.json`和`approved-art-tablet-layout.json`。
 
@@ -104,7 +104,7 @@
 - [x] 复核全站两种语言、桌面／平板／手机布局与主要交互：8页面×2语言×4屏宽，共64组；无站内文字横向溢出，菜单与钱包复制通过。公司介绍新增完整词组保护后，再做四屏宽定向检查。
 - [x] 推送并发布正式站，更新截图、验证结果与本轮交付状态。
 
-本轮验证文件：`.vercel/review/current-layout-zh.json`、`current-layout-en.json`、`current-company-layout.json`、`entry-qr-verification.json`。二维码成品与含字体许可证的独立HTML源文件保存在`A:/vibe coding/shixilin/design`。
+本轮验证文件：`.vercel/review/current-layout-zh.json`、`current-layout-en.json`、`current-company-layout.json`、`entry-qr-verification.json`。二维码成品与含字体许可证的独立HTML源文件保存在`A:/vibe coding/01_网站维护/shixilin/design`。
 
 英文内容逐项复读，202项双语键一致。排版密度脚本提示跨断点字号种类、字距与数字格式；实际站点为作品介绍，非数字仪表盘，保留标题与署名的有意字距。最终按真实渲染、语义断行与可读性核对，不机械改成统一字号。
 
@@ -156,12 +156,12 @@
 
 - ALUX官网：https://alux.network/；ConcurSys官网：https://concursys.io/。均读取官网当期公开内容，不推定两个组织的隶属关系。
 - 领英：https://www.linkedin.com/in/shixilin/。本轮已在用户登录的Chrome标签中读取公开简介；三项联合创始人身份以用户当轮确认作为来源。
-- 百世书企划：A:/vibe coding/baishishu/企划案/20260801_百世书项目企划案.pptx。
+- 百世书企划：A:/vibe coding/02_游戏开发/baishishu/企划案/20260801_百世书项目企划案.pptx。
 - 生产构建检查：191项双语键、8条静态主站路由、固定日报URL、已删除内容；Vite构建与git diff空白检查通过。
 - 布局记录：.vercel/review/final-built-layout.json，8条主站路由×2种语言×4个宽度，共64组。正文和页脚无横向溢出。关于页后续小幅断行调整另做定向检查。
 - 截图：.vercel/review/about-final-zh.jpg、about-contact-mobile.jpg、home-mobile-en.jpg与support-mobile-zh.jpg。截图只证明被观察到的页面和状态，不替代用户审美判断。
-- 正式桌面预览：A:/vibe coding/shixilin/design/20260903_光之十一主页_桌面.jpg。
-- 正式手机预览：A:/vibe coding/shixilin/design/20260903_光之十一主页_手机.jpg。
+- 正式桌面预览：A:/vibe coding/01_网站维护/shixilin/design/20260903_光之十一主页_桌面.jpg。
+- 正式手机预览：A:/vibe coding/01_网站维护/shixilin/design/20260903_光之十一主页_手机.jpg。
 - 正式预览说明：同目录20260903_光之十一主页展示说明.md。
 
 ## 发布核对
@@ -197,7 +197,7 @@
 - 日报卡片的小标签改为“AI News”，企业与项目中的ALUX名称保持原有专名。
 - 重新核对当前英文首屏：1440、768px下每句一行，390、320px下每句两行；两句各自行宽差约4.5%和0.4%。中文保留既定两句。
 - 九种语言在1440、768、390px下共27组检查通过，两个目录入口均带正确语言参数，无页面横向溢出；英文下实际点击两个入口均进入对应目录。
-- 高清主页截图：`A:/vibe coding/shixilin/design/20260904_光之十一主页.jpg`，3807×5690。采用当前生产构建的真实浏览器渲染，已逐段检查；截图时临时关闭平滑滚动以避免长图拼接异常，完成后恢复。
+- 高清主页截图：`A:/vibe coding/01_网站维护/shixilin/design/20260904_光之十一主页.jpg`，3807×5690。采用当前生产构建的真实浏览器渲染，已逐段检查；截图时临时关闭平滑滚动以避免长图拼接异常，完成后恢复。
 - 证据：`.vercel/review/homepage-20260904.json`。二维码卡已完成，本次未重新制作。
 - 生产部署：`dpl_GEQVA7JaatYg5pZBHHaLCXc6QFTe`，READY，已绑定`https://shixilin.com/`。线上JS`/assets/index-D4M-Tf8B.js`与CSS`/assets/index-CrqGGXCF.css`均与截图所用构建逐字节一致。
 
@@ -211,7 +211,7 @@
 - 新增34个翻译键，九种语言齐全；已更新现有字体子集并检查字形覆盖。没有修改首页既定的两句中文简介。
 - 设计页与首页在1440、768、390px下共54组检查通过，无横向溢出，主页两组预览等高，设计页均呈现14张周边和6个表情包。另检查901、1024、1201px导航，调整中等宽度间距后，901px德语导航与标志保持29px间隔。
 - 实际验证英文“查看全部设计”、中文手机菜单、表情包分类锚点、动画播放与暂停，以及设计页刷新。检查记录位于`.vercel/review/design-20260904.json`。
-- 主页设计区预览保存为`A:/vibe coding/shixilin/design/20260904_主页设计展示.png`，已打开检查。本轮整页截图接口超时，未覆盖旧的主页长图，也不将旧长图作为本轮预览。
+- 主页设计区预览保存为`A:/vibe coding/01_网站维护/shixilin/design/20260904_主页设计展示.png`，已打开检查。本轮整页截图接口超时，未覆盖旧的主页长图，也不将旧长图作为本轮预览。
 - 功能提交`9ff6479`，已推送GitHub main；生产部署`dpl_24ED2jxMJYKeyUSBQNDACF8257tV`为READY，正式域名`https://shixilin.com/`。
 - 线上`/design`返回正确标题和canonical；首页及设计页引用的JS`/assets/index-CXpJWChn.js`、CSS`/assets/index-BFx4Z5PX.css`与本地验收构建逐字节一致。26个图片及动画文件全部下载核对SHA-256，与用户原文件完全一致，记录见`.vercel/review/design-production.json`。
 
@@ -220,7 +220,7 @@
 - 主页表情包封面换为用户选中的`阿禄猴四种正面形态.jpg`，3840×2160原图逐字节复制到`/assets/design/sticker-cover.jpg`。
 - 维持与周边预览一致的2:1版位，原图等比完整显示；两侧余白采用接近原图底色的暖米色`#f9efe6`，不裁切、不拉伸、不改变角色颜色。
 - 电脑1440px、平板768px、手机390px均已检查，图像完整、无横向溢出；电脑与手机截图已实看。另检查英文与阿拉伯文手机页面，图片与分类入口正确。
-- 当前封面截图：`A:/vibe coding/shixilin/design/20260904_表情包封面.jpg`。设计子页继续保留原有六个表情包及动画播放功能。
+- 当前封面截图：`A:/vibe coding/01_网站维护/shixilin/design/20260904_表情包封面.jpg`。设计子页继续保留原有六个表情包及动画播放功能。
 - 功能提交`81bf781`，生产部署`dpl_G6TpwkBV3h9sHB3ui6BfkFX6S1S3`为READY，已绑定`https://shixilin.com/`。线上JS`/assets/index-0ClRSAym.js`、CSS`/assets/index-Bb5I44kk.css`与本地验收构建一致，新封面下载后的SHA-256与用户原图一致。
 
 ## 2026-09-05首页目录入口位置

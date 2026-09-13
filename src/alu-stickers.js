@@ -1,139 +1,145 @@
 export const aluStickers = [
   {
     "id": "coming",
-    "file": "alu-coming-d38910db.gif",
+    "file": "alu-coming-0337f12ba554.gif",
     "width": 952,
     "height": 962
   },
   {
     "id": "hello",
-    "file": "alu-hello-82521041.gif",
+    "file": "alu-hello-2275498a7336.gif",
     "width": 702,
     "height": 909
   },
   {
     "id": "received",
-    "file": "alu-received-ceb5f375.gif",
+    "file": "alu-received-4680ca253f17.gif",
     "width": 878,
     "height": 816
   },
   {
     "id": "thanks",
-    "file": "alu-thanks-5ec88c50.gif",
+    "file": "alu-thanks-0d7d0639b4ba.gif",
     "width": 550,
     "height": 709
   },
   {
+    "id": "hug",
+    "file": "alu-hug-9f2b10b53eac.gif",
+    "width": 1050,
+    "height": 1156
+  },
+  {
     "id": "love",
-    "file": "alu-love-c7659c15.gif",
+    "file": "alu-love-77d34782644b.gif",
     "width": 839,
     "height": 900
   },
   {
     "id": "shy",
-    "file": "alu-shy-49c8c726.gif",
+    "file": "alu-shy-424316cec154.gif",
     "width": 661,
     "height": 900
   },
   {
     "id": "please",
-    "file": "alu-please-dac42b1f.gif",
+    "file": "alu-please-13a70d649839.gif",
     "width": 850,
     "height": 920
   },
   {
     "id": "typing",
-    "file": "alu-typing-ef147eeb.gif",
+    "file": "alu-typing-e22fa7eb3997.gif",
     "width": 936,
     "height": 889
   },
   {
     "id": "watch-me",
-    "file": "alu-watch-me-f31e2ea6.gif",
+    "file": "alu-watch-me-fc8672990b16.gif",
     "width": 924,
     "height": 877
   },
   {
     "id": "challenge",
-    "file": "alu-challenge-66d1e6ec.gif",
+    "file": "alu-challenge-612346861d11.gif",
     "width": 1073,
     "height": 1110
   },
   {
     "id": "launch",
-    "file": "alu-launch-99fe4cec.gif",
+    "file": "alu-launch-fef67d2dcb8e.gif",
     "width": 752,
     "height": 889
   },
   {
-    "id": "full",
-    "file": "alu-full-50d8e898.gif",
-    "width": 768,
-    "height": 880
-  },
-  {
     "id": "what",
-    "file": "alu-what-2d81a700.gif",
+    "file": "alu-what-8501347f4052.gif",
     "width": 967,
     "height": 820
   },
   {
     "id": "alert",
-    "file": "alu-alert-afd3a0df.gif",
+    "file": "alu-alert-06cb1dccdbc4.gif",
     "width": 953,
     "height": 900
   },
   {
     "id": "shh",
-    "file": "alu-shh-4f2a3824.gif",
+    "file": "alu-shh-35d1a6bae774.gif",
     "width": 981,
     "height": 930
   },
   {
     "id": "who-farted",
-    "file": "alu-who-farted-290ed4fd.gif",
+    "file": "alu-who-farted-5585707dcb4c.gif",
     "width": 623,
     "height": 826
   },
   {
+    "id": "full",
+    "file": "alu-full-e0bf91330fb6.gif",
+    "width": 768,
+    "height": 880
+  },
+  {
+    "id": "tired",
+    "file": "alu-tired-81fb229d2d64.gif",
+    "width": 708,
+    "height": 960
+  },
+  {
     "id": "nope",
-    "file": "alu-nope-934d1dbd.gif",
+    "file": "alu-nope-b622bd80d0e8.gif",
     "width": 695,
     "height": 920
   },
   {
     "id": "angry",
-    "file": "alu-angry-102ba1b0.gif",
+    "file": "alu-angry-262aae9d6a88.gif",
     "width": 808,
     "height": 920
   },
   {
     "id": "facepalm",
-    "file": "alu-facepalm-508905ff.gif",
+    "file": "alu-facepalm-569629cd2cea.gif",
     "width": 647,
     "height": 862
   },
   {
-    "id": "tired",
-    "file": "alu-tired-3a541c9f.gif",
-    "width": 708,
-    "height": 960
-  },
-  {
     "id": "dizzy",
-    "file": "alu-dizzy-f758fddb.gif",
+    "file": "alu-dizzy-81228353e357.gif",
     "width": 790,
     "height": 918
   },
   {
     "id": "broken",
-    "file": "alu-broken-9af737eb.gif",
+    "file": "alu-broken-85cc415d4dea.gif",
     "width": 937,
     "height": 900
   },
   {
     "id": "crying",
-    "file": "alu-crying-7efcc276.gif",
+    "file": "alu-crying-a4b7dca7b06a.gif",
     "width": 934,
     "height": 804
   }
@@ -145,6 +151,7 @@ export const aluStickerLabels = {
     "好的",
     "收到",
     "谢谢",
+    "抱抱",
     "喜欢",
     "害羞",
     "求求了",
@@ -152,15 +159,15 @@ export const aluStickerLabels = {
     "看我的",
     "来啊",
     "起飞",
-    "好饱",
     "什么",
     "有情况",
     "嘘",
     "谁在放屁",
+    "好饱",
+    "累了",
     "丑拒",
     "生气了",
     "扶额",
-    "累了",
     "晕了",
     "裂开",
     "哭哭"
@@ -170,6 +177,7 @@ export const aluStickerLabels = {
     "好的",
     "收到",
     "謝謝",
+    "抱抱",
     "喜歡",
     "害羞",
     "求求了",
@@ -177,15 +185,15 @@ export const aluStickerLabels = {
     "看我的",
     "來啊",
     "起飛",
-    "好飽",
     "什麼",
     "有情況",
     "噓",
     "誰在放屁",
+    "好飽",
+    "累了",
     "醜拒",
     "生氣了",
     "扶額",
-    "累了",
     "暈了",
     "裂開",
     "哭哭"
@@ -195,6 +203,7 @@ export const aluStickerLabels = {
     "Okay",
     "Got it",
     "Thank you",
+    "Hugs",
     "Love it",
     "Shy",
     "Pretty please",
@@ -202,15 +211,15 @@ export const aluStickerLabels = {
     "Watch me",
     "Bring it on",
     "Takeoff",
-    "So full",
     "What?",
     "Something’s up",
     "Shh",
     "Who farted?",
+    "So full",
+    "Tired",
     "Nope",
     "Angry",
     "Facepalm",
-    "Tired",
     "Dizzy",
     "Falling apart",
     "Crying"
@@ -220,6 +229,7 @@ export const aluStickerLabels = {
     "オッケー",
     "了解",
     "ありがとう",
+    "ぎゅっと",
     "大好き",
     "照れちゃう",
     "お願い",
@@ -227,15 +237,15 @@ export const aluStickerLabels = {
     "見てて",
     "かかってこい",
     "テイクオフ",
-    "おなかいっぱい",
     "えっ？",
     "何かあるぞ",
     "しーっ",
     "誰のおなら？",
+    "おなかいっぱい",
+    "疲れた",
     "お断り",
     "怒ったぞ",
     "やれやれ",
-    "疲れた",
     "くらくら",
     "もう無理",
     "泣いちゃう"
@@ -245,6 +255,7 @@ export const aluStickerLabels = {
     "좋아",
     "확인했어",
     "고마워",
+    "안아줘",
     "좋아해",
     "부끄러워",
     "제발",
@@ -252,15 +263,15 @@ export const aluStickerLabels = {
     "잘 봐",
     "덤벼",
     "날아올라",
-    "배불러",
     "뭐라고?",
     "무슨 일이야",
     "쉿",
     "누가 방귀 뀌었어?",
+    "배불러",
+    "피곤해",
     "싫어",
     "화났어",
     "아이고",
-    "피곤해",
     "어질어질",
     "멘붕",
     "울먹울먹"
@@ -270,6 +281,7 @@ export const aluStickerLabels = {
     "Vale",
     "Entendido",
     "Gracias",
+    "Un abrazo",
     "Me encanta",
     "Qué vergüenza",
     "Por favor",
@@ -277,15 +289,15 @@ export const aluStickerLabels = {
     "Mira esto",
     "¡Atrévete!",
     "Despegue",
-    "Qué lleno",
     "¿Qué?",
     "Algo pasa",
     "Shhh",
     "¿Quién se ha tirado un pedo?",
+    "Qué lleno",
+    "Cansado",
     "Ni hablar",
     "Enfadado",
     "Madre mía",
-    "Cansado",
     "Mareado",
     "No puedo más",
     "Llorando"
@@ -295,6 +307,7 @@ export const aluStickerLabels = {
     "D’accord",
     "Bien reçu",
     "Merci",
+    "Un câlin",
     "J’adore",
     "Timide",
     "S’il te plaît",
@@ -302,15 +315,15 @@ export const aluStickerLabels = {
     "Regarde-moi",
     "Viens donc",
     "Décollage",
-    "Trop mangé",
     "Quoi ?",
     "Il se passe quelque chose",
     "Chut",
     "Qui a pété ?",
+    "Trop mangé",
+    "Fatigué",
     "Pas question",
     "En colère",
     "Oh là là",
-    "Fatigué",
     "Ça tourne",
     "Je craque",
     "En larmes"
@@ -320,6 +333,7 @@ export const aluStickerLabels = {
     "Okay",
     "Verstanden",
     "Danke",
+    "Umarmung",
     "Gefällt mir",
     "Schüchtern",
     "Bitte, bitte",
@@ -327,15 +341,15 @@ export const aluStickerLabels = {
     "Schau her",
     "Trau dich",
     "Abflug",
-    "So satt",
     "Was?",
     "Da ist was los",
     "Psst",
     "Wer hat gepupst?",
+    "So satt",
+    "Müde",
     "Nein danke",
     "Wütend",
     "Oh Mann",
-    "Müde",
     "Schwindelig",
     "Ich kann nicht mehr",
     "Am Weinen"
@@ -345,6 +359,7 @@ export const aluStickerLabels = {
     "حسناً",
     "وصلت",
     "شكراً",
+    "عناق",
     "أحبّه",
     "خجول",
     "أرجوك",
@@ -352,15 +367,15 @@ export const aluStickerLabels = {
     "شاهدني",
     "هيا واجهني",
     "إقلاع",
-    "شبعت",
     "ماذا؟",
     "هناك أمر ما",
     "ششش",
     "من أطلق الريح؟",
+    "شبعت",
+    "متعب",
     "لا شكراً",
     "غاضب",
     "يا إلهي",
-    "متعب",
     "أشعر بالدوار",
     "انهرت",
     "أبكي"

@@ -18,6 +18,7 @@ for (const key of ['home.moheText', 'work.mohe.text', 'work.mohe.alt']) assert.o
 
 // Exercise share links, refresh, stored preference and back navigation without a browser dependency.
 globalThis.location = { origin: 'https://shixilin.com', search: '' }
+Object.defineProperty(globalThis, 'navigator', { configurable: true, value: { languages: ['zh-CN'] } })
 const values = new Map()
 globalThis.localStorage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) }
 const { getLocale, syncLocale, setLocale, localizedHref, locales } = await import('../src/i18n.js')

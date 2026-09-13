@@ -114,96 +114,108 @@
   ],
   "rewrites": [
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/zh/index.html",
+      "source": "/games/lianzhu",
+      "destination": "https://lianzhu.vercel.app/games/lianzhu/"
+    },
+    {
+      "source": "/games/lianzhu/:path*",
+      "destination": "https://lianzhu.vercel.app/games/lianzhu/:path*"
+    },
+    {
+      "source": "/api/visitor-locale",
+      "destination": "/api/visitor-locale"
+    },
+    {
+      "destination": "https://codex-claude-resets.vercel.app/zh/",
       "source": "/ai/codex-claude-resets/zh"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/zh/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/zh/",
       "source": "/ai/codex-claude-resets/zh/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/zh-Hant/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/zh-Hant/",
       "source": "/ai/codex-claude-resets/zh-Hant"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/zh-Hant/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/zh-Hant/",
       "source": "/ai/codex-claude-resets/zh-Hant/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ja/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ja/",
       "source": "/ai/codex-claude-resets/ja"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ja/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ja/",
       "source": "/ai/codex-claude-resets/ja/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ko/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ko/",
       "source": "/ai/codex-claude-resets/ko"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ko/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ko/",
       "source": "/ai/codex-claude-resets/ko/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/es/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/es/",
       "source": "/ai/codex-claude-resets/es"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/es/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/es/",
       "source": "/ai/codex-claude-resets/es/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/fr/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/fr/",
       "source": "/ai/codex-claude-resets/fr"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/fr/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/fr/",
       "source": "/ai/codex-claude-resets/fr/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/de/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/de/",
       "source": "/ai/codex-claude-resets/de"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/de/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/de/",
       "source": "/ai/codex-claude-resets/de/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ar/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ar/",
       "source": "/ai/codex-claude-resets/ar"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/ar/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/ar/",
       "source": "/ai/codex-claude-resets/ar/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/events/:id/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/events/:id/",
       "source": "/ai/codex-claude-resets/events/:id"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/:locale/events/:id/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/:locale/events/:id/",
       "source": "/ai/codex-claude-resets/:locale/events/:id"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/events/:id/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/events/:id/",
       "source": "/ai/codex-claude-resets/events/:id/"
     },
     {
-      "destination": "https://shixi-11.github.io/codex-claude-resets/:locale/events/:id/index.html",
+      "destination": "https://codex-claude-resets.vercel.app/:locale/events/:id/",
       "source": "/ai/codex-claude-resets/:locale/events/:id/"
     },
     {
       "source": "/ai/codex-claude-resets",
-      "destination": "https://shixi-11.github.io/codex-claude-resets/index.html"
+      "destination": "https://codex-claude-resets.vercel.app/"
     },
     {
       "source": "/ai/codex-claude-resets/",
-      "destination": "https://shixi-11.github.io/codex-claude-resets/index.html"
+      "destination": "https://codex-claude-resets.vercel.app/"
     },
     {
       "source": "/ai/codex-claude-resets/:path*",
-      "destination": "https://shixi-11.github.io/codex-claude-resets/:path*"
+      "destination": "https://codex-claude-resets.vercel.app/:path*"
     },
     {
       "source": "/ai/agent-daily",
@@ -264,6 +276,22 @@
     {
       "source": "/ai/yunjian/:path*",
       "destination": "https://yunjian-omega.vercel.app/ai/yunjian/:path*"
+    },
+    {
+      "source": "/ai-films",
+      "destination": "/ai-films/index.html"
+    },
+    {
+      "source": "/ai-films/renjian-weiguang",
+      "destination": "/ai-films/renjian-weiguang/index.html"
+    },
+    {
+      "source": "/ai-films/huaxia-fuxing",
+      "destination": "/ai-films/huaxia-fuxing/index.html"
+    },
+    {
+      "source": "/on-camera",
+      "destination": "/on-camera/index.html"
     },
     {
       "source": "/:path*",

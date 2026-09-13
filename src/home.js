@@ -4,6 +4,10 @@ import { books, dailyUrl } from './content.js'
 import { gameCards } from './games.js'
 import { homeDesign } from './design.js'
 
+export function cloudPoem() {
+  return `<div class="cloud-poem" aria-hidden="true"><span>${t('home.cloudPoem1')}</span><span>${t('home.cloudPoem2')}</span><i class="cloud-seal"><span>云</span><span>笺</span></i></div>`
+}
+
 export function cloudOrnament() {
   return `<svg class="cloud-ornament" viewBox="0 0 58 32" fill="none" aria-hidden="true"><path d="M15 25C5 26 3 19 8 15c2-2 5-2 8-1-1-6 3-10 8-10 5 0 8 3 9 7 5-5 13-2 12 4 8-2 13 2 11 5-2 3-9 2-14 3-9 4-17 5-27 2Z"/><path d="M17 19c-4-6 1-11 6-8 4 2 3 6 0 7m9-1c-1-4 5-6 8-3m-19 9c7 2 12-3 17-3"/></svg>`
 }
@@ -32,7 +36,7 @@ export function homeView() {
         <article class="cloud-card">
           <div class="cloud-picture">
             <img src="/assets/cloud.png" alt="${t('home.cloudAlt')}" width="1536" height="1024" />
-            <div class="cloud-poem" aria-hidden="true"><span>${t('home.cloudPoem1')}</span><span>${t('home.cloudPoem2')}</span><i class="cloud-seal"><span>云</span><span>笺</span></i></div>
+            ${cloudPoem()}
           </div>
           <div class="cloud-card-copy">
             <h3>${t('home.yunjian')}</h3>
@@ -92,7 +96,7 @@ export function homeView() {
   `
 }
 
-export function paperFooter(showSupport = false) {
+export function paperFooter() {
   return `<footer class="paper-footer">
     <a class="paper-footer-name internal-link" href="/">${t('brand.name')}${cloudOrnament()}</a>
     <p>${t('home.subtitle')}</p>
@@ -101,6 +105,5 @@ export function paperFooter(showSupport = false) {
       <a class="footer-email" href="mailto:info@elevencapital.ltd"><span>${t('footer.collaborate')}</span><span>info@elevencapital.ltd</span></a>
       <p class="social-notes">${t('home.handles')}</p>
     </div>
-    ${showSupport ? `<a class="footer-support internal-link" href="/support">${t('footer.support')}</a>` : ''}
   </footer>`
 }

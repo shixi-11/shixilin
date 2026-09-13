@@ -273,7 +273,7 @@ export default {
   "home.dailyTitle": "AI智能體情報日報",
   "home.dailyCategory": "AI行業資訊",
     "home.dailyText": "精選AI新功能、開源項目與行業動態，每天了解值得關注的新進展。",
-    "home.prismText": "整合Codex、Claude、Grok等訂閱AI命令列工具的Windows桌面工作台，支援專案管理、模型切換與換帳號接續。",
+    "home.prismText": "整合Codex、Claude、Grok的Windows工作台，支援專案管理、模型切換與換帳號接續。",
     "home.openPrism": "了解棱鏡",
   "home.readDaily": "閱讀日報",
   "home.moheText": "住在你電腦裡的小小守護者，安靜陪伴，偶爾調皮。",

@@ -1,4 +1,5 @@
 import { messages } from './messages.js'
+import { browserLocale } from '../lib/locale-detection.js'
 
 export const locales = [
   { id: 'zh', lang: 'zh-Hans', name: '简体中文', short: '简体' },
@@ -13,15 +14,43 @@ export const locales = [
 ]
 const valid = value => locales.some(locale => locale.id === value)
 let currentLocale = 'zh'
+let automaticLocale = 'en'
 
-export function syncLocale() {
+function preferredLocale() {
   const query = new URLSearchParams(location.search).get('lang')
   let saved
   try { saved = localStorage.getItem('shixilin-locale') } catch { /* Private browsing may disable storage. */ }
-  currentLocale = query !== null ? (valid(query) ? query : 'zh') : (valid(saved) ? saved : 'zh')
+  return query !== null ? (valid(query) ? query : 'zh') : (valid(saved) ? saved : null)
+}
+
+function detectedBrowserLocale() {
+  return browserLocale(globalThis.navigator?.languages || [globalThis.navigator?.language])
+}
+
+export function syncLocale() {
+  currentLocale = preferredLocale() || detectedBrowserLocale() || automaticLocale
   return currentLocale
 }
 syncLocale()
+
+export async function initializeLocale() {
+  automaticLocale = 'en'
+  if (!preferredLocale() && !detectedBrowserLocale()) {
+    try {
+      const response = await fetch('/api/visitor-locale', { cache: 'no-store', signal: AbortSignal.timeout(1200) })
+      if (response.ok) {
+        const { locale } = await response.json()
+        if (valid(locale)) automaticLocale = locale
+      }
+    } catch { /* An unavailable country lookup must not prevent the page from loading. */ }
+  }
+  syncLocale()
+  const url = new URL(location.href)
+  if (!url.searchParams.has('lang')) {
+    url.searchParams.set('lang', currentLocale)
+    history.replaceState(history.state, '', `${url.pathname}${url.search}${url.hash}`)
+  }
+}
 
 export function getLocale() {
   return currentLocale

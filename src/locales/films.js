@@ -1,0 +1,110 @@
+export const filmCopy = {
+  "zh": [
+    "AI影视",
+    "汉服演绎",
+    "我用AI创作的影视剧与漫剧。",
+    "身着汉服，走入故事。这里收录我本人出镜演绎的古风与武侠短片。",
+    "人间微光",
+    "华夏复兴",
+    "查看合集",
+    "作品陆续上线，敬请期待。",
+    "以后再说",
+    "汉服"
+  ],
+  "zh-Hant": [
+    "AI影視",
+    "漢服演繹",
+    "我用AI創作的影視劇與漫劇。",
+    "身著漢服，走入故事。這裡收錄我本人出鏡演繹的古風與武俠短片。",
+    "人間微光",
+    "華夏復興",
+    "查看合集",
+    "作品陸續上線，敬請期待。",
+    "以後再說",
+    "漢服"
+  ],
+  "en": [
+    "AI Films",
+    "Live-Action Performances",
+    "Films, series and animated stories I create with AI.",
+    "Dressed in hanfu, I step into a story. Explore period-inspired and wuxia short films featuring me on camera.",
+    "Glimmers of Humanity",
+    "The Chinese Renaissance",
+    "View collection",
+    "New works coming soon.",
+    "Maybe Later",
+    "Hanfu"
+  ],
+  "ja": [
+    "AI映像",
+    "実写出演",
+    "AIで制作するドラマやアニメ作品。",
+    "漢服をまとい、物語の中へ。私が出演する古風な世界観の短編映像や武侠短編を集めました。",
+    "人間微光",
+    "華夏復興",
+    "シリーズを見る",
+    "作品は順次公開予定です。",
+    "話はまた今度",
+    "漢服"
+  ],
+  "ko": [
+    "AI 영상",
+    "실사 출연",
+    "AI로 만드는 영화, 드라마와 애니메이션.",
+    "한푸를 입고 이야기 속으로 들어갑니다. 제가 직접 출연해 연기한 고풍스러운 단편 영상과 무협 단편을 모았습니다.",
+    "인간 세상의 작은 빛",
+    "중화의 부흥",
+    "시리즈 보기",
+    "작품을 차례로 공개할 예정입니다.",
+    "나중에 이야기하자",
+    "한푸"
+  ],
+  "es": [
+    "Cine con IA",
+    "Actuaciones en imagen real",
+    "Películas, series y relatos animados que creo con IA.",
+    "Vestida de hanfu, me adentro en una historia. Aquí reúno los cortometrajes de inspiración tradicional y wuxia en los que actúo.",
+    "Destellos de humanidad",
+    "El renacimiento chino",
+    "Ver colección",
+    "Próximamente, nuevas obras.",
+    "Hablaremos después",
+    "Hanfu"
+  ],
+  "fr": [
+    "Cinéma IA",
+    "Prises de vues réelles",
+    "Films, séries et récits animés que je crée avec l’IA.",
+    "Vêtue de hanfu, j’entre dans une histoire. Retrouvez les courts métrages d’inspiration traditionnelle et de wuxia dans lesquels je joue.",
+    "Lueurs d’humanité",
+    "La renaissance chinoise",
+    "Voir la collection",
+    "De nouvelles œuvres à découvrir prochainement.",
+    "On en parlera plus tard",
+    "Hanfu"
+  ],
+  "de": [
+    "KI-Filme",
+    "Vor der Kamera",
+    "Filme, Serien und animierte Geschichten, die ich mit KI gestalte.",
+    "In Hanfu gekleidet trete ich in eine Geschichte ein. Hier zeige ich Kurzfilme in traditioneller chinesischer Ästhetik und Wuxia-Kurzfilme, in denen ich selbst mitspiele.",
+    "Lichtblicke der Menschlichkeit",
+    "Chinas Renaissance",
+    "Sammlung ansehen",
+    "Neue Werke erscheinen demnächst.",
+    "Reden wir später darüber",
+    "Hanfu"
+  ],
+  "ar": [
+    "أفلام بالذكاء الاصطناعي",
+    "ظهور حقيقي أمام الكاميرا",
+    "أفلام ومسلسلات وقصص متحركة أصنعها بالذكاء الاصطناعي.",
+    "أرتدي الهانفو وأدخل الحكاية. هنا أجمع أفلامًا قصيرة أمثّل فيها، بأجواء صينية تراثية ومن نوع الووشيا.",
+    "ومضات إنسانية",
+    "النهضة الصينية",
+    "عرض المجموعة",
+    "أعمال جديدة قريبًا.",
+    "نتحدث لاحقًا",
+    "هانفو"
+  ]
+}

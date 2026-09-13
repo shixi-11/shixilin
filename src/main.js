@@ -1,4 +1,6 @@
 import { aboutView, bindAbout } from './about.js'
+import { aiFilmsView, filmCollectionView, personalFilmsView } from './films.js'
+import './films.css'
 import { bookEditions, poetryView, poemView, bindPoetry } from './poetry.js'
 import { loadBookLocale, bookPageMeta, bookUi } from './book-language.js'
 import './poetry.css'
@@ -12,16 +14,21 @@ import './games.css'
 import './design.css'
 import './support.css'
 import './locales.css'
+import './navigation.css'
 import { supportView, bindSupport } from './support.js'
 import { gamesView, inkDuelView, baishishuView } from './games.js'
-import { homeView, paperFooter } from './home.js'
-import { getLocale, t, setLocale, syncLocale, locales, localizedHref } from './i18n.js'
+import { homeView, paperFooter, cloudPoem } from './home.js'
+import { getLocale, t, setLocale, syncLocale, initializeLocale, locales, localizedHref } from './i18n.js'
 import { composeLocaleHeadings } from './locales/typography.js'
 import { books, dailyUrl } from './content.js'
 
 const routes = {
   '/': { titleKey: 'meta.home', descriptionKey: 'meta.homeDescription', view: homeView },
   '/ai': { titleKey: 'meta.ai', descriptionKey: 'meta.aiDescription', view: aiView },
+  '/ai-films': { titleKey: 'meta.aiFilms', descriptionKey: 'meta.aiFilmsDescription', view: aiFilmsView },
+  '/ai-films/renjian-weiguang': { titleKey: 'meta.weiguang', descriptionKey: 'meta.aiFilmsDescription', view: () => filmCollectionView('weiguang') },
+  '/ai-films/huaxia-fuxing': { titleKey: 'meta.huaxia', descriptionKey: 'meta.aiFilmsDescription', view: () => filmCollectionView('huaxia') },
+  '/on-camera': { titleKey: 'meta.personalFilms', descriptionKey: 'meta.personalFilmsDescription', view: personalFilmsView },
   '/games': { titleKey: 'meta.games', descriptionKey: 'meta.gamesDescription', view: gamesView },
   '/books': { titleKey: 'meta.books', descriptionKey: 'meta.booksDescription', view: booksView },
   '/design': { titleKey: 'meta.design', descriptionKey: 'meta.designDescription', view: designView },
@@ -44,7 +51,7 @@ const projects = [
   { slug: 'mohe', image: '/assets/mohe-idle-v2-cutout.png', category: 'work.mohe.category', title: 'work.mohe.title', text: 'work.mohe.text', href: 'https://github.com/shixi-11/mohe-pet', action: 'work.github' },
   { slug: 'yunjian', image: '/assets/cloud.png', category: 'work.yunjian.category', title: 'work.yunjian.title', text: 'work.yunjian.text', href: '/ai/yunjian', action: 'work.open' },
   { slug: 'prism', image: '/assets/ai/prism.png', category: 'work.prism.category', title: 'work.prism.title', text: 'work.prism.text', href: 'https://github.com/shixi-11/prism-desk', action: 'work.github' },
-  { slug: 'respawn', image: '/assets/ai/resets.jpg', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-claude-resets/', action: 'work.open' },
+  { slug: 'respawn', image: '/assets/ai/resets.webp', category: 'work.respawn.category', title: 'work.respawn.title', text: 'work.respawn.text', href: '/ai/codex-claude-resets/', action: 'work.open' },
 ]
 
 const app = document.querySelector('#app')
@@ -124,6 +131,8 @@ function shell(content, pathname) {
           <nav class="site-nav" id="site-nav" aria-label="${t('nav.menu')}">
             ${navLink('/about', t('nav.about'), activePath)}
             ${navLink('/ai', t('home.products'), activePath)}
+            ${navLink('/ai-films', t('films.ai'), activePath)}
+            ${navLink('/on-camera', t('films.personalNav'), activePath)}
             ${navLink('/games', t('games.nav'), activePath)}
             ${navLink('/books', t('home.books'), activePath)}
             ${navLink('/design', t('design.nav'), activePath)}
@@ -140,13 +149,13 @@ function shell(content, pathname) {
         </div>
       </header>
       <main>${content}</main>
-      ${paperFooter(activePath === '/')}
+      ${paperFooter()}
     </div>
   `
 }
 
 function navLink(href, label, pathname) {
-  const gameSection = ['/games', '/books'].includes(href) && pathname.startsWith(href + '/')
+  const gameSection = ['/games', '/books', '/ai-films', '/on-camera'].includes(href) && pathname.startsWith(href + '/')
   const active = pathname === href || gameSection
   return `<a class="internal-link${active ? ' active' : ''}" href="${href}"${active ? ` aria-current="${gameSection ? 'location' : 'page'}"` : ''}>${label}</a>`
 }
@@ -156,7 +165,7 @@ function aiView() {
     <ol class="reading-list ai-list">${projects.map((project, index) => {
       const href = project.href
       return `<li class="reading-item ai-product">
-      <a class="ai-product-image ai-product-${project.slug}" href="${href}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}><img src="${project.image}" alt="${t(project.title)}" loading="lazy" decoding="async"></a>
+      <a class="ai-product-image ai-product-${project.slug}" href="${href}" aria-label="${t(project.title)}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${project.slug === 'mohe' ? `<img class="mohe-side mohe-left" src="/assets/ai/mohe-curious.png" alt="" loading="lazy" decoding="async"><img class="mohe-main" src="${project.image}" alt="" loading="lazy" decoding="async"><img class="mohe-side mohe-right" src="/assets/ai/mohe-pleased.png" alt="" loading="lazy" decoding="async">` : `<img src="${project.image}" alt="" loading="lazy" decoding="async">`}${project.slug === 'yunjian' ? cloudPoem() : ''}</a>
       <div class="ai-product-copy"><small class="ai-item-meta"><span class="ai-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${t(project.category)}</small><h2>${t(project.title).replace(/AI智能体|情报日报/g, phrase => `<span class="title-phrase">${phrase}</span>`)}</h2><p>${t(project.text)}</p>
       <a class="text-link" href="${href}"${href.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${t(project.action)} <span aria-hidden="true">${href.startsWith('https:') ? '↗' : '→'}</span></a>
     </div></li>`}).join('')}</ol>
@@ -233,4 +242,4 @@ function isolateMixedText() {
 }
 
 window.addEventListener('popstate', () => { syncLocale(); render() })
-render()
+initializeLocale().then(() => render())

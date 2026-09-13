@@ -1,4 +1,4 @@
-import { t } from './i18n.js'
+import { t, localizedHref } from './i18n.js'
 
 const gameText = key => t(key).replace(/《[^》]+》|中国武术|中国历史|历史幻想|幻想|水墨格斗游戏|叙事游戏|格斗游戏|兵器对战|招式衔接|打击反馈|让每一次选择|每一次选择|留下痕迹|相遇与离别|不同时代|与他们|最终成为的模样|百世间|归简台|找回|失散|此身|旧忆|修复|魂体|融合|轮回|记忆|选择|门派|兵器|交锋|攻防/g, phrase => `<span class="game-phrase">${phrase}</span>`)
 
@@ -6,9 +6,10 @@ const gameLink = (href, label, external = false) => `<a class="game-page-link${e
 
 export function gameCards({ featuredOnly = false } = {}) {
   return `<div class="home-game-list">${[
+    { href: '/games/lianzhu', image: '/assets/lianzhu.jpg', width: 1200, height: 630, key: 'lianzhu', featured: false, playable: true },
     { href: '/games/baishishu', image: '/assets/baishishu-meadow.jpg', width: 3840, height: 2160, key: 'game', featured: true },
     { href: '/games/ink-duel', image: '/assets/ink-duel-concept.png', width: 1672, height: 941, key: 'ink', featured: true },
-  ].filter(game => !featuredOnly || game.featured).map(game => `<a class="game-card internal-link" href="${game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>Steam · ${t('games.desktop')}</span><span>${t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t('games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
+  ].filter(game => !featuredOnly || game.featured).map(game => `<a class="game-card${game.playable ? '' : ' internal-link'}" href="${game.playable ? localizedHref(game.href) : game.href}"><img src="${game.image}" alt="${t(`${game.key}.imageAlt`)}" width="${game.width}" height="${game.height}" loading="lazy" /><div class="game-card-copy"><div class="game-card-meta"><span>${game.playable ? t('lianzhu.platform') : `Steam · ${t('games.desktop')}`}</span><span>${game.playable ? t('lianzhu.status') : t('games.development')}</span></div><h3>${t(`${game.key}.name`)}</h3><p>${gameText(`${game.key}.short`)}</p><span class="game-action">${t(game.playable ? 'lianzhu.play' : 'games.details')} <span aria-hidden="true">→</span></span></div></a>`).join('')}</div>`
 }
 
 function gameFacts() {
@@ -16,7 +17,7 @@ function gameFacts() {
 }
 
 export function gamesView() {
-  return `<section class="game-directory" aria-labelledby="games-title"><header><h1 id="games-title">${t('home.games')}</h1><p>${gameText('games.intro')}</p></header>${gameCards()}</section>`
+  return `<section class="game-directory" aria-labelledby="games-title"><header><h1 id="games-title">${t('home.games')}</h1></header>${gameCards()}</section>`
 }
 
 function gameHeader(name, alias, category, intro, action) {

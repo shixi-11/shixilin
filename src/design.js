@@ -1,7 +1,8 @@
 import { t, getLocale } from './i18n.js'
 import { aluStickers, aluStickerLabels } from './alu-stickers.js'
 
-const asset = name => `/assets/design/${name}`
+// Renew URLs after restoring files omitted by the previous deployment.
+const asset = name => `/assets/design/${name}?v=20260913-restored`
 const stickerLabel = index => aluStickerLabels[getLocale()][index]
 const previewStickers = ['hello', 'love', 'thanks', 'launch', 'received', 'challenge'].map(id => aluStickers.find(item => item.id === id))
 const jewelry = [
