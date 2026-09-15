@@ -13,14 +13,28 @@ export const locales = [
   { id: 'ar', lang: 'ar', name: 'العربية', short: 'العربية', dir: 'rtl' },
 ]
 const valid = value => locales.some(locale => locale.id === value)
+const localesByLongestId = [...locales].sort((a, b) => b.id.length - a.id.length)
 let currentLocale = 'zh'
 let automaticLocale = 'en'
 
+export function splitLocalePath(pathname = '/') {
+  const trimmed = String(pathname).replace(/\/+$/, '') || '/'
+  for (const locale of localesByLongestId) {
+    const prefix = `/${locale.id}`
+    if (trimmed === prefix) return { locale: locale.id, path: '/' }
+    if (trimmed.startsWith(`${prefix}/`)) return { locale: locale.id, path: trimmed.slice(prefix.length) }
+  }
+  return { locale: null, path: trimmed }
+}
+
 function preferredLocale() {
   const query = new URLSearchParams(location.search).get('lang')
+  if (query !== null) return valid(query) ? query : 'zh'
+  const { locale } = splitLocalePath(location.pathname)
+  if (locale) return locale
   let saved
   try { saved = localStorage.getItem('shixilin-locale') } catch { /* Private browsing may disable storage. */ }
-  return query !== null ? (valid(query) ? query : 'zh') : (valid(saved) ? saved : null)
+  return valid(saved) ? saved : null
 }
 
 function detectedBrowserLocale() {
@@ -46,9 +60,12 @@ export async function initializeLocale() {
   }
   syncLocale()
   const url = new URL(location.href)
-  if (!url.searchParams.has('lang')) {
-    url.searchParams.set('lang', currentLocale)
-    history.replaceState(history.state, '', `${url.pathname}${url.search}${url.hash}`)
+  const { path } = splitLocalePath(url.pathname)
+  url.pathname = path
+  if (!url.searchParams.has('lang')) url.searchParams.set('lang', currentLocale)
+  const next = `${url.pathname}${url.search}${url.hash}`
+  if (next !== `${location.pathname}${location.search}${location.hash}`) {
+    history.replaceState(history.state, '', next)
   }
 }
 
@@ -68,6 +85,7 @@ export function setLocale(locale) {
 
 export function localizedHref(href) {
   const url = new URL(href, location.origin)
+  url.pathname = splitLocalePath(url.pathname).path
   url.searchParams.set('lang', currentLocale)
   return `${url.pathname}${url.search}${url.hash}`
 }

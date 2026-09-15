@@ -18,7 +18,7 @@ import './navigation.css'
 import { supportView, bindSupport } from './support.js'
 import { gamesView, inkDuelView, baishishuView } from './games.js'
 import { homeView, paperFooter, cloudPoem } from './home.js'
-import { getLocale, t, setLocale, syncLocale, initializeLocale, locales, localizedHref } from './i18n.js'
+import { getLocale, t, setLocale, syncLocale, initializeLocale, locales, localizedHref, splitLocalePath } from './i18n.js'
 import { composeLocaleHeadings } from './locales/typography.js'
 import { books, dailyUrl } from './content.js'
 
@@ -57,8 +57,7 @@ const projects = [
 const app = document.querySelector('#app')
 
 function normalizePath(pathname) {
-  if (pathname === '/') return '/'
-  return pathname.replace(/\/$/, '')
+  return splitLocalePath(pathname).path
 }
 
 let renderVersion = 0

@@ -17,15 +17,26 @@ for (const locale of ['zh', 'zh-Hant']) assert.equal(messages[locale]['about.com
 for (const key of ['home.moheText', 'work.mohe.text', 'work.mohe.alt']) assert.ok(!/\b(he|him|his|himself)\b/i.test(messages.en[key]))
 
 // Exercise share links, refresh, stored preference and back navigation without a browser dependency.
-globalThis.location = { origin: 'https://shixilin.com', search: '' }
+globalThis.location = { origin: 'https://shixilin.com', search: '', pathname: '/' }
 Object.defineProperty(globalThis, 'navigator', { configurable: true, value: { languages: ['zh-CN'] } })
 const values = new Map()
 globalThis.localStorage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) }
-const { getLocale, syncLocale, setLocale, localizedHref, locales } = await import('../src/i18n.js')
+const { getLocale, syncLocale, setLocale, localizedHref, locales, splitLocalePath } = await import('../src/i18n.js')
 assert.equal(getLocale(), 'zh')
 assert.deepEqual(locales.map(item => item.id), ['zh', 'zh-Hant', 'en', 'ja', 'ko', 'es', 'fr', 'de', 'ar'])
+assert.deepEqual(splitLocalePath('/ja'), { locale: 'ja', path: '/' })
+assert.deepEqual(splitLocalePath('/ja/'), { locale: 'ja', path: '/' })
+assert.deepEqual(splitLocalePath('/zh-Hant/about/'), { locale: 'zh-Hant', path: '/about' })
+assert.deepEqual(splitLocalePath('/about/'), { locale: null, path: '/about' })
+assert.deepEqual(splitLocalePath('/books/yinian/2012-10-24/'), { locale: null, path: '/books/yinian/2012-10-24' })
+assert.deepEqual(splitLocalePath('/en/games/baishishu'), { locale: 'en', path: '/games/baishishu' })
+location.pathname = '/ko/about/'
+location.search = ''
+assert.equal(syncLocale(), 'ko')
+location.pathname = '/about/'
 setLocale('ja')
-assert.equal(localizedHref('/about#contact'), '/about?lang=ja#contact')
+assert.equal(localizedHref('/ja/about#contact'), '/about?lang=ja#contact')
+assert.equal(localizedHref('/about/#contact'), '/about?lang=ja#contact')
 assert.equal(syncLocale(), 'ja')
 location.search = '?lang=ar'
 assert.equal(syncLocale(), 'ar')

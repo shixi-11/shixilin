@@ -1,4 +1,4 @@
-import { readDaily, rewriteDailyText, validDailyPath } from '../lib/agent-daily.js';
+import { readDaily, rewriteDailyText, validDailyPath, fallbackDailyPath, PUBLIC_PATH } from '../lib/agent-daily.js';
 
 export default async function handler(req, res) {
   if (!['GET', 'HEAD'].includes(req.method)) {
@@ -11,8 +11,18 @@ export default async function handler(req, res) {
     const upstream = await readDaily(requestedPath);
     const type = upstream.headers.get('content-type') || 'application/octet-stream';
     if (!upstream.ok) {
+      if (upstream.status === 404) {
+        const fallback = fallbackDailyPath(requestedPath);
+        if (fallback) {
+          res.setHeader('Location', `${PUBLIC_PATH}/${fallback}`);
+          res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=60');
+          return res.status(302).end();
+        }
+        res.setHeader('Cache-Control', 'no-store');
+        return res.status(404).end('日报暂时无法加载，请稍后重试。');
+      }
       res.setHeader('Cache-Control', 'no-store');
-      return res.status(upstream.status === 404 ? 404 : 502).end('日报暂时无法加载，请稍后重试。');
+      return res.status(502).end('日报暂时无法加载，请稍后重试。');
     }
     res.setHeader('Content-Type', type);
     res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=300');
