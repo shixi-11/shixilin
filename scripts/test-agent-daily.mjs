@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { rewriteDailyText, validDailyPath, readDaily, PUBLIC_URL, ORIGIN } from '../lib/agent-daily.js';
-for (const path of ['', 'en/', 'latest/', 'en/latest/', '2026/09/05/', 'en/2026/09/05/', 'archive.json', 'en/archive.json', 'assets/alux-mark.png', 'feed.xml', 'en/feed.xml', 'ja/', 'ja/latest/', 'zh-Hant/2026/09/14/', 'ar/archive.json', 'ko/feed.xml']) assert.equal(validDailyPath(path),true,path);
+for (const path of ['', 'en/', 'latest/', 'en/latest/', '2026/09/05/', 'en/2026/09/05/', 'archive.json', 'en/archive.json', 'assets/alux-mark.png', 'feed.xml', 'en/feed.xml', 'ja/', 'ja/latest/', 'zh-Hant/2026/09/14/', 'ar/archive.json', 'ko/feed.xml', 'live/', 'live/en/', 'live/latest.json', 'live/teaser.json', 'live/2026-09-15.json', 'live/2026/09/15/', 'api/live', 'api/live.json']) assert.equal(validDailyPath(path),true,path);
 for (const path of ['../secret', '//other.example', 'https://other.example', '%2e%2e/x', ['en/'], 'api/account']) assert.equal(validDailyPath(path),false,String(path));
 const text = `<link rel="canonical" href="https://ai.alux.network/daily/"><a href="/daily/en/">EN</a><img src="/daily/assets/alux-mark.png"><a href="https://ai.alux.network/daily/2026/09/05/">issue</a><a href="https://example.org/daily/news">source</a>`;
 const out=rewriteDailyText(text);
